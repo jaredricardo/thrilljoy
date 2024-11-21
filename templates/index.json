@@ -1,0 +1,347 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_fABBbn": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_maBX86": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/moo_deng.001.jpg",
+            "url_link": "shopify://products/pix-moo-deng",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_VnNUrw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/moo_deng.002.jpg",
+            "url_link": "shopify://products/pix-moo-deng",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Jczrad": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/vangogh.png",
+            "url_link": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_maBX86",
+        "slide_VnNUrw",
+        "slide_Jczrad"
+      ],
+      "custom_css": [
+        ".slideshow__autoplay,.slider-button--prev,.slider-button--next {display: none;}",
+        ".slideshow__controls {position: absolute; bottom: 0; left: 0; right: 0; border-top: none;}",
+        ".slider-counter__link span {background-color: black;}",
+        ".slider-counter__link--active span {background-color: #5fd551;}",
+        ".slider-mobile-gutter {margin-bottom: -1px;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Moo Deng"
+      }
+    },
+    "video_mCN3Va": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify://shop_images/unnamed.png",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_zkcmx7": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Tw4miC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mega Pix!",
+            "heading_size": "hxxl"
+          }
+        },
+        "buttons_bN8Uqb": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/mega-pix",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Tw4miC",
+        "buttons_bN8Uqb"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/bg-thrilljoy.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "image_banner_h6zReh": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_xCeKVU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pix!",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_8CFKLC": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_YV9VM3": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/pix",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xCeKVU",
+        "text_8CFKLC",
+        "buttons_YV9VM3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/bg-thrilljoy.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "featured_collection_cVPwxi": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "pix",
+        "products_to_show": 20,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_Ptw9MN": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "a {display: block;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"/account/register\">\n  <img src=\"{{ 'thrillseeker.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"/>\n</a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_HdAagz": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Rxc3WB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Apparel",
+            "heading_size": "hxxl"
+          }
+        },
+        "buttons_imY8D9": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/apparel",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Rxc3WB",
+        "buttons_imY8D9"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/bg-thrilljoy.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "featured_collection_MwRKP6": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "apparel",
+        "products_to_show": 20,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_AwTkRU": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "a {display: block;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"/pages/frequently-asked-questions\">\n  <img src=\"{{ 'faqs.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"/>\n</a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_kiRNTt": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "a {display: block;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"/blogs/news/hold-onto-your-hearts-moo-deng-pix-is-coming-to-thrilljoy\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/MOO_DENG_X_THRILLJOY_BLOG_4.png?v=1732132531\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "slideshow_fABBbn",
+    "video_mCN3Va",
+    "image_banner_zkcmx7",
+    "image_banner_h6zReh",
+    "featured_collection_cVPwxi",
+    "custom_liquid_Ptw9MN",
+    "image_banner_HdAagz",
+    "featured_collection_MwRKP6",
+    "custom_liquid_AwTkRU",
+    "custom_liquid_kiRNTt"
+  ]
+}

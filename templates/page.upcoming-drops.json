@@ -1,0 +1,160 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collection_list_AfxmpQ": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_qttqVc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "beetlejuice"
+          }
+        },
+        "featured_collection_xF3aBJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "blue-eye-samurai"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_qttqVc",
+        "featured_collection_xF3aBJ"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_3yJphf": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_4wfWey": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_3rmADH": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_tBpRgy": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4wfWey",
+        "text_3rmADH",
+        "buttons_tBpRgy"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/beetlejuice-sixth-scale-figure_beetlejuice_gallery_65d39e4d0015b.webp",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_banner_gUrdkG": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_ckGYAf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_Yq9VGM": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_kgtW4e": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ckGYAf",
+        "text_Yq9VGM",
+        "buttons_kgtW4e"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/mizu-3.png",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collection_list_AfxmpQ",
+    "image_banner_3yJphf",
+    "image_banner_gUrdkG"
+  ]
+}
