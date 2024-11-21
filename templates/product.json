@@ -1,24 +1,8 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -30,14 +14,14 @@
         "custom_liquid_fVahD6": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div>\n    <strong>ODDS OF A CHASE</strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    </a>\n  </div>"
+            "custom_liquid": "<div>\n    <strong>ODDS OF A CHASE<\/strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    <\/a>\n  <\/div>"
           }
         },
         "text_rzbTg9": {
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<strong>Chance of Chase</strong> Learn more",
+            "text": "<strong>Chance of Chase<\/strong> Learn more",
             "text_style": "body"
           }
         },
@@ -58,7 +42,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<strong>Coming on October 17th</strong>",
+            "text": "<strong>Coming on October 17th<\/strong>",
             "text_style": "body"
           }
         },
@@ -86,7 +70,7 @@
         "custom_liquid_QABgYV": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<details>\n  <summary><strong>More details</strong></summary>\n  <p>\n    <strong>Type:</strong>\n    <a href=\"/collections/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n\n    </a>\n  </p>\n  <p><strong>Weight:</strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n</p>\n<p><strong>Box Dimmensions</strong>\n</p>\n<p><strong>Height:</strong>\n{{ product.metafields.custom.height.value }}\n</p>\n<p><strong>Width:</strong>\n{{ product.metafields.custom.width.value }}\n</p>\n<p><strong>Length:</strong>\n{{ product.metafields.custom.length.value }}\n</p>\n</details>"
+            "custom_liquid": "<details>\n  <summary><strong>More details<\/strong><\/summary>\n  <p>\n    <strong>Type:<\/strong>\n    <a href=\"\/collections\/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n\n    <\/a>\n  <\/p>\n  <p><strong>Weight:<\/strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n<\/p>\n<p><strong>Box Dimmensions<\/strong>\n<\/p>\n<p><strong>Height:<\/strong>\n{{ product.metafields.custom.height.value }}\n<\/p>\n<p><strong>Width:<\/strong>\n{{ product.metafields.custom.width.value }}\n<\/p>\n<p><strong>Length:<\/strong>\n{{ product.metafields.custom.length.value }}\n<\/p>\n<\/details>"
           }
         },
         "share": {
@@ -97,7 +81,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "custom_liquid_fVahD6",
@@ -131,7 +114,7 @@
     "custom_liquid_9PDUML": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div id=\"chance-chase-section\">\n    <p style=\"display: none;\">Chance of chase</p>\n  </div>",
+        "custom_liquid": "<div id=\"chance-chase-section\">\n    <p style=\"display: none;\">Chance of chase<\/p>\n  <\/div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -143,14 +126,14 @@
         "heading_9qDymW": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>1-of-6 ODDS OF A CHASE!</strong>",
+            "heading": "<strong>1-of-6 ODDS OF A CHASE!<\/strong>",
             "heading_size": "h1"
           }
         },
         "text_4gAjbJ": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>What is ODDS OF A CHASE?</strong></p><p>Each collectible has a 1-of-6 odds of a limited edition chase! </p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 98 pieces!</p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!</p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.</p>"
+            "text": "<p><strong>What is ODDS OF A CHASE?<\/strong><\/p><p>Each collectible has a 1-of-6 odds of a limited edition chase! <\/p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 98 pieces!<\/p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!<\/p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.<\/p>"
           }
         }
       },
@@ -177,16 +160,16 @@
           "type": "column",
           "settings": {
             "title": "What is 1-of-6 ODDS OF A CHASE?",
-            "text": "<p>Each collectible has a 1-of-6 odds of a limited edition chase! </p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 98 pieces!</p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!</p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.</p>",
+            "text": "<p>Each collectible has a 1-of-6 odds of a limited edition chase! <\/p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 98 pieces!<\/p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!<\/p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.<\/p>",
             "link_label": "",
-            "link": "shopify://blogs/news/welcome-to-thrilljoy"
+            "link": "shopify:\/\/blogs\/news\/welcome-to-thrilljoy"
           }
         },
         "column_Tg7NKV": {
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "image": "shopify:\/\/shop_images\/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -197,7 +180,7 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "image": "shopify:\/\/shop_images\/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -208,7 +191,7 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "image": "shopify:\/\/shop_images\/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -227,7 +210,7 @@
         ".title-wrapper-with-link {justify-content: center; margin-bottom: 5rem;}"
       ],
       "settings": {
-        "title": "<strong>1-of-6 ODDS OF A CHASE!</strong>",
+        "title": "<strong>1-of-6 ODDS OF A CHASE!<\/strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -249,7 +232,7 @@
         "column_C6HDp8": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "image": "shopify:\/\/shop_images\/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
             "title": "Limited Edition",
             "text": "",
             "link_label": "",
@@ -259,7 +242,7 @@
         "column_DiXqHB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "image": "shopify:\/\/shop_images\/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
             "title": "Chase Edition",
             "text": "",
             "link_label": "",
@@ -269,7 +252,7 @@
         "column_eYtGXt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "image": "shopify:\/\/shop_images\/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
             "title": "Ultra Chase Edition",
             "text": "",
             "link_label": "",

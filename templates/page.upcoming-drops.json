@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -87,7 +78,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/beetlejuice-sixth-scale-figure_beetlejuice_gallery_65d39e4d0015b.webp",
+        "image": "shopify:\/\/shop_images\/beetlejuice-sixth-scale-figure_beetlejuice_gallery_65d39e4d0015b.webp",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
@@ -137,7 +128,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/mizu-3.png",
+        "image": "shopify:\/\/shop_images\/mizu-3.png",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "desktop_content_position": "middle-left",

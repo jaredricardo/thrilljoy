@@ -264,8 +264,44 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
-                {% if product.metafields.custom.ship_date_text %}
-                  <h4 class="expected-ship-date">{{ product.metafields.custom.ship_date_text }}</h4>
+                {% if product.metafields.custom.countdown_time != blank %}
+                  <h3 class="countdown-timer" style="color: rgba(95,213,81,1)"></h3>
+                  <script>
+                    window.addEventListener('DOMContentLoaded', () =>{
+
+                      console.log('init')
+                      console.log({{ product.metafields.custom.countdown_time | json }})
+
+                      const timer = document.querySelector('.countdown-timer')
+                      const endTimeString = {{ product.metafields.custom.countdown_time | json }}
+                      const endTime = new Date(endTimeString).getTime()
+
+                      function initTimer(day, hour) {
+                        const interval = setInterval(() => {
+                          const now = new Date().getTime()
+                          const distance = endTime - now
+
+                          if (distance < 0) {
+                            clearInterval(interval)
+                            timer.remove()
+                            return
+                          }
+
+                          const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+                          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+                          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+                          const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+                          timer.innerHTML = `Only ${days}d ${hours}h ${minutes}m ${seconds}s left!`
+                        }, 1000);
+                      }
+
+                      initTimer()
+                    })
+                  </script> 
+                {% endif %}
+                {% if product.metafields.custom.free_shipping_callout %}
+                  <h4>{{ product.metafields.custom.free_shipping_callout }}</h4>
                 {% endif %}
               {%- when 'inventory' -%}
                 <p
@@ -598,6 +634,9 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                {% if product.metafields.custom.ship_date_text %}
+                  <h4 class="expected-ship-date">{{ product.metafields.custom.ship_date_text }}</h4>
+                {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
