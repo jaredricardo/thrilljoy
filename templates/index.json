@@ -285,7 +285,7 @@
         "a {display: block;}"
       ],
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"/blogs/news/hold-onto-your-hearts-moo-deng-pix-is-coming-to-thrilljoy\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/MOO_DENG_X_THRILLJOY_BLOG_4.png?v=1732132531\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
+        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs/news/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
