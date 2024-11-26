@@ -1,15 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -32,8 +34,9 @@
         },
         "text_dgwEBx": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "<strong>New York Comicon Exclusive<\/strong>",
+            "text": "<strong>New York Comicon Exclusive</strong>",
             "text_style": "uppercase"
           }
         },
@@ -62,7 +65,7 @@
         "custom_liquid_QABgYV": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<details>\n  <summary><strong>More details<\/strong><\/summary>\n  <p>\n    <strong>Type:<\/strong>\n    <a href=\"\/collections\/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n    <\/a>\n  <\/p>\n  <p><strong>Category:<\/strong> {{ product.category }}<\/p>\n<\/details>"
+            "custom_liquid": "<details>\n  <summary><strong>More details</strong></summary>\n  <p>\n    <strong>Type:</strong>\n    <a href=\"/collections/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n    </a>\n  </p>\n  <p><strong>Category:</strong> {{ product.category }}</p>\n</details>"
           }
         },
         "share": {
@@ -73,7 +76,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "variant_picker",
