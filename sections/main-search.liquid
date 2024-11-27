@@ -302,6 +302,7 @@
                                 <h3 class="card__heading">
                                   <a href="{{ item.url }}" class="full-unstyled-link">
                                     {{ item.title | truncate: 50 | escape }}
+                                    {% if item.product.tags contains 'tm' %}&trade;{% endif %}
                                   </a>
                                 </h3>
                               </div>

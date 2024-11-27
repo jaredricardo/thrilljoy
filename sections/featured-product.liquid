@@ -112,6 +112,7 @@
                     {%- else -%}
                       {{ 'onboarding.product_title' | t }}
                     {%- endunless -%}
+                    {% if product.tags contains 'tm' %}&trade;{% endif %}
                   </h2>
                 {%- when 'price' -%}
                   <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
