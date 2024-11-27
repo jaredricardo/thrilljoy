@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_fABBbn": {
@@ -7,7 +16,7 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/vangogh.png",
+            "image": "shopify://shop_images/vangogh.png",
             "url_link": "",
             "heading": "",
             "heading_size": "h1",
@@ -26,8 +35,27 @@
         "slide_ycBxNt": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/elf_banner_2.001.jpg",
-            "url_link": "shopify:\/\/collections\/pix",
+            "image": "shopify://shop_images/elf_banner_2.001.jpg",
+            "url_link": "shopify://collections/pix",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_3rCADQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/holiday_apparel-_homepage.001.jpg",
+            "url_link": "shopify://collections/apparel",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -45,7 +73,8 @@
       },
       "block_order": [
         "slide_Jczrad",
-        "slide_ycBxNt"
+        "slide_ycBxNt",
+        "slide_3rCADQ"
       ],
       "custom_css": [
         ".slideshow__autoplay,.slider-button--prev,.slider-button--next {display: none;}",
@@ -72,8 +101,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
+        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify://shop_images/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -95,7 +124,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/mega-pix",
+            "button_link_1": "shopify://collections/mega-pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -109,7 +138,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy.png",
+        "image": "shopify://shop_images/bg-thrilljoy.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-left",
@@ -143,7 +172,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/pix",
+            "button_link_1": "shopify://collections/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -157,7 +186,7 @@
         "buttons_YV9VM3"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy.png",
+        "image": "shopify://shop_images/bg-thrilljoy.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-left",
@@ -204,7 +233,7 @@
         "a {display: block;}"
       ],
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"\/account\/register\">\n  <img src=\"{{ 'thrillseeker.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"\/>\n<\/a>\n<\/div>",
+        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"/account/register\">\n  <img src=\"{{ 'thrillseeker.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"/>\n</a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -225,7 +254,7 @@
           "disabled": true,
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/apparel",
+            "button_link_1": "shopify://collections/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -238,7 +267,7 @@
         "buttons_imY8D9"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy.png",
+        "image": "shopify://shop_images/bg-thrilljoy.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-left",
@@ -285,7 +314,7 @@
         "a {display: block;}"
       ],
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"\/pages\/frequently-asked-questions\">\n  <img src=\"{{ 'faqs.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"\/>\n<\/a>\n<\/div>",
+        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"/pages/frequently-asked-questions\">\n  <img src=\"{{ 'faqs.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"/>\n</a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -297,7 +326,7 @@
         "a {display: block;}"
       ],
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs\/news\/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/1096\/9252\/files\/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"\/>\n    <\/a>\n<\/div>",
+        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs/news/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
