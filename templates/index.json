@@ -12,46 +12,9 @@
     "slideshow_fABBbn": {
       "type": "slideshow",
       "blocks": {
-        "slide_maBX86": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/moo_deng.001.jpg",
-            "url_link": "shopify://products/pix-moo-deng",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_VnNUrw": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/moo_deng.002.jpg",
-            "url_link": "shopify://products/pix-moo-deng",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_Jczrad": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/vangogh.png",
             "url_link": "",
@@ -68,12 +31,50 @@
             "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_ycBxNt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/elf_banner_2.001.jpg",
+            "url_link": "shopify://collections/pix",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_3rCADQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/holiday_apparel-_homepage.001.jpg",
+            "url_link": "shopify://collections/apparel",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_maBX86",
-        "slide_VnNUrw",
-        "slide_Jczrad"
+        "slide_Jczrad",
+        "slide_ycBxNt",
+        "slide_3rCADQ"
       ],
       "custom_css": [
         ".slideshow__autoplay,.slider-button--prev,.slider-button--next {display: none;}",
@@ -325,7 +326,7 @@
         "a {display: block;}"
       ],
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"/blogs/news/hold-onto-your-hearts-moo-deng-pix-is-coming-to-thrilljoy\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/MOO_DENG_X_THRILLJOY_BLOG_4.png?v=1732132531\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
+        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs/news/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
