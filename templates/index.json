@@ -14,6 +14,7 @@
       "blocks": {
         "slide_Jczrad": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/vangogh.png",
             "url_link": "",
@@ -30,10 +31,50 @@
             "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_JidRyN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/elf_banner_2.001.jpg",
+            "url_link": "shopify://collections/pix",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_6LTFYz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/holiday_apparel-_homepage.001.jpg",
+            "url_link": "shopify://collections/apparel",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_Jczrad"
+        "slide_Jczrad",
+        "slide_JidRyN",
+        "slide_6LTFYz"
       ],
       "custom_css": [
         ".slideshow__autoplay,.slider-button--prev,.slider-button--next {display: none;}",
