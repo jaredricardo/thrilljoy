@@ -1,0 +1,125 @@
+{% liquid  
+
+    assign overlay_string = ''
+
+    if section.settings.image_overlay_opacity == 0
+            assign overlay_string = '0'
+        elsif section.settings.image_overlay_opacity == 100
+            assign overlay_string = '1'
+        else 
+            assign percent = section.settings.image_overlay_opacity | divided_by: 10
+            assign overlay_string = '0.' | append: percent
+    endif 
+
+
+-%}
+
+{% assign image_overlay_opacity = section.settings.image_overlay_opacity | divided_by: 10  %}
+
+{% style %}
+
+    [data-section-id="{{ section.id }}"] {
+        position: relative;
+    }
+
+    [data-section-id="{{ section.id }}"] {
+
+    }
+
+    [data-section-id="{{ section.id }}"] h2 {
+        color: {{ section.settings.text_color }};
+    }
+
+    {% if section.settings.mobile_image %}
+        @media screen and (max-width: 768px) {
+            [data-section-id="{{ section.id }}"] .tj-simple-banner img.desktop  {
+                display: none;
+            }
+            [data-section-id="{{ section.id }}"] .tj-simple-banner img.mobile {
+                display: block;
+            }
+        }
+    {% endif %}
+
+{% endstyle %}
+<div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in">
+    <div class="tj-simple-banner">
+        {% if section.settings.header_text %}
+            <h2>{{ section.settings.header_text }}</h2>
+        {% endif %}
+        <img 
+            class="desktop"
+            srcset="
+                {%- if section.settings.desktop_image.width >= 750 -%}{{ section.settings.desktop_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.desktop_image.width >= 1100 -%}{{ section.settings.desktop_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if section.settings.desktop_image.width >= 1500 -%}{{ section.settings.desktop_image | image_url: width: 1500 }} 1500w,{%- endif -%}"
+            loading="lazy"
+            alt="{{ section.settings.image_alt_text | escape }}"
+            width="{{ section.settings.desktop_image.width }}"
+            height="{{ section.settings.desktop_image.width | divided_by: section.settings.desktop_image.aspect_ratio }}"
+        >
+        {% if section.settings.mobile_image %}
+            <img 
+            class="desktop"
+            srcset="
+                {%- if section.settings.mobile_image.width >= 375 -%}{{ section.settings.mobile_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.mobile_image.width >= 750 -%}{{ section.settings.mobile_image | image_url: width: 750 }} 750w,{%- endif -%}"
+            loading="lazy"
+            alt="{{ section.settings.image_alt_text | escape }}"
+            width="{{ section.settings.mobile_image.width }}"
+            height="{{ section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio }}"
+        >
+        {% endif %}
+        <div class="image-overlay" style="background-color: rgba(0, 0, 0, {{ overlay_string }});" data-test="{{ section.settings.overlay_string }}" ></div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name":"TJ Simple Banner",
+        "settings":[
+            {
+                "type": "range",
+                "step": 10,
+                "id": "image_overlay_opacity",
+                "label": "Image Overlay Opacity (%)",
+                "min": 0,
+                "max": 100,
+                "default": 40
+            },
+            {
+                "type": "image_picker",
+                "id": "desktop_image",
+                "label": "Desktop Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_image",
+                "label": "Mobile Image (optional)"
+            },
+            {
+                "type": "text",
+                "id": "image_alt_text",
+                "label": "Image Alt Text (for SEO)",
+                "default": "Thrilljoy Banner Image"
+            },
+            {
+                "type": "text",
+                "id": "header_text",
+                "label": "Header Text (optional)",
+                "default": "Header Text"
+            },
+            {
+                "type": "color",
+                "id": "text_color",
+                "label": "Text Color",
+                "default": "#FFFFFF"
+            }
+        ],
+        "presets": [
+            {
+                "name": "TJ Simple Banner"
+            }
+        ]
+    }
+{% endschema %}
