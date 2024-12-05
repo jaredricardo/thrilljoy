@@ -3625,6 +3625,7 @@ body {
 }
 
 .tj-simple-banner {
+  display: block;
   position: relative;
   min-height: 250px;
 }

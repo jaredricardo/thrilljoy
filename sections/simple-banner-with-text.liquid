@@ -22,15 +22,15 @@
         position: relative;
     }
 
-    [data-section-id="{{ section.id }}"] {
-
-    }
 
     [data-section-id="{{ section.id }}"] h2 {
         color: {{ section.settings.text_color }};
     }
 
     {% if section.settings.mobile_image %}
+        [data-section-id="{{ section.id }}"] .tj-simple-banner img.mobile {
+            display: none;
+        }
         @media screen and (max-width: 768px) {
             [data-section-id="{{ section.id }}"] .tj-simple-banner img.desktop  {
                 display: none;
@@ -43,7 +43,11 @@
 
 {% endstyle %}
 <div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in">
-    <div class="tj-simple-banner">
+    {% if section.settings.link_out %}
+        <a href="{{ section.settings.link_out }}" class="tj-simple-banner">
+    {% else %}
+        <div class="tj-simple-banner">
+    {% endif %}
         {% if section.settings.header_text %}
             <h2>{{ section.settings.header_text }}</h2>
         {% endif %}
@@ -60,7 +64,7 @@
         >
         {% if section.settings.mobile_image %}
             <img 
-            class="desktop"
+            class="mobile"
             srcset="
                 {%- if section.settings.mobile_image.width >= 375 -%}{{ section.settings.mobile_image | image_url: width: 375 }} 375w,{%- endif -%}
                 {%- if section.settings.mobile_image.width >= 750 -%}{{ section.settings.mobile_image | image_url: width: 750 }} 750w,{%- endif -%}"
@@ -71,22 +75,17 @@
         >
         {% endif %}
         <div class="image-overlay" style="background-color: rgba(0, 0, 0, {{ overlay_string }});" data-test="{{ section.settings.overlay_string }}" ></div>
-    </div>
+    {% if section.settings.link_out %}
+        </a>
+    {% else %}
+        </div>
+    {% endif %}
 </div>
 
 {% schema %}
     {
         "name":"TJ Simple Banner",
         "settings":[
-            {
-                "type": "range",
-                "step": 10,
-                "id": "image_overlay_opacity",
-                "label": "Image Overlay Opacity (%)",
-                "min": 0,
-                "max": 100,
-                "default": 40
-            },
             {
                 "type": "image_picker",
                 "id": "desktop_image",
@@ -96,6 +95,15 @@
                 "type": "image_picker",
                 "id": "mobile_image",
                 "label": "Mobile Image (optional)"
+            },
+            {
+                "type": "range",
+                "step": 10,
+                "id": "image_overlay_opacity",
+                "label": "Image Overlay Opacity (%)",
+                "min": 0,
+                "max": 100,
+                "default": 40
             },
             {
                 "type": "text",
@@ -114,6 +122,11 @@
                 "id": "text_color",
                 "label": "Text Color",
                 "default": "#FFFFFF"
+            },
+            {
+                "type": "url",
+                "id": "link_out",
+                "label": "URL link out (optional)"
             }
         ],
         "presets": [

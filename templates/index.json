@@ -220,12 +220,26 @@
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
+      "disabled": true,
       "settings": {
-        "image_overlay_opacity": 40,
         "desktop_image": "shopify:\/\/shop_images\/thrillseeker.png",
+        "image_overlay_opacity": 40,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "Become a Thrillseeker",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "link_out": "\/account\/register"
+      }
+    },
+    "custom_liquid_GgnKLH": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "a {display: block;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"\/account\/register\">\n  <img src=\"{{ 'thrillseeker.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"\/>\n<\/a>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_banner_HdAagz": {
@@ -329,6 +343,7 @@
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
     "simple_banner_with_text_bHQMwg",
+    "custom_liquid_GgnKLH",
     "image_banner_HdAagz",
     "featured_collection_MwRKP6",
     "custom_liquid_AwTkRU",
