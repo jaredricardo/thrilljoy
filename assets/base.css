@@ -3613,6 +3613,7 @@ body {
   color: red;
 }
 
+
 /* Jared additions */
 
 .image-overlay{
@@ -3630,8 +3631,24 @@ body {
   min-height: 250px;
 }
 
+
+.tj-simple-banner h2 {
+  margin: 0 0 1rem 0;
+}
+
+.tj-simple-banner .inner-container {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+}
+
 .tj-simple-banner img {
-  postion: relative;
+  position: relative;
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -3640,13 +3657,8 @@ body {
   z-index: 1;
 }
 
-
-.tj-simple-banner h2 {
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 3;
+@media screen and (max-width: 768px) {
+  .tj-simple-banner h2 {
+    margin: 0 0 0.5rem 0;
+  }
 }

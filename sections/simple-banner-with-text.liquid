@@ -43,37 +43,42 @@
 
 {% endstyle %}
 <div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in">
-    {% if section.settings.link_out %}
+    {% if section.settings.link_out and section.settings.link_out_is_button == false %}
         <a href="{{ section.settings.link_out }}" class="tj-simple-banner">
     {% else %}
         <div class="tj-simple-banner">
     {% endif %}
-        {% if section.settings.header_text %}
-            <h2>{{ section.settings.header_text }}</h2>
-        {% endif %}
-        <img 
-            class="desktop"
-            srcset="
-                {%- if section.settings.desktop_image.width >= 750 -%}{{ section.settings.desktop_image | image_url: width: 750 }} 750w,{%- endif -%}
-                {%- if section.settings.desktop_image.width >= 1100 -%}{{ section.settings.desktop_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-                {%- if section.settings.desktop_image.width >= 1500 -%}{{ section.settings.desktop_image | image_url: width: 1500 }} 1500w,{%- endif -%}"
-            loading="lazy"
-            alt="{{ section.settings.image_alt_text | escape }}"
-            width="{{ section.settings.desktop_image.width }}"
-            height="{{ section.settings.desktop_image.width | divided_by: section.settings.desktop_image.aspect_ratio }}"
-        >
-        {% if section.settings.mobile_image %}
+        <div class="inner-container">
+            {% if section.settings.header_text %}
+                <h2>{{ section.settings.header_text }}</h2>
+            {% endif %}
+            {% if section.settings.link_out_is_button %}
+                <a class="button button--primary" href="{{ section.settings.link_out }}">{{ section.settings.button_text }}</a>
+            {% endif %}
+        </div>
             <img 
-            class="mobile"
-            srcset="
-                {%- if section.settings.mobile_image.width >= 375 -%}{{ section.settings.mobile_image | image_url: width: 375 }} 375w,{%- endif -%}
-                {%- if section.settings.mobile_image.width >= 750 -%}{{ section.settings.mobile_image | image_url: width: 750 }} 750w,{%- endif -%}"
-            loading="lazy"
-            alt="{{ section.settings.image_alt_text | escape }}"
-            width="{{ section.settings.mobile_image.width }}"
-            height="{{ section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio }}"
-        >
-        {% endif %}
+                class="desktop"
+                srcset="
+                    {%- if section.settings.desktop_image.width >= 750 -%}{{ section.settings.desktop_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if section.settings.desktop_image.width >= 1100 -%}{{ section.settings.desktop_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                    {%- if section.settings.desktop_image.width >= 1500 -%}{{ section.settings.desktop_image | image_url: width: 1500 }} 1500w,{%- endif -%}"
+                loading="lazy"
+                alt="{{ section.settings.image_alt_text | escape }}"
+                width="{{ section.settings.desktop_image.width }}"
+                height="{{ section.settings.desktop_image.width | divided_by: section.settings.desktop_image.aspect_ratio }}"
+            >
+            {% if section.settings.mobile_image %}
+                <img 
+                class="mobile"
+                srcset="
+                    {%- if section.settings.mobile_image.width >= 375 -%}{{ section.settings.mobile_image | image_url: width: 375 }} 375w,{%- endif -%}
+                    {%- if section.settings.mobile_image.width >= 750 -%}{{ section.settings.mobile_image | image_url: width: 750 }} 750w,{%- endif -%}"
+                loading="lazy"
+                alt="{{ section.settings.image_alt_text | escape }}"
+                width="{{ section.settings.mobile_image.width }}"
+                height="{{ section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio }}"
+            >
+            {% endif %}
         <div class="image-overlay" style="background-color: rgba(0, 0, 0, {{ overlay_string }});" data-test="{{ section.settings.overlay_string }}" ></div>
     {% if section.settings.link_out %}
         </a>
@@ -124,9 +129,37 @@
                 "default": "#FFFFFF"
             },
             {
+                "type": "header",
+                "content": "Link out settings"
+            },
+            {
                 "type": "url",
                 "id": "link_out",
                 "label": "URL link out (optional)"
+            },
+            {
+                "type": "checkbox",
+                "id": "link_out_is_button",
+                "label": "Use button for link out (optional)",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Button Text (optional)",
+                "default": "Button Text"
+            },
+            {
+                "type": "color",
+                "id": "button_text_color",
+                "label": "Button Text Color",
+                "default": "#FFFFFF"
+            },
+            {
+                "type": "color",
+                "id": "button_background_color",
+                "label": "Button Background Color",
+                "default": "#000000"
             }
         ],
         "presets": [

@@ -227,7 +227,11 @@
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "Become a Thrillseeker",
         "text_color": "#ffffff",
-        "link_out": "\/account\/register"
+        "link_out": "\/account\/register",
+        "link_out_is_button": false,
+        "button_text": "Button Text",
+        "button_text_color": "#FFFFFF",
+        "button_background_color": "#000000"
       }
     },
     "custom_liquid_GgnKLH": {
