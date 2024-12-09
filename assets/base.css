@@ -3657,6 +3657,15 @@ body {
   z-index: 1;
 }
 
+.tj-simple-banner .inner-container h1,
+.tj-simple-banner .inner-container h2,
+.tj-simple-banner .inner-container h3,
+.tj-simple-banner .inner-container h4,
+.tj-simple-banner .inner-container h5,
+.tj-simple-banner .inner-container p {
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   .tj-simple-banner h2 {
     margin: 0 0 0.5rem 0;

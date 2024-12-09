@@ -11,7 +11,6 @@
             assign overlay_string = '0.' | append: percent
     endif 
 
-
 -%}
 
 {% assign image_overlay_opacity = section.settings.image_overlay_opacity | divided_by: 10  %}
@@ -22,9 +21,17 @@
         position: relative;
     }
 
-
-    [data-section-id="{{ section.id }}"] h2 {
+    [data-section-id="{{ section.id }}"] .inner-container h1,
+    [data-section-id="{{ section.id }}"] .inner-container h2,
+    [data-section-id="{{ section.id }}"] .inner-container h3,
+    [data-section-id="{{ section.id }}"] .inner-container h4, 
+    [data-section-id="{{ section.id }}"] .inner-container h5,
+    [data-section-id="{{ section.id }}"] .inner-container p  {
         color: {{ section.settings.text_color }};
+    }
+
+    [data-section-id="{{ section.id }}"] img {
+        min-height: {{ section.settings.mobile_min_height }}px;
     }
 
     {% if section.settings.mobile_image %}
@@ -50,7 +57,7 @@
     {% endif %}
         <div class="inner-container">
             {% if section.settings.header_text %}
-                <h2>{{ section.settings.header_text }}</h2>
+               {{ section.settings.header_text }}
             {% endif %}
             {% if section.settings.link_out_is_button %}
                 <a class="button button--primary" href="{{ section.settings.link_out }}">{{ section.settings.button_text }}</a>
@@ -102,6 +109,12 @@
                 "label": "Mobile Image (optional)"
             },
             {
+                "type": "number",
+                "id": "mobile_min_height",
+                "label": "Mobile Image Min Height (px)",
+                "default": 250
+            },
+            {
                 "type": "range",
                 "step": 10,
                 "id": "image_overlay_opacity",
@@ -117,10 +130,10 @@
                 "default": "Thrilljoy Banner Image"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "header_text",
                 "label": "Header Text (optional)",
-                "default": "Header Text"
+                "default": "<h3>Header Text</h3>"
             },
             {
                 "type": "color",

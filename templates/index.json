@@ -220,30 +220,18 @@
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
-      "disabled": true,
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/thrillseeker.png",
-        "image_overlay_opacity": 40,
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
+        "mobile_min_height": 250,
+        "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "Become a Thrillseeker",
+        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
         "link_out": "\/account\/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
-        "button_text_color": "#FFFFFF",
+        "button_text_color": "#ffffff",
         "button_background_color": "#000000"
-      }
-    },
-    "custom_liquid_GgnKLH": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "a {display: block;}"
-      ],
-      "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"\/account\/register\">\n  <img src=\"{{ 'thrillseeker.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"\/>\n<\/a>\n<\/div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "image_banner_HdAagz": {
@@ -315,16 +303,20 @@
         "padding_bottom": 36
       }
     },
-    "custom_liquid_AwTkRU": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "a {display: block;}"
-      ],
+    "simple_banner_with_text_DzdpE3": {
+      "type": "simple-banner-with-text",
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n<a href=\"\/pages\/frequently-asked-questions\">\n  <img src=\"{{ 'faqs.png' | file_url }}\" alt=\"Banner description\" style=\"width: 100%;\"\/>\n<\/a>\n<\/div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "mobile_min_height": 250,
+        "image_overlay_opacity": 30,
+        "image_alt_text": "Thrilljoy Banner Image",
+        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
+        "text_color": "#ffffff",
+        "link_out": "",
+        "link_out_is_button": false,
+        "button_text": "Button Text",
+        "button_text_color": "#ffffff",
+        "button_background_color": "#000000"
       }
     },
     "custom_liquid_kiRNTt": {
@@ -347,10 +339,9 @@
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
     "simple_banner_with_text_bHQMwg",
-    "custom_liquid_GgnKLH",
     "image_banner_HdAagz",
     "featured_collection_MwRKP6",
-    "custom_liquid_AwTkRU",
+    "simple_banner_with_text_DzdpE3",
     "custom_liquid_kiRNTt"
   ]
 }
