@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+    <meta name="google-site-verification" content="vzobP6c1OzTJ65B7Tx9B-b5PEobRhn-X933OXUaKNfc" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,6 +26,15 @@
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
+
+    {% if request.page_type == "blog" %}
+      <meta name="description" content="Stay up to date with news on Thrilljoy's limited-edition pop culture collectibles.">
+    {% endif %}
+
+    {% if request.path == "/pages/frequently-asked-questions" %}
+      <meta name="description" content="{{ shop.name }} | Frequently asked questions">
+    {% endif %}
+
 
     {% render 'meta-tags' %}
 
