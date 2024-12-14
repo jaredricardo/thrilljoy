@@ -81,7 +81,8 @@
           class: image_class,
           loading: lazy,
           sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+          fetchpriority: 'high'
       }}
     </div>
     <button
@@ -111,7 +112,7 @@
           <span class="visually-hidden">{{ 'products.product.media.play_video' | t }}</span>
           {%- render 'icon-play' -%}
         {%- endif -%}
-      </span>
+      </span> 
       {{
         media.preview_image
         | image_url: width: 1946
@@ -160,3 +161,13 @@
     {%- endif -%}
   {%- endif -%}
 </div>
+{% comment %} preloads product images {% endcomment %}
+<script style="display:none;">
+  document.addEventListener("DOMContentLoaded", () => {    
+    var link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = '{{ media.preview_image | image_url: width: 1946 }}'
+    document.head.appendChild(link)
+  })
+</script>

@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "slideshow_fABBbn": {
@@ -16,7 +7,7 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/vangogh.png",
+            "image": "shopify:\/\/shop_images\/vangogh.png",
             "url_link": "",
             "heading": "",
             "heading_size": "h1",
@@ -35,8 +26,8 @@
         "slide_JidRyN": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/elf_banner_2.001.jpg",
-            "url_link": "shopify://collections/pix",
+            "image": "shopify:\/\/shop_images\/elf_banner_2.001.jpg",
+            "url_link": "shopify:\/\/collections\/pix",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -54,8 +45,8 @@
         "slide_6LTFYz": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/holiday_apparel-_homepage.001.jpg",
-            "url_link": "shopify://collections/apparel",
+            "image": "shopify:\/\/shop_images\/holiday_apparel-_homepage.001.jpg",
+            "url_link": "shopify:\/\/collections\/apparel",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -101,54 +92,13 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify://shop_images/unnamed.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "image_banner_zkcmx7": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_Tw4miC": {
-          "type": "heading",
-          "settings": {
-            "heading": "Mega Pix!",
-            "heading_size": "hxxl"
-          }
-        },
-        "buttons_bN8Uqb": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/mega-pix",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Tw4miC",
-        "buttons_bN8Uqb"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
       }
     },
     "image_banner_h6zReh": {
@@ -158,6 +108,7 @@
           "type": "heading",
           "settings": {
             "heading": "Pix!",
+            "use_h1": false,
             "heading_size": "hxxl"
           }
         },
@@ -172,7 +123,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/pix",
+            "button_link_1": "shopify:\/\/collections\/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -186,8 +137,10 @@
         "buttons_YV9VM3"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy_1.webp",
         "image_overlay_opacity": 0,
+        "fetch_priority": "high",
+        "use_preload": true,
         "image_height": "small",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -230,13 +183,13 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
+        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "/account/register",
+        "link_out": "\/account\/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -250,6 +203,7 @@
           "type": "heading",
           "settings": {
             "heading": "Apparel",
+            "use_h1": false,
             "heading_size": "hxxl"
           }
         },
@@ -258,7 +212,7 @@
           "disabled": true,
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/apparel",
+            "button_link_1": "shopify:\/\/collections\/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -271,8 +225,10 @@
         "buttons_imY8D9"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy.png",
         "image_overlay_opacity": 0,
+        "fetch_priority": "auto",
+        "use_preload": false,
         "image_height": "small",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -315,13 +271,13 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
+        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "/pages/frequently-asked-questions",
+        "link_out": "\/pages\/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -334,7 +290,7 @@
         "a {display: block;}"
       ],
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs/news/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0672/1096/9252/files/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"/>\n    </a>\n</div>",
+        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs\/news\/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/1096\/9252\/files\/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"\/>\n    <\/a>\n<\/div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -344,7 +300,6 @@
   "order": [
     "slideshow_fABBbn",
     "video_mCN3Va",
-    "image_banner_zkcmx7",
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
     "simple_banner_with_text_bHQMwg",

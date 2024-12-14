@@ -45,11 +45,9 @@
     assign half_width = '50vw'
     assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
   endif
-  assign fetch_priority = 'auto'
-  if section.index == 1
-    assign fetch_priority = 'high'
-  endif
 -%}
+
+
 
 <div
   id="Banner-{{ section.id }}"
@@ -79,7 +77,7 @@
           class: image_class,
           sizes: sizes,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: section.settings.fetch_priority
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
@@ -174,6 +172,18 @@
   </div>
 </div>
 
+{% if section.settings.use_preload %}
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {    
+      var link = document.createElement('link')
+      link.rel = 'preload'
+      link.as = 'image'
+      link.href = '{{ section.settings.image | image_url: width: 3840 }}'
+      document.head.appendChild(link)
+    })
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
@@ -202,6 +212,31 @@
       "unit": "%",
       "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
       "default": 0
+    },
+    {
+      "type": "select",
+      "id": "fetch_priority",
+      "label": "Load priority for this image. Above fold should be higher.", 
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto"
+        },
+        {
+          "value": "high",
+          "label": "High"
+        },
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "label": "Use preload for image",
+      "id": "use_preload",
+      "default": false
     },
     {
       "type": "select",
