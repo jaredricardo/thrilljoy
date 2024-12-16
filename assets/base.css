@@ -3662,8 +3662,34 @@ body {
 .tj-simple-banner .inner-container h3,
 .tj-simple-banner .inner-container h4,
 .tj-simple-banner .inner-container h5,
-.tj-simple-banner .inner-container p {
+.tj-simple-banner .inner-container p,
+.tj-banner-carousel h1,
+.tj-banner-carousel h2,
+.tj-banner-carousel h3,
+.tj-banner-carousel h4,
+.tj-banner-carousel h5,
+.tj-banner-carousel p {
   margin: 0;
+}
+
+.tj-banner-carousel-slide {
+  position: relative;
+}
+
+.tj-banner-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.tj-banner-carousel-slide .text-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; 
+  left: 0;
 }
 
 @media screen and (max-width: 768px) {

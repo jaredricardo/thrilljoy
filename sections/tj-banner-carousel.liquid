@@ -1,0 +1,162 @@
+<div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in">
+    <div class="tj-banner-carousel swiper">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide" data-block-id="{{ block.id }}">
+                    {% render 'tj-banner-carousel-slide', block:block %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if section.settings.use_pagination_dots %}
+        <div class="swiper-pagination"></div>
+    {% endif %}
+
+    {% if section.settings.us_arrow_buttons %}
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    {% endif %}
+</div>
+
+<script>
+
+</script>
+
+{% schema %}
+    {
+        "name":"TJ Carousel",
+        "settings":[
+            {
+                "type": "number",
+                "id": "mobile_min_height",
+                "label": "Mobile Images Min Height (px)",
+                "default": 250
+            },
+            {
+                "type": "number",
+                "id": "auto_rotate_seconds",
+                "label": "Auto Rotate Timer (in seconds, 0 for disable)",
+                "default": 0
+            },
+            {
+                "type": "checkbox", 
+                "id": "use_arrow_buttons",
+                "label": "Use Arrows Buttons",
+                "default": true
+            },
+            {
+                "type": "checkbox", 
+                "id": "use_pagination_dots",
+                "label": "Use Pagination Dots",
+                "default": true
+            }
+        ],
+        "blocks": [
+            {
+                "type": "carousel",
+                "name": "TJ Banner Carousel",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "desktop_image",
+                        "label": "Desktop Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "mobile_image",
+                        "label": "Mobile Image (optional)"
+                    },
+                    {
+                        "type": "range",
+                        "step": 10,
+                        "id": "image_overlay_opacity",
+                        "label": "Image Overlay Opacity (%)",
+                        "min": 0,
+                        "max": 100,
+                        "default": 40
+                    },
+                    {
+                        "type": "text",
+                        "id": "image_alt_text",
+                        "label": "Image Alt Text (for SEO)",
+                        "default": "Thrilljoy Banner Image"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Text Settings"
+                    },
+                    {
+                        "type": "text",
+                        "id": "header",
+                        "label": "Header",
+                        "default": "Header Text"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "use_h1",
+                        "label": "Make Header H1",
+                        "default": false
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "subheader",
+                        "label": "Subheader",
+                        "default": "Subheader Text"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor."
+                    },
+                    {
+                        "type": "color",
+                        "id": "text_color",
+                        "label": "Text Color",
+                        "default": "#FFFFFF"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Button Settings"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Button Text",
+                        "default": "Button Text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_text_color",
+                        "label": "Button Text Color",
+                        "default": "#FFFFFF"
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_background_color",
+                        "label": "Button Background Color",
+                        "default": "#5fd551"
+                    },
+                    {
+                        "type": "url", 
+                        "id": "button_link",
+                        "label": "Button Link",
+                        "default": "/"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "use_slide_linkout",
+                        "label": "Use Entire Slide as Link",
+                        "default": false
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "TJ Banner Carousel"
+            }
+        ]
+    }
+{% endschema %}

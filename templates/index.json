@@ -1,5 +1,56 @@
 {
   "sections": {
+    "tj_banner_carousel_RUTTt9": {
+      "type": "tj-banner-carousel",
+      "blocks": {
+        "carousel_gkcgTF": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/elf_banner_2.001.jpg",
+            "image_overlay_opacity": 40,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Header Text",
+            "use_h1": false,
+            "subheader": "Subheader Text",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor.",
+            "text_color": "#ffffff",
+            "button_text": "Button Text",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "\/",
+            "use_slide_linkout": false
+          }
+        },
+        "carousel_TpANaE": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/holiday_apparel-_homepage.001.jpg",
+            "image_overlay_opacity": 40,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Header Text",
+            "use_h1": false,
+            "subheader": "Subheader Text",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor.",
+            "text_color": "#ec1c24",
+            "button_text": "Button Text",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "\/",
+            "use_slide_linkout": false
+          }
+        }
+      },
+      "block_order": [
+        "carousel_gkcgTF",
+        "carousel_TpANaE"
+      ],
+      "settings": {
+        "mobile_min_height": 250,
+        "auto_rotate_seconds": 0,
+        "use_arrow_buttons": true,
+        "use_pagination_dots": true
+      }
+    },
     "slideshow_fABBbn": {
       "type": "slideshow",
       "blocks": {
@@ -180,8 +231,8 @@
         "padding_bottom": 36
       }
     },
-    "simple_banner_with_text_bHQMwg": {
-      "type": "simple-banner-with-text",
+    "tj_simple_banner_with_text_fwd8Kz": {
+      "type": "tj-simple-banner-with-text",
       "settings": {
         "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
         "mobile_min_height": 250,
@@ -189,7 +240,7 @@
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "\/account\/register",
+        "link_out": "",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -268,16 +319,16 @@
         "padding_bottom": 36
       }
     },
-    "simple_banner_with_text_DzdpE3": {
-      "type": "simple-banner-with-text",
+    "tj_simple_banner_with_text_MN6wXJ": {
+      "type": "tj-simple-banner-with-text",
       "settings": {
         "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 30,
-        "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
+        "image_overlay_opacity": 40,
+        "image_alt_text": "Frequently Asked Questions",
+        "header_text": "<h2>What <\/h2><h2>the <\/h2><h2>FAQ?<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "\/pages\/frequently-asked-questions",
+        "link_out": "",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -298,14 +349,15 @@
     }
   },
   "order": [
+    "tj_banner_carousel_RUTTt9",
     "slideshow_fABBbn",
     "video_mCN3Va",
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
-    "simple_banner_with_text_bHQMwg",
+    "tj_simple_banner_with_text_fwd8Kz",
     "image_banner_HdAagz",
     "featured_collection_MwRKP6",
-    "simple_banner_with_text_DzdpE3",
+    "tj_simple_banner_with_text_MN6wXJ",
     "custom_liquid_kiRNTt"
   ]
 }
