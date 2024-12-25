@@ -1,3 +1,9 @@
+<style>
+    [data-section-id="{{ section.id }}"] {
+        position: relative;
+    }
+</style>
+
 <div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in">
     <div class="tj-banner-carousel swiper">
         <div class="swiper-wrapper">
@@ -20,8 +26,43 @@
 </div>
 
 <script>
+    window.addEventListener('DOMContentLoaded', () => {
 
+        const target = document.querySelector('[data-section-id="{{ section.id }}"] .swiper')
+        
+        if(!target) return
+
+        const swiper = new Swiper(target, {
+            spaceBetween: 0,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            centeredSlides: false,
+            loop: true,
+            speed: 400,
+            {% unless section.settings.auto_rotate_seconds == 0 %}
+            autoplay: {
+                delay: {{ section.settings.auto_rotate_seconds }},
+
+            },
+            {% endunless %}
+            {% if section.settings.use_pagination_dots %}
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            {% endif %}
+            {% if section.settings.us_arrow_buttons %}
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+            {% endif %}
+        })
+
+    })
 </script>
+
+
 
 {% schema %}
     {
@@ -36,7 +77,7 @@
             {
                 "type": "number",
                 "id": "auto_rotate_seconds",
-                "label": "Auto Rotate Timer (in seconds, 0 for disable)",
+                "label": "Auto Rotate Timer (in Milliseconds, 0 for disable)",
                 "default": 0
             },
             {

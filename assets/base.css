@@ -3683,6 +3683,18 @@ body {
   vertical-align: bottom;
 }
 
+body .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  background: #e6e6e6 !important;
+  opacity: .65;
+}
+
+body .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #5fd551 !important;
+  opacity: 1;
+}
+
 .tj-banner-carousel-slide .text-container {
   width: 100%;
   height: 100%;
@@ -3690,6 +3702,7 @@ body {
   position: absolute;
   top: 0; 
   left: 0;
+  z-index: 3;
 }
 
 @media screen and (max-width: 768px) {

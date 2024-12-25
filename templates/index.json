@@ -46,7 +46,7 @@
       ],
       "settings": {
         "mobile_min_height": 250,
-        "auto_rotate_seconds": 0,
+        "auto_rotate_seconds": 5000,
         "use_arrow_buttons": true,
         "use_pagination_dots": true
       }
