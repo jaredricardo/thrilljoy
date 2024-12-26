@@ -11,17 +11,40 @@
             assign overlay_string = '0.' | append: percent
     endif 
 
+
+    assign mob_header_margin_bottom = block.settings.header_margin_bottom | times: 0.5
+    assign mob_subheader_margin_bottom = block.settings.subheader_margin_bottom | times: 0.5
+    assign mob_description_margin_bottom = block.settings.description_margin_bottom | times: 0.5
+
+
 -%}
 
 {% style %}
 
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] {
         position: relative;
+        height: auto;
+    }
+
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .text-container {
+        max-width: {{ block.settings.text_container_max_width }}%;
     }
 
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .button {
         background-color: {{ block.settings.button_background_color }}; 
         color: {{ block.settings.button_text_color }};
+    }
+
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h1,
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h2 {
+        margin-bottom: {{ block.settings.header_margin_bottom }}px;
+    }
+
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h3 {
+        margin-bottom: {{ block.settings.subheader_margin_bottom }}px;
+    }
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] p {
+        margin-bottom: {{ block.settings.description_margin_bottom }}px;
     }
 
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .tj-banner-carousel-slide h1,
@@ -31,6 +54,24 @@
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .tj-banner-carousel-slide h5,
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .tj-banner-carousel-slide p  {
         color: {{ block.settings.text_color }};
+    }
+
+    @media screen and (max-width: 768px) {
+        [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .text-container  {
+            max-width: 95%;
+            width: 95%;
+        }
+        [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h1,
+        [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h2 {
+            margin-bottom: {{ mob_header_margin_bottom }}px;
+        }
+
+        [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h3 {
+            margin-bottom: {{ mob_subheader_margin_bottom }}px;
+        }
+        [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] p {
+            margin-bottom: {{ mob_description_margin_bottom }}px;
+        }
     }
 
     {% if block.settings.mobile_image %}

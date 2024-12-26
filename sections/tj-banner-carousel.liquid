@@ -1,6 +1,31 @@
 <style>
     [data-section-id="{{ section.id }}"] {
         position: relative;
+        height: auto;
+    }
+
+    [data-section-id="{{ section.id }}"] .text-container {
+        text-align: {{ section.settings.text_alignment }};
+        {% unless section.settings.complete_center %}
+            top: {{ section.settings.text_container_top_pos }}%;
+            left: {{ section.settings.text_container_left_pos }}%;
+        {% else %}
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        {% endunless %}
+    }
+    
+
+    @media screen and (max-width: 768px) {
+        [data-section-id="{{ section.id }}"] .text-container {
+            top: {{ section.settings.top_pos_mobile }}%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        [data-section-id="{{ section.id }}"] img {
+            min-height: {{ section.settings.mobile_min_height }}px;
+        }
     }
 </style>
 
@@ -75,6 +100,54 @@
                 "default": 250
             },
             {
+                "type": "header",
+                "content": "Content container general position settings"
+            },
+            {
+                "type": "checkbox",
+                "id": "complete_center",
+                "label": "Center Text Container (overrides top and left position)",
+                "default": false
+            },
+            {
+                "type": "select",
+                "id": "text_alignment",
+                "label": "Text Alignment",
+                "default": "left",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "Center"
+                    }
+                ]
+            },
+            {
+                "type": "number",
+                "id": "text_container_top_pos",
+                "label": "Text Container Top Position (%)",
+                "default": 25
+            },
+            {
+                "type": "number",
+                "id": "text_container_left_pos",
+                "label": "Text Container Left Position (%)",
+                "default": 5
+            },
+            {
+                "type": "number",
+                "id": "top_pos_mobile",
+                "label": "Text Container Top Position on Mobile (%)",
+                "default": 40
+            },
+            {
+                "type": "header",
+                "content": "Carousel Settings"
+            },
+            {
                 "type": "number",
                 "id": "auto_rotate_seconds",
                 "label": "Auto Rotate Timer (in Milliseconds, 0 for disable)",
@@ -140,10 +213,22 @@
                         "default": false
                     },
                     {
+                        "type": "number",
+                        "id": "header_margin_bottom",
+                        "label": "Header Bottom Margin (px)",
+                        "default": 16
+                    },
+                    {
                         "type": "textarea",
                         "id": "subheader",
                         "label": "Subheader",
                         "default": "Subheader Text"
+                    },
+                    {
+                        "type": "number",
+                        "id": "subheader_margin_bottom",
+                        "label": "Subheader Bottom Margin (px)",
+                        "default": 16
                     },
                     {
                         "type": "textarea",
@@ -152,10 +237,22 @@
                         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor."
                     },
                     {
+                        "type": "number",
+                        "id": "description_margin_bottom",
+                        "label": "Description Bottom Margin (px)",
+                        "default": 32
+                    },
+                    {
                         "type": "color",
                         "id": "text_color",
                         "label": "Text Color",
                         "default": "#FFFFFF"
+                    },
+                    {
+                        "type": "number",
+                        "id": "text_container_max_width",
+                        "label": "Text Container Max Width (%)",
+                        "default": 50
                     },
                     {
                         "type": "header",
