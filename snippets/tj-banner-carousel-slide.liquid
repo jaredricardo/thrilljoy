@@ -75,14 +75,14 @@
     }
 
     {% if block.settings.mobile_image %}
-        [data-section-id="{{ block.id }}"] .tj-banner-carousel-slide img.mobile {
+        [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .tj-banner-carousel-slide img.mobile {
             display: none;
         }
         @media screen and (max-width: 768px) {
-            [data-section-id="{{ section.id }}"] .tj-banner-carousel-slide img.desktop  {
+            [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .tj-banner-carousel-slide img.desktop  {
                 display: none;
             }
-            [data-section-id="{{ section.id }}"] .tj-banner-carousel-slide img.mobile {
+            [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .tj-banner-carousel-slide img.mobile {
                 display: block;
             }
         }

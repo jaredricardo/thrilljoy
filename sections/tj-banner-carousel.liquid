@@ -29,7 +29,7 @@
     }
 </style>
 
-<div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in">
+<div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in tj-banner-carousel-wrapper">
     <div class="tj-banner-carousel swiper">
         <div class="swiper-wrapper">
             {% for block in section.blocks %}
@@ -44,7 +44,7 @@
         <div class="swiper-pagination"></div>
     {% endif %}
 
-    {% if section.settings.us_arrow_buttons %}
+    {% if section.settings.use_arrow_buttons %}
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     {% endif %}
@@ -76,10 +76,10 @@
                 clickable: true
             },
             {% endif %}
-            {% if section.settings.us_arrow_buttons %}
+            {% if section.settings.use_arrow_buttons %}
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
+                nextEl: '[data-section-id="{{ section.id }}"] .swiper-button-next',
+                prevEl: '[data-section-id="{{ section.id }}"] .swiper-button-prev'
             }
             {% endif %}
         })
@@ -156,8 +156,8 @@
             {
                 "type": "checkbox", 
                 "id": "use_arrow_buttons",
-                "label": "Use Arrows Buttons",
-                "default": true
+                "label": "Use Arrows Buttons (desktop only)",
+                "default": false
             },
             {
                 "type": "checkbox", 
