@@ -1,70 +1,5 @@
 {
   "sections": {
-    "tj_banner_carousel_RUTTt9": {
-      "type": "tj-banner-carousel",
-      "blocks": {
-        "carousel_gkcgTF": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/bg-thrilljoy.webp",
-            "mobile_image": "shopify:\/\/shop_images\/ThriljoyPIXBlooNewyears_2.jpg",
-            "image_overlay_opacity": 40,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Header Text",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "Subheader Text",
-            "subheader_margin_bottom": 16,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor.",
-            "description_margin_bottom": 32,
-            "text_color": "#ffffff",
-            "text_container_max_width": 50,
-            "button_text": "Button Text",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
-            "button_link": "\/",
-            "use_slide_linkout": false
-          }
-        },
-        "carousel_TpANaE": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/holiday_apparel-_homepage.001.jpg",
-            "image_overlay_opacity": 40,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Header Text",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "Subheader Text",
-            "subheader_margin_bottom": 16,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor.",
-            "description_margin_bottom": 32,
-            "text_color": "#ec1c24",
-            "text_container_max_width": 50,
-            "button_text": "Button Text",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
-            "button_link": "\/",
-            "use_slide_linkout": false
-          }
-        }
-      },
-      "block_order": [
-        "carousel_gkcgTF",
-        "carousel_TpANaE"
-      ],
-      "settings": {
-        "mobile_min_height": 250,
-        "complete_center": false,
-        "text_alignment": "left",
-        "text_container_top_pos": 25,
-        "text_container_left_pos": 5,
-        "top_pos_mobile": 40,
-        "auto_rotate_seconds": 0,
-        "use_arrow_buttons": false,
-        "use_pagination_dots": true
-      }
-    },
     "slideshow_fABBbn": {
       "type": "slideshow",
       "blocks": {
@@ -363,7 +298,6 @@
     }
   },
   "order": [
-    "tj_banner_carousel_RUTTt9",
     "slideshow_fABBbn",
     "video_mCN3Va",
     "image_banner_h6zReh",
