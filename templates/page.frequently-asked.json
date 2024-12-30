@@ -36,8 +36,6 @@
       "settings": {
         "image": "shopify://shop_images/header-example.png",
         "image_overlay_opacity": 40,
-        "fetch_priority": "auto",
-        "use_preload": false,
         "image_height": "adapt",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -438,7 +436,7 @@
           "settings": {
             "heading": "What happens if my package is lost or stolen?",
             "icon": "none",
-            "row_content": "<p>If your package hasn’t arrived or appears to be missing, don’t worry—our Customer Service Team is here to help! Simply reach out to us directly to report the issue.</p><p><br/>We’ll handle the process of investigating the missing shipment with the carrier on your behalf and work to resolve the situation as quickly as possible.</p>",
+            "row_content": "<p>If you experience a missing shipment, please file a claim with the appropriate carrier. </p><p><span style=\"text-decoration:underline\">For US Shipments:</span> Contact UPS customer service or visit their website for assistance. </p><p><span style=\"text-decoration:underline\">For Canadian Shipments:</span> Contact DHL for any missing shipments.  </p><p>You can file a claim directly on their websites or contact their respective customer service teams for support.</p>",
             "page": ""
           }
         },
