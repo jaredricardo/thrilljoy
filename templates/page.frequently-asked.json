@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_MjGMb4": {
@@ -25,8 +34,10 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/header-example.png",
+        "image": "shopify://shop_images/header-example.png",
         "image_overlay_opacity": 40,
+        "fetch_priority": "auto",
+        "use_preload": false,
         "image_height": "adapt",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -104,7 +115,7 @@
           "settings": {
             "heading": "How do I place an order?",
             "icon": "none",
-            "row_content": "<p>All customers must have an <a href=\"\/account\/register\" title=\"\/account\/register\">account<\/a> on our website to purchase products.<strong> <\/strong> <\/p><p>Ongoing drops will be hosted <em>exclusively <\/em>on Thrilljoy.com- schedule to be announced post-NYCC.  <\/p><p>Our virtual queue will allow you to reserve your spot for the drop. Once the sale goes live, the queue will be randomized. This ensures a smooth and orderly experience for everyone. <\/p><p>Once you’re in the queue, you’ll receive updates on your position and estimated wait time. You’ll be notified when it’s your turn to enter the sale. <\/p><p><em><strong>NOTE<\/strong><\/em>: To maintain a quality experience, there may be a limit on the number of participants.  <\/p><p>Once you enter the sale, simply browse our current drops, select what you’d like, and click “Add to Cart.” Once you’re ready, go to your cart and follow the checkout prompts! <\/p><p>If you miss your turn, you may have to wait until the next opportunity. Keep an eye on social for updates! <\/p>",
+            "row_content": "<p>All customers must have an <a href=\"/account/register\" title=\"/account/register\">account</a> on our website to purchase products.<strong> </strong> </p><p>Ongoing drops will be hosted <em>exclusively </em>on Thrilljoy.com- schedule to be announced post-NYCC.  </p><p>Our virtual queue will allow you to reserve your spot for the drop. Once the sale goes live, the queue will be randomized. This ensures a smooth and orderly experience for everyone. </p><p>Once you’re in the queue, you’ll receive updates on your position and estimated wait time. You’ll be notified when it’s your turn to enter the sale. </p><p><em><strong>NOTE</strong></em>: To maintain a quality experience, there may be a limit on the number of participants.  </p><p>Once you enter the sale, simply browse our current drops, select what you’d like, and click “Add to Cart.” Once you’re ready, go to your cart and follow the checkout prompts! </p><p>If you miss your turn, you may have to wait until the next opportunity. Keep an eye on social for updates! </p>",
             "page": ""
           }
         },
@@ -113,7 +124,7 @@
           "settings": {
             "heading": "Can I modify or cancel my order after placing it?",
             "icon": "none",
-            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!<\/p>",
+            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!</p>",
             "page": ""
           }
         },
@@ -122,7 +133,7 @@
           "settings": {
             "heading": "When will my order ship?",
             "icon": "none",
-            "row_content": "<p>Online orders from our first ever drop will be shipped within 2-4weeks. We appreciate your patience and look forward to delivering your products promptly!<\/p>",
+            "row_content": "<p>Online orders from our first ever drop will be shipped within 2-4weeks. We appreciate your patience and look forward to delivering your products promptly!</p>",
             "page": ""
           }
         },
@@ -131,7 +142,7 @@
           "settings": {
             "heading": "Do you offer international shipping?",
             "icon": "none",
-            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only. Import duty and tax charges are not included in the shipping price and will be calculated during checkout.<\/p>",
+            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only. Import duty and tax charges are not included in the shipping price and will be calculated during checkout.</p>",
             "page": ""
           }
         },
@@ -140,7 +151,7 @@
           "settings": {
             "heading": "How can I track my order?",
             "icon": "none",
-            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. <\/p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress. <\/p>",
+            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. </p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress. </p>",
             "page": ""
           }
         }
@@ -200,7 +211,7 @@
           "settings": {
             "heading": "What payment methods do you accept?",
             "icon": "none",
-            "row_content": "<p>We accept major credit cards and any other options listed at checkout.<\/p>",
+            "row_content": "<p>We accept major credit cards and any other options listed at checkout.</p>",
             "page": ""
           }
         },
@@ -209,7 +220,7 @@
           "settings": {
             "heading": "Is my payment information secure?",
             "icon": "none",
-            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your payment information.<\/p>",
+            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your payment information.</p>",
             "page": ""
           }
         },
@@ -218,7 +229,7 @@
           "settings": {
             "heading": "Can I change my payment method after placing an order?",
             "icon": "none",
-            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!<\/p>",
+            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!</p>",
             "page": ""
           }
         },
@@ -227,7 +238,7 @@
           "settings": {
             "heading": "When will my card be charged?",
             "icon": "none",
-            "row_content": "<p>All payments are processed at the time of purchase.<\/p>",
+            "row_content": "<p>All payments are processed at the time of purchase.</p>",
             "page": ""
           }
         },
@@ -236,7 +247,7 @@
           "settings": {
             "heading": "What currency will I be charged in?",
             "icon": "none",
-            "row_content": "<p>All prices are listed and will be charged in USD.<\/p>",
+            "row_content": "<p>All prices are listed and will be charged in USD.</p>",
             "page": ""
           }
         }
@@ -296,7 +307,7 @@
           "settings": {
             "heading": "What is your returns and exchanges policy?",
             "icon": "none",
-            "row_content": "<p>At Thrilljoy, we strive to provide the highest quality collectibles. Because of the extremely limited nature of our product, we will not allow returns or exchanges. Please note that all sales are final. Thank you for your understanding!<\/p>",
+            "row_content": "<p>At Thrilljoy, we strive to provide the highest quality collectibles. Because of the extremely limited nature of our product, we will not allow returns or exchanges. Please note that all sales are final. Thank you for your understanding!</p>",
             "page": ""
           }
         },
@@ -305,7 +316,7 @@
           "settings": {
             "heading": "What if my item is damaged or defective?",
             "icon": "none",
-            "row_content": "<p>If you receive a damaged or defective item, please contact our customer service within 48 hours of delivery to start the inspection process.<\/p>",
+            "row_content": "<p>If you receive a damaged or defective item, please contact our customer service within 48 hours of delivery to start the inspection process.</p>",
             "page": ""
           }
         },
@@ -314,7 +325,7 @@
           "settings": {
             "heading": "What should I do if I received the wrong item?",
             "icon": "none",
-            "row_content": "<p>If you receive the wrong item, please contact our customer service within 48 hours of delivery to start the inspection process.<\/p>",
+            "row_content": "<p>If you receive the wrong item, please contact our customer service within 48 hours of delivery to start the inspection process.</p>",
             "page": ""
           }
         },
@@ -323,7 +334,7 @@
           "settings": {
             "heading": "How do I contact customer service?",
             "icon": "none",
-            "row_content": "<p>We will provide the customer service e-mail form once product goes live.<\/p>",
+            "row_content": "<p>We will provide the customer service e-mail form once product goes live.</p>",
             "page": ""
           }
         }
@@ -382,7 +393,7 @@
           "settings": {
             "heading": "How long will it take for my order to arrive?",
             "icon": "none",
-            "row_content": "<p>Online orders from our first ever drop will be shipped within 2-4 weeks. We appreciate your patience and look forward to delivering your products promptly!<\/p>",
+            "row_content": "<p>Online orders from our first ever drop will be shipped within 2-4 weeks. We appreciate your patience and look forward to delivering your products promptly!</p>",
             "page": ""
           }
         },
@@ -391,7 +402,7 @@
           "settings": {
             "heading": "Do you ship internationally?",
             "icon": "none",
-            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only.Import duty and tax charges are not included in the shipping price and will be calculated during checkout.<\/p>",
+            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only.Import duty and tax charges are not included in the shipping price and will be calculated during checkout.</p>",
             "page": ""
           }
         },
@@ -400,7 +411,7 @@
           "settings": {
             "heading": "How can I track my shipment?",
             "icon": "none",
-            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. <\/p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress.<\/p>",
+            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. </p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress.</p>",
             "page": ""
           }
         },
@@ -409,7 +420,7 @@
           "settings": {
             "heading": "Is there a shipping fee?",
             "icon": "none",
-            "row_content": "<p>Yes, shipping fees will be calculated at checkout based on weight.<\/p>",
+            "row_content": "<p>Yes, shipping fees will be calculated at checkout based on weight.</p>",
             "page": ""
           }
         },
@@ -418,7 +429,7 @@
           "settings": {
             "heading": "Can I change my shipping address after placing an order?",
             "icon": "none",
-            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!<\/p>",
+            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!</p>",
             "page": ""
           }
         },
@@ -427,7 +438,7 @@
           "settings": {
             "heading": "What happens if my package is lost or stolen?",
             "icon": "none",
-            "row_content": "<p>If you experience a missing shipment, please file a claim with the appropriate carrier. <\/p><p><span style=\"text-decoration:underline\">For US Shipments:<\/span> Contact UPS customer service or visit their website for assistance. <\/p><p><span style=\"text-decoration:underline\">For Canadian Shipments:<\/span> Contact DHL for any missing shipments.  <\/p><p>You can file a claim directly on their websites or contact their respective customer service teams for support.<\/p>",
+            "row_content": "<p>If your package hasn’t arrived or appears to be missing, don’t worry—our Customer Service Team is here to help! Simply reach out to us directly to report the issue.<br/>We’ll handle the process of investigating the missing shipment with the carrier on your behalf and work to resolve the situation as quickly as possible.</p>",
             "page": ""
           }
         },
@@ -436,7 +447,7 @@
           "settings": {
             "heading": "Do you offer free shipping?",
             "icon": "none",
-            "row_content": "<p>At this time, we are not offering free shipping.<\/p>",
+            "row_content": "<p>At this time, we are not offering free shipping.</p>",
             "page": ""
           }
         }
@@ -498,7 +509,7 @@
           "settings": {
             "heading": "How can I find out about upcoming product launches?",
             "icon": "none",
-            "row_content": "<p>Make sure you follow @thrilljoycollectibles on social and are signed up for our newsletter to receive the latest information on new product releases!<\/p>",
+            "row_content": "<p>Make sure you follow @thrilljoycollectibles on social and are signed up for our newsletter to receive the latest information on new product releases!</p>",
             "page": ""
           }
         },
@@ -507,7 +518,7 @@
           "settings": {
             "heading": "Do you have pre-order options for upcoming releases?",
             "icon": "none",
-            "row_content": "<p>Some pre-order items may take up to 45 days for delivery. Each product page will clearly indicate the expected shipping timeframe for that specific item.<\/p>",
+            "row_content": "<p>Some pre-order items may take up to 45 days for delivery. Each product page will clearly indicate the expected shipping timeframe for that specific item.</p>",
             "page": ""
           }
         },
@@ -516,7 +527,7 @@
           "settings": {
             "heading": "What happens if I miss the release of an item?",
             "icon": "none",
-            "row_content": "<p>If a limited-edition item sells out, we know it can be a huge bummer! Unfortunately, once it’s gone, it won’t be available again. Definitely stay tunedfor upcoming announcementsof future drops, as we often introduce new collections that might pique your interest!<\/p>",
+            "row_content": "<p>If a limited-edition item sells out, we know it can be a huge bummer! Unfortunately, once it’s gone, it won’t be available again. Definitely stay tunedfor upcoming announcementsof future drops, as we often introduce new collections that might pique your interest!</p>",
             "page": ""
           }
         }
@@ -574,7 +585,7 @@
           "settings": {
             "heading": "How do you protect my personal information?",
             "icon": "none",
-            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your personal information.<\/p>",
+            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your personal information.</p>",
             "page": ""
           }
         },
@@ -583,7 +594,7 @@
           "settings": {
             "heading": "Do you share my information with third parties?",
             "icon": "none",
-            "row_content": "<p>We do not sell or share your personal information with third parties, except as required by law or to fulfill your order with shipping providers.<\/p>",
+            "row_content": "<p>We do not sell or share your personal information with third parties, except as required by law or to fulfill your order with shipping providers.</p>",
             "page": ""
           }
         },
@@ -592,7 +603,7 @@
           "settings": {
             "heading": "What measures are in place to prevent fraud?",
             "icon": "none",
-            "row_content": "<p>At Thrilljoy, we want to make sure our limited drops get into the hands of our fans. We have invested in advanced measuresto protect your information and guard against bots.<\/p>",
+            "row_content": "<p>At Thrilljoy, we want to make sure our limited drops get into the hands of our fans. We have invested in advanced measuresto protect your information and guard against bots.</p>",
             "page": ""
           }
         }
@@ -631,7 +642,7 @@
         "text_nELHtE": {
           "type": "text",
           "settings": {
-            "text": "<p>We are THRILLED to let you know that a loyalty program is in the works, designed to reward you for your continued support. Stay tuned for more details!<\/p><p><strong>To make this all happen, we need you to create an account on our website<\/strong>. Why? So we can start tracking your points from day one for all <a href=\"https:\/\/thrilljoy.com\" title=\"https:\/\/thrilljoy.com\">thrilljoy.com<\/a> purchases! <br\/><br\/>Stay tuned for more details!<\/p>"
+            "text": "<p>We are THRILLED to let you know that a loyalty program is in the works, designed to reward you for your continued support. Stay tuned for more details!</p><p><strong>To make this all happen, we need you to create an account on our website</strong>. Why? So we can start tracking your points from day one for all <a href=\"https://thrilljoy.com\" title=\"https://thrilljoy.com\">thrilljoy.com</a> purchases! <br/><br/>Stay tuned for more details!</p>"
           }
         }
       },
