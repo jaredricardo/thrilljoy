@@ -438,7 +438,7 @@
           "settings": {
             "heading": "What happens if my package is lost or stolen?",
             "icon": "none",
-            "row_content": "<p>If your package hasn’t arrived or appears to be missing, don’t worry—our Customer Service Team is here to help! Simply reach out to us directly to report the issue.<br/>We’ll handle the process of investigating the missing shipment with the carrier on your behalf and work to resolve the situation as quickly as possible.</p>",
+            "row_content": "<p>If your package hasn’t arrived or appears to be missing, don’t worry—our Customer Service Team is here to help! Simply reach out to us directly to report the issue.</p><p><br/>We’ll handle the process of investigating the missing shipment with the carrier on your behalf and work to resolve the situation as quickly as possible.</p>",
             "page": ""
           }
         },
