@@ -35,7 +35,6 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {}
         },
         "text_UCqMyQ": {
@@ -127,6 +126,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>1-of-6 ODDS OF A CHASE!<\/strong>",
+            "use_h1": false,
             "heading_size": "h1"
           }
         },

@@ -1,14 +1,22 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "slideshow_fABBbn": {
       "type": "slideshow",
       "blocks": {
         "slide_Jczrad": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/vangogh.png",
-            "url_link": "",
+            "image": "shopify://shop_images/NYBloo-COMMON_BANNER_1.png",
+            "url_link": "shopify://products/pix-bloo-new-years",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -26,8 +34,8 @@
         "slide_JidRyN": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/elf_banner_2.001.jpg",
-            "url_link": "shopify:\/\/collections\/pix",
+            "image": "shopify://shop_images/NYBloo-CHASE_BANNER_2.png",
+            "url_link": "shopify://products/pix-bloo-new-years",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -45,8 +53,8 @@
         "slide_6LTFYz": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday_apparel-_homepage.001.jpg",
-            "url_link": "shopify:\/\/collections\/apparel",
+            "image": "shopify://shop_images/NYBloo-SUPERCHASE_BANNER_1.png",
+            "url_link": "shopify://products/pix-bloo-new-years",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -92,8 +100,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
+        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify://shop_images/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -123,7 +131,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/pix",
+            "button_link_1": "shopify://collections/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -137,7 +145,7 @@
         "buttons_YV9VM3"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy_1.webp",
+        "image": "shopify://shop_images/bg-thrilljoy_1.webp",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -180,16 +188,16 @@
         "padding_bottom": 36
       }
     },
-    "tj_simple_banner_with_text_fwd8Kz": {
-      "type": "tj-simple-banner-with-text",
+    "simple_banner_with_text_bHQMwg": {
+      "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
+        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
-        "link_out": "",
+        "link_out": "/account/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -212,7 +220,7 @@
           "disabled": true,
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/apparel",
+            "button_link_1": "shopify://collections/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -225,7 +233,7 @@
         "buttons_imY8D9"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy.png",
+        "image": "shopify://shop_images/bg-thrilljoy.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -268,32 +276,36 @@
         "padding_bottom": 36
       }
     },
-    "tj_simple_banner_with_text_MN6wXJ": {
-      "type": "tj-simple-banner-with-text",
+    "simple_banner_with_text_DzdpE3": {
+      "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 40,
-        "image_alt_text": "Frequently Asked Questions",
-        "header_text": "<h2>What <\/h2><h2>the <\/h2><h2>FAQ?<\/h2>",
+        "image_overlay_opacity": 30,
+        "image_alt_text": "Thrilljoy Banner Image",
+        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
         "text_color": "#ffffff",
-        "link_out": "",
+        "link_out": "/pages/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
         "button_background_color": "#000000"
       }
     },
-    "custom_liquid_kiRNTt": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "a {display: block;}"
-      ],
+    "simple_banner_with_text_K6HdPp": {
+      "type": "simple-banner-with-text",
       "settings": {
-        "custom_liquid": "<div style=\"margin: -10px;\">\n    <a href=\"blogs\/news\/it-s-tiiiiiiiiiiiime-🎄🔥\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/1096\/9252\/files\/the_ultimate_holiday_drop.png?v=1732604625\" alt=\"Banner description\" style=\"width: 100%; height: 100%;\"\/>\n    <\/a>\n<\/div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "desktop_image": "shopify://shop_images/Untitled_design.svg",
+        "mobile_min_height": 250,
+        "image_overlay_opacity": 0,
+        "image_alt_text": "Thrilljoy Banner Image",
+        "header_text": "<h2>Out with the old, </h2><h2>in with the BLOO</h2>",
+        "text_color": "#ffffff",
+        "link_out": "shopify://blogs/news/out-with-the-old-in-with-the-bloo",
+        "link_out_is_button": false,
+        "button_text": "Button Text",
+        "button_text_color": "#ffffff",
+        "button_background_color": "#000000"
       }
     }
   },
@@ -302,10 +314,10 @@
     "video_mCN3Va",
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
-    "tj_simple_banner_with_text_fwd8Kz",
+    "simple_banner_with_text_bHQMwg",
     "image_banner_HdAagz",
     "featured_collection_MwRKP6",
-    "tj_simple_banner_with_text_MN6wXJ",
-    "custom_liquid_kiRNTt"
+    "simple_banner_with_text_DzdpE3",
+    "simple_banner_with_text_K6HdPp"
   ]
 }
