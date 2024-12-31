@@ -42,6 +42,14 @@
   endif
 -%}
 
+<style>
+  @media screen and (max-width: 768px) {
+    #MediaGallery-{{ section.id }} {
+      justify-content: start;
+   }
+  }
+</style>
+
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
