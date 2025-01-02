@@ -3698,10 +3698,49 @@ body {
   align-items: center;
 }
 
+.tj-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.tj-breadcrumbs  svg {
+  transform: rotate(270deg);
+  width: 15px;
+  height: 15px;
+  color: black;
+}
+
+.tj-breadcrumbs .breadcrumb {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.tj-breadcrumbs .breadcrumb.current {
+  color: #121212bf;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   .tj-banner-carousel-wrapper .swiper-button-prev,
   .tj-banner-carousel-wrapper .swiper-button-next {
     display: none;
+  }
+  .tj-breadcrumbs {
+    column-gap: .5rem;
+    row-gap: 0;
+  }
+  .tj-breadcrumbs .breadcrumb {
+    font-size: 12px;
   }
 }
 

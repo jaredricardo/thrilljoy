@@ -1,3 +1,15 @@
+{% liquid 
+
+  assign is_apparel = false
+  assign apparel_products = collections['apparel'].products
+    
+  for app_product in apparel_products
+    if product.id == app_product.id
+      assign is_apparel = true
+    endif
+  endfor
+
+-%}
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -198,6 +210,21 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
+    <div class="tj-breadcrumbs">
+      <a class="breadcrumb" href="{{ routes.root_url }}">Home</a>
+      {% render 'icon-caret' %}
+      {% case product.type %}
+        {% when "PIX!" %}
+          <a class="breadcrumb" href="{{ collections['pix'].url }}">{{ product.type }}</a>
+        {% when "MEGA PIX!" %}
+          <a class="breadcrumb" href="{{ collections['mega-pix'].url }}">{{ product.type }}</a>
+      {% endcase %}
+      {% if is_apparel %}
+        <a class="breadcrumb" href="{{ collections['apparel'].url }}">Apparel</a>
+      {% endif %}
+      {% render 'icon-caret' %}
+      <p class="breadcrumb current">{{ product.title | truncate: 25 }}</p>
+    </div>
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
