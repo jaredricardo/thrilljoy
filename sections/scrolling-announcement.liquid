@@ -1,3 +1,5 @@
+<script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
+
 {% if section.blocks.size == 1 %}
     <style>
       [data-section-id="{{ section.id }}"] scrolling-text {
@@ -70,26 +72,7 @@
           }
           
       </style>
-  
-  
-      {% if section.settings.append_as_sticky_header %}
-        <style>
 
-            [data-section-id="{{ section.id }}"].announcement--root--sticky {
-                display: none;
-            }
-
-            .scrolled-past-header [data-section-id="{{ section.id }}"].announcement--root {
-              display: none;
-            }
-            .scrolled-past-header [data-section-id="{{ section.id }}"].announcement--root--sticky {
-              display: block;
-            }
-          .site-header {
-            padding-top: 0 !important;
-          }
-        </style>
-      {% endif %}
   
       <div
         class="announcement--root"
@@ -137,12 +120,6 @@
   {
     "name": "Announcement bar",
     "settings": [
-      {
-        "type":"checkbox",
-        "id": "append_as_sticky_header",
-        "label": "Append as sticky header (ONLY USE FOR ONE SCROLL SECTION ON PAGE)",
-        "default": false
-      },
       {
         "type": "number",
         "id": "text_margin",

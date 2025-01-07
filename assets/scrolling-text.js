@@ -94,7 +94,7 @@ if (typeof ScrollingText !== "function") {
             const speed = window.innerWidth > 768 ? parseInt(this.dataset.scrollingSpeed) : parseInt(this.dataset.scrollingSpeed) / 1.5;
             const direction = this.dataset.scrollingDirection;
             const scrolling_text = new ScrollingText(this, speed, direction);
-            // scrolling_text.start(direction);
+            scrolling_text.start(direction);
 
 
             const carusel = this;
