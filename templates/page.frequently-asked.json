@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner_MjGMb4": {
@@ -115,7 +106,7 @@
           "settings": {
             "heading": "How do I place an order?",
             "icon": "none",
-            "row_content": "<p>All customers must have an <a href=\"\/account\/register\" title=\"\/account\/register\">account<\/a> on our website to purchase products.<strong> <\/strong> <\/p><p>Ongoing drops will be hosted <em>exclusively <\/em>on Thrilljoy.com- schedule to be announced post-NYCC.  <\/p><p>Our virtual queue will allow you to reserve your spot for the drop. Once the sale goes live, the queue will be randomized. This ensures a smooth and orderly experience for everyone. <\/p><p>Once you’re in the queue, you’ll receive updates on your position and estimated wait time. You’ll be notified when it’s your turn to enter the sale. <\/p><p><em><strong>NOTE<\/strong><\/em>: To maintain a quality experience, there may be a limit on the number of participants.  <\/p><p>Once you enter the sale, simply browse our current drops, select what you’d like, and click “Add to Cart.” Once you’re ready, go to your cart and follow the checkout prompts! <\/p><p>If you miss your turn, you may have to wait until the next opportunity. Keep an eye on social for updates! <\/p>",
+            "row_content": "<p>Ongoing drops will be hosted <em>exclusively <\/em>on Thrilljoy.com.<\/p><p>Our virtual queue will allow you to reserve your spot for the drop. Once the sale goes live, the queue will be randomized. This ensures a smooth and orderly experience for everyone. <\/p><p>Once you’re in the queue, you’ll receive updates on your position and estimated wait time. You’ll be notified when it’s your turn to enter the sale. <\/p><p><em><strong>NOTE<\/strong><\/em>: To maintain a quality experience, there may be a limit on the number of participants.  <\/p><p>Once you enter the sale, simply browse our current drops, select what you’d like, and click “Add to Cart.” Once you’re ready, go to your cart and follow the checkout prompts! <\/p><p>If you miss your turn, you may have to wait until the next opportunity. Keep an eye on social for updates! <\/p>",
             "page": ""
           }
         },
@@ -334,7 +325,7 @@
           "settings": {
             "heading": "How do I contact customer service?",
             "icon": "none",
-            "row_content": "<p>We will provide the customer service e-mail form once product goes live.<\/p>",
+            "row_content": "<p>We’re here to help with any questions, concerns, or feedback you may have!<\/p><p><br\/>To reach our Customer Service team, simply <a href=\"mailto:support@thrilljoy.zendesk.com\" target=\"_blank\" title=\"mailto:support@thrilljoy.zendesk.com\">click here<\/a> to send us an email (or email us directly at support@thrilljoy.zendesk.com). We’ll get back to you as soon as possible. Our team is dedicated to making your Thrilljoy experience amazing. <\/p><p>Whether you need assistance with an order, have a question about our products, or just want to share your love for collectibles, we’re just an email away!<\/p>",
             "page": ""
           }
         }
