@@ -4,12 +4,7 @@
         justify-content: center;
       } 
     </style>
-  {% endif %}
-  
-  
-  
-  <script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
-  
+  {% endif %}  
   
   {% if section.blocks.size > 0 %}
   
@@ -94,20 +89,6 @@
             padding-top: 0 !important;
           }
         </style>
-        <script>
-          window.addEventListener('DOMContentLoaded', () => {
-              const target = document.querySelector('sticky-header');
-              const originalElement = document.querySelector('[data-section-id="{{ section.id }}"].announcement--root')
-  
-              if (target && originalElement) {
-   
-                  const clonedElement = originalElement.cloneNode(true)
-                  clonedElement.classList.add('announcement--root--sticky')
-              
-                  target.insertBefore(clonedElement, target.firstChild)
-              }
-          })
-        </script>
       {% endif %}
   
       <div

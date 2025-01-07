@@ -5,11 +5,11 @@
     "scrolling_announcement_D88dkd": {
       "type": "scrolling-announcement",
       "blocks": {
-        "text_KkA4XB": {
+        "text_zwrmbT": {
           "type": "text",
           "settings": {
-            "text": "SHOP NEW YEARS BLOO",
-            "link": "shopify:\/\/collections\/all"
+            "text": "Follow @thrilljoycollectibles on Instagram and TikTok",
+            "link": "https:\/\/www.instagram.com\/thrilljoycollectibles\/"
           }
         },
         "text_Lj7CYF": {
@@ -18,11 +18,19 @@
             "text": "SHIPPING TO CANADA NOW LIVE!",
             "link": ""
           }
+        },
+        "text_KkA4XB": {
+          "type": "text",
+          "settings": {
+            "text": "SHOP NEW YEARS BLOO",
+            "link": "shopify:\/\/products\/pix-bloo-new-years"
+          }
         }
       },
       "block_order": [
-        "text_KkA4XB",
-        "text_Lj7CYF"
+        "text_zwrmbT",
+        "text_Lj7CYF",
+        "text_KkA4XB"
       ],
       "settings": {
         "append_as_sticky_header": true,
@@ -30,7 +38,7 @@
         "enabled": true,
         "icon_max_width": 50,
         "padding_y": 10,
-        "home-page-only": true,
+        "home-page-only": false,
         "bg_color": "#000000",
         "color": "#ffffff",
         "alternative-color": true,

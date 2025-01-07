@@ -1,5 +1,6 @@
 if (typeof ScrollingText !== "function") {
     class ScrollingText extends HTMLElement {
+
         constructor() {
             super();
 
@@ -28,6 +29,7 @@ if (typeof ScrollingText !== "function") {
                     this.inner_element = inner_element.cloneNode(true);
                     setUpChildrens.call(this);
                 }
+
 
                 function refreshWidths() {
                     this.box_width = getWidth(this.box);
@@ -94,8 +96,9 @@ if (typeof ScrollingText !== "function") {
             const scrolling_text = new ScrollingText(this, speed, direction);
             // scrolling_text.start(direction);
 
+
+            const carusel = this;
             if(this.dataset.pauseOnHover == "true") {
-                const carusel = this;
                 let windowInFocus = true;
 
                 window.addEventListener("blur", function() {
@@ -125,6 +128,7 @@ if (typeof ScrollingText !== "function") {
             }
 
             const intersectionObserver = new IntersectionObserver(entries => {
+                scrolling_text.start(direction);
                 if (entries[0].isIntersecting ) {
                     scrolling_text.start(direction);
                 } else {
@@ -134,9 +138,13 @@ if (typeof ScrollingText !== "function") {
             intersectionObserver.observe(this);
 
         }
+        
     }
 
     if (typeof customElements.get("scrolling-text") == "undefined") {
         customElements.define("scrolling-text", ScrollingText);
     }
 }
+
+
+
