@@ -27,11 +27,19 @@
             "text": "SHOP NEW YEARS BLOO",
             "link": "shopify://products/pix-bloo-new-years"
           }
+        },
+        "text_mFNrzB": {
+          "type": "text",
+          "settings": {
+            "text": "NEXT DROP 1/24 🚨",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "text_zwrmbT",
-        "text_KkA4XB"
+        "text_KkA4XB",
+        "text_mFNrzB"
       ],
       "settings": {
         "text_margin": 120,
