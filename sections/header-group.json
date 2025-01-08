@@ -17,28 +17,20 @@
         "text_zwrmbT": {
           "type": "text",
           "settings": {
-            "text": "Follow @thrilljoycollectibles on Instagram and TikTok",
-            "link": "https:\/\/www.instagram.com\/thrilljoycollectibles\/"
-          }
-        },
-        "text_Lj7CYF": {
-          "type": "text",
-          "settings": {
-            "text": "SHIPPING TO CANADA NOW LIVE!",
-            "link": ""
+            "text": "FOLLOW @THRILLJOYCOLLECTIBLES ON INSTAGRAM AND TIKTOK",
+            "link": "https://www.instagram.com/thrilljoycollectibles/"
           }
         },
         "text_KkA4XB": {
           "type": "text",
           "settings": {
             "text": "SHOP NEW YEARS BLOO",
-            "link": "shopify:\/\/products\/pix-bloo-new-years"
+            "link": "shopify://products/pix-bloo-new-years"
           }
         }
       },
       "block_order": [
         "text_zwrmbT",
-        "text_Lj7CYF",
         "text_KkA4XB"
       ],
       "settings": {
@@ -68,7 +60,7 @@
           "type": "announcement",
           "settings": {
             "text": "Latest Drop",
-            "link": "shopify:\/\/collections\/latest-drop"
+            "link": "shopify://collections/latest-drop"
           }
         },
         "announcement_Td6ie7": {
@@ -103,9 +95,9 @@
       "type": "apps",
       "blocks": {
         "announcement_bar_sales_banner_free_bUVn3Y": {
-          "type": "shopify:\/\/apps\/announcement-bar\/blocks\/sales-banner-free\/9350a41f-5964-4405-9bba-bbffcbe501a2",
+          "type": "shopify://apps/announcement-bar/blocks/sales-banner-free/9350a41f-5964-4405-9bba-bbffcbe501a2",
           "settings": {
-            "marquee_text": "<p>🔥<\/p><p>Buy One Get One FREE<\/p><p>🔥<\/p><p>DEAL ALERT<\/p>",
+            "marquee_text": "<p>🔥</p><p>Buy One Get One FREE</p><p>🔥</p><p>DEAL ALERT</p>",
             "background": "linear-gradient(5deg, rgba(0, 128, 139, 1), rgba(0, 128, 139, 1) 100%)",
             "banner_text_color": "#ffffff"
           }
