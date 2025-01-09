@@ -141,7 +141,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 250px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy_1.webp",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -233,7 +233,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 250px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,

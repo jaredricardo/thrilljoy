@@ -19,20 +19,28 @@
             "use_h1": true,
             "heading_size": "hxxl"
           }
+        },
+        "text_Q68tJy": {
+          "type": "text",
+          "settings": {
+            "text": "Discover the latest thrilljoy items that will bring excitement to your everyday life. Shop our curated selection now!",
+            "text_style": "subtitle"
+          }
         }
       },
       "block_order": [
-        "heading_QnJBNf"
+        "heading_QnJBNf",
+        "text_Q68tJy"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy_1.webp",
-        "image_overlay_opacity": 0,
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image_overlay_opacity": 10,
         "fetch_priority": "high",
         "use_preload": true,
         "image_height": "adapt",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",

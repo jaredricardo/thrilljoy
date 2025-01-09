@@ -33,7 +33,7 @@
         "text_jxCtGR"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy_1.webp",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 10,
         "fetch_priority": "high",
         "use_preload": true,
