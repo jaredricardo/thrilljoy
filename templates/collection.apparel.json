@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "image_banner_LWbHrD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_QnJBNf": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "use_h1": true,
+            "heading_size": "hxxl"
+          }
+        },
+        "text_pVTVqb": {
+          "type": "text",
+          "settings": {
+            "text": "Discover collectible t-shirts and hats featuring your favorite characters. Show off your love for iconic franchises in style.",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QnJBNf",
+        "text_pVTVqb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy_1.webp",
+        "image_overlay_opacity": 0,
+        "fetch_priority": "high",
+        "use_preload": true,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 36,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "image_banner_LWbHrD",
+    "product-grid"
+  ]
+}
