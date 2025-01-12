@@ -1,0 +1,20 @@
+<ul
+    id="HeaderMenu-MenuList-{{ forloop.index }}"
+    class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
+    role="list"
+    tabindex="-1"
+>
+    {% for block in section.blocks %}
+        {% if block.type == "category-block" %}
+            <li style="background-color: {{ block.settings.category_background_color }};">
+                <a  
+                    style="color: {{ block.settings.category_text_color }};"
+                    href="{{ block.settings.url }}"
+                >
+                <img src="{{ block.settings.category_headshot | image_url: width: 100  }}" alt="Thrilljoy Category Headshot">
+                {{ block.settings.title }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
