@@ -295,11 +295,11 @@
     "simple_banner_with_text_K6HdPp": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/Untitled_design.svg",
+        "desktop_image": "shopify:\/\/shop_images\/TOON_IN_TO_OUR_ANIMATION_BLOG.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Out with the old,<\/h2><h2>in with the BLOO<\/h2>",
+        "header_text": "<h2>Toon in: <\/h2><h2>Our Animation Blog is Live!<\/h2>",
         "text_color": "#ffffff",
         "link_out": "shopify:\/\/blogs\/news\/out-with-the-old-in-with-the-bloo",
         "link_out_is_button": false,
