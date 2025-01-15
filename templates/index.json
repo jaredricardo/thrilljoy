@@ -117,14 +117,7 @@
           "settings": {
             "heading": "PIX!",
             "use_h1": false,
-            "heading_size": "hxl"
-          }
-        },
-        "text_8CFKLC": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
+            "heading_size": "h0"
           }
         },
         "buttons_YV9VM3": {
@@ -141,13 +134,12 @@
       },
       "block_order": [
         "heading_xCeKVU",
-        "text_8CFKLC",
         "buttons_YV9VM3"
       ],
       "custom_css": [
-        ".banner {height: 400px;}",
+        ".banner {height: 250px;}",
         ".banner__box {padding: 0;}",
-        "@media screen and (max-width: 768px) {.banner {height: 250px; }}"
+        "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
@@ -217,7 +209,7 @@
           "settings": {
             "heading": "Thrilljoy Threads",
             "use_h1": false,
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "buttons_imY8D9": {
@@ -237,9 +229,9 @@
         "buttons_imY8D9"
       ],
       "custom_css": [
-        ".banner {height: 300px;}",
+        ".banner {height: 250px;}",
         ".banner__box {padding: 0;}",
-        "@media screen and (max-width: 768px) {.banner {height: 250px; }}"
+        "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
