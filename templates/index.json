@@ -215,7 +215,7 @@
         "heading_Rxc3WB": {
           "type": "heading",
           "settings": {
-            "heading": "Thilljoy Threads",
+            "heading": "Thrilljoy Threads",
             "use_h1": false,
             "heading_size": "hxl"
           }
@@ -237,7 +237,7 @@
         "buttons_imY8D9"
       ],
       "custom_css": [
-        ".banner {height: 400px;}",
+        ".banner {height: 300px;}",
         ".banner__box {padding: 0;}",
         "@media screen and (max-width: 768px) {.banner {height: 250px; }}"
       ],
