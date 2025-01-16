@@ -295,13 +295,13 @@
     "simple_banner_with_text_K6HdPp": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/TOON_IN_TO_OUR_ANIMATION_BLOG.png",
+        "desktop_image": "shopify:\/\/shop_images\/TOON_IN_TO_OUR_ANIMATION_BLOG.svg",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>Toon in: <\/h2><h2>Our Animation Blog is Live!<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "shopify:\/\/blogs\/news\/out-with-the-old-in-with-the-bloo",
+        "link_out": "shopify:\/\/blogs\/news\/animation-drop-time-to-relive-your-cartoon-dreams",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
