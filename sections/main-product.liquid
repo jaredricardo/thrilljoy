@@ -297,9 +297,6 @@
                   <script>
                     window.addEventListener('DOMContentLoaded', () =>{
 
-                      console.log('init')
-                      console.log({{ product.metafields.custom.countdown_time | json }})
-
                       const timer = document.querySelector('.countdown-timer')
                       const endTimeString = {{ product.metafields.custom.countdown_time | json }}
                       const endTime = new Date(endTimeString).getTime()

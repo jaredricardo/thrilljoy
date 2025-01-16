@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_k9Rt7m": {
@@ -7,6 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
+            "use_h1": false,
             "heading_size": "h1"
           }
         }
@@ -15,12 +25,14 @@
         "heading_yanWc6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp-b.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
         "image_overlay_opacity": 0,
+        "fetch_priority": "auto",
+        "use_preload": false,
         "image_height": "adapt",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
