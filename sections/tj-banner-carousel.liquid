@@ -4,27 +4,35 @@
         height: auto;
     }
 
-    [data-section-id="{{ section.id }}"] .text-container {
-        text-align: {{ section.settings.text_alignment }};
-        {% unless section.settings.complete_center %}
-            top: {{ section.settings.text_container_top_pos }}%;
-            left: {{ section.settings.text_container_left_pos }}%;
-        {% else %}
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        {% endunless %}
+
+    [data-section-id="{{ section.id }}"] .button {
+        background-color: {{ block.settings.button_background_color }}; 
+        color: {{ block.settings.button_text_color }};
     }
-    
+
+    [data-section-id="{{ section.id }}"] h1,
+    [data-section-id="{{ section.id }}"] h2 {
+        font-size: 36px;
+    }
+
+    [data-section-id="{{ section.id }}"] h3 {
+        font-size: 24px;
+    }
+    [data-section-id="{{ section.id }}"] p {
+        font-size: 16px;
+    }
 
     @media screen and (max-width: 768px) {
-        [data-section-id="{{ section.id }}"] .text-container {
-            top: {{ section.settings.top_pos_mobile }}%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        [data-section-id="{{ section.id }}"] h1,
+        [data-section-id="{{ section.id }}"] h2 {
+            font-size: 24px;
         }
-        [data-section-id="{{ section.id }}"] img {
-            min-height: {{ section.settings.mobile_min_height }}px;
+
+        [data-section-id="{{ section.id }}"] h3 {
+            font-size: 16px;
+        }
+        [data-section-id="{{ section.id }}"] p {
+            font-size: 12px;
         }
     }
 </style>
@@ -58,6 +66,7 @@
         if(!target) return
 
         const swiper = new Swiper(target, {
+            autoHeight: true,
             spaceBetween: 0,
             slidesPerView: 1,
             slidesPerGroup: 1,
@@ -93,56 +102,6 @@
     {
         "name":"TJ Carousel",
         "settings":[
-            {
-                "type": "number",
-                "id": "mobile_min_height",
-                "label": "Mobile Images Min Height (px)",
-                "default": 250
-            },
-            {
-                "type": "header",
-                "content": "Content container general position settings"
-            },
-            {
-                "type": "checkbox",
-                "id": "complete_center",
-                "label": "Center Text Container (overrides top and left position)",
-                "default": false
-            },
-            {
-                "type": "select",
-                "id": "text_alignment",
-                "label": "Text Alignment",
-                "default": "left",
-                "options": [
-                    {
-                        "value": "left",
-                        "label": "Left"
-                    },
-                    {
-                        "value": "center",
-                        "label": "Center"
-                    }
-                ]
-            },
-            {
-                "type": "number",
-                "id": "text_container_top_pos",
-                "label": "Text Container Top Position (%)",
-                "default": 25
-            },
-            {
-                "type": "number",
-                "id": "text_container_left_pos",
-                "label": "Text Container Left Position (%)",
-                "default": 5
-            },
-            {
-                "type": "number",
-                "id": "top_pos_mobile",
-                "label": "Text Container Top Position on Mobile (%)",
-                "default": 40
-            },
             {
                 "type": "header",
                 "content": "Carousel Settings"
@@ -188,6 +147,57 @@
                         "label": "Image Overlay Opacity (%)",
                         "min": 0,
                         "max": 100,
+                        "default": 40
+                    },
+                    {
+                        "type": "number",
+                        "id": "mobile_min_height",
+                        "label": "Mobile Images Min Height (px)",
+                        "default": 250,
+                        "info": "Setting to 0 indicated no min height and the image will take on its native height / width ratio"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Content container general position settings"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "complete_center",
+                        "label": "Center Text Container (overrides top and left position)",
+                        "default": false
+                    },
+                    {
+                        "type": "select",
+                        "id": "text_alignment",
+                        "label": "Text Alignment",
+                        "default": "left",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "number",
+                        "id": "text_container_top_pos",
+                        "label": "Text Container Top Position (%)",
+                        "default": 25
+                    },
+                    {
+                        "type": "number",
+                        "id": "text_container_left_pos",
+                        "label": "Text Container Left Position (%)",
+                        "default": 5
+                    },
+                    {
+                        "type": "number",
+                        "id": "top_pos_mobile",
+                        "label": "Text Container Top Position on Mobile (%)",
                         "default": 40
                     },
                     {
@@ -240,7 +250,7 @@
                         "type": "number",
                         "id": "description_margin_bottom",
                         "label": "Description Bottom Margin (px)",
-                        "default": 32
+                        "default": 16
                     },
                     {
                         "type": "color",
@@ -250,9 +260,15 @@
                     },
                     {
                         "type": "number",
-                        "id": "text_container_max_width",
-                        "label": "Text Container Max Width (%)",
+                        "id": "text_container_max_width_d",
+                        "label": "Text Container Max Width Desktop (%)",
                         "default": 50
+                    },
+                    {
+                        "type": "number",
+                        "id": "text_container_max_width_m",
+                        "label": "Text Container Max Width Mobile (%)",
+                        "default": 90
                     },
                     {
                         "type": "header",
@@ -262,7 +278,7 @@
                         "type": "text",
                         "id": "button_text",
                         "label": "Button Text",
-                        "default": "Button Text"
+                        "default": "Shop Now"
                     },
                     {
                         "type": "color",

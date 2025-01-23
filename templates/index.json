@@ -1,96 +1,138 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "slideshow_fABBbn": {
-      "type": "slideshow",
+    "tj_banner_carousel_LayRLh": {
+      "type": "tj-banner-carousel",
       "blocks": {
-        "slide_Jczrad": {
-          "type": "slide",
+        "carousel_e6f39C": {
+          "type": "carousel",
           "settings": {
-            "image": "shopify://shop_images/NYBloo-COMMON_BANNER_1.png",
-            "url_link": "shopify://products/pix-bloo-new-years",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "desktop_image": "shopify:\/\/shop_images\/unnamed-3.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 25,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Oh my, cabbages! Aang has arrived!",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#FFFFFF",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify:\/\/products\/pix-aang",
+            "use_slide_linkout": false
           }
         },
-        "slide_JidRyN": {
-          "type": "slide",
+        "carousel_3VnqMa": {
+          "type": "carousel",
           "settings": {
-            "image": "shopify://shop_images/NYBloo-CHASE_BANNER_2.png",
-            "url_link": "shopify://products/pix-bloo-new-years",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "desktop_image": "shopify:\/\/shop_images\/unnamed-4.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 15,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "The answer to your missing collectible mystery",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#FFFFFF",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify:\/\/products\/pix-scooby-doo",
+            "use_slide_linkout": false
           }
         },
-        "slide_6LTFYz": {
-          "type": "slide",
+        "carousel_thh9Wb": {
+          "type": "carousel",
           "settings": {
-            "image": "shopify://shop_images/NYBloo-SUPERCHASE_BANNER_1.png",
-            "url_link": "shopify://products/pix-bloo-new-years",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "desktop_image": "shopify:\/\/shop_images\/unnamed-5.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 10,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Jinkies! Add this mystery-solving chase to your collection!",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#FFFFFF",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify:\/\/products\/pix-scooby-doo",
+            "use_slide_linkout": false
+          }
+        },
+        "carousel_dGzaTX": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 25,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Flip the script with Aeon Flux",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#FFFFFF",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify:\/\/products\/pix-aeon-flux",
+            "use_slide_linkout": false
           }
         }
       },
       "block_order": [
-        "slide_Jczrad",
-        "slide_JidRyN",
-        "slide_6LTFYz"
+        "carousel_e6f39C",
+        "carousel_3VnqMa",
+        "carousel_thh9Wb",
+        "carousel_dGzaTX"
       ],
       "custom_css": [
-        ".slideshow__autoplay,.slider-button--prev,.slider-button--next {display: none;}",
-        ".slideshow__controls {position: absolute; bottom: 0; left: 0; right: 0; border-top: none;}",
-        ".slider-counter__link span {background-color: black;}",
-        ".slider-counter__link--active span {background-color: #5fd551;}",
-        ".slider-mobile-gutter {margin-bottom: -1px;}"
+        "@media screen and (max-width: 768px) {h1, h2 {font-size: 16px; } .button {min-width: auto; min-height: auto; padding: 0 1.5rem; height: 40px; }}"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": false,
-        "accessibility_info": "Moo Deng"
+        "auto_rotate_seconds": 5000,
+        "use_arrow_buttons": false,
+        "use_pagination_dots": true
       }
     },
     "video_mCN3Va": {
@@ -100,8 +142,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify://shop_images/unnamed.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -124,7 +166,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/pix",
+            "button_link_1": "shopify:\/\/collections\/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -142,7 +184,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -188,13 +230,13 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
+        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "/account/register",
+        "link_out": "\/account\/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -216,7 +258,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/apparel",
+            "button_link_1": "shopify:\/\/collections\/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -234,7 +276,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -280,13 +322,13 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
+        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "/pages/frequently-asked-questions",
+        "link_out": "\/pages\/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -311,7 +353,7 @@
     }
   },
   "order": [
-    "slideshow_fABBbn",
+    "tj_banner_carousel_LayRLh",
     "video_mCN3Va",
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
