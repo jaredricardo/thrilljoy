@@ -19,6 +19,40 @@
     margin-left: -1.2rem;
   }
 
+  #tj-category-meganav {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.grid_columns }}, 1fr);
+    grid-template-rows: repeat({{ section.settings.grid_rows }}, 1fr);
+    width: max-content;
+    border: none;
+    padding: 1rem 0px 0rem 0;
+    z-index: 1;
+    left: 0;
+
+  }  
+
+  #tj-category-meganav li  {
+    width: 100%;
+  }
+
+  .tj-category-container-inner {
+    background-color: red;
+  }
+  
+  #tj-category-meganav li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5px 0 0;
+  }
+
+  #tj-category-meganav li a img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
@@ -460,6 +494,23 @@
   "name": "t:sections.header.name",
   "class": "section-header",
   "settings": [
+    {
+      "type": "header",
+      "content": "Thrilljoy Category Settings",
+      "info": "The below grid numbers define the rows and columns for the drop down category menu."
+    },
+    {
+      "type": "number",
+      "id": "grid_columns",
+      "label": "Grid Columns",
+      "default": 3 
+    },
+    {
+      "type": "number",
+      "id": "grid_rows",
+      "label": "Grid rows",
+      "default": 3 
+    },
     {
       "type": "select",
       "id": "logo_position",
