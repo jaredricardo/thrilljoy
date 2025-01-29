@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "tj_banner_carousel_LayRLh": {
@@ -15,7 +6,7 @@
         "carousel_e6f39C": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/unnamed-3.png",
+            "desktop_image": "shopify:\/\/shop_images\/unnamed-3.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -37,14 +28,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://products/pix-aang",
-            "use_slide_linkout": false
+            "button_link": "shopify:\/\/products\/pix-aang",
+            "use_slide_linkout": true
           }
         },
         "carousel_3VnqMa": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/unnamed-4.png",
+            "desktop_image": "shopify:\/\/shop_images\/unnamed-4.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -66,14 +57,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://products/pix-scooby-doo",
-            "use_slide_linkout": false
+            "button_link": "shopify:\/\/products\/pix-scooby-doo",
+            "use_slide_linkout": true
           }
         },
         "carousel_thh9Wb": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/unnamed-5.png",
+            "desktop_image": "shopify:\/\/shop_images\/unnamed-5.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -95,14 +86,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://products/pix-scooby-doo",
-            "use_slide_linkout": false
+            "button_link": "shopify:\/\/products\/pix-scooby-doo",
+            "use_slide_linkout": true
           }
         },
         "carousel_dGzaTX": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
+            "desktop_image": "shopify:\/\/shop_images\/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -124,7 +115,7 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://products/pix-aeon-flux",
+            "button_link": "shopify:\/\/products\/pix-aeon-flux",
             "use_slide_linkout": true
           }
         }
@@ -139,7 +130,7 @@
         "@media screen and (max-width: 768px) {h1, h2 {font-size: 16px; } .button {min-width: auto; min-height: auto; padding: 0 1.5rem; height: 40px; }}"
       ],
       "settings": {
-        "auto_rotate_seconds": 5000,
+        "auto_rotate_seconds": 0,
         "use_arrow_buttons": false,
         "use_pagination_dots": true
       }
@@ -151,8 +142,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify://shop_images/unnamed.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -175,7 +166,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/pix",
+            "button_link_1": "shopify:\/\/collections\/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -193,7 +184,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -239,13 +230,13 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
+        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "/account/register",
+        "link_out": "\/account\/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -267,7 +258,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/apparel",
+            "button_link_1": "shopify:\/\/collections\/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -285,7 +276,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -331,13 +322,13 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
+        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "/pages/frequently-asked-questions",
+        "link_out": "\/pages\/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -347,13 +338,13 @@
     "simple_banner_with_text_K6HdPp": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/TOON_IN_TO_OUR_ANIMATION_BLOG.svg",
+        "desktop_image": "shopify:\/\/shop_images\/TOON_IN_TO_OUR_ANIMATION_BLOG.svg",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Toon in: </h2><h2>Our Animation Blog is Live!</h2>",
+        "header_text": "<h2>Toon in: <\/h2><h2>Our Animation Blog is Live!<\/h2>",
         "text_color": "#ffffff",
-        "link_out": "shopify://blogs/news/animation-drop-time-to-relive-your-cartoon-dreams",
+        "link_out": "shopify:\/\/blogs\/news\/animation-drop-time-to-relive-your-cartoon-dreams",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",

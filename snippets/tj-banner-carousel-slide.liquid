@@ -105,7 +105,7 @@
 {% endstyle %}
 
 {% if block.settings.use_slide_linkout %}
-    <a href="{{ section.settings.link_out }}" class="tj-banner-carousel-slide">
+    <a href="{{ block.settings.button_link }}" class="tj-banner-carousel-slide">
 {% else %}
     <div class="tj-banner-carousel-slide">
 {% endif %}
@@ -127,8 +127,11 @@
             <p>{{ block.settings.description }}</p>
         {% endif %}
 
-        {% if block.settings.button_link %}
+        {% if block.settings.button_link and block.settings.use_slide_linkout == false %}
             <a class="button button--primary" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
+        {% endif %}
+        {% if block.settings.button_link and block.settings.use_slide_linkout == true %}
+            <div class="button button--primary" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</div>
         {% endif %}
     </div>
 
