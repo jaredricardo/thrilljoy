@@ -8,6 +8,17 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Category nav settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "category_comparison_string",
+        "label": "Category comparison string",
+        "info": "This string is used to target a navigation link title that matches the above string (downcased). When the strings match, this is where Thrilljoy the category nav will be placed."
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

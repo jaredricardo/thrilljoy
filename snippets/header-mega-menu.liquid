@@ -4,11 +4,12 @@
   Usage:
   {% render 'header-mega-menu' %}
 {% endcomment %}
+{% assign downcased_comparison_string = settings.category_comparison_string %}
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
-      {% assign downcased = link.title | downcase %}
+      {% assign downcased_link_title = link.title | downcase %}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -26,7 +27,7 @@
                 </span>
                 {% render 'icon-caret' %}
               </summary>
-              {% if link.links and downcased == "shop" %}
+              {% if link.links and downcased_link_title == downcased_comparison_string %}
                 {% render 'tj-category-meganav', blocks:blocks %}
               {% else %}
               <div

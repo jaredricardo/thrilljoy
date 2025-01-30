@@ -22,13 +22,12 @@
   #tj-category-meganav {
     display: grid;
     grid-template-columns: repeat({{ section.settings.grid_columns }}, 1fr);
-    grid-template-rows: repeat({{ section.settings.grid_rows }}, 1fr);
+    /* grid-template-rows: repeat({{ section.settings.grid_rows }}, 1fr); */
     width: max-content;
     border: none;
     padding: 1rem 0px 0rem 0;
     z-index: 1;
     left: 0;
-
   }  
 
   #tj-category-meganav li  {
@@ -51,6 +50,19 @@
   #tj-category-meganav li a img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 990px) {
+    #tj-category-meganav {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+    #tj-category-meganav li a img {
+      width: 40%;
+    }
+    #tj-category-meganav .header__menu-item span {
+      font-size: 14px;
+    }
   }
 
 

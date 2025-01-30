@@ -149,7 +149,7 @@
             "title": "Category Name",
             "url": "",
             "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
-            "category_text_color": "#FFFFFF",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         },
@@ -159,7 +159,7 @@
             "title": "Category Name",
             "url": "",
             "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
-            "category_text_color": "#FFFFFF",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         },
@@ -169,7 +169,7 @@
             "title": "Category Name",
             "url": "",
             "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
-            "category_text_color": "#FFFFFF",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         },
@@ -179,7 +179,7 @@
             "title": "Category Name",
             "url": "",
             "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
-            "category_text_color": "#FFFFFF",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         },
@@ -189,7 +189,7 @@
             "title": "Category Name",
             "url": "",
             "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
-            "category_text_color": "#FFFFFF",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         },
@@ -199,7 +199,7 @@
             "title": "Category Name",
             "url": "",
             "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
-            "category_text_color": "#FFFFFF",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         }
@@ -221,9 +221,11 @@
         ".cart-notification .cart-notification__links .link {color: #fff;}"
       ],
       "settings": {
+        "grid_columns": 3,
+        "grid_rows": 3,
         "logo_position": "middle-left",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
