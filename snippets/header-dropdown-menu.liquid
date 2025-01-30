@@ -5,9 +5,12 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
+{% assign downcased_comparison_string = settings.category_comparison_string %}
+
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
+      {% assign downcased_link_title = link.title | downcase %}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -25,6 +28,9 @@
                 </span>
                 {% render 'icon-caret' %}
               </summary>
+              {% if link.links and downcased_link_title == downcased_comparison_string %}
+                  {% render 'tj-category-meganav', blocks:blocks %}
+                {% else %}
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"
                 class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
@@ -77,6 +83,7 @@
                   </li>
                 {%- endfor -%}
               </ul>
+              {% endif %}
             </details>
           </header-menu>
         {%- else -%}

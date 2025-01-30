@@ -19,6 +19,52 @@
     margin-left: -1.2rem;
   }
 
+  #tj-category-meganav {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.grid_columns }}, 1fr);
+    /* grid-template-rows: repeat({{ section.settings.grid_rows }}, 1fr); */
+    width: max-content;
+    border: none;
+    padding: 1rem 0px 0rem 0;
+    z-index: 1;
+    left: 0;
+  }  
+
+  #tj-category-meganav li  {
+    width: 100%;
+  }
+
+  .tj-category-container-inner {
+    background-color: red;
+  }
+  
+  #tj-category-meganav li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5px 0 0;
+  }
+
+  #tj-category-meganav li a img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 990px) {
+    #tj-category-meganav {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+    #tj-category-meganav li a img {
+      width: 40%;
+    }
+    #tj-category-meganav .header__menu-item span {
+      font-size: 14px;
+    }
+  }
+
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
@@ -182,7 +228,7 @@
     {%- liquid
       if section.settings.menu != blank
         if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
+          render 'header-dropdown-menu', blocks: section.blocks
         elsif section.settings.menu_type_desktop != 'drawer'
           render 'header-mega-menu'
         endif
@@ -459,8 +505,24 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 3,
   "settings": [
+    {
+      "type": "header",
+      "content": "Thrilljoy Category Settings",
+      "info": "The below grid numbers define the rows and columns for the drop down category menu."
+    },
+    {
+      "type": "number",
+      "id": "grid_columns",
+      "label": "Grid Columns",
+      "default": 3 
+    },
+    {
+      "type": "number",
+      "id": "grid_rows",
+      "label": "Grid rows",
+      "default": 3 
+    },
     {
       "type": "select",
       "id": "logo_position",
@@ -655,6 +717,40 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "category-block",
+      "name": "Category Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Name",
+          "default": "Category Name"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "category URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "category_headshot",
+          "label": "Category Headshot Image"
+        },
+        {
+          "type": "color",
+          "id": "category_text_color",
+          "label": "Category Text Color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "category_background_color",
+          "label": "Category Background Color",
+          "default": "#000000"
+        }
+      ]
     }
   ]
 }

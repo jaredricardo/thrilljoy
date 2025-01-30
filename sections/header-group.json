@@ -112,15 +112,120 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "category_block_XLEyC4": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_wRnbGQ": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_faU4hH": {
+          "type": "category-block",
+          "settings": {
+            "title": "non sqaure test",
+            "url": "shopify:\/\/products\/collectible-bucket-hat-thrilljoy-black-logo",
+            "category_headshot": "shopify:\/\/shop_images\/ThriljoyPIXBlooNewyears_2.jpg",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_9tDUe9": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_4Xkcn9": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_TjR3fK": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_hEn9Ni": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_jFFmcR": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_nf9wHj": {
+          "type": "category-block",
+          "settings": {
+            "title": "Category Name",
+            "url": "",
+            "category_headshot": "shopify:\/\/shop_images\/Screen_Shot_2025-01-11_at_7.05.50_PM.png",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "category_block_XLEyC4",
+        "category_block_wRnbGQ",
+        "category_block_faU4hH",
+        "category_block_9tDUe9",
+        "category_block_4Xkcn9",
+        "category_block_TjR3fK",
+        "category_block_hEn9Ni",
+        "category_block_jFFmcR",
+        "category_block_nf9wHj"
+      ],
       "custom_css": [
         ".list-menu__item.link {font-family: \"CocogooseProTrial\" !important; color: #fff;}",
         ".cart-notification .cart-notification__links #cart-notification-button {color: #fff; border: 2px solid #fff;}",
         ".cart-notification .cart-notification__links .link {color: #fff;}"
       ],
       "settings": {
+        "grid_columns": 3,
+        "grid_rows": 3,
         "logo_position": "middle-left",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
