@@ -1,0 +1,25 @@
+
+<script>
+    console.log({{ product | json }})
+    console.log('/////')
+    console.log({{ product.metafields.custom.video_card_metaobjects.value | json }})
+</script>
+
+<div class="video-preview-cards-container">
+    {% comment %} {% for block in blocks %}
+        <script>
+            console.log('looping through blocks');
+        </script>
+        {% if block.type == "video-preview-cards" %}
+            <div class="video-preview-card-container">
+                <div class="video-container">
+                    
+                </div>
+                <p>{{ block.settings.explanation }}</p>
+            </div>
+        {% endif %}
+    {% endfor %} {% endcomment %}
+</div>
+<div class="full-video-modal">
+
+</div>
