@@ -346,7 +346,9 @@
     },
     "simple_banner_with_text_K6HdPp": {
       "type": "simple-banner-with-text",
-      "custom_css": [],
+      "custom_css": [
+        ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
+      ],
       "settings": {
         "desktop_image": "shopify://shop_images/bloo_loves_you.svg",
         "mobile_min_height": 250,
