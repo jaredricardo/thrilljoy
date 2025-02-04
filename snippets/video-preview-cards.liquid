@@ -1,25 +1,31 @@
 
 <script>
-    console.log({{ product | json }})
     console.log('/////')
     console.log({{ product.metafields.custom.video_card_metaobjects.value | json }})
+    window.addEventListener('DOMContentLoaded', () => {
+        // add video event listeners to pop open its relevent modal and play the full video
+    })
 </script>
 
+{% liquid 
+
+    assign videos_obj = product.metafields.custom.video_card_metaobjects.value
+
+-%}
+
 <div class="video-preview-cards-container">
-    {% comment %} {% for block in blocks %}
-        <script>
-            console.log('looping through blocks');
-        </script>
-        {% if block.type == "video-preview-cards" %}
-            <div class="video-preview-card-container">
-                <div class="video-container">
-                    
-                </div>
-                <p>{{ block.settings.explanation }}</p>
+    {% for video_obj in videos_obj %}
+        {% assign vid_str = video_obj.preview_video | file_url %}
+        <div class="video-preview-card-container">
+            <div class="video-container">
+                <video src="{{ vid_str }}" muted autoplay loop controls="false"></video>
             </div>
-        {% endif %}
-    {% endfor %} {% endcomment %}
+            <p>{{ video_obj.optional_video_explanation }}</p>
+        </div>
+    {% endfor %}
 </div>
 <div class="full-video-modal">
-
+    <video src="" preload="none">
+    
+    </video>
 </div>
