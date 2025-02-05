@@ -1,9 +1,16 @@
 
 <script>
-    console.log('/////')
-    console.log({{ product.metafields.custom.video_card_metaobjects.value | json }})
     window.addEventListener('DOMContentLoaded', () => {
+        window.setTimeout(() => {
+            document.querySelector('.video-preview-cards-container').classList.add('active')
+        }, 1000)
         // add video event listeners to pop open its relevent modal and play the full video
+        document.querySelectorAll('.video-preview-cards-container .video-preview-card-container').forEach(videoContainer => {
+            videoContainer.addEventListener('click', () => {
+                const videoId = videoContainer.querySelector('video').dataset.videoId
+                console.log(videoId)
+            })
+        })
     })
 </script>
 
@@ -17,15 +24,16 @@
     {% for video_obj in videos_obj %}
         {% assign vid_str = video_obj.preview_video | file_url %}
         <div class="video-preview-card-container">
-            <div class="video-container">
-                <video src="{{ vid_str }}" muted autoplay loop controls="false"></video>
-            </div>
+            <video src="{{ vid_str }}" muted autoplay loop controls="false" data-video-id="video-{{ forloop.index0 }}"></video>
             <p>{{ video_obj.optional_video_explanation }}</p>
         </div>
     {% endfor %}
 </div>
 <div class="full-video-modal">
-    <video src="" preload="none">
-    
-    </video>
+    {% for video_obj in videos_obj %}
+        {% assign vid_str = video_obj.full_video | file_url %}
+        <div class="full-video-container">
+            <video src="{{ vid_str }}" autoplay="false" loop controls="false" preload="none" data-video-id="video-{{ forloop.index0 }}"></video>
+        </div>
+    {% endfor %}
 </div>
