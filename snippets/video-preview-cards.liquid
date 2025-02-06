@@ -1,16 +1,52 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', () => {
+
+        const fullVideomodal = document.querySelector('.full-video-modal')
+        const modalClose = fullVideomodal.querySelector('.modal-close')
+
+        document.querySelector('#MainContent').appendChild(fullVideomodal)
+
+        const swiper = new Swiper('.full-video-modal .swiper', {
+            direction: 'vertical',
+            rewind: true,
+            loopAddBlankSlides: true,
+            speed: 400,
+            centeredSlides: true
+        })
+
         window.setTimeout(() => {
             document.querySelector('.video-preview-cards-container').classList.add('active')
         }, 1000)
-        // add video event listeners to pop open its relevent modal and play the full video
+
+
+        modalClose.addEventListener('click', () => {
+            fullVideomodal.classList.remove('active')
+            resetAllVideos()
+        })
+
         document.querySelectorAll('.video-preview-cards-container .video-preview-card-container').forEach(videoContainer => {
             videoContainer.addEventListener('click', () => {
+
                 const videoId = videoContainer.querySelector('video').dataset.videoId
-                console.log(videoId)
+
+                fullVideomodal.classList.add('active')
+                
             })
         })
+
+
+        function resetAllVideos() {
+            document.querySelectorAll('.full-video-modal video').forEach(video => {
+                video.pause()
+                video.currentTime = 0
+            })
+        }
+
+        window.addEventListener('click', (e) => {
+            console.log(e.target)
+        })
+
     })
 </script>
 
@@ -30,10 +66,21 @@
     {% endfor %}
 </div>
 <div class="full-video-modal">
-    {% for video_obj in videos_obj %}
-        {% assign vid_str = video_obj.full_video | file_url %}
-        <div class="full-video-container">
-            <video src="{{ vid_str }}" autoplay="false" loop controls="false" preload="none" data-video-id="video-{{ forloop.index0 }}"></video>
+    <div class="modal-close">
+        {% render 'icon-close' %}
+    </div>
+    <div class="full-video-modal-container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for video_obj in videos_obj %}
+                    {% assign vid_str = video_obj.full_video | file_url %}
+                    <div class="swiper-slide">
+                        <div class="full-video-container">
+                            <video src="{{ vid_str }}" autoplay="false" controls="false" data-video-id="video-{{ forloop.index0 }}"></video>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-    {% endfor %}
+    </div>
 </div>
