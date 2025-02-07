@@ -3784,20 +3784,14 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   flex-wrap: nowrap;
   justify-content: start;
   gap: 12px;
-  overflow: scroll;
+  overflow-x: scroll;
   margin: 1.5rem 0 !important;
   padding: 1rem;
-  opacity: 0;
   transition: 0.6s ease-in-out;
 }
 
-
-.video-preview-cards-container.active {
-  opacity: 1;
-}
-
 .video-preview-cards-container .video-preview-card-container {
-  height: 100%;
+  height: min-content;
   width: 90px;
   min-width: 90px;
   aspect-ratio: 9/16; 
@@ -3857,7 +3851,7 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .full-video-modal .swiper {
-    height: 100% !important;
+  height: 100% !important;
 }
 
 .full-video-modal .full-video-modal-container {
@@ -3869,9 +3863,29 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: auto;
+  cursor: pointer;
+  position: relative;
 }
 
+.full-video-modal .full-video-container  .icon-play {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 7.5%;
+  color: #fff;
+  z-index: 12;
+  background-color: #00000096;
+  border-radius: 100px;
+  padding: 15px;
+
+}
+
+.full-video-modal .full-video-container  .icon-play.active {
+  display: block;
+}
 
 .full-video-modal video {
   height: 100vh;
@@ -3879,4 +3893,53 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   object-fit: cover;
   vertical-align: bottom;
   pointer-events: none;
+}
+
+.full-video-modal-container .thumb-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: auto;
+  z-index: 20;
+  max-height: 80vh;
+  padding: 1rem 0;
+}
+
+.full-video-modal-container .thumb-container .thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 0;
+  vertical-align: top;
+  border: none;
+  cursor: pointer;
+}
+
+.full-video-modal-container .thumb-container .thumb video {
+  height: 100%; 
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.full-video-modal-container .thumb-container .thumb.active {
+  border: 3px solid white;
+}
+
+.full-video-modal video::-webkit-media-controls,
+.video-preview-cards-container video::-webkit-media-controls {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .full-video-modal-container .thumb-container {
+    display: none;
+  }
+  .full-video-modal .full-video-container  .icon-play {
+    width: 15%;
+  }
 }

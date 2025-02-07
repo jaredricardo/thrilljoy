@@ -2,10 +2,14 @@
 <script>
     window.addEventListener('DOMContentLoaded', () => {
 
-        const fullVideomodal = document.querySelector('.full-video-modal')
-        const modalClose = fullVideomodal.querySelector('.modal-close')
+        const fullVideoModal = document.querySelector('.full-video-modal')
+        const cards = document.querySelectorAll('.video-preview-cards-container .video-preview-card-container')
+        const modalClose = fullVideoModal.querySelector('.modal-close')
+        const thumbs = document.querySelectorAll('.full-video-modal .thumb-container .thumb')
+        const fullVideos = fullVideoModal.querySelectorAll('.full-video-modal video')
+        const fullVideoContainers = document.querySelectorAll('.full-video-modal .full-video-container')
 
-        document.querySelector('#MainContent').appendChild(fullVideomodal)
+        document.querySelector('#MainContent').appendChild(fullVideoModal)
 
         const swiper = new Swiper('.full-video-modal .swiper', {
             direction: 'vertical',
@@ -15,37 +19,71 @@
             centeredSlides: true
         })
 
-        window.setTimeout(() => {
-            document.querySelector('.video-preview-cards-container').classList.add('active')
-        }, 1000)
-
 
         modalClose.addEventListener('click', () => {
-            fullVideomodal.classList.remove('active')
-            resetAllVideos()
+            fullVideoModal.classList.remove('active')
+            resetVideosAndThumbs()
         })
 
-        document.querySelectorAll('.video-preview-cards-container .video-preview-card-container').forEach(videoContainer => {
-            videoContainer.addEventListener('click', () => {
+        thumbs.forEach((thumb) => {
+            thumb.addEventListener('click', () => {
+                const currentIndex = thumb.dataset.videoIndex
+                resetVideosAndThumbs()
+                thumb.classList.add('active')  
+                swiper.slideTo(currentIndex)
+                document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
+            })
+        })
 
-                const videoId = videoContainer.querySelector('video').dataset.videoId
-
-                fullVideomodal.classList.add('active')
-                
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const currentIndex = card.dataset.videoIndex
+                document.querySelector(`.thumb[data-video-index="${currentIndex}"]`).click()
+                document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
+                fullVideoModal.classList.add('active')
             })
         })
 
 
-        function resetAllVideos() {
-            document.querySelectorAll('.full-video-modal video').forEach(video => {
-                video.pause()
-                video.currentTime = 0
+        fullVideoContainers.forEach((container) => {
+            container.addEventListener('click', () => {
+                const video = container.querySelector('video')
+                video.paused ? enterPlayState(video) : enterPauseState(video)
+            })
+        })
+
+
+        function enterPlayState(video) {
+            hidePlayIcons()
+            video.play()
+        }
+
+        function enterPauseState(video) {
+            video.closest('.full-video-container').querySelector('.icon-play').classList.add('active')
+            video.pause()
+        }
+
+        function hidePlayIcons() {
+            document.querySelectorAll('.full-video-container .icon-play').forEach((icon) => {
+                icon.classList.remove('active')
             })
         }
 
-        window.addEventListener('click', (e) => {
-            console.log(e.target)
-        })
+
+        function resetVideosAndThumbs() {
+
+            hidePlayIcons()
+            
+            thumbs.forEach((thumb) => {
+                thumb.classList.remove('active')
+            })
+
+            fullVideos.forEach((video) => {
+                video.pause()
+                video.currentTime = 0
+            })
+            
+        }
 
     })
 </script>
@@ -59,8 +97,8 @@
 <div class="video-preview-cards-container">
     {% for video_obj in videos_obj %}
         {% assign vid_str = video_obj.preview_video | file_url %}
-        <div class="video-preview-card-container">
-            <video src="{{ vid_str }}" muted autoplay loop controls="false" data-video-id="video-{{ forloop.index0 }}"></video>
+        <div class="video-preview-card-container" data-video-index="{{ forloop.index0 }}">
+            <video src="{{ vid_str }}" muted autoplay loop controls="false"></video>
             <p>{{ video_obj.optional_video_explanation }}</p>
         </div>
     {% endfor %}
@@ -70,13 +108,22 @@
         {% render 'icon-close' %}
     </div>
     <div class="full-video-modal-container">
+        <div class="thumb-container">
+            {% for video_obj in videos_obj %}
+                {% assign vid_str = video_obj.preview_video | file_url %}
+                <button class="thumb" data-video-index="{{ forloop.index0 }}">
+                    <video src="{{ vid_str }}" autoplay="false" controls="false"></video>
+                </button>
+            {% endfor %}
+        </div> 
         <div class="swiper">
             <div class="swiper-wrapper">
                 {% for video_obj in videos_obj %}
                     {% assign vid_str = video_obj.full_video | file_url %}
                     <div class="swiper-slide">
                         <div class="full-video-container">
-                            <video src="{{ vid_str }}" autoplay="false" controls="false" data-video-id="video-{{ forloop.index0 }}"></video>
+                            {% render 'icon-play' %}
+                            <video src="{{ vid_str }}" autoplay="false" controls="false" data-video-index="{{ forloop.index0 }}"></video>
                         </div>
                     </div>
                 {% endfor %}
