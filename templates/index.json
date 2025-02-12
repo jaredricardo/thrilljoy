@@ -14,6 +14,7 @@
       "blocks": {
         "carousel_e6f39C": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-3.png",
             "image_overlay_opacity": 10,
@@ -43,6 +44,7 @@
         },
         "carousel_3VnqMa": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-4.png",
             "image_overlay_opacity": 10,
@@ -72,6 +74,7 @@
         },
         "carousel_thh9Wb": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-5.png",
             "image_overlay_opacity": 10,
@@ -101,6 +104,7 @@
         },
         "carousel_dGzaTX": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
             "image_overlay_opacity": 10,
@@ -130,7 +134,6 @@
         },
         "carousel_prtVei": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-2.png",
             "image_overlay_opacity": 10,
@@ -160,7 +163,6 @@
         },
         "carousel_EefcRn": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed_b3a4c8da-5069-48d3-8dbd-b1fa9a580db9.png",
             "image_overlay_opacity": 10,
@@ -190,7 +192,6 @@
         },
         "carousel_QLqnaY": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-4_1b77d541-85eb-4101-9ac0-d6709ad46ec0.png",
             "image_overlay_opacity": 10,
@@ -220,7 +221,6 @@
         },
         "carousel_n7ay6J": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-1.png",
             "image_overlay_opacity": 10,
