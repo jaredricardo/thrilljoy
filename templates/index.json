@@ -14,7 +14,6 @@
       "blocks": {
         "carousel_e6f39C": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-3.png",
             "image_overlay_opacity": 10,
@@ -44,7 +43,6 @@
         },
         "carousel_3VnqMa": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-4.png",
             "image_overlay_opacity": 10,
@@ -74,7 +72,6 @@
         },
         "carousel_thh9Wb": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-5.png",
             "image_overlay_opacity": 10,
@@ -104,7 +101,6 @@
         },
         "carousel_dGzaTX": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
             "image_overlay_opacity": 10,
@@ -134,6 +130,7 @@
         },
         "carousel_prtVei": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-2.png",
             "image_overlay_opacity": 10,
@@ -151,11 +148,11 @@
             "subheader_margin_bottom": 16,
             "description": "",
             "description_margin_bottom": 16,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_container_max_width_d": 50,
             "text_container_max_width_m": 50,
             "button_text": "Shop Now",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-hermione-granger",
             "use_slide_linkout": true
@@ -163,6 +160,7 @@
         },
         "carousel_EefcRn": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed_b3a4c8da-5069-48d3-8dbd-b1fa9a580db9.png",
             "image_overlay_opacity": 10,
@@ -180,11 +178,11 @@
             "subheader_margin_bottom": 16,
             "description": "",
             "description_margin_bottom": 16,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_container_max_width_d": 50,
             "text_container_max_width_m": 50,
             "button_text": "Shop Now",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-luna-lovegood",
             "use_slide_linkout": true
@@ -192,6 +190,7 @@
         },
         "carousel_QLqnaY": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-4_1b77d541-85eb-4101-9ac0-d6709ad46ec0.png",
             "image_overlay_opacity": 10,
@@ -209,11 +208,11 @@
             "subheader_margin_bottom": 16,
             "description": "",
             "description_margin_bottom": 16,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_container_max_width_d": 50,
             "text_container_max_width_m": 50,
             "button_text": "Shop Now",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-hermione-granger",
             "use_slide_linkout": true
@@ -221,6 +220,7 @@
         },
         "carousel_n7ay6J": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/unnamed-1.png",
             "image_overlay_opacity": 10,
@@ -238,11 +238,11 @@
             "subheader_margin_bottom": 16,
             "description": "",
             "description_margin_bottom": 16,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_container_max_width_d": 50,
             "text_container_max_width_m": 50,
             "button_text": "Shop Now",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-luna-lovegood",
             "use_slide_linkout": true
