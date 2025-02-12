@@ -244,7 +244,7 @@
             "button_text": "Shop Now",
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5fd551",
-            "button_link": "/",
+            "button_link": "shopify://products/pix-luna-lovegood",
             "use_slide_linkout": false
           }
         }
