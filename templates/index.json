@@ -187,7 +187,7 @@
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-luna-lovegood",
-            "use_slide_linkout": false
+            "use_slide_linkout": true
           }
         },
         "carousel_QLqnaY": {
@@ -216,7 +216,7 @@
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-hermione-granger",
-            "use_slide_linkout": false
+            "use_slide_linkout": true
           }
         },
         "carousel_n7ay6J": {
@@ -245,7 +245,7 @@
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5fd551",
             "button_link": "shopify://products/pix-luna-lovegood",
-            "use_slide_linkout": false
+            "use_slide_linkout": true
           }
         }
       },
