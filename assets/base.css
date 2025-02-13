@@ -3839,6 +3839,15 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   display: flex;
 }
 
+.full-video-modal .background-overlay {
+  /* display: block !important;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1; */
+}
+
 .full-video-modal .modal-close {
   position: absolute;
   padding: 10px;
