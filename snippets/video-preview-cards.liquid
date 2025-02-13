@@ -29,10 +29,17 @@
 
         soundIconOn.addEventListener('click', () => {
             audioIconContainer.classList.remove('audio-on')
+            document.querySelectorAll('.full-video-modal video').forEach((video) => {
+                video.muted = true
+            })
+           
         })
 
         soundIconOff.addEventListener('click', () => {
             audioIconContainer.classList.add('audio-on')
+            document.querySelectorAll('.full-video-modal video').forEach((video) => {
+                video.muted = false
+            })
         })
 
         modalClose.addEventListener('click', () => {
@@ -93,6 +100,7 @@
                 icon.classList.remove('active')
             })
         }
+
 
         function resetVideosAndThumbs() {
 
