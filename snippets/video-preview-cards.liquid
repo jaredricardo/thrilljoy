@@ -8,6 +8,9 @@
         const thumbs = document.querySelectorAll('.full-video-modal .thumb-container .thumb')
         const fullVideos = fullVideoModal.querySelectorAll('.full-video-modal video')
         const fullVideoContainers = document.querySelectorAll('.full-video-modal .full-video-container')
+        const audioIconContainer = document.querySelector('.full-video-modal .modal-mute-active-video')
+        const soundIconOn = document.querySelector('.full-video-modal .icon-sound-on')
+        const soundIconOff = document.querySelector('.full-video-modal .icon-sound-off')
 
         document.querySelector('#MainContent').appendChild(fullVideoModal)
 
@@ -19,6 +22,18 @@
             centeredSlides: true
         })
 
+        swiper.on('transitionEnd',function(){
+            const newlyActiveIndex = document.querySelector('.full-video-modal-container .swiper-slide.swiper-slide-active').dataset.videoIndex
+            handleSwipeTransition(newlyActiveIndex)
+        })
+
+        soundIconOn.addEventListener('click', () => {
+            audioIconContainer.classList.remove('audio-on')
+        })
+
+        soundIconOff.addEventListener('click', () => {
+            audioIconContainer.classList.add('audio-on')
+        })
 
         modalClose.addEventListener('click', () => {
             fullVideoModal.classList.remove('active')
@@ -27,11 +42,7 @@
 
         thumbs.forEach((thumb) => {
             thumb.addEventListener('click', () => {
-                const currentIndex = thumb.dataset.videoIndex
-                resetVideosAndThumbs()
-                thumb.classList.add('active')  
-                swiper.slideTo(currentIndex)
-                document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
+                handleClickThumb(thumb)
             })
         })
 
@@ -52,6 +63,20 @@
             })
         })
 
+        function handleClickThumb(thumb) {
+            const currentIndex = thumb.dataset.videoIndex
+            resetVideosAndThumbs()
+            thumb.classList.add('active')  
+            swiper.slideTo(currentIndex)
+            document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
+        }
+
+        function handleSwipeTransition(newIndex){
+            const newlyActiveThumb = document.querySelector(`.thumb[data-video-index="${newIndex}"]`)
+            resetVideosAndThumbs()
+            newlyActiveThumb.classList.add('active')  
+            document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).play()
+        }
 
         function enterPlayState(video) {
             hidePlayIcons()
@@ -68,7 +93,6 @@
                 icon.classList.remove('active')
             })
         }
-
 
         function resetVideosAndThumbs() {
 
@@ -107,6 +131,10 @@
     <div class="modal-close">
         {% render 'icon-close' %}
     </div>
+    <div class="modal-mute-active-video audio-on">
+        {% render 'icon-sound-on' %}
+        {% render 'icon-sound-off' %}
+    </div>
     <div class="full-video-modal-container">
         <div class="thumb-container">
             {% for video_obj in videos_obj %}
@@ -120,10 +148,10 @@
             <div class="swiper-wrapper">
                 {% for video_obj in videos_obj %}
                     {% assign vid_str = video_obj.full_video | file_url %}
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-video-index="{{ forloop.index0 }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            <video src="{{ vid_str }}" autoplay="false" controls="false" data-video-index="{{ forloop.index0 }}"></video>
+                            <video src="{{ vid_str }}" loop="true" autoplay="false" controls="false" data-video-index="{{ forloop.index0 }}"></video>
                         </div>
                     </div>
                 {% endfor %}
