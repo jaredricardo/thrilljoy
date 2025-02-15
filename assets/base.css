@@ -3840,12 +3840,13 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .full-video-modal .background-overlay {
-  /* display: block !important;
+  display: none;
   width: 100vw;
-  height: 100vh;
+  height: 10vh;
   position: fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  z-index: 1; */
+  background: linear-gradient(to bottom, #00000078, #0000);
+  z-index: 2;
+  top: 0;
 }
 
 .full-video-modal .modal-close {
@@ -3980,5 +3981,21 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
   .full-video-modal .full-video-container  .icon-play {
     width: 15%;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .full-video-modal .background-overlay  {
+    display: block !important; 
+  }
+  .full-video-modal .modal-close {
+    top: 10px;
+    left: 10px;
+    width: 50px;
+  }
+  .full-video-modal .modal-mute-active-video {
+    top: 10px;
+    right: 10px;
+    width: 50px;
   }
 }
