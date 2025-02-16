@@ -19,6 +19,50 @@
     ]
   },
   {
+    "name": "General TT style settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings for general Tik Tok Style Videos",
+        "info": "These settings are for the Tik Tok style mini videos on the PDPs. These settings are specifically for the 'general' videos, which appear on every PDP. To add specific videos to specific product pages, you must add them via product metafelds."
+      },
+      {
+        "type": "text",
+        "id": "default_video_text_one",
+        "label": "Text for mini PDP video 1"
+      },
+      {
+        "type": "video",
+        "id": "preview_video_one",
+        "label": "PDP mini preview video 1",
+        "info": "Short preview video for the general Tik Tok style mini video 1"
+      },
+      {
+        "type": "video",
+        "id": "full_video_one",
+        "label": "PDP mini full video 1",
+        "info": "Full video for the general Tik Tok style mini video 1"
+      },
+      {
+        "type": "text",
+        "id": "default_video_text_two",
+        "label": "Text for mini PDP video 2"
+      },
+      {
+        "type": "video",
+        "id": "preview_video_two",
+        "label": "PDP mini preview video 2",
+        "info": "Short preview video for the general Tik Tok style mini video 2"
+      },
+      {
+        "type": "video",
+        "id": "full_video_two",
+        "label": "PDP mini full video 2",
+        "info": "Full video for the general Tik Tok style mini video 2"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
