@@ -2,6 +2,8 @@
 <script>
     window.addEventListener('DOMContentLoaded', () => {
 
+    
+
         const fullVideoModal = document.querySelector('.full-video-modal')
         const cards = document.querySelectorAll('.video-preview-cards-container .video-preview-card-container')
         const modalClose = fullVideoModal.querySelector('.modal-close')
@@ -13,6 +15,16 @@
         const soundIconOff = document.querySelector('.full-video-modal .icon-sound-off')
 
         document.querySelector('#MainContent').appendChild(fullVideoModal)
+
+        // fullVideos.forEach((video) => {
+        //     video.controls = "false"
+        //     video.addEventListener('play', () => {
+        //         video.controls = "false"
+        //     })
+        //     video.addEventListener('pause', () => {
+        //         video.controls = "false"
+        //     })
+        // })
 
         const swiper = new Swiper('.full-video-modal .swiper', {
             direction: 'vertical',
@@ -57,12 +69,10 @@
             card.addEventListener('click', () => {
                 const currentIndex = card.dataset.videoIndex
                 document.querySelector(`.thumb[data-video-index="${currentIndex}"]`).click()
-                console.log(document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`))
                 document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
                 fullVideoModal.classList.add('active')
             })
         })
-
 
         fullVideoContainers.forEach((container) => {
             container.addEventListener('click', () => {
@@ -78,9 +88,9 @@
             swiper.slideTo(currentIndex)
         }
 
-        function handleSwipeTransition(newIndex){
+        async function handleSwipeTransition(newIndex){
             const newlyActiveThumb = document.querySelector(`.thumb[data-video-index="${newIndex}"]`)
-            resetVideosAndThumbs()
+            await resetVideosAndThumbs()
             newlyActiveThumb.classList.add('active')  
             document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).play()
         }
@@ -131,9 +141,10 @@
 <div class="video-preview-cards-container">
     {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
     {% for video_obj in videos_obj %}
-        {% assign vid_str = video_obj.preview_video | file_url %}
+        {% assign vid = video_obj.preview_video.value %}
         <div class="video-preview-card-container" data-video-index="{{ forloop.index0 }}">
-            <video src="{{ vid_str }}" muted autoplay loop controls="false"></video>
+            {{ vid | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            {% comment %} <video src="{{ vid_str }}" muted autoplay loop controls="false"></video> {% endcomment %}
             <p>{{ video_obj.optional_video_explanation }}</p>
         </div>
     {% endfor %}
@@ -178,31 +189,31 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 {% for video_obj in videos_obj %}
-                    {% assign vid_str = video_obj.full_video | file_url %}
+                    {% assign vid = video_obj.full_video.value %}
                     <div class="swiper-slide" data-video-index="{{ forloop.index0 }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            <video src="{{ vid_str }}" loop="true" controls="false" preload="none" data-video-index="{{ forloop.index0 }}"></video>
+                            {{ vid | video_tag: image_size: '100x', muted:false, loop:true, controls:false, preload:false, playsinline:true, data-video-index: forloop.index0 }}
                         </div>
                     </div>
                 {% endfor %}
                 {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
-                {% if settings.preview_video_one != blank %}
+                {% if settings.full_video_one != blank %}
                     {% assign first_general_video_index = num_videos | plus: 0 %}
                     <div class="swiper-slide" data-video-index="{{ first_general_video_index }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            {{ settings.full_video_one | video_tag: image_size: '100x', autoplay:false, loop:false, controls:true, preload:false, data-video-index: first_general_video_index }}
+                            {{ settings.full_video_one | video_tag: image_size: '100x', muted:false, loop:true, controls:false, preload:false, playsinline:true, data-video-index: first_general_video_index }}
                         </div>
                     </div>
                 {% endif %}
 
-                {% if settings.preview_video_two != blank %}
+                {% if settings.full_video_two != blank %}
                     {% assign second_general_video_index = num_videos | plus: 1 %}
                     <div class="swiper-slide" data-video-index="{{ second_general_video_index }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            {{ settings.full_video_two | video_tag: image_size: '100x', autoplay:false, loop:false, controls:true, preload:false, data-video-index: second_general_video_index }}
+                            {{ settings.full_video_two | video_tag: image_size: '100x', muted:false, loop:false, controls:false, preload:false, playsinline:true, data-video-index: second_general_video_index }}
                         </div>
                     </div>
                 {% endif %}

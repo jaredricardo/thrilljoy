@@ -3968,8 +3968,10 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .full-video-modal video::-webkit-media-controls,
-.video-preview-cards-container video::-webkit-media-controls {
-  display: none;
+.video-preview-cards-container video::-webkit-media-controls,
+.video-preview-cards-container video::-webkit-media-controls-start-playback-button,
+.full-video-modal video::-webkit-media-controls-enclosure  {
+  display: none !important;
 }
 
 
