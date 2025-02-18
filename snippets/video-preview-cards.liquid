@@ -57,6 +57,7 @@
             card.addEventListener('click', () => {
                 const currentIndex = card.dataset.videoIndex
                 document.querySelector(`.thumb[data-video-index="${currentIndex}"]`).click()
+                console.log(document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`))
                 document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
                 fullVideoModal.classList.add('active')
             })
@@ -75,7 +76,6 @@
             resetVideosAndThumbs()
             thumb.classList.add('active')  
             swiper.slideTo(currentIndex)
-            document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
         }
 
         function handleSwipeTransition(newIndex){
@@ -164,15 +164,15 @@
         <div class="thumb-container">        
             {% for video_obj in videos_obj %}
                 {% assign vid_str = video_obj.preview_video | file_url %}
-                <button class="thumb" data-video-index="{{ forloop.index0 }}" style="background-image: url({{ video_obj.preview_video.preview_image | image_url: '100x' }});"></button>
+                <button class="thumb" data-video-index="{{ forloop.index0 }}" style="background-image: url({{ video_obj.poster | image_url: width: '150x' }});"></button>
             {% endfor %}
             {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
             {% if settings.preview_video_one != blank %}
-                <button class="thumb" data-video-index="{{ num_videos | plus: 0 }}" style="background-image: url({{ settings.preview_video_one.preview_image | image_url: width: '100x' }});"></button>
+                <button class="thumb" data-video-index="{{ num_videos | plus: 0 }}" style="background-image: url({{ settings.poster_1 | image_url: width: '150x' }});"></button>
             {% endif %}
 
             {% if settings.preview_video_two != blank %}
-                <button class="thumb" data-video-index="{{ num_videos | plus: 1 }}" style="background-image: url({{ settings.preview_video_two.preview_image | image_url: width: '100x' }});"></button>
+                <button class="thumb" data-video-index="{{ num_videos | plus: 1 }}" style="background-image: url({{ settings.poster_2 | image_url: width: '150x' }});"></button>
             {% endif %}
         </div> 
         <div class="swiper">
@@ -182,25 +182,27 @@
                     <div class="swiper-slide" data-video-index="{{ forloop.index0 }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            <video src="{{ vid_str }}" loop="true" autoplay="false" controls="false" preload="none" data-video-index="{{ forloop.index0 }}"></video>
+                            <video src="{{ vid_str }}" loop="true" controls="false" preload="none" data-video-index="{{ forloop.index0 }}"></video>
                         </div>
                     </div>
                 {% endfor %}
                 {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
                 {% if settings.preview_video_one != blank %}
-                    <div class="swiper-slide" data-video-index="{{ num_videos | plus: 0 }}">
+                    {% assign first_general_video_index = num_videos | plus: 0 %}
+                    <div class="swiper-slide" data-video-index="{{ first_general_video_index }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            {{ settings.preview_video_one | video_tag: image_size: '100x', autoplay:false, loop:false, controls:false, preload:false, data-video-index: "3" }}
+                            {{ settings.full_video_one | video_tag: image_size: '100x', autoplay:false, loop:false, controls:true, preload:false, data-video-index: first_general_video_index }}
                         </div>
                     </div>
                 {% endif %}
 
                 {% if settings.preview_video_two != blank %}
-                    <div class="swiper-slide" data-video-index="{{ num_videos | plus: 1 }}">
+                    {% assign second_general_video_index = num_videos | plus: 1 %}
+                    <div class="swiper-slide" data-video-index="{{ second_general_video_index }}">
                         <div class="full-video-container">
                             {% render 'icon-play' %}
-                            {{ settings.preview_video_two | video_tag: image_size: '100x', autoplay:false, loop:false, controls:false, preload:false, data-video-index: "4" }}
+                            {{ settings.full_video_two | video_tag: image_size: '100x', autoplay:false, loop:false, controls:true, preload:false, data-video-index: second_general_video_index }}
                         </div>
                     </div>
                 {% endif %}

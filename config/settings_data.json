@@ -1,12 +1,14 @@
 {
   "current": {
     "category_comparison_string": "parked-unused",
-    "default_video_text_one": "preview text 1",
+    "default_video_text_one": "",
     "preview_video_one": "shopify:\/\/files\/videos\/0216.mp4",
     "full_video_one": "shopify:\/\/files\/videos\/0216.mp4",
-    "default_video_text_two": "preview text 2",
-    "preview_video_two": "shopify:\/\/files\/videos\/0216(1).mp4",
-    "full_video_two": "shopify:\/\/files\/videos\/0216(1).mp4",
+    "poster_1": "shopify:\/\/shop_images\/Screen_Shot_2025-02-17_at_12.45.42_PM.png",
+    "default_video_text_two": "",
+    "preview_video_two": "shopify:\/\/files\/videos\/0217.mp4",
+    "full_video_two": "shopify:\/\/files\/videos\/0217(1).mp4",
+    "poster_2": "shopify:\/\/shop_images\/Screen_Shot_2025-02-17_at_9.50.25_PM.png",
     "logo": "shopify:\/\/shop_images\/THRILLJOY_LOGO_B_W_Thrilljoy_b_w_word_lockup_36028183-ae0d-492b-b6db-63201a78b865.png",
     "logo_width": 200,
     "favicon": "shopify:\/\/shop_images\/favicon.png",

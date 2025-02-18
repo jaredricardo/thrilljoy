@@ -3808,10 +3808,11 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .video-preview-cards-container .video-preview-card-container p {
-  text-align: left;
-  margin: 5px 0 0 0;
+  margin: 0;
   line-height: 1.2;
-  color: black;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
 }
 
 .video-preview-cards-container video {
@@ -3958,11 +3959,8 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   cursor: pointer;
 }
 
-.full-video-modal-container .thumb-container .thumb video {
-  height: 100%; 
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
+.full-video-modal-container .thumb-container .thumb {
+  background-position: center;
 }
 
 .full-video-modal-container .thumb-container .thumb.active {
@@ -3996,6 +3994,6 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   .full-video-modal .modal-mute-active-video {
     top: 10px;
     right: 10px;
-    width: 50px;
+    width: 50 px;
   }
 }
