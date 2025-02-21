@@ -1543,9 +1543,9 @@ slider-component#GalleryDots-template--23615465226404__main li button,
 slider-component#GalleryDots-template--23615654887588__main li button
 {
     height: 1.2rem;
-    width: .5rem;
+    width: 1.2rem;
     background: #000;
-    border-radius: 50%;    
+    border-radius: 50px;    
     border: 0;
     cursor: pointer;
 }

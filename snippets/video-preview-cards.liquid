@@ -2,8 +2,6 @@
 <script>
     window.addEventListener('DOMContentLoaded', () => {
 
-    
-
         const fullVideoModal = document.querySelector('.full-video-modal')
         const cards = document.querySelectorAll('.video-preview-cards-container .video-preview-card-container')
         const modalClose = fullVideoModal.querySelector('.modal-close')
@@ -16,16 +14,6 @@
 
         document.querySelector('#MainContent').appendChild(fullVideoModal)
 
-        // fullVideos.forEach((video) => {
-        //     video.controls = "false"
-        //     video.addEventListener('play', () => {
-        //         video.controls = "false"
-        //     })
-        //     video.addEventListener('pause', () => {
-        //         video.controls = "false"
-        //     })
-        // })
-
         const swiper = new Swiper('.full-video-modal .swiper', {
             direction: 'vertical',
             rewind: true,
@@ -34,10 +22,12 @@
             centeredSlides: true
         })
 
-        swiper.on('transitionEnd',function(){
+        swiper.on('slideChangeTransitionEnd',function(){   
+            console.log('slide change')
             const newlyActiveIndex = document.querySelector('.full-video-modal-container .swiper-slide.swiper-slide-active').dataset.videoIndex
             handleSwipeTransition(newlyActiveIndex)
         })
+
 
         soundIconOn.addEventListener('click', () => {
             audioIconContainer.classList.remove('audio-on')
@@ -61,15 +51,23 @@
 
         thumbs.forEach((thumb) => {
             thumb.addEventListener('click', () => {
+                console.log('CLICKED THUMB')
                 handleClickThumb(thumb)
             })
         })
 
         cards.forEach((card) => {
             card.addEventListener('click', () => {
+  
                 const currentIndex = card.dataset.videoIndex
-                document.querySelector(`.thumb[data-video-index="${currentIndex}"]`).click()
-                document.querySelector(`.full-video-container video[data-video-index="${currentIndex}"]`).play()
+                const currentVideo = document.querySelector(`.full-video-modal .swiper-slide[data-video-index="${currentIndex}"] video`)  
+
+                document.querySelector(`.full-video-modal .thumb[data-video-index="${currentIndex}"]`).classList.add('active')
+
+                swiper.slideTo(currentIndex)
+
+                currentVideo.play()
+
                 fullVideoModal.classList.add('active')
             })
         })
@@ -82,17 +80,22 @@
         })
 
         function handleClickThumb(thumb) {
-            const currentIndex = thumb.dataset.videoIndex
+            const currentIndex = thumb.dataset.videoIndex  
             resetVideosAndThumbs()
             thumb.classList.add('active')  
             swiper.slideTo(currentIndex)
         }
 
         async function handleSwipeTransition(newIndex){
-            const newlyActiveThumb = document.querySelector(`.thumb[data-video-index="${newIndex}"]`)
-            await resetVideosAndThumbs()
-            newlyActiveThumb.classList.add('active')  
-            document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).play()
+            const currentVideo = document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`)
+
+            // reset all videos to initial state
+            resetVideosAndThumbs()
+
+            document.querySelector(`.full-video-modal .thumb[data-video-index="${newIndex}"]`).classList.add('active')
+
+            currentVideo.play()
+    
         }
 
         function enterPlayState(video) {
