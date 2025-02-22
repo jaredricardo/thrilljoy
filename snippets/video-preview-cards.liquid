@@ -22,12 +22,15 @@
             centeredSlides: true
         })
 
-        swiper.on('slideChangeTransitionEnd',function(){   
-            console.log('slide change')
+        swiper.on('transitionEnd',function(){   
+
             const newlyActiveIndex = document.querySelector('.full-video-modal-container .swiper-slide.swiper-slide-active').dataset.videoIndex
+            console.log(`slide change to new ${newlyActiveIndex}`)
             handleSwipeTransition(newlyActiveIndex)
         })
 
+ 
+        // slideChangeTransitionEnd
 
         soundIconOn.addEventListener('click', () => {
             audioIconContainer.classList.remove('audio-on')
@@ -62,6 +65,8 @@
                 const currentIndex = card.dataset.videoIndex
                 const currentVideo = document.querySelector(`.full-video-modal .swiper-slide[data-video-index="${currentIndex}"] video`)  
 
+                console.log(currentIndex)
+
                 document.querySelector(`.full-video-modal .thumb[data-video-index="${currentIndex}"]`).classList.add('active')
 
                 swiper.slideTo(currentIndex)
@@ -87,15 +92,22 @@
         }
 
         async function handleSwipeTransition(newIndex){
-            const currentVideo = document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`)
-
+    
             // reset all videos to initial state
-            resetVideosAndThumbs()
+            await resetVideosAndThumbs()
 
             document.querySelector(`.full-video-modal .thumb[data-video-index="${newIndex}"]`).classList.add('active')
 
-            currentVideo.play()
-    
+            // document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).load()
+
+            document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).play()
+       
+          
+
+
+            // document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).muted = false
+
+          
         }
 
         function enterPlayState(video) {
@@ -117,6 +129,7 @@
 
         function resetVideosAndThumbs() {
 
+
             hidePlayIcons()
             
             thumbs.forEach((thumb) => {
@@ -124,8 +137,8 @@
             })
 
             fullVideos.forEach((video) => {
-                video.pause()
                 video.currentTime = 0
+                video.pause()
             })
             
         }
