@@ -14,6 +14,19 @@
 
         document.querySelector('#MainContent').appendChild(fullVideoModal)
 
+
+        function isMobileDevice() {
+            return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        }
+
+        if (isMobileDevice()) {
+            fullVideos.forEach((video) => {
+                video.muted = true
+                audioIconContainer.classList.remove('audio-on')
+            })
+        }
+          
+
         const swiper = new Swiper('.full-video-modal .swiper', {
             direction: 'vertical',
             rewind: true,
@@ -23,14 +36,9 @@
         })
 
         swiper.on('transitionEnd',function(){   
-
             const newlyActiveIndex = document.querySelector('.full-video-modal-container .swiper-slide.swiper-slide-active').dataset.videoIndex
-            console.log(`slide change to new ${newlyActiveIndex}`)
             handleSwipeTransition(newlyActiveIndex)
         })
-
- 
-        // slideChangeTransitionEnd
 
         soundIconOn.addEventListener('click', () => {
             audioIconContainer.classList.remove('audio-on')
@@ -54,7 +62,6 @@
 
         thumbs.forEach((thumb) => {
             thumb.addEventListener('click', () => {
-                console.log('CLICKED THUMB')
                 handleClickThumb(thumb)
             })
         })
@@ -63,9 +70,12 @@
             card.addEventListener('click', () => {
   
                 const currentIndex = card.dataset.videoIndex
-                const currentVideo = document.querySelector(`.full-video-modal .swiper-slide[data-video-index="${currentIndex}"] video`)  
-
-                console.log(currentIndex)
+                const currentVideo = document.querySelector(`.full-video-modal .swiper-slide[data-video-index="${currentIndex}"] video`) 
+                
+                fullVideos.forEach((video) => {
+                    video.muted = false
+                    audioIconContainer.classList.add('audio-on')
+                })
 
                 document.querySelector(`.full-video-modal .thumb[data-video-index="${currentIndex}"]`).classList.add('active')
 
@@ -92,22 +102,14 @@
         }
 
         async function handleSwipeTransition(newIndex){
-    
-            // reset all videos to initial state
+
             await resetVideosAndThumbs()
 
             document.querySelector(`.full-video-modal .thumb[data-video-index="${newIndex}"]`).classList.add('active')
 
-            // document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).load()
-
             document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).play()
-       
-          
 
-
-            // document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).muted = false
-
-          
+ 
         }
 
         function enterPlayState(video) {
@@ -128,7 +130,6 @@
 
 
         function resetVideosAndThumbs() {
-
 
             hidePlayIcons()
             
