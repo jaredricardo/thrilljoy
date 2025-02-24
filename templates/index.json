@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "tj_banner_carousel_LayRLh": {
@@ -5,8 +14,9 @@
       "blocks": {
         "carousel_e6f39C": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/unnamed-3.png",
+            "desktop_image": "shopify://shop_images/unnamed-3.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -28,14 +38,15 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/products\/pix-aang",
+            "button_link": "shopify://products/pix-aang",
             "use_slide_linkout": true
           }
         },
         "carousel_3VnqMa": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/unnamed-4.png",
+            "desktop_image": "shopify://shop_images/unnamed-4.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -57,14 +68,15 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/products\/pix-scooby-doo",
+            "button_link": "shopify://products/pix-scooby-doo",
             "use_slide_linkout": true
           }
         },
         "carousel_thh9Wb": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/unnamed-5.png",
+            "desktop_image": "shopify://shop_images/unnamed-5.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -86,14 +98,15 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/products\/pix-scooby-doo",
+            "button_link": "shopify://products/pix-scooby-doo",
             "use_slide_linkout": true
           }
         },
         "carousel_dGzaTX": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
+            "desktop_image": "shopify://shop_images/unnamed_7accdb23-f31d-473b-84d9-f6f3d3405cbe.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -115,7 +128,123 @@
             "button_text": "Shop Now",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/products\/pix-aeon-flux",
+            "button_link": "shopify://products/pix-aeon-flux",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_prtVei": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/unnamed-2.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 10,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Get your priorities in order and add Hermione to your collection!",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://products/pix-hermione-granger",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_EefcRn": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/unnamed_b3a4c8da-5069-48d3-8dbd-b1fa9a580db9.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 10,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "You’re just as sane as we are - add Luna to your collection today!",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://products/pix-luna-lovegood",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_QLqnaY": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/unnamed-4_1b77d541-85eb-4101-9ac0-d6709ad46ec0.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Brains, bravery, and a screaming Mandrake—Hermione has arrived!",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://products/pix-hermione-granger",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_n7ay6J": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/unnamed-1.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "Add a little magic (and maybe some Spectrespecs) to your collection today!",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 50,
+            "button_text": "Shop Now",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://products/pix-luna-lovegood",
             "use_slide_linkout": true
           }
         }
@@ -124,7 +253,11 @@
         "carousel_e6f39C",
         "carousel_3VnqMa",
         "carousel_thh9Wb",
-        "carousel_dGzaTX"
+        "carousel_dGzaTX",
+        "carousel_prtVei",
+        "carousel_EefcRn",
+        "carousel_QLqnaY",
+        "carousel_n7ay6J"
       ],
       "custom_css": [
         "@media screen and (max-width: 768px) {h1, h2 {font-size: 16px; } .button {min-width: auto; min-height: auto; padding: 0 1.5rem; height: 40px; }}"
@@ -142,8 +275,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
+        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify://shop_images/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -166,7 +299,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/pix",
+            "button_link_1": "shopify://collections/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -184,7 +317,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -230,13 +363,13 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
+        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
-        "link_out": "\/account\/register",
+        "link_out": "/account/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -258,7 +391,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/apparel",
+            "button_link_1": "shopify://collections/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -276,7 +409,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -322,13 +455,13 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
+        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
         "text_color": "#ffffff",
-        "link_out": "\/pages\/frequently-asked-questions",
+        "link_out": "/pages/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -337,14 +470,17 @@
     },
     "simple_banner_with_text_K6HdPp": {
       "type": "simple-banner-with-text",
+      "custom_css": [
+        ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
+      ],
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/TOON_IN_TO_OUR_ANIMATION_BLOG.svg",
+        "desktop_image": "shopify://shop_images/bloo_loves_you.svg",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Toon in: <\/h2><h2>Our Animation Blog is Live!<\/h2>",
+        "header_text": "",
         "text_color": "#ffffff",
-        "link_out": "shopify:\/\/blogs\/news\/animation-drop-time-to-relive-your-cartoon-dreams",
+        "link_out": "shopify://blogs/news/roses-are-red-this-yeti-is-bloo",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",

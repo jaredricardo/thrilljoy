@@ -1,0 +1,64 @@
+<script>
+
+    // USE https://csvjson.com/csv2json TO GET THE BELOW CSV DATA INTO JSON FORMAT
+
+    const obj =   {
+    "restoch11@gmail.com": 1,
+    "jasonsjobom@hotmail.com": 1,
+    "jmcafee45@yahoo.com": 1,
+    "jbobeslara@yahoo.com": 1,
+    "drider024@yahoo.com": 1,
+    "danielwolf2411@gmail.com": 1,
+    "randylebaron@gmail.com": 1,
+    "colinstairs@gmail.com": 1,
+    "dustinblea@rocketmail.com": 1,
+    "allynauer@mac.com": 1,
+    "cebowen@gmail.com": 1,
+    "jose.castropr@gmail.com": 1,
+    "michael@suddith.com": 1,
+    "rjrosalesdelrosario@gmail.com": 1,
+    "jermpharmd@yahoo.com": 2,
+    "rachelkurtz.rk@gmail.com": 1,
+    "triguous@gmail.com": 1,
+    "vincent.villaflor@outlook.com": 1,
+    "cynthiagalas@hotmail.com": 1,
+    "juliecdeschamps@gmail.com": 2,
+    "jsuchy85@aol.com": 1,
+    "tuto0323@gmail.com": 1,
+    "aa1diaries@gmail.com": 1,
+    "pegatinasfunko@gmail.com": 6,
+    "coreybicek@yahoo.com": 1,
+    "zmaitzen@gmail.com": 1,
+    "lndavid91@yahoo.com": 1,
+    "buck41buck@gmail.com": 1,
+    "cuongk83@gmail.com": 1,
+    "thomasdavidh@me.com": 1,
+    "justintime808@gmail.com": 1,
+    "soccerstar901@aol.com": 1
+  }
+
+  let finalArray = []
+
+
+for (const key in obj) {
+
+    const value = obj[key]
+
+    for(let i = 0; i < value; i++) {
+        finalArray.push(key)
+    }
+
+}
+
+console.log(finalArray)
+
+function randomWinner(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+}
+
+console.log('/////////// THE RANDOM WINNER IS //////////')
+console.log(randomWinner(finalArray))
+
+
+
+</script>
