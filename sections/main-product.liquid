@@ -240,6 +240,8 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {%- when 'video-cards-placement' -%}
+                {% render 'video-preview-cards' product:product %}
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -920,6 +922,18 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "video-cards-placement",
+      "name": "Video Cards Placement",
+      "limit": 1,
+      "settings" : [
+        {
+          "type": "header",
+          "content": "Explanation: of block:",
+          "info": "Place this block wherever you would like the video blocks to appear in the main product area. The videos are loaded via a metaobject on the given product. This block is simply for positioning."
+        }
+      ] 
     },
     {
       "type": "text",

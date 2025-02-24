@@ -52,6 +52,10 @@
             "show_gift_card_recipient": true
           }
         },
+        "video_cards_placement_4nweMc": {
+          "type": "video-cards-placement",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -88,6 +92,7 @@
         "quantity_selector",
         "text_UCqMyQ",
         "buy_buttons",
+        "video_cards_placement_4nweMc",
         "description",
         "collapsible_tab_7jT6Rw",
         "custom_liquid_QABgYV",

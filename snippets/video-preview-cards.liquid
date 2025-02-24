@@ -1,0 +1,240 @@
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const fullVideoModal = document.querySelector('.full-video-modal')
+        const cards = document.querySelectorAll('.video-preview-cards-container .video-preview-card-container')
+        const modalClose = fullVideoModal.querySelector('.modal-close')
+        const thumbs = document.querySelectorAll('.full-video-modal .thumb-container .thumb')
+        const fullVideos = fullVideoModal.querySelectorAll('.full-video-modal video')
+        const fullVideoContainers = document.querySelectorAll('.full-video-modal .full-video-container')
+        const audioIconContainer = document.querySelector('.full-video-modal .modal-mute-active-video')
+        const soundIconOn = document.querySelector('.full-video-modal .icon-sound-on')
+        const soundIconOff = document.querySelector('.full-video-modal .icon-sound-off')
+
+        document.querySelector('#MainContent').appendChild(fullVideoModal)
+
+
+        function isMobileDevice() {
+            return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        }
+
+        if (isMobileDevice()) {
+            fullVideos.forEach((video) => {
+                video.muted = true
+                audioIconContainer.classList.remove('audio-on')
+            })
+        }
+          
+
+        const swiper = new Swiper('.full-video-modal .swiper', {
+            direction: 'vertical',
+            rewind: true,
+            loopAddBlankSlides: true,
+            speed: 400,
+            centeredSlides: true
+        })
+
+        swiper.on('transitionEnd',function(){   
+            const newlyActiveIndex = document.querySelector('.full-video-modal-container .swiper-slide.swiper-slide-active').dataset.videoIndex
+            handleSwipeTransition(newlyActiveIndex)
+        })
+
+        soundIconOn.addEventListener('click', () => {
+            audioIconContainer.classList.remove('audio-on')
+            document.querySelectorAll('.full-video-modal video').forEach((video) => {
+                video.muted = true
+            })
+           
+        })
+
+        soundIconOff.addEventListener('click', () => {
+            audioIconContainer.classList.add('audio-on')
+            document.querySelectorAll('.full-video-modal video').forEach((video) => {
+                video.muted = false
+            })
+        })
+
+        modalClose.addEventListener('click', () => {
+            fullVideoModal.classList.remove('active')
+            resetVideosAndThumbs()
+        })
+
+        thumbs.forEach((thumb) => {
+            thumb.addEventListener('click', () => {
+                handleClickThumb(thumb)
+            })
+        })
+
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+  
+                const currentIndex = card.dataset.videoIndex
+                const currentVideo = document.querySelector(`.full-video-modal .swiper-slide[data-video-index="${currentIndex}"] video`) 
+                
+                fullVideos.forEach((video) => {
+                    video.muted = false
+                    audioIconContainer.classList.add('audio-on')
+                })
+
+                document.querySelector(`.full-video-modal .thumb[data-video-index="${currentIndex}"]`).classList.add('active')
+
+                swiper.slideTo(currentIndex)
+
+                currentVideo.play()
+
+                fullVideoModal.classList.add('active')
+            })
+        })
+
+        fullVideoContainers.forEach((container) => {
+            container.addEventListener('click', () => {
+                const video = container.querySelector('video')
+                video.paused ? enterPlayState(video) : enterPauseState(video)
+            })
+        })
+
+        function handleClickThumb(thumb) {
+            const currentIndex = thumb.dataset.videoIndex  
+            resetVideosAndThumbs()
+            thumb.classList.add('active')  
+            swiper.slideTo(currentIndex)
+        }
+
+        async function handleSwipeTransition(newIndex){
+
+            await resetVideosAndThumbs()
+
+            document.querySelector(`.full-video-modal .thumb[data-video-index="${newIndex}"]`).classList.add('active')
+
+            document.querySelector(`.full-video-container video[data-video-index="${newIndex}"]`).play()
+
+ 
+        }
+
+        function enterPlayState(video) {
+            hidePlayIcons()
+            video.play()
+        }
+
+        function enterPauseState(video) {
+            video.closest('.full-video-container').querySelector('.icon-play').classList.add('active')
+            video.pause()
+        }
+
+        function hidePlayIcons() {
+            document.querySelectorAll('.full-video-container .icon-play').forEach((icon) => {
+                icon.classList.remove('active')
+            })
+        }
+
+
+        function resetVideosAndThumbs() {
+
+            hidePlayIcons()
+            
+            thumbs.forEach((thumb) => {
+                thumb.classList.remove('active')
+            })
+
+            fullVideos.forEach((video) => {
+                video.currentTime = 0
+                video.pause()
+            })
+            
+        }
+
+    })
+</script>
+
+{% liquid 
+
+    assign videos_obj = product.metafields.custom.video_card_metaobjects.value
+    assign num_videos = product.metafields.custom.video_card_metaobjects.value.count
+
+-%}
+
+
+<div class="video-preview-cards-container">
+    {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
+    {% for video_obj in videos_obj %}
+        {% assign vid = video_obj.preview_video.value %}
+        <div class="video-preview-card-container" data-video-index="{{ forloop.index0 }}">
+            {{ vid | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            {% comment %} <video src="{{ vid_str }}" muted autoplay loop controls="false"></video> {% endcomment %}
+            <p>{{ video_obj.optional_video_explanation }}</p>
+        </div>
+    {% endfor %}
+    {% if settings.preview_video_one != blank %}
+        {% comment %} Because this is 0 indexed, we don't need to add anything to the first data video index here. This is because num videos is not 0 indexed. {% endcomment %}
+        <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 0 }}">
+            {{ settings.preview_video_one | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            <p>{{ settings.default_video_text_one }}</p>
+        </div>
+    {% endif %}
+    {% if settings.preview_video_two != blank %}
+        <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 1 }}">
+            {{ settings.preview_video_two | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            <p>{{ settings.default_video_text_two }}</p>
+        </div>
+    {% endif %}
+</div>
+<div class="full-video-modal">
+    <div class="background-overlay"></div>
+    <div class="modal-close">
+        {% render 'icon-close' %}
+    </div>
+    <div class="modal-mute-active-video audio-on">
+        {% render 'icon-sound-on' %}
+        {% render 'icon-sound-off' %}
+    </div>
+    <div class="full-video-modal-container">
+        <div class="thumb-container">        
+            {% for video_obj in videos_obj %}
+                {% assign vid_str = video_obj.preview_video | file_url %}
+                <button class="thumb" data-video-index="{{ forloop.index0 }}" style="background-image: url({{ video_obj.poster | image_url: width: '150x' }});"></button>
+            {% endfor %}
+            {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
+            {% if settings.preview_video_one != blank %}
+                <button class="thumb" data-video-index="{{ num_videos | plus: 0 }}" style="background-image: url({{ settings.poster_1 | image_url: width: '150x' }});"></button>
+            {% endif %}
+
+            {% if settings.preview_video_two != blank %}
+                <button class="thumb" data-video-index="{{ num_videos | plus: 1 }}" style="background-image: url({{ settings.poster_2 | image_url: width: '150x' }});"></button>
+            {% endif %}
+        </div> 
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for video_obj in videos_obj %}
+                    {% assign vid = video_obj.full_video.value %}
+                    <div class="swiper-slide" data-video-index="{{ forloop.index0 }}">
+                        <div class="full-video-container">
+                            {% render 'icon-play' %}
+                            {{ vid | video_tag: image_size: '100x', muted:false, loop:true, controls:false, preload:false, playsinline:true, data-video-index: forloop.index0 }}
+                        </div>
+                    </div>
+                {% endfor %}
+                {% comment %} in case of default pdp videos 1 and 2 being present {% endcomment %}
+                {% if settings.full_video_one != blank %}
+                    {% assign first_general_video_index = num_videos | plus: 0 %}
+                    <div class="swiper-slide" data-video-index="{{ first_general_video_index }}">
+                        <div class="full-video-container">
+                            {% render 'icon-play' %}
+                            {{ settings.full_video_one | video_tag: image_size: '100x', muted:false, loop:true, controls:false, preload:false, playsinline:true, data-video-index: first_general_video_index }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if settings.full_video_two != blank %}
+                    {% assign second_general_video_index = num_videos | plus: 1 %}
+                    <div class="swiper-slide" data-video-index="{{ second_general_video_index }}">
+                        <div class="full-video-container">
+                            {% render 'icon-play' %}
+                            {{ settings.full_video_two | video_tag: image_size: '100x', muted:false, loop:false, controls:false, preload:false, playsinline:true, data-video-index: second_general_video_index }}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
