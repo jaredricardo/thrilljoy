@@ -9,46 +9,6 @@
  */
 {
   "sections": {
-    "image_banner_MjGMb4": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_TyUA76": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.title }}",
-            "use_h1": false,
-            "heading_size": "h1"
-          }
-        },
-        "text_LXFxhD": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_TyUA76",
-        "text_LXFxhD"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/header-example.png",
-        "image_overlay_opacity": 40,
-        "fetch_priority": "auto",
-        "use_preload": false,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -79,32 +39,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "rich_text_7BAVc9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_KVPfBa": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "ORDERING",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_KVPfBa"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 0
       }
     },
     "collapsible_content_TQU4Np": {
@@ -178,31 +112,6 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_JKKxaN": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_aaJV3L": {
-          "type": "heading",
-          "settings": {
-            "heading": "PAYMENTS AND BILLING",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_aaJV3L"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "collapsible_content_ytrcYT": {
       "type": "collapsible-content",
       "blocks": {
@@ -274,31 +183,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_Wb9XBm": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_b8e4xX": {
-          "type": "heading",
-          "settings": {
-            "heading": "RETURNS AND EXCHANGES",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_b8e4xX"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "collapsible_content_KiFNVb": {
       "type": "collapsible-content",
       "blocks": {
@@ -358,31 +242,6 @@
         "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "rich_text_fyaWtd": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_39canr": {
-          "type": "heading",
-          "settings": {
-            "heading": "SHIPPING",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_39canr"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "collapsible_content_CUaMxB": {
@@ -476,31 +335,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_z9cyUX": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_aqqVRc": {
-          "type": "heading",
-          "settings": {
-            "heading": "PRODUCT RELEASES",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_aqqVRc"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "collapsible_content_epNFQB": {
       "type": "collapsible-content",
       "blocks": {
@@ -562,31 +396,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_jTHig3": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_8RVHfC": {
-          "type": "heading",
-          "settings": {
-            "heading": "SECURITY",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8RVHfC"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "collapsible_content_YDdFhR": {
       "type": "collapsible-content",
       "blocks": {
@@ -638,6 +447,108 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_Pixw9N": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dmWjq6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Thrilljoy Collectible Editions: What You Need to Know</strong>",
+            "use_h1": false,
+            "heading_size": "h2"
+          }
+        },
+        "text_rXyHHg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Thrilljoy, we love keeping things exciting—so when you grab a PIX! collectible, you’re not just getting an awesome figure, you’re also getting the<em>thrill of the chase</em>!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dmWjq6",
+        "text_rXyHHg"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_HaYTzY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BbE9PK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are Standard Editions & Chase Variants?",
+            "icon": "none",
+            "row_content": "<p>Every PIX! collectible has a<strong>1-in-6 chance </strong>of being a <strong>limited edition chase</strong>! That means for every six figures produced, one will be a special chase variant with unique details, colors, or designs.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6EigJp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are Super Chase Editions?",
+            "icon": "none",
+            "row_content": "<p>For special events and select drops, we take the excitement up a notch with <strong>SUPER chase items</strong>, featuring extremely limited edition sizes—as low as <strong>just 98 pieces worldwide</strong>! These rare finds are the ultimate collector’s prize.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NA7n4x": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are Ultra Chase Editions?",
+            "icon": "none",
+            "row_content": "<p>Occasionally, we release <strong>ULTRA chase items</strong>, which are even rarer, with edition sizes as small as <strong>just 24 pieces</strong>. If you manage to snag one of these, you’re holding a truly elite collectible!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ikpTpV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why the Different Editions?",
+            "icon": "none",
+            "row_content": "<p>We believe collecting should be <strong>fun, exciting, and rewarding</strong>. Our mix of standard, chase, super chase, and ultra chase editions adds an element of surprise while keeping our community engaged and connected. Limited production runs mean every piece is special, and every drop is an adventure!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_E64PjP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Want to Increase Your Odds?",
+            "icon": "none",
+            "row_content": "<p>While chase variants are random, the more PIX! you collect, the better your chances of landing one of these rare editions! And don’t forget—you can always trade with fellow collectors in the Thrilljoy community to complete your perfect collection.</p><p><br/>Happy collecting, and may the chase be ever in your favor!</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BbE9PK",
+        "collapsible_row_6EigJp",
+        "collapsible_row_NA7n4x",
+        "collapsible_row_ikpTpV",
+        "collapsible_row_E64PjP"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "rich_text_MKDeCA": {
       "type": "rich-text",
       "blocks": {
@@ -671,21 +582,16 @@
     }
   },
   "order": [
-    "image_banner_MjGMb4",
     "main",
     "rich_text_DycnaQ",
-    "rich_text_7BAVc9",
     "collapsible_content_TQU4Np",
-    "rich_text_JKKxaN",
     "collapsible_content_ytrcYT",
-    "rich_text_Wb9XBm",
     "collapsible_content_KiFNVb",
-    "rich_text_fyaWtd",
     "collapsible_content_CUaMxB",
-    "rich_text_z9cyUX",
     "collapsible_content_epNFQB",
-    "rich_text_jTHig3",
     "collapsible_content_YDdFhR",
+    "rich_text_Pixw9N",
+    "collapsible_content_HaYTzY",
     "rich_text_MKDeCA"
   ]
 }
