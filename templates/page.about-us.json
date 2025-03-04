@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "image_banner_k9Rt7m": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_yanWc6": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "use_h1": false,
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yanWc6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp-b.png",
+        "image_overlay_opacity": 0,
+        "fetch_priority": "auto",
+        "use_preload": false,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "jr_5050_zeYrHw": {
+      "type": "jr-5050",
+      "blocks": {
+        "h2_J6yE3y": {
+          "type": "h2",
+          "settings": {
+            "h2": "H2 Text"
+          }
+        },
+        "h3_X87FQz": {
+          "type": "h3",
+          "settings": {
+            "h3": "H3 Text"
+          }
+        },
+        "p_RkMigT": {
+          "type": "p",
+          "settings": {
+            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.<\/p>"
+          }
+        },
+        "button_8UXAqe": {
+          "type": "button",
+          "settings": {
+            "button_text": "Click Me",
+            "button_url": "",
+            "button_bg_color": "#5FD451",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "h2_J6yE3y",
+        "h3_X87FQz",
+        "p_RkMigT",
+        "button_8UXAqe"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "col_order": "",
+        "text_alignment": "center-aligned",
+        "image": "shopify:\/\/shop_images\/bloo_head.png"
+      }
+    }
+  },
+  "order": [
+    "image_banner_k9Rt7m",
+    "main",
+    "jr_5050_zeYrHw"
+  ]
+}

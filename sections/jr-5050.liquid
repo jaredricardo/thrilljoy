@@ -1,0 +1,174 @@
+{% style %}
+
+    [data-section-id="{{ section.id }}"] {
+        background-color: {{ section.settings.background_color }};
+    }
+
+    [data-section-id="{{ section.id }}"] h2,
+    [data-section-id="{{ section.id }}"] h3,
+    [data-section-id="{{ section.id }}"] p {
+        color: {{ section.settings.text_color }};
+    }
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-5050 jr-padding {{ section.settings.col_order }} page-width-2 scroll-trigger animate--fade-in">
+        <div class="col {{ section.settings.text_alignment }} content-area">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'h2' %}
+                        <h2 class="h0">{{ block.settings.h2 }}</h2>
+                    {% when 'h3' %}
+                        <h3>{{ block.settings.h3 }}</h3>
+                    {% when 'p' %}
+                        <p>{{ block.settings.p }}</p>
+                    {% when 'button' %}
+                        <a 
+                            class="button button--primary" 
+                            style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};"
+                            href="{{ block.settings.button_url }}"
+                            >
+                            {{ block.settings.button_text }}
+                        </a>
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <div class="col">
+            <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | default: '' | escape }}">
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "JR 50/50",
+  "settings": [
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color", 
+        "id": "text_color",
+        "label": "Section Text Color",
+        "default": "#000000"
+    },
+    {
+        "type": "select",
+        "id": "col_order",
+        "label": "Column Order",
+        "default": "",
+        "options": [
+            {
+                "value": "reverse",
+                "label": "Image First"
+            },
+            {
+                "value": "",
+                "label": "Image Second"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment",
+        "default": "center-aligned",
+        "options": [
+            {
+                "value": "left-aligned",
+                "label": "Left Aligned"
+            },
+            {
+                "value": "center-aligned",
+                "label": "Center Aligned"
+            },
+            {
+                "value": "right-aligned",
+                "label": "Right Aligned"
+            }
+        ]
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Section Image"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "h2",
+        "name": "H2",
+        "settings": [
+            {
+                "type": "text",
+                "id": "h2",
+                "label": "H2 Text",
+                "default": "H2 Text"
+            }
+        ]
+    },
+    {
+        "type": "h3",
+        "name": "H3",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "h3",
+                "label": "H3 Text",
+                "default": "H3 Text"
+            }
+        ]
+    },
+    {
+        "type": "p",
+        "name": "Paragraph",
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "p",
+                "label": "Paragraph Text",
+                "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.</p>"
+            }
+        ]
+    },
+    {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "button text",
+                "default": "Click Me"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button url"
+            },
+            {
+                "type": "color",
+                "id": "button_bg_color",
+                "label": "Button Background Color",
+                "default": "#5FD451"    
+            },
+            {
+                "type": "color",
+                "id": "button_text_color",
+                "label": "Button Text Color",
+                "default": "#ffffff"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+        "name": "50/50"
+    }
+  ]
+}
+{% endschema %}
