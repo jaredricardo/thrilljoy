@@ -1,0 +1,134 @@
+<style>
+    [data-section-id="{{ section.id }}"] {
+        background-color: {{ section.settings.bg_color }};
+        padding: {{ section.settings.padding_y_d }}px 1rem;
+        position: relative;
+    } 
+
+    [data-section-id="{{ section.id }}"] .form-container .klaviyo-form button {
+        background: {{ section.settings .button_bg_color }} !important;
+        color: {{ section.settings.button_text_color }} !important;
+    }
+
+
+    [data-section-id="{{ section.id }}"] h2 {
+        color: {{ section.settings.header_color }} !important;
+        margin: 0;
+    }
+
+    [data-section-id="{{ section.id }}"] h4 {
+        color: {{ section.settings.subheader_color }};
+    }
+
+    [data-section-id="{{ section.id }}"] .form-container {
+        max-width: {{ section.settings.form_max_width }}px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        [data-section-id="{{ section.id }}"] {
+            padding: {{ section.settings.padding_y_m }}px 1rem;   
+        }
+    }
+</style>
+
+<div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in tj-klaviyo-email-capture-component">
+    <div class="form-container">
+        {% if section.settings.header != blank %}
+            <h2 class="h0">{{ section.settings.header }}</h2>
+        {% endif %}
+        {% if section.settings.subheader != blank %}
+            <h4>{{ section.settings.subheader }}</h4>
+        {% endif %}
+        {{ section.settings.klaviyo_html }}
+    </div>
+    {% if section.settings.bg_image != blank %}
+        <img class="absolute-bg-image" src="{{ section.settings.bg_image | image_url: width: '1200x' }}" alt="Thrilljoy Background Image">
+    {% endif %}
+</div>
+
+
+{% schema %}
+    {
+        "name":"TJ Klaviyo Email Capture",
+        "settings":[
+            {
+                "type": "html",
+                "id": "klaviyo_html",
+                "label": "Klaviyo Email Capture HTML",
+                "default": "<div class='klaviyo-form-WV9pY7'></div>"
+            },
+            {
+                "type": "range",
+                "id": "form_max_width",
+                "label": "Form max width",
+                "default": 600,
+                "min": 300,
+                "max": 1200,
+                "step": 10
+            },
+            {
+                "type": "number",
+                "id": "padding_y_d",
+                "label": "Padding Y Desktop",
+                "default": 120
+            },
+            {
+                "type": "number",
+                "id": "padding_y_m",
+                "label": "Padding Y Mobile",
+                "default": 30
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "button_bg_color",
+                "label": "Button background color (overrides Klaviyo button color)",
+                "default": "#5FD551"
+            },
+            {
+                "type": "color",
+                "id": "button_text_color",
+                "label": "Button text color (overrides Klaviyo button color)",
+                "default": "#FFFFFF"
+            },
+            {
+                "type": "text",
+                "id": "header",
+                "label": "Header (optional)"
+            },
+            {
+                "type": "color",
+                "id": "header_color",
+                "label": "Header color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "textarea",
+                "id": "subheader",
+                "label": "Subheader (optional)"
+            },
+            {
+                "type": "color",
+                "id": "subheader_color",
+                "label": "Subheader color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Background image (optional, overtakes background color)"
+            }
+        ],
+        "presets": [
+            {
+                "name": "TJ Klaviyo Email Capture"
+            }
+        ]
+    }
+{% endschema %}
