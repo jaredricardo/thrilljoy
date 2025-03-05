@@ -160,6 +160,23 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "klaviyo_email_capture_qyYJCJ": {
+      "type": "klaviyo-email-capture",
+      "settings": {
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"><\/div>",
+        "form_max_width": 600,
+        "padding_y_d": 120,
+        "padding_y_m": 30,
+        "bg_color": "#ffffff",
+        "button_bg_color": "#5FD551",
+        "button_text_color": "#FFFFFF",
+        "header": "Keep up to date with all things Thrilljoy!",
+        "header_color": "#ffffff",
+        "subheader": "",
+        "subheader_color": "#ffffff",
+        "bg_image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png"
+      }
     }
   },
   "order": [
@@ -168,6 +185,7 @@
     "jr_5050_XRVeMn",
     "jr_5050_zeYrHw",
     "video_RxhBpx",
-    "rich_text_WpRRAn"
+    "rich_text_WpRRAn",
+    "klaviyo_email_capture_qyYJCJ"
   ]
 }
