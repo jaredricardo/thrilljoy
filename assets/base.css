@@ -4070,6 +4070,11 @@ display: none;
   max-width: 400px;
 }
 
+.jr-5050 .col.content-area h2,
+.jr-5050 .col.content-area h3 {
+  margin: 0
+}
+
 @media screen and (max-width: 768px) {
   .jr-padding {
     padding: 2rem;
