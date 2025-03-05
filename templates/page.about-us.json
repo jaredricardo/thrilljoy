@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "image_banner_k9Rt7m": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_yanWc6": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "use_h1": true,
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yanWc6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HeroBanner-elements-bg.png",
+        "image_overlay_opacity": 0,
+        "fetch_priority": "auto",
+        "use_preload": false,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "jr_5050_XRVeMn": {
+      "type": "jr-5050",
+      "blocks": {
+        "h2_KQXWr4": {
+          "type": "h2",
+          "settings": {
+            "h2": "H2 Text"
+          }
+        },
+        "p_jBA3Wy": {
+          "type": "p",
+          "settings": {
+            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "h2_KQXWr4",
+        "p_jBA3Wy"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "col_order": "reverse",
+        "text_alignment": "center-aligned",
+        "image": "shopify:\/\/shop_images\/halfbloo_1.png"
+      }
+    },
+    "jr_5050_zeYrHw": {
+      "type": "jr-5050",
+      "blocks": {
+        "h2_J6yE3y": {
+          "type": "h2",
+          "settings": {
+            "h2": "H2 Text"
+          }
+        },
+        "h3_X87FQz": {
+          "type": "h3",
+          "settings": {
+            "h3": "H3 Text"
+          }
+        },
+        "p_RkMigT": {
+          "type": "p",
+          "settings": {
+            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.<\/p>"
+          }
+        },
+        "button_8UXAqe": {
+          "type": "button",
+          "settings": {
+            "button_text": "Click Me",
+            "button_url": "",
+            "button_bg_color": "#5fd451",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "h2_J6yE3y",
+        "h3_X87FQz",
+        "p_RkMigT",
+        "button_8UXAqe"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "col_order": "",
+        "text_alignment": "center-aligned",
+        "image": "shopify:\/\/shop_images\/bloo_head.png"
+      }
+    },
+    "video_RxhBpx": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/BrianIntroHorizontal_V2.webm",
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_WpRRAn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UXeBak": {
+          "type": "heading",
+          "settings": {
+            "heading": "Header",
+            "use_h1": false,
+            "heading_size": "h1"
+          }
+        },
+        "text_Q9BRmC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ligula ut augue imperdiet egestas sit amet nec mi. Mauris tempor, eros vel placerat varius, arcu nulla semper sapien, sit amet elementum nulla lacus at neque. Nunc vel orci purus. Donec ipsum est, malesuada luctus gravida eget, vehicula sit amet turpis. Donec ornare risus ex, eget accumsan tellus scelerisque non. Nulla pretium, est sed aliquam ultrices, lacus lectus varius metus, non sagittis urna neque nec lorem. Fusce aliquet gravida eleifend. Maecenas lacinia quam ligula. Morbi dignissim tempus metus, eget euismod tellus volutpat sed. Phasellus efficitur felis id urna eleifend pharetra. Suspendisse nec diam ex.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UXeBak",
+        "text_Q9BRmC"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner_k9Rt7m",
+    "main",
+    "jr_5050_XRVeMn",
+    "jr_5050_zeYrHw",
+    "video_RxhBpx",
+    "rich_text_WpRRAn"
+  ]
+}
