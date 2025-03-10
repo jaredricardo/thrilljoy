@@ -168,7 +168,6 @@ class PredictiveSearch extends SearchForm {
   }
 
   getSearchResults(searchTerm) {
-    console.log(`Getting search results for ${searchTerm}`);
     const queryKey = searchTerm.replace(' ', '-').toLowerCase();
     this.setLiveRegionLoadingState();
 
@@ -181,6 +180,7 @@ class PredictiveSearch extends SearchForm {
       signal: this.abortController.signal,
     })
       .then((response) => {
+     
         if (!response.ok) {
           var error = new Error(response.status);
           this.close();
