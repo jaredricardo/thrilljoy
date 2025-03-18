@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner_k9Rt7m": {
@@ -16,8 +7,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "use_h1": false,
-            "heading_size": "h1"
+            "use_h1": true,
+            "heading_size": "hxxl"
           }
         }
       },
@@ -25,23 +16,24 @@
         "heading_yanWc6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp-b.png",
+        "image": "shopify:\/\/shop_images\/HeroBanner-elements-bg.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
-        "image_height": "adapt",
+        "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -49,10 +41,145 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_WpRRAn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UXeBak": {
+          "type": "heading",
+          "settings": {
+            "heading": "Born from the passion of fans, for fans",
+            "use_h1": false,
+            "heading_size": "h0"
+          }
+        },
+        "text_Q9BRmC": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Thrilljoy is an officially licensed collectible company dedicated to immortalizing your favorite pop culture moments with creativity and craftsmanship. We specialize in limited-edition collectibles, designed with innovative packaging and intricate details that bring fandom to life. We’re here to celebrate everything weird, wild, and wonderful about the worlds we love. Always listening, always evolving, we push boundaries to deliver fresh, exciting, and unforgettable ways for you to collect, connect, and celebrate your fandom. <\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UXeBak",
+        "text_Q9BRmC"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "jr_5050_XRVeMn": {
+      "type": "jr-5050",
+      "blocks": {
+        "h3_QMbWNX": {
+          "type": "h3",
+          "settings": {
+            "h3": "We are here to bring back the THRILL of collecting and the JOY of community."
+          }
+        }
+      },
+      "block_order": [
+        "h3_QMbWNX"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "col_order": "",
+        "text_alignment": "center-aligned",
+        "image": "shopify:\/\/shop_images\/halfbloo_1.png"
+      }
+    },
+    "jr_5050_zeYrHw": {
+      "type": "jr-5050",
+      "blocks": {
+        "h2_J6yE3y": {
+          "type": "h2",
+          "settings": {
+            "h2": "H2 Text"
+          }
+        },
+        "h3_X87FQz": {
+          "type": "h3",
+          "settings": {
+            "h3": "H3 Text"
+          }
+        },
+        "p_RkMigT": {
+          "type": "p",
+          "settings": {
+            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.<\/p>"
+          }
+        },
+        "button_8UXAqe": {
+          "type": "button",
+          "settings": {
+            "button_text": "Click Me",
+            "button_url": "",
+            "button_bg_color": "#5fd451",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "h2_J6yE3y",
+        "h3_X87FQz",
+        "p_RkMigT",
+        "button_8UXAqe"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "col_order": "",
+        "text_alignment": "center-aligned",
+        "image": "shopify:\/\/shop_images\/bloo_head.png"
+      }
+    },
+    "video_RxhBpx": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/BrianIntroHorizontal_V2.webm",
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "klaviyo_email_capture_qyYJCJ": {
+      "type": "klaviyo-email-capture",
+      "settings": {
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"><\/div>",
+        "form_max_width": 600,
+        "padding_y_d": 120,
+        "padding_y_m": 30,
+        "bg_color": "#ffffff",
+        "button_bg_color": "#5fd551",
+        "button_text_color": "#ffffff",
+        "header": "Keep up to date with all things Thrilljoy!",
+        "header_color": "#ffffff",
+        "subheader": "",
+        "subheader_color": "#ffffff",
+        "bg_image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png"
+      }
     }
   },
   "order": [
     "image_banner_k9Rt7m",
-    "main"
+    "main",
+    "rich_text_WpRRAn",
+    "jr_5050_XRVeMn",
+    "jr_5050_zeYrHw",
+    "video_RxhBpx",
+    "klaviyo_email_capture_qyYJCJ"
   ]
 }
