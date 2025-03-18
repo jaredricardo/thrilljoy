@@ -1,0 +1,27 @@
+{% liquid 
+
+    assign no_index = false
+
+    if product
+        if product.tags contains 'no-index' or product.template_suffix == "not-purchasable-with-money"
+            assign no_index = true
+        endif
+    endif
+
+    if collection
+        if collection.metafields.custom.no_index
+            assign no_index = true
+        endif
+    endif
+
+    if page
+        if page.metafields.custom.no_index
+            assign no_index = true
+        endif
+    endif
+
+-%}
+
+{% if no_index %}
+    <meta name="robots" content="noindex">
+{% endif %}

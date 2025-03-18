@@ -10,6 +10,7 @@
   endfor
 
 -%}
+
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -210,7 +211,7 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
-    <div class="tj-breadcrumbs">
+    <div class="tj-breadcrumbs" {% if product.tags contains 'no-index' or product.template_suffix == "not-purchasable-with-money" %} style="display:none;" {% endif %}>
       <a class="breadcrumb" href="{{ routes.root_url }}">Home</a>
       {% render 'icon-caret' %}
       {% case product.type %}

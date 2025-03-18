@@ -1,11 +1,13 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+   
     <meta name="google-site-verification" content="vzobP6c1OzTJ65B7Tx9B-b5PEobRhn-X933OXUaKNfc" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
+    {% render 'meta-index-logic' %}
     <link rel="canonical" href="{{ canonical_url }}">
     
     {%- if settings.favicon != blank -%}
