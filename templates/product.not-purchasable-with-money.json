@@ -11,125 +11,131 @@
  */
 >>>>>>> 5a050a4a34ce254018126fbf850d040219a42aa2
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "blocks": {
-          "title": {
-            "type": "title",
-            "settings": {}
-          },
-          "price": {
-            "type": "price",
-            "settings": {}
-          },
-          "custom_liquid_fVahD6": {
-            "type": "custom_liquid",
-            "settings": {
-              "custom_liquid": "<div>\n    <strong>ODDS OF A CHASE<\/strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    <\/a>\n  <\/div>"
-            }
-          },
-          "text_rzbTg9": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "text": "<strong>Chance of Chase<\/strong> Learn more",
-              "text_style": "body"
-            }
-          },
-          "variant_picker": {
-            "type": "variant_picker",
-            "disabled": true,
-            "settings": {
-              "picker_type": "button",
-              "swatch_shape": "circle"
-            }
-          },
-          "quantity_selector": {
-            "type": "quantity_selector",
-            "settings": {}
-          },
-          "text_UCqMyQ": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "text": "<strong>Coming on October 17th<\/strong>",
-              "text_style": "body"
-            }
-          },
-          "buy_buttons": {
-            "type": "buy_buttons",
-            "settings": {
-              "show_dynamic_checkout": false,
-              "show_gift_card_recipient": true
-            }
-          },
-          "video_cards_placement_4nweMc": {
-            "type": "video-cards-placement",
-            "settings": {}
-          },
-          "description": {
-            "type": "description",
-            "settings": {}
-          },
-          "collapsible_tab_7jT6Rw": {
-            "type": "collapsible_tab",
-            "disabled": true,
-            "settings": {
-              "heading": "More Details",
-              "icon": "none",
-              "content": "",
-              "page": ""
-            }
-          },
-          "custom_liquid_QABgYV": {
-            "type": "custom_liquid",
-            "settings": {
-              "custom_liquid": "<details>\n  <summary><strong>More details<\/strong><\/summary>\n  <p>\n    <strong>Type:<\/strong>\n    <a href=\"\/collections\/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n\n    <\/a>\n  <\/p>\n  <p><strong>Weight:<\/strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n<\/p>\n<p><strong>Box Dimmensions<\/strong>\n<\/p>\n<p><strong>Height:<\/strong>\n{{ product.metafields.custom.height.value }}\n<\/p>\n<p><strong>Width:<\/strong>\n{{ product.metafields.custom.width.value }}\n<\/p>\n<p><strong>Length:<\/strong>\n{{ product.metafields.custom.length.value }}\n<\/p>\n<\/details>"
-            }
-          },
-          "share": {
-            "type": "share",
-            "settings": {
-              "share_label": "Share"
-            }
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_fVahD6": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div>\n    <strong>ODDS OF A CHASE<\/strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    <\/a>\n  <\/div>"
           }
         },
-        "block_order": [
-          "title",
-          "price",
-          "custom_liquid_fVahD6",
-          "text_rzbTg9",
-          "variant_picker",
-          "quantity_selector",
-          "text_UCqMyQ",
-          "buy_buttons",
-          "video_cards_placement_4nweMc",
-          "description",
-          "collapsible_tab_7jT6Rw",
-          "custom_liquid_QABgYV",
-          "share"
-        ],
-        "custom_css": [],
-        "settings": {
-          "enable_sticky_info": false,
-          "color_scheme": "scheme-1",
-          "media_size": "large",
-          "constrain_to_viewport": true,
-          "media_fit": "contain",
-          "gallery_layout": "thumbnail_slider",
-          "media_position": "left",
-          "image_zoom": "hover",
-          "mobile_thumbnails": "hide",
-          "hide_variants": true,
-          "enable_video_looping": false,
-          "padding_top": 36,
-          "padding_bottom": 84
+        "text_rzbTg9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<strong>Chance of Chase<\/strong> Learn more",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "text_UCqMyQ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<strong>Coming on October 17th<\/strong>",
+            "text_style": "body"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "video_cards_placement_4nweMc": {
+          "type": "video-cards-placement",
+          "disabled": true,
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_7jT6Rw": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "More Details",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "custom_liquid_QABgYV": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details>\n  <summary><strong>More details<\/strong><\/summary>\n  <p>\n    <strong>Type:<\/strong>\n    <a href=\"\/collections\/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n\n    <\/a>\n  <\/p>\n  <p><strong>Weight:<\/strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n<\/p>\n<p><strong>Box Dimmensions<\/strong>\n<\/p>\n<p><strong>Height:<\/strong>\n{{ product.metafields.custom.height.value }}\n<\/p>\n<p><strong>Width:<\/strong>\n{{ product.metafields.custom.width.value }}\n<\/p>\n<p><strong>Length:<\/strong>\n{{ product.metafields.custom.length.value }}\n<\/p>\n<\/details>"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
         }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "custom_liquid_fVahD6",
+        "text_rzbTg9",
+        "variant_picker",
+        "quantity_selector",
+        "text_UCqMyQ",
+        "buy_buttons",
+        "video_cards_placement_4nweMc",
+        "description",
+        "collapsible_tab_7jT6Rw",
+        "custom_liquid_QABgYV",
+        "share"
+      ],
+      "custom_css": [],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 84
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
