@@ -8,7 +8,7 @@
           "settings": {
             "heading": "{{ page.title }}",
             "use_h1": true,
-            "heading_size": "hxl"
+            "heading_size": "hxxl"
           }
         }
       },
@@ -42,30 +42,54 @@
         "padding_bottom": 28
       }
     },
-    "jr_5050_XRVeMn": {
-      "type": "jr-5050",
+    "rich_text_WpRRAn": {
+      "type": "rich-text",
       "blocks": {
-        "h2_KQXWr4": {
-          "type": "h2",
+        "heading_UXeBak": {
+          "type": "heading",
           "settings": {
-            "h2": "H2 Text"
+            "heading": "Born from the passion of fans, for fans",
+            "use_h1": false,
+            "heading_size": "h0"
           }
         },
-        "p_jBA3Wy": {
-          "type": "p",
+        "text_Q9BRmC": {
+          "type": "text",
           "settings": {
-            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.<\/p>"
+            "text": "<p><strong>Thrilljoy is an officially licensed collectible company dedicated to immortalizing your favorite pop culture moments with creativity and craftsmanship. We specialize in limited-edition collectibles, designed with innovative packaging and intricate details that bring fandom to life. We’re here to celebrate everything weird, wild, and wonderful about the worlds we love. Always listening, always evolving, we push boundaries to deliver fresh, exciting, and unforgettable ways for you to collect, connect, and celebrate your fandom. <\/strong><\/p>"
           }
         }
       },
       "block_order": [
-        "h2_KQXWr4",
-        "p_jBA3Wy"
+        "heading_UXeBak",
+        "text_Q9BRmC"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "jr_5050_XRVeMn": {
+      "type": "jr-5050",
+      "blocks": {
+        "h3_QMbWNX": {
+          "type": "h3",
+          "settings": {
+            "h3": "We are here to bring back the THRILL of collecting and the JOY of community."
+          }
+        }
+      },
+      "block_order": [
+        "h3_QMbWNX"
       ],
       "settings": {
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "col_order": "reverse",
+        "col_order": "",
         "text_alignment": "center-aligned",
         "image": "shopify:\/\/shop_images\/halfbloo_1.png"
       }
@@ -107,6 +131,7 @@
         "p_RkMigT",
         "button_8UXAqe"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#ffffff",
         "text_color": "#000000",
@@ -130,37 +155,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_WpRRAn": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_UXeBak": {
-          "type": "heading",
-          "settings": {
-            "heading": "Header",
-            "use_h1": false,
-            "heading_size": "h1"
-          }
-        },
-        "text_Q9BRmC": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ligula ut augue imperdiet egestas sit amet nec mi. Mauris tempor, eros vel placerat varius, arcu nulla semper sapien, sit amet elementum nulla lacus at neque. Nunc vel orci purus. Donec ipsum est, malesuada luctus gravida eget, vehicula sit amet turpis. Donec ornare risus ex, eget accumsan tellus scelerisque non. Nulla pretium, est sed aliquam ultrices, lacus lectus varius metus, non sagittis urna neque nec lorem. Fusce aliquet gravida eleifend. Maecenas lacinia quam ligula. Morbi dignissim tempus metus, eget euismod tellus volutpat sed. Phasellus efficitur felis id urna eleifend pharetra. Suspendisse nec diam ex.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UXeBak",
-        "text_Q9BRmC"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "klaviyo_email_capture_qyYJCJ": {
       "type": "klaviyo-email-capture",
       "settings": {
@@ -169,8 +163,8 @@
         "padding_y_d": 120,
         "padding_y_m": 30,
         "bg_color": "#ffffff",
-        "button_bg_color": "#5FD551",
-        "button_text_color": "#FFFFFF",
+        "button_bg_color": "#5fd551",
+        "button_text_color": "#ffffff",
         "header": "Keep up to date with all things Thrilljoy!",
         "header_color": "#ffffff",
         "subheader": "",
@@ -182,10 +176,10 @@
   "order": [
     "image_banner_k9Rt7m",
     "main",
+    "rich_text_WpRRAn",
     "jr_5050_XRVeMn",
     "jr_5050_zeYrHw",
     "video_RxhBpx",
-    "rich_text_WpRRAn",
     "klaviyo_email_capture_qyYJCJ"
   ]
 }
