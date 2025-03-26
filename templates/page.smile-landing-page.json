@@ -159,6 +159,7 @@
         },
         "collapsible_row_468Mrc": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What happens to my points when I return items?",
             "icon": "none",
