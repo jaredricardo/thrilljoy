@@ -8,13 +8,13 @@
         >
         {% for block in section.blocks %}
             {% if block.type == "category-block" %}
-                <li style="background-color: {{ block.settings.category_background_color }};">
+                <li style="background-color: {{ block.settings.category_background_color }};" {% if block.settings.category_headshot == blank %} class="no-headshot" {% endif %}>
                     <a  
                         class="header__menu-item list-menu__item link link--text focus-inset"
                         style="color: {{ block.settings.category_text_color }};"
                         href="{{ block.settings.url }}"
                     >
-                    <img src="{{ block.settings.category_headshot | image_url: width: 100  }}" alt="Thrilljoy Category Headshot">
+                    <img class="headshot" src="{{ block.settings.category_headshot | image_url: width: 100  }}" alt="Thrilljoy Category Headshot">
                     <span>{{ block.settings.title }}</span>
                     </a>
                 </li>

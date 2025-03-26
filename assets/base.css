@@ -3760,6 +3760,10 @@ body .swiper-pagination-bullet {
   opacity: .65;
 }
 
+body .swiper-pagination {
+  z-index: 9;
+}
+
 body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #5fd551 !important;
   opacity: 1;

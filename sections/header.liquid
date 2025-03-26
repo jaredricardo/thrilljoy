@@ -52,6 +52,23 @@
     object-fit: cover;
   }
 
+  #tj-category-meganav:has(.no-headshot) .headshot {
+    display: none;
+  }
+  
+  #tj-category-meganav:has(.no-headshot) li {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #tj-category-meganav:has(.no-headshot) li a {
+    padding: 2rem 3rem;
+  }
+
   @media screen and (max-width: 990px) {
     #tj-category-meganav {
       grid-template-columns: repeat(2, 1fr);
@@ -62,6 +79,9 @@
     }
     #tj-category-meganav .header__menu-item span {
       font-size: 14px;
+    }
+    #tj-category-meganav:has(.no-headshot) li {
+      justify-content: start;
     }
   }
 
