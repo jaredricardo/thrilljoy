@@ -29,10 +29,6 @@
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 {% assign downcased_link_title = link.title | downcase %}
-                <script>
-                  console.log('///')
-                  console.log({{ downcased_link_title | json }})
-                </script>
                 <li>
                   {%- if link.links != blank -%}
                     <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
