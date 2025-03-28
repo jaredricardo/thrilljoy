@@ -131,6 +131,7 @@
         "carousel_P6wrxQ": {
           "type": "carousel",
           "settings": {
+            "desktop_image": "shopify://shop_images/MTVAPPAREL_COPY.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 250,
             "complete_center": false,
