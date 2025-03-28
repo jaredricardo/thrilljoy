@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "smile-landing-page": {
@@ -8,10 +17,11 @@
       "type": "apps",
       "blocks": {
         "smile_io_smile_landing_page_header_VHGY9e": {
-          "type": "shopify:\/\/apps\/smile-io\/blocks\/smile-landing-page-header\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-header/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
           "settings": {
             "primary_colour": "#333333",
             "secondary_colour": "#ffffff",
+            "background_image": "shopify://shop_images/clubLEbanner.png",
             "title_text": "Welcome to  Club LE",
             "description_text": "Club LE is your exclusive gateway to unlocking rewards, perks, and \nunforgettable experiences while you collect what you love. Club LE is \ndesigned for those who thrive on the thrill of the chase.",
             "join_button_text": "Join now",
@@ -32,7 +42,7 @@
       "type": "apps",
       "blocks": {
         "smile_io_smile_landing_page_how_it_works_QR4647": {
-          "type": "shopify:\/\/apps\/smile-io\/blocks\/smile-landing-page-how-it-works\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-how-it-works/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
           "settings": {
             "primary_colour": "#333333",
             "secondary_colour": "#ffffff",
@@ -57,7 +67,7 @@
       "type": "apps",
       "blocks": {
         "smile_io_smile_landing_page_earning_rule_highlight_97qrz8": {
-          "type": "shopify:\/\/apps\/smile-io\/blocks\/smile-landing-page-earning-rule-highlight\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-earning-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
           "settings": {
             "primary_colour": "#333333",
             "secondary_colour": "#ffffff",
@@ -78,7 +88,7 @@
       "type": "apps",
       "blocks": {
         "smile_io_smile_landing_page_redeeming_rule_highlight_6WYAzV": {
-          "type": "shopify:\/\/apps\/smile-io\/blocks\/smile-landing-page-redeeming-rule-highlight\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-redeeming-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
           "settings": {
             "primary_colour": "#333333",
             "secondary_colour": "#ffffff",
@@ -101,7 +111,7 @@
         "text_bQhkCh": {
           "type": "text",
           "settings": {
-            "text": "<h2>So go ahead, keep your collection THRILLING, and let Club LE take you on  a journey where every point brings you closer to something amazing.<\/h2>"
+            "text": "<h2>So go ahead, keep your collection THRILLING, and let Club LE take you on  a journey where every point brings you closer to something amazing.</h2>"
           }
         }
       },
@@ -125,7 +135,7 @@
           "settings": {
             "heading": "How do I join Club LE?",
             "icon": "none",
-            "row_content": "<p>Joining is easy! Sign up to create your  Thrillseeker account and you’ll <br\/>automatically become a Club LE member. No extra steps needed<\/p>",
+            "row_content": "<p>Joining is easy! Sign up to create your  Thrillseeker account and you’ll <br/>automatically become a Club LE member. No extra steps needed</p>",
             "page": ""
           }
         },
@@ -134,7 +144,7 @@
           "settings": {
             "heading": "How do I earn XPs?",
             "icon": "none",
-            "row_content": "<p>You earn <strong>1 XP for every $1 spent<\/strong> on Thrilljoy purchases. We may also run special promotions where you can earn bonus XPs.<\/p>",
+            "row_content": "<p>You earn <strong>1 XP for every $1 spent</strong> on Thrilljoy purchases. We may also run special promotions where you can earn bonus XPs.</p>",
             "page": ""
           }
         },
@@ -143,7 +153,7 @@
           "settings": {
             "heading": "What can I redeem my XPs for?",
             "icon": "none",
-            "row_content": "<p>Club LE is packed with incredible rewards for our collectors! You can redeem your XPs for discounts, exclusive experiences,FREE products, and entries into raffles for rare and limited-edition items!<\/p><p><br\/>Our lineup of rewards is always expanding and changing, so be sure to visit <a href=\"\/pages\/thrilljoy-loyalty\" title=\"Thrilljoy Points\">Club LE<\/a> to see what’s new and exciting.<\/p><p><br\/>Note: Some rewards and sweepstakes may have restrictions. Be sure to read the full description carefully before redeeming so you don’t miss a detail!<\/p>",
+            "row_content": "<p>Club LE is packed with incredible rewards for our collectors! You can redeem your XPs for discounts, exclusive experiences,FREE products, and entries into raffles for rare and limited-edition items!</p><p><br/>Our lineup of rewards is always expanding and changing, so be sure to visit <a href=\"/pages/thrilljoy-loyalty\" title=\"Thrilljoy Points\">Club LE</a> to see what’s new and exciting.</p><p><br/>Note: Some rewards and sweepstakes may have restrictions. Be sure to read the full description carefully before redeeming so you don’t miss a detail!</p>",
             "page": ""
           }
         },
@@ -153,7 +163,7 @@
           "settings": {
             "heading": "Do XPs expire?",
             "icon": "none",
-            "row_content": "<p>Yep, but not without warning! Your XPs will expire if you’ve been inactive or haven’t logged in to your Club LE account for a full year. Want to keep your hard-earned points safe? Just pop into your account and make a purchase, redeem XPs, or read a blog!<\/p>",
+            "row_content": "<p>Yep, but not without warning! Your XPs will expire if you’ve been inactive or haven’t logged in to your Club LE account for a full year. Want to keep your hard-earned points safe? Just pop into your account and make a purchase, redeem XPs, or read a blog!</p>",
             "page": ""
           }
         },
@@ -163,7 +173,7 @@
           "settings": {
             "heading": "What happens to my points when I return items?",
             "icon": "none",
-            "row_content": "<p>All XPs earned from a purchase, including bonus points, will be deducted from your account if that purchase is returned. In some cases, this may result in a negative XP balance.<\/p>",
+            "row_content": "<p>All XPs earned from a purchase, including bonus points, will be deducted from your account if that purchase is returned. In some cases, this may result in a negative XP balance.</p>",
             "page": ""
           }
         },
@@ -172,7 +182,7 @@
           "settings": {
             "heading": "How do I track my XPs?",
             "icon": "none",
-            "row_content": "<p>You can view your current XP balance by logging into your Thrilljoy Thrillseeker account. Your points will automatically update after each purchase.<\/p>",
+            "row_content": "<p>You can view your current XP balance by logging into your Thrilljoy Thrillseeker account. Your points will automatically update after each purchase.</p>",
             "page": ""
           }
         },
@@ -181,7 +191,7 @@
           "settings": {
             "heading": "Can I combine XPs with other discounts or promotions?",
             "icon": "none",
-            "row_content": "<p>Yes! XPs can be combined with <strong>most <\/strong>Thrilljoy discounts, so you can maximize your savings and rewards.<\/p>",
+            "row_content": "<p>Yes! XPs can be combined with <strong>most </strong>Thrilljoy discounts, so you can maximize your savings and rewards.</p>",
             "page": ""
           }
         },
@@ -190,7 +200,7 @@
           "settings": {
             "heading": "How do I redeem XPs?",
             "icon": "none",
-            "row_content": "<p>When you’re ready to redeem your points, simply select the available rewards during checkout or visit the Club LE page to explore your options.<\/p>",
+            "row_content": "<p>When you’re ready to redeem your points, simply select the available rewards during checkout or visit the Club LE page to explore your options.</p>",
             "page": ""
           }
         },
@@ -199,7 +209,7 @@
           "settings": {
             "heading": "I have more questions!",
             "icon": "none",
-            "row_content": "<p>We’ve got you covered!  Reach out to our support team and we’ll be happy  to help.<\/p>",
+            "row_content": "<p>We’ve got you covered!  Reach out to our support team and we’ll be happy  to help.</p>",
             "page": ""
           }
         }
