@@ -47,7 +47,7 @@
         "icon_max_width": 50,
         "padding_y": 15,
         "home-page-only": false,
-        "bg_color": "#000000",
+        "bg_color": "#398188",
         "color": "#ffffff",
         "alternative-color": true,
         "speed": 20,
@@ -121,6 +121,100 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "category_block_8UA87b": {
+          "type": "category-block",
+          "settings": {
+            "title": "Animation",
+            "url": "shopify:\/\/collections\/animation",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_6XrCe9": {
+          "type": "category-block",
+          "settings": {
+            "title": "Fantasy",
+            "url": "shopify:\/\/collections\/fantasy",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_d7rDWV": {
+          "type": "category-block",
+          "settings": {
+            "title": "Movies",
+            "url": "shopify:\/\/collections\/movies",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_aiGeRe": {
+          "type": "category-block",
+          "settings": {
+            "title": "Classics",
+            "url": "shopify:\/\/collections\/classics",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_fVc38G": {
+          "type": "category-block",
+          "settings": {
+            "title": "Mascots",
+            "url": "shopify:\/\/collections\/mascots",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_i7NQKC": {
+          "type": "category-block",
+          "settings": {
+            "title": "Holiday",
+            "url": "shopify:\/\/collections\/holiday",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_AGMMVk": {
+          "type": "category-block",
+          "settings": {
+            "title": "Horror",
+            "url": "shopify:\/\/collections\/horror",
+            "category_text_color": "#ffffff",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_kJz6i7": {
+          "type": "category-block",
+          "settings": {
+            "title": "Streaming Now",
+            "url": "shopify:\/\/collections\/streaming-now",
+            "category_text_color": "#FFFFFF",
+            "category_background_color": "#000000"
+          }
+        },
+        "category_block_bxAQhq": {
+          "type": "category-block",
+          "settings": {
+            "title": "Historical Figures",
+            "url": "shopify:\/\/collections\/historical-figures",
+            "category_text_color": "#FFFFFF",
+            "category_background_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "category_block_8UA87b",
+        "category_block_6XrCe9",
+        "category_block_d7rDWV",
+        "category_block_aiGeRe",
+        "category_block_fVc38G",
+        "category_block_i7NQKC",
+        "category_block_AGMMVk",
+        "category_block_kJz6i7",
+        "category_block_bxAQhq"
+      ],
       "custom_css": [
         ".list-menu__item.link {font-family: \"CocogooseProTrial\" !important; color: #fff;}",
         ".cart-notification .cart-notification__links #cart-notification-button {color: #fff; border: 2px solid #fff;}",
@@ -130,7 +224,7 @@
         "grid_columns": 3,
         "grid_rows": 3,
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "main-menu-post-wondercon",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
