@@ -126,7 +126,7 @@
           "type": "category-block",
           "settings": {
             "title": "Animation",
-            "url": "shopify:\/\/collections\/animation",
+            "url": "shopify://collections/animation",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -135,7 +135,7 @@
           "type": "category-block",
           "settings": {
             "title": "Fantasy",
-            "url": "shopify:\/\/collections\/fantasy",
+            "url": "shopify://collections/fantasy",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -144,7 +144,7 @@
           "type": "category-block",
           "settings": {
             "title": "Movies",
-            "url": "shopify:\/\/collections\/movies",
+            "url": "shopify://collections/movies",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -153,7 +153,7 @@
           "type": "category-block",
           "settings": {
             "title": "Classics",
-            "url": "shopify:\/\/collections\/classics",
+            "url": "shopify://collections/classics",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -162,7 +162,7 @@
           "type": "category-block",
           "settings": {
             "title": "Mascots",
-            "url": "shopify:\/\/collections\/mascots",
+            "url": "shopify://collections/mascots",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -171,7 +171,7 @@
           "type": "category-block",
           "settings": {
             "title": "Holiday",
-            "url": "shopify:\/\/collections\/holiday",
+            "url": "shopify://collections/holiday",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -180,7 +180,7 @@
           "type": "category-block",
           "settings": {
             "title": "Horror",
-            "url": "shopify:\/\/collections\/horror",
+            "url": "shopify://collections/horror",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -189,8 +189,8 @@
           "type": "category-block",
           "settings": {
             "title": "Streaming Now",
-            "url": "shopify:\/\/collections\/streaming-now",
-            "category_text_color": "#FFFFFF",
+            "url": "shopify://collections/streaming-now",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         },
@@ -198,8 +198,8 @@
           "type": "category-block",
           "settings": {
             "title": "Historical Figures",
-            "url": "shopify:\/\/collections\/historical-figures",
-            "category_text_color": "#FFFFFF",
+            "url": "shopify://collections/historical-figures",
+            "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
         }
@@ -216,7 +216,6 @@
         "category_block_bxAQhq"
       ],
       "custom_css": [
-        ".list-menu__item.link {font-family: \"CocogooseProTrial\" !important; color: #fff;}",
         ".cart-notification .cart-notification__links #cart-notification-button {color: #fff; border: 2px solid #fff;}",
         ".cart-notification .cart-notification__links .link {color: #fff;}"
       ],
