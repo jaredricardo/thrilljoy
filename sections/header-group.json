@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -9,28 +18,28 @@
           "type": "text",
           "settings": {
             "text": "@THRILLJOYCOLLECTIBLES ON INSTAGRAM AND TIKTOK 🤩",
-            "link": "https:\/\/www.instagram.com\/thrilljoycollectibles\/"
-          }
-        },
-        "text_KkA4XB": {
-          "type": "text",
-          "settings": {
-            "text": "✨ Hermione & Luna have arrived ✨",
-            "link": "shopify:\/\/collections\/galentines"
+            "link": "https://www.instagram.com/thrilljoycollectibles/"
           }
         },
         "text_mFNrzB": {
           "type": "text",
           "settings": {
-            "text": "ANIMATION DROP IS LIVE- DON'T MISS OUT! 🚨",
-            "link": ""
+            "text": "MTV DROP IS LIVE - DON'T MISS OUT! 🚨",
+            "link": "shopify://collections/new-featured"
+          }
+        },
+        "text_KkA4XB": {
+          "type": "text",
+          "settings": {
+            "text": "BEAVIS & BUTT-HEAD HAVE ARRIVED",
+            "link": "shopify://collections/new-featured"
           }
         }
       },
       "block_order": [
         "text_zwrmbT",
-        "text_KkA4XB",
-        "text_mFNrzB"
+        "text_mFNrzB",
+        "text_KkA4XB"
       ],
       "settings": {
         "text_margin": 120,
@@ -59,7 +68,7 @@
           "type": "announcement",
           "settings": {
             "text": "Latest Drop",
-            "link": "shopify:\/\/collections\/latest-drop"
+            "link": "shopify://collections/latest-drop"
           }
         },
         "announcement_Td6ie7": {
@@ -94,9 +103,9 @@
       "type": "apps",
       "blocks": {
         "announcement_bar_sales_banner_free_bUVn3Y": {
-          "type": "shopify:\/\/apps\/announcement-bar\/blocks\/sales-banner-free\/9350a41f-5964-4405-9bba-bbffcbe501a2",
+          "type": "shopify://apps/announcement-bar/blocks/sales-banner-free/9350a41f-5964-4405-9bba-bbffcbe501a2",
           "settings": {
-            "marquee_text": "<p>🔥<\/p><p>Buy One Get One FREE<\/p><p>🔥<\/p><p>DEAL ALERT<\/p>",
+            "marquee_text": "<p>🔥</p><p>Buy One Get One FREE</p><p>🔥</p><p>DEAL ALERT</p>",
             "background": "linear-gradient(5deg, rgba(0, 128, 139, 1), rgba(0, 128, 139, 1) 100%)",
             "banner_text_color": "#ffffff"
           }
