@@ -3775,6 +3775,10 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   z-index: 3;
 }
 
+slider-component .card__inner .dropping-soon-on-card  {
+  display: none;
+}
+
 .card__inner .dropping-soon-on-card {
   position: absolute;
   top: -10px;
