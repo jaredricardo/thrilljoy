@@ -3577,12 +3577,12 @@ details-disclosure > details {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'CocogooseProTrial' !important;
+  /* font-family: 'CocogooseProTrial' !important; */
   font-weight: bold;
   font-style: normal;
 }
 .button {
-  font-family: 'CocogooseProTrial' !important;
+  /* font-family: 'CocogooseProTrial' !important; */
 }
 /*
 body::before {
