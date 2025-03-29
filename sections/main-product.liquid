@@ -387,6 +387,9 @@
                   {%- endif -%}
                 </p>
               {%- when 'description' -%}
+                {% if product.type == "PIX!" %}
+                  <p><b>PLEASE NOTE- THIS PRODUCT WILL BE BRANDED “PIX!”, NOT “PIX! PANORAMIX”</b></p>
+                {% endif %}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
