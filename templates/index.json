@@ -45,7 +45,7 @@
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/Screen_Shot_2025-03-30_at_12.13.45_PM.png",
-            "image_overlay_opacity": 40,
+            "image_overlay_opacity": 0,
             "mobile_min_height": 250,
             "complete_center": false,
             "text_alignment": "left",
@@ -74,7 +74,7 @@
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/Screen_Shot_2025-03-30_at_12.15.00_PM.png",
-            "image_overlay_opacity": 40,
+            "image_overlay_opacity": 0,
             "mobile_min_height": 250,
             "complete_center": false,
             "text_alignment": "left",
