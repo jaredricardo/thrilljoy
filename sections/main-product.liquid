@@ -860,6 +860,20 @@
             {{ 'products.product.view_full_details' | t }}
             {% render 'icon-arrow' %}
           </a>
+          {% if product.type == 'T-Shirt' %}
+            <div class="shirt-sizing-container">
+              <div class="ts-head">Thrilljoy Sizing</div>
+              <div class="ts-head">Standard US Sizing</div>
+              <div class="ts-size">XS</div>
+              <div class="ts-size">XXS-XS</div>
+              <div class="ts-size">S</div>
+              <div class="ts-size">XS-M</div>
+              <div class="ts-size">M</div>
+              <div class="ts-size">M-L</div>
+              <div class="ts-size">L</div>
+              <div class="ts-size">L-XL</div>
+            </div>
+          {% endif %}
         </section>
       </div>
     </div>
