@@ -539,37 +539,6 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "rich_text_MKDeCA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_wpVkpN": {
-          "type": "heading",
-          "settings": {
-            "heading": "LOYALTY PROGRAM",
-            "use_h1": false,
-            "heading_size": "h2"
-          }
-        },
-        "text_nELHtE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We are THRILLED to let you know that a loyalty program is in the works, designed to reward you for your continued support. Stay tuned for more details!</p><p><strong>To make this all happen, we need you to create an account on our website</strong>. Why? So we can start tracking your points from day one for all <a href=\"https://thrilljoy.com\" title=\"https://thrilljoy.com\">thrilljoy.com</a> purchases! <br/><br/>Stay tuned for more details!</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_wpVkpN",
-        "text_nELHtE"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": false,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -582,7 +551,6 @@
     "collapsible_content_epNFQB",
     "collapsible_content_YDdFhR",
     "rich_text_Pixw9N",
-    "collapsible_content_HaYTzY",
-    "rich_text_MKDeCA"
+    "collapsible_content_HaYTzY"
   ]
 }
