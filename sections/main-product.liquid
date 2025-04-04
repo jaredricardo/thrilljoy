@@ -875,8 +875,10 @@
               <div class="ts-size">XL</div>
               <div class="ts-size">XL-XXL</div>
             </div>
-            <a href="/pages/thrilljoy-apparel-sizing-guide" target="_blank">Check out the full sizing guide here!</a>
           {% endif %}
+          {% if product.type == 'T-Shirt' or product.type == "Bucket Hat" %}
+            <a href="/pages/thrilljoy-apparel-sizing-guide" target="_blank">Check out the full sizing guide here.</a>
+          {% endif %} 
         </section>
       </div>
     </div>
