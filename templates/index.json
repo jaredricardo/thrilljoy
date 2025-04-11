@@ -37,7 +37,7 @@
             "button_text": "",
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5fd551",
-            "button_link": "/",
+            "button_link": "shopify://products/mystery-box",
             "use_slide_linkout": false
           }
         },
