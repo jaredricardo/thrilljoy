@@ -14,6 +14,13 @@
     "scrolling_announcement_D88dkd": {
       "type": "scrolling-announcement",
       "blocks": {
+        "text_KkA4XB": {
+          "type": "text",
+          "settings": {
+            "text": "MYSTERY BUNDLES ARE HERE 🎁",
+            "link": "shopify://products/mystery-box"
+          }
+        },
         "text_zwrmbT": {
           "type": "text",
           "settings": {
@@ -27,19 +34,12 @@
             "text": "MTV DROP IS LIVE - DON'T MISS OUT! 🚨",
             "link": "shopify://collections/new-featured"
           }
-        },
-        "text_KkA4XB": {
-          "type": "text",
-          "settings": {
-            "text": "BEAVIS & BUTT-HEAD HAVE ARRIVED",
-            "link": "shopify://collections/new-featured"
-          }
         }
       },
       "block_order": [
+        "text_KkA4XB",
         "text_zwrmbT",
-        "text_mFNrzB",
-        "text_KkA4XB"
+        "text_mFNrzB"
       ],
       "settings": {
         "text_margin": 120,
