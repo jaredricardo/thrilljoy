@@ -16,7 +16,7 @@
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/IMG_3720_dafa90b0-9955-4932-9d93-482931cd134e.png",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 20,
             "mobile_min_height": 250,
             "complete_center": false,
             "text_alignment": "left",
