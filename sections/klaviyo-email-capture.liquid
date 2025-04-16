@@ -7,7 +7,6 @@
 
     [data-section-id="{{ section.id }}"] .form-container .klaviyo-form button {
         background: {{ section.settings .button_bg_color }} !important;
-        color: {{ section.settings.button_text_color }} !important;
     }
 
 
@@ -90,12 +89,6 @@
                 "id": "button_bg_color",
                 "label": "Button background color (overrides Klaviyo button color)",
                 "default": "#5FD551"
-            },
-            {
-                "type": "color",
-                "id": "button_text_color",
-                "label": "Button text color (overrides Klaviyo button color)",
-                "default": "#FFFFFF"
             },
             {
                 "type": "text",
