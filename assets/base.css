@@ -4188,3 +4188,19 @@ display: none;
     font-size: 14px;
   }
 }
+
+.product__title .broken-out-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 1rem 0 0 0;
+}
+
+.product__title:has(.broken-out-title) span {
+  margin: 0;
+}
+
+.product__title .broken-out-title  .subtitle {
+  color: #3e3e3e;
+  font-weight: 500;
+}
