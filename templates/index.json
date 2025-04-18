@@ -215,6 +215,35 @@
             "use_slide_linkout": true
           }
         },
+        "carousel_hHULJT": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/historicalfigures.mozart_superchase.png",
+            "image_overlay_opacity": 10,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 15,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Keep it classical and indulge in the new PIX! Mozart!",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#FFFFFF",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 60,
+            "button_text": "Shop Now",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/new-featured",
+            "use_slide_linkout": true
+          }
+        },
         "carousel_JVGdXT": {
           "type": "carousel",
           "settings": {
@@ -253,6 +282,7 @@
         "carousel_TJGHmB",
         "carousel_wMCGyK",
         "carousel_RM9qHq",
+        "carousel_hHULJT",
         "carousel_JVGdXT"
       ],
       "custom_css": [
