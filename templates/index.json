@@ -22,7 +22,7 @@
             "text_alignment": "left",
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
-            "top_pos_mobile": 16,
+            "top_pos_mobile": 15,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "Fit for a queen! PIX! Marie Antoinette is here.",
             "use_h1": false,
@@ -51,7 +51,7 @@
             "text_alignment": "left",
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
-            "top_pos_mobile": 20,
+            "top_pos_mobile": 15,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "Extra is in. Get your PIX! Marie Antoinette now.",
             "use_h1": false,
@@ -67,34 +67,6 @@
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5fd551",
             "button_link": "shopify://collections/new-featured",
-            "use_slide_linkout": false
-          }
-        },
-        "carousel_DTJqYK": {
-          "type": "carousel",
-          "settings": {
-            "image_overlay_opacity": 40,
-            "mobile_min_height": 250,
-            "complete_center": false,
-            "text_alignment": "left",
-            "text_container_top_pos": 25,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 40,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Header Text",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "Subheader Text",
-            "subheader_margin_bottom": 16,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis at sem rhoncus tempor.",
-            "description_margin_bottom": 16,
-            "text_color": "#FFFFFF",
-            "text_container_max_width_d": 50,
-            "text_container_max_width_m": 90,
-            "button_text": "Shop Now",
-            "button_text_color": "#FFFFFF",
-            "button_background_color": "#5fd551",
-            "button_link": "/",
             "use_slide_linkout": false
           }
         },
@@ -131,7 +103,6 @@
       "block_order": [
         "carousel_HjXQzj",
         "carousel_34DVwb",
-        "carousel_DTJqYK",
         "carousel_JVGdXT"
       ],
       "custom_css": [
