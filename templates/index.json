@@ -12,6 +12,35 @@
     "tj_banner_carousel_LayRLh": {
       "type": "tj-banner-carousel",
       "blocks": {
+        "carousel_HjXQzj": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/historicalfigures.marie_hero.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": 25,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 16,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "Fit for a queen! PIX! Marie Antoinette is here.",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#FFFFFF",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 49,
+            "button_text": "Shop Now",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/new-featured",
+            "use_slide_linkout": false
+          }
+        },
         "carousel_JVGdXT": {
           "type": "carousel",
           "settings": {
@@ -43,6 +72,7 @@
         }
       },
       "block_order": [
+        "carousel_HjXQzj",
         "carousel_JVGdXT"
       ],
       "custom_css": [
