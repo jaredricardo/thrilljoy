@@ -136,7 +136,23 @@
                           {%- endif -%}
 
                           <a href="{{ item.url }}" class="cart-item__name h4 break">
-                            {{- item.product.title | escape -}}
+                            {% if item.product.metafields.custom.broken_out_title %} 
+
+                              {% liquid 
+
+                                assign split = item.product.metafields.custom.broken_out_title | split: "|"
+                                assign title = split[0]
+                                assign subtitle = split[1]
+
+                              -%}
+                                <p class="h5">{{ title }}</p>
+                                <p class="h6">{{ subtitle }}</p>
+
+                              {% else %}
+                                {{- item.product.title | escape -}}
+                            {% endif %}
+
+                         
                             {% if item.product.tags contains 'tm' %}&trade;{% endif %}
                           </a>
 

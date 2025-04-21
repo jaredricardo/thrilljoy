@@ -158,7 +158,23 @@
                             {{ product.vendor }}
                           </div>
                         {%- endif -%}
-                        <p class="predictive-search__item-heading h5">{{ product.title | escape }}{% if product.tags contains 'tm' %}&trade;{% endif %}</p>
+                        {% if product.metafields.custom.broken_out_title %}
+                          {% liquid 
+
+                            assign split = product.metafields.custom.broken_out_title | split: "|"
+                            assign title = split[0]
+                            assign subtitle = split[1]
+
+                          -%}
+                          <p class="predictive-search__item-heading h5">
+                            {{ title  }}{% if product.tags contains 'tm' %}&trade;{% endif %}
+                          </p>
+                          <p class="h6" style="margin: 0;">
+                            {{ subtitle }}
+                          </p>
+                          {% else %}
+                          <p class="predictive-search__item-heading h5">{{ product.title | escape }}{% if product.tags contains 'tm' %}&trade;{% endif %}</p>
+                        {% endif %}
                         {%- if settings.predictive_search_show_price -%}
                           {% render 'price', product: product, use_variant: true, show_badges: false %}
                         {%- endif -%}

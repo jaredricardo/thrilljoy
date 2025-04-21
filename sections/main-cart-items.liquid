@@ -106,7 +106,24 @@
                         {% if item.product.type == "Loyalty" or item.product.type == "loyalty" or item.product.title contains "raffle" or item.product.tags contains 'no-index' %}
                             <h4 class="cart-item__name h4 break">{{ item.product.title | escape }}{% if item.product.tags contains 'tm' %}&trade;{% endif %}</h4>
                           {% else %}
-                            <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}{% if item.product.tags contains 'tm' %}&trade;{% endif %}</a>
+                            <a href="{{ item.url }}" class="cart-item__name h4 break">
+                              {% if item.product.metafields.custom.broken_out_title %} 
+
+                                {% liquid 
+  
+                                  assign split = item.product.metafields.custom.broken_out_title | split: "|"
+                                  assign title = split[0]
+                                  assign subtitle = split[1]
+  
+                                -%}
+                                  <p style="margin: 0.5rem 0" class="h5">{{ title }}</p>
+                                  <p style="margin: 0.5rem 0" class="h6">{{ subtitle }}</p>
+  
+                                {% else %}
+                                {{ item.product.title | escape }}
+                              {% endif %}
+                                {% if item.product.tags contains 'tm' %}&trade;
+                            {% endif %}</a>
                         {% endif %}
                         {%- if item.original_price != item.final_price -%}
                           <div class="cart-item__discounted-prices">
