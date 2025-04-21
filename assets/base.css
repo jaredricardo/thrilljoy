@@ -4188,3 +4188,46 @@ display: none;
     font-size: 14px;
   }
 }
+
+.product__title .broken-out-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 1rem 0 0 0;
+}
+
+.product__title:has(.broken-out-title) span,
+.card__heading.broken-out a span {
+  margin: 0;
+}
+
+.product__title .broken-out-title  .subtitle {
+  color: #3e3e3e;
+  font-weight: 500;
+}
+
+.card__heading.broken-out a {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__heading.broken-out .title {
+  font-size: 16px;
+} 
+
+.card__heading.broken-out .subtitle {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .card__heading.broken-out .title {
+    font-size: 15px;
+  } 
+  .card__heading.broken-out a {
+    gap: 0.5rem;
+  }
+  .card__content:has(.broken-out) {
+    padding: 0 !important;
+  }
+}
+

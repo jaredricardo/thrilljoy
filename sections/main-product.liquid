@@ -252,13 +252,30 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}{% if product.tags contains 'tm' %}&trade;{% endif %}</h1>
-                  <a href="{{ product.url }}" class="product__title">
-                    <h2 class="h1">
-                      {{ product.title | escape }}
-                      {% if product.tags contains 'tm' %}&trade;{% endif %}
-                    </h2>
-                  </a>
+                  {% if product.metafields.custom.broken_out_title %}
+
+                    {% liquid 
+
+                      assign split = product.metafields.custom.broken_out_title | split: "|"
+                      assign title = split[0]
+                      assign subtitle = split[1]
+                    
+                    -%}
+
+                    <h1 class="broken-out-title">
+                      <span class="title">{{ title }}</span>
+                      <span class="subtitle"> {{ subtitle }}</span>
+                    </h1>
+
+                    {% else %}
+                      <h1>{{ product.title | escape }}{% if product.tags contains 'tm' %}&trade;{% endif %}</h1>
+                        <a href="{{ product.url }}" class="product__title">
+                          <h2 class="h1">
+                            {{ product.title | escape }}
+                            {% if product.tags contains 'tm' %}&trade;{% endif %}
+                          </h2>
+                        </a>
+                  {% endif %}
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
