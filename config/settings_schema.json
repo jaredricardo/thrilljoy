@@ -73,6 +73,88 @@
     ]
   },
   {
+    "name": "Sticky Pencil Settings",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_sticky_pencil",
+        "label": "Enable sticky pencil banner",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "sticky_pencil_pencil_bg_color",
+        "label": "Sticky pencil banner background color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "sticky_pencil_text_color",
+        "label": "Sticky pencil banner text color",
+        "default": "#FFFFFF"
+      },
+      {
+       "type": "richtext",
+       "id": "sticky_pencil_text",
+       "label": "Sticky pencil banner text",
+        "default": "<p>CTA for pencil banner</p>"
+      },
+      {
+        "type": "header",
+        "content": "Countdown timer settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sticky_pencil_timer",
+        "label": "Enable sticky pencil countdown timer",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "timer_year",
+        "label": "Year"
+      },
+      {
+        "type": "number",
+        "id": "timer_month",
+        "label": "Month"
+      },
+      {
+        "type": "number",
+        "id": "timer_day",
+        "label": "Day"
+      },
+      {
+        "type": "header",
+        "content": "Button settings, blank for no button"
+      },
+      {
+        "type": "text",
+        "id": "sticky_pencil_button_text",
+        "label": "Sticky pencil button text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "url",
+        "id": "sticky_pencil_button_url",
+        "label": "Sticky pencil button URL",
+        "default": "/"
+      },
+      {
+        "type": "color",
+        "id": "sticky_pencil_button_bg_color",
+        "label": "Sticky pencil button background color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "sticky_pencil_button_text_color",
+        "label": "Sticky pencil button text color",
+        "default": "#FFFFFF"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
