@@ -16,7 +16,7 @@
     "preview_video_two": "shopify://files/videos/0217.mp4",
     "full_video_two": "shopify://files/videos/0217(1).mp4",
     "poster_2": "shopify://shop_images/Screen_Shot_2025-02-26_at_1.22.59_AM.png",
-    "enable_sticky_pencil": true,
+    "enable_sticky_pencil": false,
     "sticky_pencil_pencil_bg_color": "#398188",
     "sticky_pencil_text": "<p>Last chance to get lucky! Secret Stash ends soon!</p>",
     "timer_year": 2025,

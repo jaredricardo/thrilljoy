@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "tj_banner_carousel_LayRLh": {
@@ -6,7 +15,7 @@
         "carousel_HjXQzj": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.marie_hero.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.marie_hero.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -28,14 +37,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
         "carousel_34DVwb": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.marie_chase.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.marie_chase.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -57,14 +66,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
         "carousel_wHXdfx": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.dali_hero_0f7de3ad-1fb3-4bdc-bd50-f5c8d5c0cdd1.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.dali_hero_0f7de3ad-1fb3-4bdc-bd50-f5c8d5c0cdd1.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -86,14 +95,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
         "carousel_ECGwXH": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.dali_superchase.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.dali_superchase.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -115,14 +124,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": false
           }
         },
         "carousel_TJGHmB": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.picasso_chase_b864ecc2-eeb7-4d66-93ab-a7af09da9a1e.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.picasso_chase_b864ecc2-eeb7-4d66-93ab-a7af09da9a1e.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -144,14 +153,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
         "carousel_wMCGyK": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.mozart_hero.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.mozart_hero.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -173,14 +182,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
         "carousel_RM9qHq": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.mozart_chase.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.mozart_chase.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -202,14 +211,14 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
         "carousel_hHULJT": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.mozart_superchase.png",
+            "desktop_image": "shopify://shop_images/historicalfigures.mozart_superchase.png",
             "image_overlay_opacity": 10,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -231,36 +240,7 @@
             "button_text": "Shop Now",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
-            "use_slide_linkout": true
-          }
-        },
-        "carousel_JVGdXT": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/IMG_3720_dafa90b0-9955-4932-9d93-482931cd134e.png",
-            "image_overlay_opacity": 20,
-            "mobile_min_height": 250,
-            "complete_center": false,
-            "text_alignment": "left",
-            "text_container_top_pos": 25,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 30,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Get 3 PIX! for the price of 2",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "SECRET STASH BUNDLE AVAILABLE NOW",
-            "subheader_margin_bottom": 16,
-            "description": "",
-            "description_margin_bottom": 16,
-            "text_color": "#ffffff",
-            "text_container_max_width_d": 50,
-            "text_container_max_width_m": 90,
-            "button_text": "SHOP NOW",
-            "button_text_color": "#000000",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/products\/mystery-box",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         }
@@ -273,8 +253,7 @@
         "carousel_TJGHmB",
         "carousel_wMCGyK",
         "carousel_RM9qHq",
-        "carousel_hHULJT",
-        "carousel_JVGdXT"
+        "carousel_hHULJT"
       ],
       "custom_css": [
         "@media screen and (max-width: 768px) {h1, h2 {font-size: 16px; } .button {min-width: auto; min-height: auto; padding: 0 1.5rem; height: 40px; }}"
@@ -292,8 +271,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
+        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify://shop_images/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -316,7 +295,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/pix",
+            "button_link_1": "shopify://collections/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -334,7 +313,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -380,7 +359,7 @@
     "klaviyo_email_capture_yehVpF": {
       "type": "klaviyo-email-capture",
       "settings": {
-        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"><\/div>",
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
         "form_max_width": 600,
         "padding_y_d": 60,
         "padding_y_m": 30,
@@ -390,19 +369,19 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png"
+        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
+        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
-        "link_out": "\/account\/register",
+        "link_out": "/account/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -424,7 +403,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/apparel",
+            "button_link_1": "shopify://collections/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -442,7 +421,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -488,13 +467,13 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
+        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
         "text_color": "#ffffff",
-        "link_out": "\/pages\/frequently-asked-questions",
+        "link_out": "/pages/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -508,13 +487,13 @@
         ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
       ],
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/bloo_loves_you.svg",
+        "desktop_image": "shopify://shop_images/bloo_loves_you.svg",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "",
         "text_color": "#ffffff",
-        "link_out": "shopify:\/\/blogs\/news\/roses-are-red-this-yeti-is-bloo",
+        "link_out": "shopify://blogs/news/roses-are-red-this-yeti-is-bloo",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
