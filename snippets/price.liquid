@@ -131,6 +131,8 @@
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
         {% if product.tags contains 'not-on-sale-yet' %}
           COMING SOON
+        {% elsif product.tags contains 'temp-unavailable' %}
+          TEMPORARILY UNAVAILABLE
         {% else %}
           {{ 'products.product.sold_out' | t }}
         {% endif %}

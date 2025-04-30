@@ -69,6 +69,22 @@
             SOON
           </span>
         {% endif %}
+        {% if card_product.tags contains "temp-unavailable" %}
+          <span class="dropping-soon-on-card">
+            TEMPORARILY
+            <br> 
+            UNAVAILABLE
+          </span>
+        {% endif %}
+
+        {% if card_product.available == false %}
+          {% unless card_product.tags contains "not-on-sale-yet" or card_product.tags contains "temp-unavailable" %}
+            <span class="dropping-soon-on-card">
+              SOLD OUT
+            </span>
+          {% endunless %}
+        {% endif %}
+
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
