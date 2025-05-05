@@ -60,7 +60,7 @@
                 data-label="{{ 'customer.order.product' | t }}"
               >
                 <div>
-                  {%- if line_item.url != blank -%}
+                  {%- if line_item.url != blank and line_item.product.type != "Loyalty" -%}
                     <a href="{{ line_item.url }}">{{ line_item.title | escape }}</a>
                   {%- else -%}
                     <p>{{ line_item.title | escape }}</p>

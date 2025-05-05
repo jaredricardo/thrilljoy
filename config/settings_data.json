@@ -1,33 +1,25 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
     "category_comparison_string": "genres",
-    "preview_video_one": "shopify://files/videos/0216.mp4",
-    "full_video_one": "shopify://files/videos/0216.mp4",
-    "poster_1": "shopify://shop_images/Screen_Shot_2025-02-26_at_1.23.51_AM.png",
-    "preview_video_two": "shopify://files/videos/0217.mp4",
-    "full_video_two": "shopify://files/videos/0217(1).mp4",
-    "poster_2": "shopify://shop_images/Screen_Shot_2025-02-26_at_1.22.59_AM.png",
+    "preview_video_one": "shopify:\/\/files\/videos\/0216.mp4",
+    "full_video_one": "shopify:\/\/files\/videos\/0216.mp4",
+    "poster_1": "shopify:\/\/shop_images\/Screen_Shot_2025-02-26_at_1.23.51_AM.png",
+    "preview_video_two": "shopify:\/\/files\/videos\/0217.mp4",
+    "full_video_two": "shopify:\/\/files\/videos\/0217(1).mp4",
+    "poster_2": "shopify:\/\/shop_images\/Screen_Shot_2025-02-26_at_1.22.59_AM.png",
     "enable_sticky_pencil": false,
     "sticky_pencil_pencil_bg_color": "#398188",
-    "sticky_pencil_text": "<p>Last chance to get lucky! Secret Stash ends soon!</p>",
+    "sticky_pencil_text": "<p>Last chance to get lucky! Secret Stash ends soon!<\/p>",
+    "enable_sticky_pencil_timer": false,
     "timer_year": 2025,
     "timer_month": 4,
     "timer_day": 30,
-    "sticky_pencil_button_url": "shopify://products/mystery-box",
+    "sticky_pencil_button_url": "shopify:\/\/products\/mystery-box",
     "sticky_pencil_button_bg_color": "#5fd551",
     "sticky_pencil_button_text_color": "#000000",
-    "logo": "shopify://shop_images/THRILLJOY_LOGO_B_W_Thrilljoy_b_w_word_lockup_36028183-ae0d-492b-b6db-63201a78b865.png",
+    "logo": "shopify:\/\/shop_images\/THRILLJOY_LOGO_B_W_Thrilljoy_b_w_word_lockup_36028183-ae0d-492b-b6db-63201a78b865.png",
     "logo_width": 150,
-    "favicon": "shopify://shop_images/favicon.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "type_header_font": "montserrat_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
@@ -124,12 +116,12 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Thrilljoy LLC",
-    "brand_description": "<p>Discover your thrill.</p><p><a href=\"mailto:support@thrilljoy.zendesk.com\" title=\"mailto:support@thrilljoy.zendesk.com\">Contact us</a></p>",
+    "brand_description": "<p>Discover your thrill.<\/p><p><a href=\"mailto:support@thrilljoy.zendesk.com\" title=\"mailto:support@thrilljoy.zendesk.com\">Contact us<\/a><\/p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
-    "social_instagram_link": "https://instagram.com/thrilljoycollectibles",
+    "social_instagram_link": "https:\/\/instagram.com\/thrilljoycollectibles",
     "social_youtube_link": "",
-    "social_tiktok_link": "https://www.tiktok.com/@thrilljoycollectibles",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@thrilljoycollectibles",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -162,19 +154,19 @@
     "content_for_index": [],
     "blocks": {
       "11945366711752539959": {
-        "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
+        "type": "shopify:\/\/apps\/zendesk\/blocks\/zendesk_web_widget\/c0b417b1-b90b-4754-baaf-f55627e6acd4",
         "disabled": true,
         "settings": {}
       },
       "5149645339031002760": {
-        "type": "shopify://apps/order-limits-minmaxify/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
         "disabled": false,
         "settings": {
           "async": false
         }
       },
       "6174324309569838175": {
-        "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "type": "shopify:\/\/apps\/smile-io\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
         "disabled": false,
         "settings": {}
       }
@@ -448,7 +440,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_description": "<p><\/p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
