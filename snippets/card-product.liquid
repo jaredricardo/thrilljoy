@@ -63,14 +63,14 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {% if card_product.tags contains "not-on-sale-yet" %}
-          <span class="dropping-soon-on-card">
+          <span class="dropping-soon-on-card" style="background-color:#2D6961;">
             DROPPING
             <br> 
             SOON
           </span>
         {% endif %}
         {% if card_product.tags contains "temp-unavailable" %}
-          <span class="dropping-soon-on-card">
+          <span class="dropping-soon-on-card" style="background-color:black;">
             TEMPORARILY
             <br> 
             UNAVAILABLE
@@ -79,7 +79,7 @@
 
         {% if card_product.available == false %}
           {% unless card_product.tags contains "not-on-sale-yet" or card_product.tags contains "temp-unavailable" %}
-            <span class="dropping-soon-on-card">
+            <span class="dropping-soon-on-card" style="background-color:#BA0011;">
               SOLD OUT
             </span>
           {% endunless %}
