@@ -238,41 +238,46 @@
   <script>
     window.addEventListener('DOMContentLoaded', () => {
 
-      const endYear = {{ settings.timer_year }}
-      const endMonth = {{ settings.timer_month }}
-      const endDay = {{ settings.timer_day }}
-      // const endMins = 0
+      const endYear = {{ settings.timer_year }};
+      const endMonth = {{ settings.timer_month }};
+      const endDay = {{ settings.timer_day }};
+      const endHourEST = {{ settings.timer_hour }}; // Hour in EST (1 = 1am, 23 = 11pm)
 
-      const daysLeft = document.getElementById('days-left')
-      const hoursLeft = document.getElementById('hours-left')
-      const minsLeft = document.getElementById('mins-left')
-      const secsLeft = document.getElementById('secs-left')
-
+      const daysLeft = document.getElementById('days-left');
+      const hoursLeft = document.getElementById('hours-left');
+      const minsLeft = document.getElementById('mins-left');
+      const secsLeft = document.getElementById('secs-left');
 
       function updateTimer() {
+        const currentDate = new Date();
 
-        const currentDate = new Date()
-        const currentDatePST = new Date(currentDate.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }))
-        const endDate = new Date(endYear, endMonth - 1, endDay)
-        const timeDiff = endDate - currentDatePST
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
-        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000)
+        // Convert current date to PST
+        const currentDatePST = new Date(currentDate.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
 
-        daysLeft.innerText = days
-        hoursLeft.innerText = hours
-        minsLeft.innerText = minutes
-        secsLeft.innerText = seconds
+        // Convert endHour from EST to PST
+        const endHourPST = (endHourEST - 3 + 24) % 24; // Subtract 3 hours for EST to PST conversion
 
+        // Create the end date in PST
+        const endDate = new Date(endYear, endMonth - 1, endDay, endHourPST);
+
+        const timeDiff = endDate - currentDatePST;
+
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        daysLeft.innerText = days;
+        hoursLeft.innerText = hours;
+        minsLeft.innerText = minutes;
+        secsLeft.innerText = seconds;
       }
 
       window.setInterval(() => {
-        updateTimer()
-      }, 1000)
+        updateTimer();
+      }, 1000);
 
-
-    })
+    });
   </script>
 
 {% endif %}

@@ -125,6 +125,11 @@
         "label": "Day"
       },
       {
+        "type": "number",
+        "id": "timer_hour",
+        "label": "Hour (EST)"
+      },
+      {
         "type": "header",
         "content": "Button settings, blank for no button"
       },
