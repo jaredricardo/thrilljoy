@@ -15,7 +15,7 @@
         "carousel_hHULJT": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/READ_NOW.png",
+            "desktop_image": "shopify://shop_images/tickets_available_now_v3.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -37,7 +37,7 @@
             "button_text": "",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/blogs\/news\/🎡-welcome-to-thrilljoy-s-block-party-boardwalk-bash-🎉",
+            "button_link": "https://www.eventbrite.com/e/1357731554629?aff=oddtdtcreator",
             "use_slide_linkout": true
           }
         }
@@ -61,8 +61,8 @@
         "heading": "",
         "heading_size": "h2",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
+        "video_url": "https://www.youtube.com/watch?v=j5yXu7LeQBo",
+        "cover_image": "shopify://shop_images/unnamed.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -85,7 +85,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/pix",
+            "button_link_1": "shopify://collections/pix",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -103,7 +103,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
@@ -149,7 +149,7 @@
     "klaviyo_email_capture_yehVpF": {
       "type": "klaviyo-email-capture",
       "settings": {
-        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"><\/div>",
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
         "form_max_width": 600,
         "padding_y_d": 60,
         "padding_y_m": 30,
@@ -159,19 +159,19 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png"
+        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
+        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
-        "link_out": "\/account\/register",
+        "link_out": "/account/register",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -193,7 +193,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/apparel",
+            "button_link_1": "shopify://collections/apparel",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -211,7 +211,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -257,13 +257,13 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What <\/h2><h2>the<\/h2><h2>FAQ?<\/h2>",
+        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
         "text_color": "#ffffff",
-        "link_out": "\/pages\/frequently-asked-questions",
+        "link_out": "/pages/frequently-asked-questions",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
@@ -277,13 +277,13 @@
         ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
       ],
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/bloo_loves_you.svg",
+        "desktop_image": "shopify://shop_images/bloo_loves_you.svg",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "",
         "text_color": "#ffffff",
-        "link_out": "shopify:\/\/blogs\/news\/roses-are-red-this-yeti-is-bloo",
+        "link_out": "shopify://blogs/news/roses-are-red-this-yeti-is-bloo",
         "link_out_is_button": false,
         "button_text": "Button Text",
         "button_text_color": "#ffffff",
