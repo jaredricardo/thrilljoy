@@ -15,7 +15,7 @@
         "carousel_hHULJT": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/tickets_available_now_v3.png",
+            "desktop_image": "shopify://shop_images/sold_out_v3.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -37,7 +37,7 @@
             "button_text": "",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "https://www.eventbrite.com/e/1357731554629?aff=oddtdtcreator",
+            "button_link": "shopify://blogs/news/🎡-welcome-to-thrilljoy-s-block-party-boardwalk-bash-🎉",
             "use_slide_linkout": true
           }
         }
