@@ -12,20 +12,37 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', () => {
+    
+        const scavengerKey = "{{ settings.scavenger_hunt_key | sha256 }}"
+        const testt = "{{ 'test_key_1' | sha256 }}"
 
-        console.log({{ settings.scavenger_hunt_key | json }})
-       document.querySelector('#check-word').addEventListener('click', async () => {
+        console.log(scavengerKey)
+        console.log(testt)
 
-            const scavengerKey = {{ settings.scavenger_hunt_key }}
+        console.log(hash('test_key_1'))
+        console.log(hash('test_key_2'))
 
+        document.querySelector('#check-word').addEventListener('click', async () => {
 
+            const scavengerKey = {{ settings.scavenger_hunt_key | sha256 }}
+            const testt = {{ 'sha' | sha256 }}
 
-        
 
             const res = await fetch(`${Shopify.routes.root}pages/scavenger-hunt?view=scavenger-success`)
             const html = await res.text()        
             document.querySelector('#insert').innerHTML = html
         })
+
+        async function hash(string) {
+            const utf8 = new TextEncoder().encode(string);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray
+                .map((bytes) => bytes.toString(16).padStart(2, '0'))
+                .join('');
+            return hashHex;
+        }
+
     })
 </script>
 
