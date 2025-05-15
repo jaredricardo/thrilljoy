@@ -1,0 +1,48 @@
+{% style %}
+
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}" >
+    <button id="check-word">
+        Check Word
+    </button>
+    <div id="insert"></div>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        console.log({{ settings.scavenger_hunt_key | json }})
+       document.querySelector('#check-word').addEventListener('click', async () => {
+
+            const scavengerKey = {{ settings.scavenger_hunt_key }}
+
+
+
+        
+
+            const res = await fetch(`${Shopify.routes.root}pages/scavenger-hunt?view=scavenger-success`)
+            const html = await res.text()        
+            document.querySelector('#insert').innerHTML = html
+        })
+    })
+</script>
+
+{% schema %}
+{
+  "name": "JR Scavenger Hunt Checker",
+  "enabled_on": {
+    "templates": [
+      "page"
+    ]
+  },
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+        "name": "JR Scavenger Hunt Checker"
+    }
+  ]
+}
+{% endschema %}

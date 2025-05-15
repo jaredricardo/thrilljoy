@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "image_banner_k9Rt7m": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_yanWc6": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "use_h1": false,
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yanWc6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp-b.png",
+        "image_overlay_opacity": 0,
+        "fetch_priority": "auto",
+        "use_preload": false,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "scavenger_checker_8bNWY6": {
+      "type": "scavenger-checker",
+      "name": "JR Scavenger Hunt Checker",
+      "settings": {}
+    }
+  },
+  "order": [
+    "image_banner_k9Rt7m",
+    "main",
+    "scavenger_checker_8bNWY6"
+  ]
+}

@@ -1617,5 +1617,15 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Scavenger Hunt Settings",
+    "settings":[
+      {
+        "type": "text",
+        "id": "scavenger_hunt_key",
+        "label": "Scavenger Hunt Key"
+      }
+    ]
   }
 ]

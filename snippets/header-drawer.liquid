@@ -6,10 +6,6 @@
 {% endcomment %}
 
 {% assign downcased_comparison_string = settings.category_comparison_string %}
-<script>
-  console.log('++++')
-  console.log({{ downcased_comparison_string | json }})
-</script>
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
