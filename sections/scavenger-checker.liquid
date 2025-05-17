@@ -1,48 +1,104 @@
-{% style %}
+{% liquid 
 
+  assign scavenger_hunt_key = settings.scavenger_hunt_key | downcase | sha256
 
-{% endstyle %}
+-%}
 
-<div data-section-id="{{ section.id }}" >
-    <button id="check-word">
-        Check Word
-    </button>
-    <div id="insert"></div>
+<style>
+
+  .banner__heading {
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  @media screen and (max-width: 749px) {
+  .banner__media {
+    position: absolute !important;
+    }
+    .banner__heading {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+</style>
+
+<div data-section-id="{{ section.id }}" class="scavenger-guess-container">
+  <input type="text" id="guessed-word" placeholder="Whats the secret word?" />
+  <button id="check-word" class="button">
+    Check Word
+  </button>
 </div>
 
 <script>
     window.addEventListener('DOMContentLoaded', () => {
+
+      // append this section to banner image section if it exsts (im too lazy to make a new section inside of the existing one)
+
+      const bannerBox = document.querySelector('.banner__box')
+
+      if(bannerBox) {
+        const scavengerChecker = document.querySelector('[data-section-id="{{ section.id }}"]')
+        bannerBox.appendChild(scavengerChecker)
+      }
+  
+      const scavengerKey = "{{ scavenger_hunt_key }}"
+
+      document.querySelector('#check-word').addEventListener('click', async () => {
+        const guessedWordC = document.querySelector('#guessed-word').value.toLowerCase()
+        const guessedWord = await hash(guessedWordC)
+        checkWord(guessedWord)
+      })
     
-        const scavengerKey = "{{ settings.scavenger_hunt_key | sha256 }}"
-        const testt = "{{ 'test_key_1' | sha256 }}"
 
-        console.log(scavengerKey)
-        console.log(testt)
+       document.querySelector('#guessed-word').addEventListener('keypress', async () => {
+        if (event.key !== 'Enter') return
+        const guessedWordC = document.querySelector('#guessed-word').value.toLowerCase()
+        const guessedWord = await hash(guessedWordC)
+        checkWord(guessedWord)
+       })
 
-        console.log(hash('test_key_1'))
-        console.log(hash('test_key_2'))
+      async function checkWord(guessedWord) {
 
-        document.querySelector('#check-word').addEventListener('click', async () => {
-
-            const scavengerKey = {{ settings.scavenger_hunt_key | sha256 }}
-            const testt = {{ 'sha' | sha256 }}
-
-
-            const res = await fetch(`${Shopify.routes.root}pages/scavenger-hunt?view=scavenger-success`)
-            const html = await res.text()        
-            document.querySelector('#insert').innerHTML = html
-        })
-
-        async function hash(string) {
-            const utf8 = new TextEncoder().encode(string);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray
-                .map((bytes) => bytes.toString(16).padStart(2, '0'))
-                .join('');
-            return hashHex;
+        if(scavengerKey !== guessedWord) {
+          alert('Incorrect word, try again!')
+          return
         }
 
+        document.querySelector('.scavenger-guess-container').innerHTML = `
+          <div class="loading__spinner">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="spinner"
+              viewBox="0 0 66 66"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+          </div>
+        `
+
+        const res = await fetch(`${Shopify.routes.root}pages/scavenger-hunt?view=scavenger-success`)
+        const html = await res.text()        
+
+        const originalBannerHeading = document.querySelector('.banner__heading')
+
+        if(originalBannerHeading) {
+          originalBannerHeading.remove()
+        }
+
+        document.querySelector('.scavenger-guess-container').innerHTML = html     
+      }
+
+      async function hash(string) {
+          const utf8 = new TextEncoder().encode(string)
+          const hashBuffer = await crypto.subtle.digest('SHA-256', utf8)
+          const hashArray = Array.from(new Uint8Array(hashBuffer))
+          const hashHex = hashArray
+            .map((bytes) => bytes.toString(16).padStart(2, '0'))
+            .join('')
+          return hashHex
+      }
     })
 </script>
 

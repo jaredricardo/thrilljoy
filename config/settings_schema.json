@@ -1625,6 +1625,23 @@
         "type": "text",
         "id": "scavenger_hunt_key",
         "label": "Scavenger Hunt Key"
+      },
+      {
+        "type": "text",
+        "id": "scavenger_congrats_message",
+        "label": "Scavenger Hunt Congrats Message",
+        "default": "Congratulations! You solved the scavenger hunt."
+      },
+      {
+        "type": "richtext",
+        "id": "scavenger_text",
+        "label": "Scavenger Hunt Copy",
+        "default": "<h4>Copy that described the above image / product from the scavenger hunt</h4>"
+      },
+      {
+        "type": "image_picker",
+        "id": "scavenger_image",
+        "label": "Scavenger Hunt Banner Image"
       }
     ]
   }

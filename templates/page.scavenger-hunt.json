@@ -6,7 +6,7 @@
         "heading_yanWc6": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.title }}",
+            "heading": "Think you know the secret word?",
             "use_h1": false,
             "heading_size": "h1"
           }
@@ -33,6 +33,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -49,7 +50,7 @@
   },
   "order": [
     "image_banner_k9Rt7m",
-    "main",
-    "scavenger_checker_8bNWY6"
+    "scavenger_checker_8bNWY6",
+    "main"
   ]
 }
