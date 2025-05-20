@@ -33,6 +33,10 @@
             "swatch_shape": "circle"
           }
         },
+        "variant_product_area_MyVGbM": {
+          "type": "variant-product-area",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -89,6 +93,7 @@
         "custom_liquid_fVahD6",
         "text_rzbTg9",
         "variant_picker",
+        "variant_product_area_MyVGbM",
         "quantity_selector",
         "text_UCqMyQ",
         "buy_buttons",

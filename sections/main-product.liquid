@@ -241,6 +241,8 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {%- when 'variant-product-area' -%}
+                {% render 'variant-but-separate-product' product:product %}
               {%- when 'video-cards-placement' -%}
                 {% render 'video-preview-cards' product:product %}
               {%- when 'text' -%}
@@ -964,6 +966,18 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "variant-product-area",
+      "name": "Variant product Area",
+      "limit": 1,
+      "settings" : [
+        {
+          "type": "header",
+          "content": "Variant Product Picker Area",
+          "info": "This block is where the variant product picker will appear if the product has products inside of the variant picker metafield."
+        }
+      ]
     },
     {
       "type": "video-cards-placement",

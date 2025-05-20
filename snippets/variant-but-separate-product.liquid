@@ -1,0 +1,16 @@
+
+
+<script>
+    console.log('/////')
+    console.log({{ collections[product.metafields.custom.product_way_collection.value.handle].products | json }})
+</script>
+{% if product.metafields.custom.product_way_collection %}
+    test still working
+    {{ product.metafields.custom.product_way_collection.value.handle }}
+    {% assign colorway_collection = collections[product.metafields.custom.product_way_collection.value.handle].products %}
+   <ul class="product-way-picker">
+    {% for product in colorway_collection %}
+        <li>{{ product.title }}</li>
+    {% endfor %}
+   </ul>
+{% endif %}
