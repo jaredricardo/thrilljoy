@@ -4231,3 +4231,7 @@ display: none;
   }
 }
 
+quick-add-modal .video-preview-cards-container,
+quick-add-modal .tj-breadcrumbs {
+  display: none;
+}
