@@ -4231,3 +4231,72 @@ display: none;
   }
 }
 
+/* related product varant swapper */
+
+.product-way-picker {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.product-way-picker .product-picker {
+  cursor: pointer;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 3px;
+}
+
+.product-way-picker .product-picker.current-product img {
+  outline: 2px solid rgba(var(--color-button), 1);
+}
+
+.product-way-picker p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.3;
+  color: #000;
+}
+
+.product-way-picker .product-picker img {
+  border-radius: 3px;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-product-area .variant-select-loading {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.main-product-area .variant-select-loading .loading__spinner {
+  width: 100%;
+  height: 100%;
+  display: block !important;
+}
+
+.main-product-area.loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.main-product-area .variant-select-loading svg circle {
+  stroke: rgb(var(--color-button));
+}
+
+.main-product-area.loading .variant-select-loading {
+  display: block;
+}
