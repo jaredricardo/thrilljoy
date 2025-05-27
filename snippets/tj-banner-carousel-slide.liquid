@@ -45,6 +45,16 @@
         color: {{ block.settings.button_text_color }};
     }
 
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .button:after {
+        box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) {{ block.settings.button_background_color | hex_to_rgba }};
+        transition: box-shadow var(--duration-short) ease;
+    }
+
+    [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .button:hover:after {
+        --border-offset: 1.3px;
+        box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 calc(var(--buttons-border-width) + 1px) {{ block.settings.button_background_color | hex_to_rgba }};
+    } 
+
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h1,
     [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] h2 {
         margin-bottom: {{ block.settings.header_margin_bottom }}px;
@@ -69,6 +79,7 @@
     @media screen and (max-width: 768px) {
         [data-section-id="{{ section.id }}"] [data-block-id="{{ block.id }}"] .text-container  {
             top: {{ block.settings.top_pos_mobile }}%;
+            left: {{ block.settings.left_pos_mobile }}%;
             max-width: {{ block.settings.text_container_max_width_m }}%;
             width: 95%;
         }
@@ -128,10 +139,10 @@
         {% endif %}
 
         {% if block.settings.button_link and block.settings.use_slide_linkout == false %}
-            <a class="button button--primary" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
+            <a data-rgba="{{ block.settings.button_background_color | hex_to_rgba }}" class="button button--primary" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
         {% endif %}
         {% if block.settings.button_link and block.settings.use_slide_linkout == true %}
-            <div class="button button--primary" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</div>
+            <div  data-rgba="{{ block.settings.button_background_color | hex_to_rgba }}" class="button button--primary" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</div>
         {% endif %}
     </div>
 
