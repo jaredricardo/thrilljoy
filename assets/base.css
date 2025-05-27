@@ -4272,3 +4272,7 @@ scavenger-hunt-success h4 {
   font-weight: 700;
   width: 100%;
 }
+quick-add-modal .video-preview-cards-container,
+quick-add-modal .tj-breadcrumbs {
+  display: none;
+}
