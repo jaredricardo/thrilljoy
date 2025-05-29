@@ -1,47 +1,19 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "image_banner_k9Rt7m": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_yanWc6": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.title }}",
-            "use_h1": false,
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_yanWc6"
-      ],
+    "jr_video_banner_WLeqBX": {
+      "type": "jr-video-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp-b.png",
-        "image_overlay_opacity": 0,
-        "fetch_priority": "auto",
-        "use_preload": false,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/622b46be44b54fdda0b416ee55be45f8.mp4",
+        "heading": "Thrilljoy LIVE on Whatnot!",
+        "text": "<strong>Get ready for first looks, exclusive teasers, dollar auctions, giveaways, and more. Be one of the FIRST to score our latest product and connect with the Thrillseeker community.<\/strong>",
+        "button_text": "Follow us on Whatnot",
+        "button_link": "",
+        "abs_pos_image": "shopify:\/\/shop_images\/FullLogo_V2.png"
       }
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -49,10 +21,22 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "jr_section_timer_Y3CNd6": {
+      "type": "jr-section-timer",
+      "settings": {
+        "background_color": "#398188",
+        "text_color": "#ffffff",
+        "timer_year": 2025,
+        "timer_month": 6,
+        "timer_day": 6,
+        "timer_hour": 15
+      }
     }
   },
   "order": [
-    "image_banner_k9Rt7m",
-    "main"
+    "jr_video_banner_WLeqBX",
+    "main",
+    "jr_section_timer_Y3CNd6"
   ]
 }
