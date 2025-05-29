@@ -1,14 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "jr_video_banner_WLeqBX": {
       "type": "jr-video-banner",
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/622b46be44b54fdda0b416ee55be45f8.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/622b46be44b54fdda0b416ee55be45f8.mp4",
         "heading": "Thrilljoy LIVE on Whatnot!",
-        "text": "<strong>Get ready for first looks, exclusive teasers, dollar auctions, giveaways, and more. Be one of the FIRST to score our latest product and connect with the Thrillseeker community.<\/strong>",
+        "text": "<strong>Get ready for first looks, exclusive teasers, dollar auctions, giveaways, and more. Be one of the FIRST to score our latest product and connect with the Thrillseeker community.</strong>",
         "button_text": "Follow us on Whatnot",
-        "button_link": "",
-        "abs_pos_image": "shopify:\/\/shop_images\/FullLogo_V2.png"
+        "button_link": "https://www.whatnot.com/user/thrilljoycollectibles",
+        "abs_pos_image": "shopify://shop_images/FullLogo_V2.png"
       }
     },
     "main": {
