@@ -1,6 +1,6 @@
 {% liquid 
 
-  assign scavenger_hunt_key = settings.scavenger_hunt_key | downcase | sha256
+  assign scavenger_hunt_key = settings.scavenger_hunt_key | downcase | strip | sha256
 
 -%}
 
@@ -46,17 +46,17 @@
     const scavengerKey = "{{ scavenger_hunt_key }}"
 
     document.querySelector('#check-word').addEventListener('click', async () => {
-      const guessedWordC = document.querySelector('#guessed-word').value.toLowerCase()
+      const guessedWordC = document.querySelector('#guessed-word').value.trim().toLowerCase()
       const guessedWord = await hash(guessedWordC)
       checkWord(guessedWord)
     })
   
 
       document.querySelector('#guessed-word').addEventListener('keypress', async () => {
-      if (event.key !== 'Enter') return
-      const guessedWordC = document.querySelector('#guessed-word').value.toLowerCase()
-      const guessedWord = await hash(guessedWordC)
-      checkWord(guessedWord)
+        if (event.key !== 'Enter') return
+        const guessedWordC = document.querySelector('#guessed-word').value.trim().toLowerCase()
+        const guessedWord = await hash(guessedWordC)
+        checkWord(guessedWord)
       })
 
     async function checkWord(guessedWord) {
