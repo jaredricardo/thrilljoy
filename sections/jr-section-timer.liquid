@@ -1,0 +1,143 @@
+{% style %}
+
+    [data-section-id="{{ section.id }}"] {
+        background-color: {{ section.settings.background_color }};
+    }
+
+    [data-section-id="{{ section.id }}"] h2,
+    [data-section-id="{{ section.id }}"] h3,
+    [data-section-id="{{ section.id }}"] p,
+    [data-section-id="{{ section.id }}"] span {
+        color: {{ section.settings.text_color }};
+    }
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="page-width jr-padding jr-section-timer">
+        <div class="text-timer-container">
+            <div class="countdown-container">
+                <div>
+                <span class="timer-number" id="days-left"></span>
+                <span class="time-name">days</span>
+                </div>
+                <div>
+                <span class="timer-number" id="hours-left"></span>
+                <span class="time-name">hours</span>
+                </div>
+                <div>
+                <span class="timer-number" id="mins-left"></span>
+                <span class="time-name">mins</span>
+                </div>
+                <div>
+                <span class="timer-number" id="secs-left"></span>
+                <span class="time-name">secs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+      const endYear = {{ section.settings.timer_year }}
+      const endMonth = {{ section.settings.timer_month }}
+      const endDay = {{ section.settings.timer_day }}
+      const endHourEST = {{ section.settings.timer_hour }} // Hour in EST (1 = 1am, 23 = 11pm)
+
+      const daysLeft = document.querySelector('[data-section-id="{{ section.id }}"] #days-left')
+      const hoursLeft = document.querySelector('[data-section-id="{{ section.id }}"] #hours-left')
+      const minsLeft = document.querySelector('[data-section-id="{{ section.id }}"] #mins-left')
+      const secsLeft = document.querySelector('[data-section-id="{{ section.id }}"] #secs-left')
+      const section =  document.querySelector('[data-section-id="{{ section.id }}"] .jr-section-timer')
+
+      function updateTimer() {
+        const currentDate = new Date()
+
+        // Convert current date to PST
+        const currentDatePST = new Date(currentDate.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }))
+
+        // Convert endHour from EST to PST
+        const endHourPST = (endHourEST - 3 + 24) % 24 // Subtract 3 hours for EST to PST conversion
+
+        // Create the end date in PST
+        const endDate = new Date(endYear, endMonth - 1, endDay, endHourPST)
+
+        const timeDiff = endDate - currentDatePST
+
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000)
+
+        daysLeft.innerText = days
+        hoursLeft.innerText = hours
+        minsLeft.innerText = minutes
+        secsLeft.innerText = seconds
+
+        if(!section.classList.contains('loaded')) {
+            section.classList.add('loaded')
+        }
+
+      }
+   
+   
+
+      window.setInterval(() => {
+        updateTimer()
+      }, 1000)
+
+    })
+</script>
+
+{% schema %}
+{
+  "name": "JR Section Timer",
+  "settings": [
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color", 
+        "id": "text_color",
+        "label": "Section Text Color",
+        "default": "#000000"
+    },
+    {
+        "type": "number",
+        "id": "timer_year",
+        "label": "Year",
+        "default": 3000
+      },
+      {
+        "type": "number",
+        "id": "timer_month",
+        "label": "Month",
+        "default": 1
+      },
+      {
+        "type": "number",
+        "id": "timer_day",
+        "label": "Day",
+        "default": 1
+      },
+      {
+        "type": "number",
+        "id": "timer_hour",
+        "label": "Hour (EST, Military Time)",
+        "default": 0
+      }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+        "name": "JR Section Timer"
+    }
+  ]
+}
+{% endschema %}
