@@ -4308,6 +4308,30 @@ quick-add-modal .tj-breadcrumbs {
   line-height: 1;
 }
 
+main:has(.haunted-container) {
+  position: relative;
+}
+
+.haunted-container {
+  /* turn on on Saturday morning */
+  display: none;
+  z-index: -3;
+  /*  */
+  position: sticky;
+  bottom: 0;
+  left: 5%;
+  width: 20vw;
+  max-width: 150px;
+  min-width: 110px;
+
+}
+
+.haunted-container img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
 @media screen and (max-width: 768px) {
   .jr-section-timer .countdown-container .timer-number,
   .jr-section-timer .countdown-container .time-name  {
