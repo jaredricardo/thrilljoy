@@ -130,6 +130,13 @@
       .product__info-container:has(.klaviyo-bis-trigger) .product-form__buttons {
         display: none;
       }
+
+      {% if product.type == "MEGA PIX!" %}
+        .hide-from-mega-pix {
+          display: none;
+        }
+      {% endif %}
+
     </style>
 
     <!-- Google tag (gtag.js) -->
