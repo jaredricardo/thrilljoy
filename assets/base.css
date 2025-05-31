@@ -4313,10 +4313,8 @@ main:has(.haunted-container) {
 }
 
 .haunted-container {
-  /* turn on on Saturday morning */
-  display: none;
-  z-index: -3;
-  /*  */
+  display: block;
+  z-index: 3;
   position: sticky;
   bottom: 0;
   left: 5%;
