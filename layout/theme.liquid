@@ -132,7 +132,8 @@
       }
 
       {% if product.type == "MEGA PIX!" %}
-        .hide-from-mega-pix {
+        .hide-from-mega-pix,
+        .odds-of-chase {
           display: none;
         }
       {% endif %}
@@ -439,6 +440,10 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+   
+    <img class="blood-1" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Blood-1.png?v=1748823917" alt="Blood splatter 1" />
+    <img class="blood-2" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Blood-2_21109f91-0812-41da-9ee1-0691c7614043.png?v=1748823916" alt="Blood splatter 2" />
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -452,36 +457,7 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
      
       {{ content_for_layout }}   
-  
-      <div class="haunted-container">
-        {% case request.path %}
-          {% when '/'%}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-01.png?v=1748589339" alt="Tomb Stone">
-          {% when '/pages/about-thrilljoy' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-02.png?v=1748589339" alt="Tomb Stone">
-          {% when '/pages/frequently-asked-questions' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-03.png?v=1748589339" alt="Tomb Stone">
-          {% when '/blogs/news' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-04.png?v=1748589339" alt="Tomb Stone">
-          {% when '/blogs/news/crack-the-code-the-thrill-for-pix-begins' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-05.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/new-featured' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-06.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/pix-1'%}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-07.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/mega-pix' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-08.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/pix'%}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-09.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/apparel' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-10.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/horror' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-11.png?v=1748589339" alt="Tomb Stone">
-          {% when '/collections/animation' %}
-            <img src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/6049-6050-Grave-12.png?v=1748589339" alt="Tomb Stone">
-        {% endcase %}
-      </div>
-      
+    
     </main>
 
 

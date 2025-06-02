@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "tj_banner_carousel_LayRLh": {
@@ -14,19 +5,18 @@
       "blocks": {
         "carousel_HjXQzj": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.marie_hero.png",
+            "desktop_image": "shopify:\/\/shop_images\/HeroBanner-6001-Teaser.png",
             "image_overlay_opacity": 0,
-            "mobile_min_height": 0,
+            "mobile_min_height": 140,
             "complete_center": false,
-            "text_alignment": "left",
+            "text_alignment": "center",
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 15,
             "left_pos_mobile": 5,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Fit for a queen! PIX! Marie Antoinette is here.",
+            "image_alt_text": "",
+            "header": "",
             "use_h1": false,
             "header_margin_bottom": 16,
             "subheader": "",
@@ -35,8 +25,8 @@
             "description_margin_bottom": 16,
             "text_color": "#ffffff",
             "text_container_max_width_d": 50,
-            "text_container_max_width_m": 49,
-            "button_text": "Shop Now",
+            "text_container_max_width_m": 97,
+            "button_text": "",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
             "button_link": "shopify:\/\/collections\/new-featured",
@@ -176,7 +166,7 @@
             "top_pos_mobile": 10,
             "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
-            "header": "From composer to collectible, PIX! Mozart is available now!",
+            "header": "From coMposEr to collectible, PIX! Mozart is available now!",
             "use_h1": false,
             "header_margin_bottom": 16,
             "subheader": "",
@@ -358,7 +348,7 @@
         "padding_y_m": 30,
         "bg_color": "rgba(0,0,0,0)",
         "button_bg_color": "#5fd551",
-        "header": "Keep up to date with all things Thrilljoy!",
+        "header": "Keep up to date with all thIngS Thrilljoy!",
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
@@ -372,7 +362,7 @@
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
+        "header_text": "<h2>BecoMe <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
         "link_out": "\/account\/register",
         "link_out_is_button": false,
@@ -387,7 +377,7 @@
         "heading_Rxc3WB": {
           "type": "heading",
           "settings": {
-            "heading": "Thrilljoy Threads",
+            "heading": "Thrilljoy ThreadS",
             "use_h1": false,
             "heading_size": "h0"
           }
