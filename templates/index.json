@@ -14,6 +14,7 @@
       "blocks": {
         "carousel_nr8tGL": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/Whatnot-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/Whatnot-1080x1350_1.png",
@@ -36,9 +37,9 @@
             "text_color": "#ffffff",
             "text_container_max_width_d": 50,
             "text_container_max_width_m": 90,
-            "button_text": "",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_text": "LIVE STREAM AT 1PM",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffe312",
             "button_link": "https://www.whatnot.com/user/thrilljoycollectibles",
             "use_slide_linkout": true
           }
