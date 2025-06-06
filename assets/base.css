@@ -4308,9 +4308,16 @@ quick-add-modal .tj-breadcrumbs {
   line-height: 1;
 }
 
+.main-product-area.retail-exclusive .product-form__buttons,
+.main-product-area.retail-exclusive .product-form__input {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .jr-section-timer .countdown-container .timer-number,
   .jr-section-timer .countdown-container .time-name  {
     font-size: 18px;
   }
 }
+
+
