@@ -6,7 +6,7 @@
         "heading_yanWc6": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.title }}",
+            "heading": "Think you know the secret word?",
             "use_h1": false,
             "heading_size": "h1"
           }
@@ -31,8 +31,14 @@
         "show_text_below": true
       }
     },
+    "scavenger_checker_8bNWY6": {
+      "type": "scavenger-checker",
+      "name": "JR Scavenger Hunt Checker",
+      "settings": {}
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -44,6 +50,7 @@
   },
   "order": [
     "image_banner_k9Rt7m",
+    "scavenger_checker_8bNWY6",
     "main"
   ]
 }

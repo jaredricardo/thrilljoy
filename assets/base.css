@@ -1262,9 +1262,7 @@ button.shopify-payment-button__button--unbranded {
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-      rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
 .button--secondary:after {
@@ -4300,3 +4298,95 @@ display: none;
 .main-product-area.loading .variant-select-loading {
   display: block;
 }
+.scavenger-guess-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0rem auto !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.scavenger-guess-container img {
+  width: 100%;
+}
+
+.scavenger-guess-container:has(.scavenger-hunt-success) {
+  max-width: 100%;
+}
+
+.scavenger-hunt-success h2,
+scavenger-hunt-success h4 {
+  text-align: center; 
+}
+
+.scavenger-guess-container .loading__spinner {
+  width: 3.5rem;
+}
+
+
+.banner__box:has(.scavenger-guess-container) {
+  background-color: transparent !important;
+}
+
+#guessed-word {
+  font-size: 14px;
+  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+  padding: 10px;
+  width: 100%;
+}
+
+#check-word {
+  font-weight: 700;
+  width: 100%;
+}
+quick-add-modal .video-preview-cards-container,
+quick-add-modal .tj-breadcrumbs {
+  display: none;
+}
+
+.jr-section-timer {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.jr-section-timer.loaded {
+  opacity: 1;
+}
+
+.jr-section-timer .countdown-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.jr-section-timer .countdown-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.jr-section-timer .countdown-container .timer-number,
+.jr-section-timer .countdown-container .time-name  {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.main-product-area.retail-exclusive .product-form__buttons,
+.main-product-area.retail-exclusive .product-form__input {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .jr-section-timer .countdown-container .timer-number,
+  .jr-section-timer .countdown-container .time-name  {
+    font-size: 18px;
+  }
+}
+
+

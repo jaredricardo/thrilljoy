@@ -147,6 +147,10 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "scavenger_hunt_key": "Encore",
+    "scavenger_congrats_message": "Thanks for cracking the code with us! Here’s a special treat just for you: Presale for our next drop kicks off June 12 at 9AM PT with limited quantities available before the official launch on June 20.",
+    "scavenger_text": "",
+    "scavenger_image": "shopify://shop_images/Image_1.jpg",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

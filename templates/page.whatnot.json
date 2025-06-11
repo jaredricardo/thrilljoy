@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "jr_video_banner_WLeqBX": {
+      "type": "jr-video-banner",
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/622b46be44b54fdda0b416ee55be45f8.mp4",
+        "heading": "Thrilljoy LIVE on Whatnot!",
+        "text": "<strong>Get ready for first looks, exclusive teasers, dollar auctions, giveaways, and more. Be one of the FIRST to score our latest product and connect with the Thrillseeker community.<\/strong>",
+        "button_text": "Follow us on Whatnot",
+        "button_link": "https:\/\/www.whatnot.com\/user\/thrilljoycollectibles",
+        "abs_pos_image": "shopify:\/\/shop_images\/FullLogo_V2.png"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "jr_section_timer_Y3CNd6": {
+      "type": "jr-section-timer",
+      "settings": {
+        "background_color": "#398188",
+        "text_color": "#ffffff",
+        "timer_year": 2025,
+        "timer_month": 6,
+        "timer_day": 6,
+        "timer_hour": 16
+      }
+    }
+  },
+  "order": [
+    "jr_video_banner_WLeqBX",
+    "main",
+    "jr_section_timer_Y3CNd6"
+  ]
+}

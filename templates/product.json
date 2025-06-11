@@ -14,7 +14,7 @@
         "custom_liquid_fVahD6": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div>\n    <strong>ODDS OF A CHASE<\/strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    <\/a>\n  <\/div>"
+            "custom_liquid": "<div class=\"odds-of-chase\">\n    <strong>ODDS OF A CHASE<\/strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    <\/a>\n  <\/div>"
           }
         },
         "text_rzbTg9": {
@@ -155,6 +155,7 @@
         "h2 {text-align: center;}"
       ],
       "settings": {
+        "extra_classes": "hide-from-mega-pix",
         "desktop_content_position": "center",
         "content_alignment": "left",
         "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
@@ -220,6 +221,7 @@
         ".title-wrapper-with-link {justify-content: center; margin-bottom: 5rem;}"
       ],
       "settings": {
+        "extra_classes": "",
         "title": "<strong>1-of-6 ODDS OF A CHASE!<\/strong>",
         "heading_size": "h1",
         "image_width": "full",
@@ -276,6 +278,7 @@
         "column_eYtGXt"
       ],
       "settings": {
+        "extra_classes": "hide-from-mega-pix",
         "title": "",
         "heading_size": "h1",
         "image_width": "full",

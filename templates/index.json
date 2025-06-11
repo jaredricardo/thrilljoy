@@ -3,19 +3,22 @@
     "tj_banner_carousel_LayRLh": {
       "type": "tj-banner-carousel",
       "blocks": {
-        "carousel_HjXQzj": {
+        "carousel_nr8tGL": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/historicalfigures.marie_hero.png",
+            "desktop_image": "shopify:\/\/shop_images\/Whatnot-Hero-2000x750.png",
+            "mobile_image": "shopify:\/\/shop_images\/Whatnot-1080x1350_1.png",
             "image_overlay_opacity": 0,
-            "mobile_min_height": 0,
+            "mobile_min_height": 250,
             "complete_center": false,
             "text_alignment": "left",
-            "text_container_top_pos": 25,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 15,
+            "text_container_top_pos": 30,
+            "text_container_left_pos": 8,
+            "top_pos_mobile": 0,
+            "left_pos_mobile": 0,
             "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Fit for a queen! PIX! Marie Antoinette is here.",
+            "header": "JOIN OUR FIRST TIME ON WHATNOT",
             "use_h1": false,
             "header_margin_bottom": 16,
             "subheader": "",
@@ -24,11 +27,11 @@
             "description_margin_bottom": 16,
             "text_color": "#ffffff",
             "text_container_max_width_d": 50,
-            "text_container_max_width_m": 49,
-            "button_text": "Shop Now",
-            "button_text_color": "#000000",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/collections\/new-featured",
+            "text_container_max_width_m": 90,
+            "button_text": "LIVE STREAM AT 1PM",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffe312",
+            "button_link": "https:\/\/www.whatnot.com\/user\/thrilljoycollectibles",
             "use_slide_linkout": true
           }
         },
@@ -43,6 +46,7 @@
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 15,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "Extra is in. Get your PIX! Marie Antoinette now.",
             "use_h1": false,
@@ -72,6 +76,7 @@
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 10,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "All-new PIX! featuring Salvador Dalí with his iconic masterpiece.",
             "use_h1": false,
@@ -101,6 +106,7 @@
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 15,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "Get surreal! PIX! Salvador Dalí has arrived.",
             "use_h1": false,
@@ -130,6 +136,7 @@
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 15,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "1-of-6 odds of a PIX! Picasso Chase!",
             "use_h1": false,
@@ -159,6 +166,7 @@
             "text_container_top_pos": 20,
             "text_container_left_pos": 5,
             "top_pos_mobile": 10,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "From composer to collectible, PIX! Mozart is available now!",
             "use_h1": false,
@@ -188,6 +196,7 @@
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 15,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "Strike the perfect chord with the new PIX! Mozart!",
             "use_h1": false,
@@ -217,6 +226,7 @@
             "text_container_top_pos": 25,
             "text_container_left_pos": 5,
             "top_pos_mobile": 15,
+            "left_pos_mobile": 5,
             "image_alt_text": "Thrilljoy Banner Image",
             "header": "Keep it classical and indulge in the new PIX! Mozart!",
             "use_h1": false,
@@ -234,47 +244,17 @@
             "button_link": "shopify:\/\/collections\/new-featured",
             "use_slide_linkout": true
           }
-        },
-        "carousel_JVGdXT": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/IMG_3720_dafa90b0-9955-4932-9d93-482931cd134e.png",
-            "image_overlay_opacity": 20,
-            "mobile_min_height": 250,
-            "complete_center": false,
-            "text_alignment": "left",
-            "text_container_top_pos": 25,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 30,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "Get 3 PIX! for the price of 2",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "SECRET STASH BUNDLE AVAILABLE NOW",
-            "subheader_margin_bottom": 16,
-            "description": "",
-            "description_margin_bottom": 16,
-            "text_color": "#ffffff",
-            "text_container_max_width_d": 50,
-            "text_container_max_width_m": 90,
-            "button_text": "SHOP NOW",
-            "button_text_color": "#000000",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify:\/\/products\/mystery-box",
-            "use_slide_linkout": true
-          }
         }
       },
       "block_order": [
-        "carousel_HjXQzj",
+        "carousel_nr8tGL",
         "carousel_34DVwb",
         "carousel_wHXdfx",
         "carousel_ECGwXH",
         "carousel_TJGHmB",
         "carousel_wMCGyK",
         "carousel_RM9qHq",
-        "carousel_hHULJT",
-        "carousel_JVGdXT"
+        "carousel_hHULJT"
       ],
       "custom_css": [
         "@media screen and (max-width: 768px) {h1, h2 {font-size: 16px; } .button {min-width: auto; min-height: auto; padding: 0 1.5rem; height: 40px; }}"
@@ -283,22 +263,6 @@
         "auto_rotate_seconds": 0,
         "use_arrow_buttons": false,
         "use_pagination_dots": true
-      }
-    },
-    "video_mCN3Va": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j5yXu7LeQBo",
-        "cover_image": "shopify:\/\/shop_images\/unnamed.png",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "image_banner_h6zReh": {
@@ -400,7 +364,7 @@
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>Become <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
+        "header_text": "<h2>BecoMe <\/h2><h2>a <\/h2><h2>Thrillseeker<\/h2>",
         "text_color": "#ffffff",
         "link_out": "\/account\/register",
         "link_out_is_button": false,
@@ -523,7 +487,6 @@
   },
   "order": [
     "tj_banner_carousel_LayRLh",
-    "video_mCN3Va",
     "image_banner_h6zReh",
     "featured_collection_cVPwxi",
     "klaviyo_email_capture_yehVpF",

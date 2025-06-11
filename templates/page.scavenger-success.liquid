@@ -1,0 +1,7 @@
+{% layout none %}
+
+<div class="scavenger-hunt-success">
+    <h2 class="banner__heading inline-richtext h1">{{ settings.scavenger_congrats_message }}</h2>
+    <img src="{{ settings.scavenger_image |  image_url: width: 1000  }}" alt="Scavenger hunt image">
+    {{ settings.scavenger_text }}
+</div>
