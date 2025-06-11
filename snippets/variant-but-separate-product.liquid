@@ -1,0 +1,65 @@
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const variantPickers = document.querySelectorAll('.product-way-picker .product-picker')
+  
+
+        variantPickers.forEach((variantPicker) => {
+            variantPicker.addEventListener('click', async (e) => {
+
+                if(e.currentTarget.classList.contains('current-product')) return
+                
+                document.querySelector('.product-picker.current-product').classList.remove('current-product')
+                e.currentTarget.classList.add('current-product')
+
+                document.querySelector('.main-product-area').classList.add('loading')
+
+                // fetching the whole page
+
+                const targetHandle = e.currentTarget.dataset.targetHandle
+                
+                const fetchUrl = `{{ routes.root_url }}products/${targetHandle}`
+          
+           
+                const renderData = await fetch(fetchUrl)
+          
+          
+                const json = await renderData.text()
+                const parser = new DOMParser()
+                const doc = parser.parseFromString(json, 'text/html')
+                const mainProductSectionHTML = doc.querySelector('.main-product-area')
+
+                const sectionsToReplace = ['.tj-breadcrumbs', '.product__title','.product__media-wrapper','.product-form__quantity', '.product-form'] 
+
+                sectionsToReplace.forEach((section) => {
+                    const newSection = doc.querySelector(section)
+                    const oldSection = document.querySelector(section)
+                    if (newSection && oldSection) {
+                        oldSection.outerHTML = newSection.outerHTML
+                    }
+                })
+                document.querySelector('.main-product-area').classList.remove('loading')
+            })
+        })
+
+    })
+
+</script>
+{% if product.metafields.custom.product_way_collection %}
+    {% assign colorway_collection = collections[product.metafields.custom.product_way_collection.value.handle].products %}
+   <ul class="product-way-picker">
+    <div class="variant-select-loading">
+        {% render 'loading-spinner' %}
+    </div>
+    {% for rel_product in colorway_collection %}
+        <li class="product-picker {% if product.id == rel_product.id %} current-product {% endif %}" data-target-handle="{{ rel_product.handle }}">
+            <div class="img-container">
+                {{ rel_product.featured_image | image_url: width: 700 | image_tag }}      
+            </div>
+            <p>{{ rel_product.title }}</p>
+        </li>
+    {% endfor %}
+   </ul>
+{% endif %}
