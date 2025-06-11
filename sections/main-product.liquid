@@ -278,6 +278,11 @@
                           </h2>
                         </a>
                   {% endif %}
+                  {% if product.tags contains '6-12' %}
+                    {% unless product.available or product.tags contains 'not-on-sale-yet'%}
+                      <h4 style="color: red; font-weight: 600; margin-top: 1rem;">Temporarily Unavailable</h4>
+                    {% endunless %}
+                  {% endif %}
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
