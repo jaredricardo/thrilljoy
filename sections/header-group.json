@@ -14,24 +14,24 @@
     "scrolling_announcement_D88dkd": {
       "type": "scrolling-announcement",
       "blocks": {
+        "text_mFNrzB": {
+          "type": "text",
+          "settings": {
+            "text": "PURCHASE A FULL PIXL SET AND WE’LL COVER SHIPPING ON YOUR WHOLE ORDER. OFFER ENDS 6/20!  🚨",
+            "link": "shopify://collections/new-featured"
+          }
+        },
         "text_zwrmbT": {
           "type": "text",
           "settings": {
             "text": "@THRILLJOYCOLLECTIBLES ON INSTAGRAM AND TIKTOK 🤩",
             "link": "https://www.instagram.com/thrilljoycollectibles/"
           }
-        },
-        "text_mFNrzB": {
-          "type": "text",
-          "settings": {
-            "text": "Purchase a full PIXL set and we’ll cover shipping on your whole order. Offer ends 6/20!  🚨",
-            "link": "shopify://collections/new-featured"
-          }
         }
       },
       "block_order": [
-        "text_zwrmbT",
-        "text_mFNrzB"
+        "text_mFNrzB",
+        "text_zwrmbT"
       ],
       "settings": {
         "text_margin": 120,
