@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -5,24 +14,24 @@
     "scrolling_announcement_D88dkd": {
       "type": "scrolling-announcement",
       "blocks": {
+        "text_mFNrzB": {
+          "type": "text",
+          "settings": {
+            "text": "Purchase a full PIXL set and we’ll cover shipping on your whole order. Offer ends 6/20!  🚨",
+            "link": "shopify://collections/new-featured"
+          }
+        },
         "text_zwrmbT": {
           "type": "text",
           "settings": {
             "text": "@THRILLJOYCOLLECTIBLES ON INSTAGRAM AND TIKTOK 🤩",
-            "link": "https:\/\/www.instagram.com\/thrilljoycollectibles\/"
-          }
-        },
-        "text_mFNrzB": {
-          "type": "text",
-          "settings": {
-            "text": "HISTORICAL FIGURES ARE LIVE - DON'T MISS OUT! 🚨",
-            "link": "shopify:\/\/collections\/new-featured"
+            "link": "https://www.instagram.com/thrilljoycollectibles/"
           }
         }
       },
       "block_order": [
-        "text_zwrmbT",
-        "text_mFNrzB"
+        "text_mFNrzB",
+        "text_zwrmbT"
       ],
       "disabled": true,
       "settings": {
@@ -42,9 +51,9 @@
       "type": "apps",
       "blocks": {
         "announcement_bar_sales_banner_free_bUVn3Y": {
-          "type": "shopify:\/\/apps\/announcement-bar\/blocks\/sales-banner-free\/9350a41f-5964-4405-9bba-bbffcbe501a2",
+          "type": "shopify://apps/announcement-bar/blocks/sales-banner-free/9350a41f-5964-4405-9bba-bbffcbe501a2",
           "settings": {
-            "marquee_text": "<p>🔥<\/p><p>Buy One Get One FREE<\/p><p>🔥<\/p><p>DEAL ALERT<\/p>",
+            "marquee_text": "<p>🔥</p><p>Buy One Get One FREE</p><p>🔥</p><p>DEAL ALERT</p>",
             "background": "linear-gradient(5deg, rgba(0, 128, 139, 1), rgba(0, 128, 139, 1) 100%)",
             "banner_text_color": "#ffffff"
           }
@@ -65,7 +74,7 @@
           "type": "category-block",
           "settings": {
             "title": "Animation",
-            "url": "shopify:\/\/collections\/animation",
+            "url": "shopify://collections/animation",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -74,7 +83,7 @@
           "type": "category-block",
           "settings": {
             "title": "Fantasy",
-            "url": "shopify:\/\/collections\/fantasy",
+            "url": "shopify://collections/fantasy",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -83,7 +92,7 @@
           "type": "category-block",
           "settings": {
             "title": "Movies",
-            "url": "shopify:\/\/collections\/movies",
+            "url": "shopify://collections/movies",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -92,7 +101,7 @@
           "type": "category-block",
           "settings": {
             "title": "Classics",
-            "url": "shopify:\/\/collections\/classics",
+            "url": "shopify://collections/classics",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -101,7 +110,7 @@
           "type": "category-block",
           "settings": {
             "title": "Mascots",
-            "url": "shopify:\/\/collections\/mascots",
+            "url": "shopify://collections/mascots",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -110,7 +119,7 @@
           "type": "category-block",
           "settings": {
             "title": "Holiday",
-            "url": "shopify:\/\/collections\/holiday",
+            "url": "shopify://collections/holiday",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -119,7 +128,7 @@
           "type": "category-block",
           "settings": {
             "title": "Horror",
-            "url": "shopify:\/\/collections\/horror",
+            "url": "shopify://collections/horror",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -128,7 +137,7 @@
           "type": "category-block",
           "settings": {
             "title": "Streaming Now",
-            "url": "shopify:\/\/collections\/streaming-now",
+            "url": "shopify://collections/streaming-now",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
@@ -137,7 +146,7 @@
           "type": "category-block",
           "settings": {
             "title": "Historical Figures",
-            "url": "shopify:\/\/collections\/historical-figures",
+            "url": "shopify://collections/historical-figures",
             "category_text_color": "#ffffff",
             "category_background_color": "#000000"
           }
