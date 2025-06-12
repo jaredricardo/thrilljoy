@@ -279,6 +279,9 @@
                         </a>
                   {% endif %}
                   {% if product.tags contains '6-12' %}
+                    <h4 style="color: red; font-weight: 600; margin-top: 1rem;">This item is pre-sale and will ship as it is available.</h4>
+                  {% endif %}
+                  {% if product.tags contains '6-12' %}
                     {% unless product.available or product.tags contains 'not-on-sale-yet'%}
                       <h4 style="color: red; font-weight: 600; margin-top: 1rem;">Temporarily Unavailable</h4>
                     {% endunless %}
