@@ -31,7 +31,7 @@
                 const doc = parser.parseFromString(json, 'text/html')
                 const mainProductSectionHTML = doc.querySelector('.main-product-area')
 
-                const sectionsToReplace = ['.tj-breadcrumbs', '.product__title','.product__media-wrapper','.product-form__quantity', '.product-form'] 
+                const sectionsToReplace = ['.tj-breadcrumbs', '.product__title','.product__media-wrapper','.product-form__quantity', '.product-form', '.price__container'] 
 
                 sectionsToReplace.forEach((section) => {
                     const newSection = doc.querySelector(section)
