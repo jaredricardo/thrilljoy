@@ -279,7 +279,9 @@
                         </a>
                   {% endif %}
                   {% if product.tags contains '6-20' %}
-                 
+                    {% unless product.available %}
+                      <h4 style="color: black; font-weight: 600; margin-top: 1rem;">This item is sold out on our site, but it's also available at <a href="https://www.hottopic.com" target="_blank">Hot Topic</a></h4>
+                    {% endunless %}
                   {% endif %}
                   {% if product.title contains 'Whole Set' %}
                     <h6 style="color: black; margin-top: 1rem;">Purchase a full PIXL set and we’ll cover shipping on your whole order. Offer ends 6/20! Offer valid only in the 50 United States. Not available internationally or in U.S. territories.</h6>
