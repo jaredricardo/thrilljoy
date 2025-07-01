@@ -25,7 +25,7 @@
         "heading_yanWc6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp-b.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -42,6 +42,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -49,10 +50,130 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_qCqRh6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_J3iQWq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tux",
+            "heading_size": "h0"
+          }
+        },
+        "text_wxgq6r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tux is no ordinary penguin,he’s a dreamer with his head in the clouds (literally). Born a flightless bird, Tux never let that stop him. With a pair of goggles and a heart full of ambition, he took off in pursuit of the impossible. Now he’s soaring high as the official pilotfor Thrilljoy. Tux leads every adventure with wide-eyed wonder and fearless determination.He’s here to remind you to chase what lights you up, because when you follow your dreams, the sky isn’t the limit…it’s just the beginning.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_J3iQWq",
+        "text_wxgq6r"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-07-01_at_4.23.49_PM.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_aLBQBQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jM8XAF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Redd",
+            "heading_size": "h0"
+          }
+        },
+        "text_YKbykT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Say hello to Redd, the red panda with big city energy and even bigger style. From the coolest kicks to the freshest fits, Redd is always one step ahead of the trends. But she’s more than just fashion-forward, Redd’s all heart. She is the most connected, is always in the know, and somehow has the hookup for <em>everything.</em> Her community fuels her, and she fuels it right back. She draws people in with her easy confidence and genuine warmth, and whether she’s hitting the hottest new spot or introducing you to your next favorite hang, Redd makes everyone feel like they’re exactly where they’re meant to be.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jM8XAF",
+        "text_YKbykT"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-07-01_at_4.24.27_PM.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_gYXxbD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BpP3Li": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bloo",
+            "heading_size": "h0"
+          }
+        },
+        "text_FXCKV3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet Bloo, the ultimate Thrillseeker and your favorite misfit mascot. He’s the embodiment of everything our fans live for: fearless self-expression, unapologetic individuality, and an obsession with all things pop culture. Bloo is the icon who turns weird into wonderful. The true king of pop culture. Bloo is a die-hard collector, a walking encyclopedia of movie quotes and fandom facts, and never misses a chance to dress up like his favorite characters. Bloo is your reminder that different is daring, and always worth the thrill.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BpP3Li",
+        "text_FXCKV3"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-07-01_at_4.26.20_PM.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_k9Rt7m",
-    "main"
+    "main",
+    "image_with_text_qCqRh6",
+    "image_with_text_aLBQBQ",
+    "image_with_text_gYXxbD"
   ]
 }
