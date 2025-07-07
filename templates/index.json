@@ -15,7 +15,7 @@
         "carousel_nr8tGL": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/Screenshot_2025-07-03_at_2.32.27_PM.png",
+            "desktop_image": "shopify://shop_images/OnShelfJune-Hero-2000x750.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -35,7 +35,7 @@
             "text_color": "#242833",
             "text_container_max_width_d": 50,
             "text_container_max_width_m": 90,
-            "button_text": "",
+            "button_text": "Shop Now",
             "button_text_color": "#121212",
             "button_background_color": "#f3f3f3",
             "button_link": "shopify://collections/new-featured",
