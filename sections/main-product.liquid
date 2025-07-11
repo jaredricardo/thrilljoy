@@ -291,6 +291,11 @@
                   {% if product.title contains 'Whole Set' %}
                     <h6 style="color: black; margin-top: 1rem;">Purchase a full PIXL set and recieve $15 off shipping. Offer valid only in the 50 United States. Not available internationally or in U.S. territories.</h6>
                   {% endif %}
+                  {% if product.tags contains 'pre-sale' %}
+                    {% unless product.available %}
+                      <h6 style="color: red;">This is a presale item</h6>
+                    {% endunless %}
+                  {% endif %}
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
