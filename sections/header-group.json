@@ -14,6 +14,13 @@
     "scrolling_announcement_D88dkd": {
       "type": "scrolling-announcement",
       "blocks": {
+        "text_CFzy66": {
+          "type": "text",
+          "settings": {
+            "text": "LIMITED EVENT EXCLUSIVES AVAILABLE NOW!",
+            "link": ""
+          }
+        },
         "text_VXC4TQ": {
           "type": "text",
           "disabled": true,
@@ -38,6 +45,7 @@
         }
       },
       "block_order": [
+        "text_CFzy66",
         "text_VXC4TQ",
         "text_mFNrzB",
         "text_zwrmbT"
