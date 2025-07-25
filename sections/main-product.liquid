@@ -278,19 +278,24 @@
                           </h2>
                         </a>
                   {% endif %}
-                  {% if product.tags contains '6-20' %}
+
+                  {% if product.metafields.custom.custom_title_message != blank %}
+                    <h4 style="color: black; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">{{ product.metafields.custom.custom_title_message }} </h4>
+                  {% endif %}
+
+                  {% if product.metafields.custom.sold_out_physical_location_message %}
                     {% unless product.available %}
-                      {% if product.metafields.custom.sold_out_but_available_in_physical_stores %}
-                          {{ product.metafields.custom.sold_out_but_available_in_physical_stores | metafield_tag}}
-                        {% else %}
-                          <h4 style="color: black; font-weight: 600; margin-top: 1rem;">This item is sold out on our site, but it's also available at <a href="https://www.hottopic.com" target="_blank">Hot Topic</a></h4>
-                      {% endif %}
-                     
+                      <div>
+                        {{ product.metafields.custom.sold_out_physical_location_message | metafield_tag }}
+                      </div>
                     {% endunless %}
                   {% endif %}
+                    
+
                   {% if product.title contains 'Whole Set' %}
                     <h6 style="color: black; margin-top: 1rem;">Purchase a full PIXL set and recieve $15 off shipping. Offer valid only in the 50 United States. Not available internationally or in U.S. territories.</h6>
                   {% endif %}
+
                   {% if product.tags contains 'pre-sale' %}
                     {% if product.available %}
                       <h4 style="color: black; margin-top: 2rem;">This is a presale item</h4>
