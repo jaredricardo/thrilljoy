@@ -14,7 +14,6 @@
       "blocks": {
         "carousel_9ztrEi": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/BlooSamurai-Hero-2000x750.png",
             "image_overlay_opacity": 0,
