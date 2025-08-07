@@ -165,7 +165,6 @@
         </div>
     {% endfor %}
     {% if settings.preview_video_one != blank %}
-        {% comment %} Because this is 0 indexed, we don't need to add anything to the first data video index here. This is because num videos is not 0 indexed. {% endcomment %}
         <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 0 }}">
             {{ settings.preview_video_one | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
             <p>{{ settings.default_video_text_one }}</p>
@@ -175,6 +174,24 @@
         <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 1 }}">
             {{ settings.preview_video_two | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
             <p>{{ settings.default_video_text_two }}</p>
+        </div>
+    {% endif %}
+    {% if settings.preview_video_three != blank %}
+        <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 2 }}">
+            {{ settings.preview_video_three | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            <p>{{ settings.default_video_text_three }}</p>
+        </div>
+    {% endif %}
+    {% if settings.preview_video_four != blank %}
+        <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 3 }}">
+            {{ settings.preview_video_four | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            <p>{{ settings.default_video_text_four }}</p>
+        </div>
+    {% endif %}
+    {% if settings.preview_video_five != blank %}
+        <div class="video-preview-card-container" data-video-index="{{ num_videos | plus: 4 }}">
+            {{ settings.preview_video_five | video_tag: image_size: '100x', autoplay: true, loop: true, controls:false, muted: true, preload: false }}
+            <p>{{ settings.default_video_text_five }}</p>
         </div>
     {% endif %}
 </div>
@@ -200,6 +217,18 @@
 
             {% if settings.preview_video_two != blank %}
                 <button class="thumb" data-video-index="{{ num_videos | plus: 1 }}" style="background-image: url({{ settings.poster_2 | image_url: width: '150x' }});"></button>
+            {% endif %}
+
+            {% if settings.preview_video_three != blank %}
+                <button class="thumb" data-video-index="{{ num_videos | plus: 2 }}" style="background-image: url({{ settings.poster_3 | image_url: width: '150x' }});"></button>
+            {% endif %}
+
+            {% if settings.preview_video_four != blank %}
+                <button class="thumb" data-video-index="{{ num_videos | plus: 3 }}" style="background-image: url({{ settings.poster_4 | image_url: width: '150x' }});"></button>
+            {% endif %}
+
+            {% if settings.preview_video_five != blank %}
+                <button class="thumb" data-video-index="{{ num_videos | plus: 4 }}" style="background-image: url({{ settings.poster_5 | image_url: width: '150x' }});"></button>
             {% endif %}
         </div> 
         <div class="swiper">
@@ -230,6 +259,36 @@
                         <div class="full-video-container">
                             {% render 'icon-play' %}
                             {{ settings.full_video_two | video_tag: image_size: '100x', muted:false, loop:false, controls:false, preload:false, playsinline:true, data-video-index: second_general_video_index }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if settings.full_video_three != blank %}
+                    {% assign third_general_video_index = num_videos | plus: 2 %}
+                    <div class="swiper-slide" data-video-index="{{ third_general_video_index }}">
+                        <div class="full-video-container">
+                            {% render 'icon-play' %}
+                            {{ settings.full_video_three | video_tag: image_size: '100x', muted:false, loop:false, controls:false, preload:false, playsinline:true, data-video-index: third_general_video_index }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if settings.full_video_four != blank %}
+                    {% assign fourth_general_video_index = num_videos | plus: 3 %}
+                    <div class="swiper-slide" data-video-index="{{ fourth_general_video_index }}">
+                        <div class="full-video-container">
+                            {% render 'icon-play' %}
+                            {{ settings.full_video_four | video_tag: image_size: '100x', muted:false, loop:false, controls:false, preload:false, playsinline:true, data-video-index: fourth_general_video_index }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if settings.full_video_five != blank %}
+                    {% assign fifth_general_video_index = num_videos | plus: 4 %}
+                    <div class="swiper-slide" data-video-index="{{ fifth_general_video_index }}">
+                        <div class="full-video-container">
+                            {% render 'icon-play' %}
+                            {{ settings.full_video_five | video_tag: image_size: '100x', muted:false, loop:false, controls:false, preload:false, playsinline:true, data-video-index: fifth_general_video_index }}
                         </div>
                     </div>
                 {% endif %}

@@ -69,6 +69,72 @@
         "type": "image_picker",
         "id": "poster_2",
         "label": "Poster image for carousel thumb for mini video 2"
+      },
+      {
+        "type": "text",
+        "id": "default_video_text_three",
+        "label": "Text for mini PDP video 3"
+      },
+      {
+        "type": "video",
+        "id": "preview_video_three",
+        "label": "PDP mini preview video 3",
+        "info": "Short preview video for the general Tik Tok style mini video 3"
+      },
+      {
+        "type": "video",
+        "id": "full_video_three",
+        "label": "PDP mini full video 3",
+        "info": "Full video for the general Tik Tok style mini video 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "poster_3",
+        "label": "Poster image for carousel thumb for mini video 3"
+      },
+      {
+        "type": "text",
+        "id": "default_video_text_four",
+        "label": "Text for mini PDP video 4"
+      },
+      {
+        "type": "video",
+        "id": "preview_video_four",
+        "label": "PDP mini preview video 4",
+        "info": "Short preview video for the general Tik Tok style mini video 4"
+      },
+      {
+        "type": "video",
+        "id": "full_video_four",
+        "label": "PDP mini full video 4",
+        "info": "Full video for the general Tik Tok style mini video 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "poster_4",
+        "label": "Poster image for carousel thumb for mini video 4"
+      },
+      {
+        "type": "text",
+        "id": "default_video_text_five",
+        "label": "Text for mini PDP video 5"
+      },
+      {
+        "type": "video",
+        "id": "preview_video_five",
+        "label": "PDP mini preview video 5",
+        "info": "Short preview video for the general Tik Tok style mini video 5"
+      },
+      {
+        "type": "video",
+        "id": "full_video_five",
+        "label": "PDP mini full video 5",
+        "info": "Full video for the general Tik Tok style mini video 5"
+      },
+      {
+        "type": "image_picker",
+        "id": "poster_5",
+        "label": "Poster image for carousel thumb for mini video 5"
       }
     ]
   },
