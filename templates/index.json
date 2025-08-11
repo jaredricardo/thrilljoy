@@ -14,9 +14,8 @@
       "blocks": {
         "carousel_9ztrEi": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/BlooSamurai-Hero-2000x750.png",
+            "desktop_image": "shopify://shop_images/PIXL-BlooScottPilgrim-Hero-2000x750.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -39,7 +38,7 @@
             "button_text": "",
             "button_text_color": "#000000",
             "button_background_color": "#5fd551",
-            "button_link": "https://thrilljoy.com/products/pix-bloo-x-stan-sakai",
+            "button_link": "shopify://collections/pixl",
             "use_slide_linkout": true
           }
         },
