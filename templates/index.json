@@ -145,7 +145,7 @@
         "@media screen and (max-width: 768px) {h1, h2 {font-size: 16px; } .button {min-width: auto; min-height: auto; padding: 0 1.5rem; height: 40px; }}"
       ],
       "settings": {
-        "auto_rotate_seconds": 0,
+        "auto_rotate_seconds": 4000,
         "use_arrow_buttons": false,
         "use_pagination_dots": true
       }
