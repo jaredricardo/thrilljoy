@@ -47,7 +47,7 @@
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/AlastorPreSale-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/AlastorPreSale-1080x1920-A.png",
+            "mobile_image": "shopify://shop_images/AlastorPreSale-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
