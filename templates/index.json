@@ -321,6 +321,7 @@
     },
     "simple_banner_with_text_K6HdPp": {
       "type": "simple-banner-with-text",
+      "disabled": true,
       "custom_css": [
         ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
       ],
