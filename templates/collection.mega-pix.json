@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -33,7 +42,7 @@
         "text_tCtYzn"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png",
+        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "image_overlay_opacity": 10,
         "fetch_priority": "high",
         "use_preload": true,
@@ -59,7 +68,7 @@
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
