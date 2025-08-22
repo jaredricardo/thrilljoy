@@ -62,36 +62,8 @@
         class="card__inner{% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {% if card_product.tags contains "not-on-sale-yet" %}
-          <span class="dropping-soon-on-card" style="background-color:#2D6961;">
-            DROPPING
-            <br> 
-            SOON
-          </span>
-        {% endif %}
-        {% if card_product.tags contains "temp-unavailable" %}
-          <span class="dropping-soon-on-card" style="background-color:#7D0053;">
-            TEMPORARILY
-            <br> 
-            UNAVAILABLE
-          </span>
-        {% endif %}
-
-        {% if card_product.tags contains "retail-exclusive" %}
-          <span class="dropping-soon-on-card" style="background-color:#782ae6;">
-            RETAIL
-            <br> 
-            EXCLUSIVE
-          </span>
-        {% endif %}
-
-        {% if card_product.available == false %}
-          {% unless card_product.tags contains "not-on-sale-yet" or card_product.tags contains "temp-unavailable" or card_product.tags contains 'retail-exclusive' %}
-            <span class="dropping-soon-on-card" style="background-color:#BA0011;">
-              SOLD OUT
-            </span>
-          {% endunless %}
-        {% endif %}
+  
+        {% render 'card-badge-logic', card_product:card_product %}
 
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
