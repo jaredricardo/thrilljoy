@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -24,12 +33,45 @@
         "heading_g79Nka"
       ],
       "settings": {
+        "extra_classes": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "collapsible_content_rdkjKd": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_TncFWH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the \"SAVE10\" Terms & Conditions?",
+            "icon": "none",
+            "row_content": "<p>Offer valid online at <a href=\"http://thrilljoy.com\" target=\"_blank\" title=\"http://thrilljoy.com/\">thrilljoy.com</a> from August 25, 2025 at 9:00 AM ET through August 31, 2025 at 11:00 PM ET. Receive $10 off your purchase of any PIX! Panoramix products when you apply promo code SAVE10 at checkout. Promo code must be entered at time of checkout to qualify. Discount cannot be applied to previous purchases. Offer valid while supplies last. No cash value. Cannot be combined with other offers, discounts, or promotions. Thrilljoy reserves the right to modify or cancel this promotion at any time without notice.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_TncFWH"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "SAVE10 PROMO ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collapsible_content_TQU4Np": {
@@ -40,7 +82,7 @@
           "settings": {
             "heading": "Can I modify or cancel my order after placing it?",
             "icon": "none",
-            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!<\/p>",
+            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!</p>",
             "page": ""
           }
         },
@@ -49,7 +91,7 @@
           "settings": {
             "heading": "When will my order ship?",
             "icon": "none",
-            "row_content": "<p><strong>Online orders will ship within 1-3 weeks, unless otherwise noted. <\/strong>For <strong>in-stock items<\/strong>, we aim to ship within this timeframe. However, <strong>pre-sale items <\/strong>may have a longer processing time. The product page for pre-order items will clearly indicate the expected shipping timeframe for that specific item. We appreciate your patience and look forward to delivering your products promptly!<\/p>",
+            "row_content": "<p><strong>Online orders will ship within 1-3 weeks, unless otherwise noted. </strong>For <strong>in-stock items</strong>, we aim to ship within this timeframe. However, <strong>pre-sale items </strong>may have a longer processing time. The product page for pre-order items will clearly indicate the expected shipping timeframe for that specific item. We appreciate your patience and look forward to delivering your products promptly!</p>",
             "page": ""
           }
         },
@@ -58,7 +100,7 @@
           "settings": {
             "heading": "Do you offer international shipping?",
             "icon": "none",
-            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only. Import duty and tax charges are not included in the shipping price and will be calculated during checkout.<\/p>",
+            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only. Import duty and tax charges are not included in the shipping price and will be calculated during checkout.</p>",
             "page": ""
           }
         },
@@ -67,7 +109,7 @@
           "settings": {
             "heading": "How can I track my order?",
             "icon": "none",
-            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. <\/p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress. <\/p>",
+            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. </p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress. </p>",
             "page": ""
           }
         }
@@ -101,7 +143,7 @@
           "settings": {
             "heading": "What payment methods do you accept?",
             "icon": "none",
-            "row_content": "<p>We accept major credit cards and any other options listed at checkout.<\/p>",
+            "row_content": "<p>We accept major credit cards and any other options listed at checkout.</p>",
             "page": ""
           }
         },
@@ -110,7 +152,7 @@
           "settings": {
             "heading": "Is my payment information secure?",
             "icon": "none",
-            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your payment information.<\/p>",
+            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your payment information.</p>",
             "page": ""
           }
         },
@@ -119,7 +161,7 @@
           "settings": {
             "heading": "Can I change my payment method after placing an order?",
             "icon": "none",
-            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!<\/p>",
+            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!</p>",
             "page": ""
           }
         },
@@ -128,7 +170,7 @@
           "settings": {
             "heading": "When will my card be charged?",
             "icon": "none",
-            "row_content": "<p>All payments are processed at the time of purchase.<\/p>",
+            "row_content": "<p>All payments are processed at the time of purchase.</p>",
             "page": ""
           }
         },
@@ -137,7 +179,7 @@
           "settings": {
             "heading": "What currency will I be charged in?",
             "icon": "none",
-            "row_content": "<p>All prices are listed and will be charged in USD.<\/p>",
+            "row_content": "<p>All prices are listed and will be charged in USD.</p>",
             "page": ""
           }
         }
@@ -172,7 +214,7 @@
           "settings": {
             "heading": "What is your returns and exchanges policy?",
             "icon": "none",
-            "row_content": "<p>At Thrilljoy, we strive to provide the highest quality collectibles. Because of the extremely limited nature of our product, we will not allow returns or exchanges. Please note that all sales are final. Thank you for your understanding!<\/p>",
+            "row_content": "<p>At Thrilljoy, we strive to provide the highest quality collectibles. Because of the extremely limited nature of our product, we will not allow returns or exchanges. Please note that all sales are final. Thank you for your understanding!</p>",
             "page": ""
           }
         },
@@ -181,7 +223,7 @@
           "settings": {
             "heading": "What if my item is damaged or defective?",
             "icon": "none",
-            "row_content": "<p>If you receive a damaged or defective item, please contact our customer service within 48 hours of delivery to start the inspection process.<\/p>",
+            "row_content": "<p>If you receive a damaged or defective item, please contact our customer service within 48 hours of delivery to start the inspection process.</p>",
             "page": ""
           }
         },
@@ -190,7 +232,7 @@
           "settings": {
             "heading": "What should I do if I received the wrong item?",
             "icon": "none",
-            "row_content": "<p>If you receive the wrong item, please contact our customer service within 48 hours of delivery to start the inspection process.<\/p>",
+            "row_content": "<p>If you receive the wrong item, please contact our customer service within 48 hours of delivery to start the inspection process.</p>",
             "page": ""
           }
         },
@@ -199,7 +241,7 @@
           "settings": {
             "heading": "How do I contact customer service?",
             "icon": "none",
-            "row_content": "<p>We’re here to help with any questions, concerns, or feedback you may have!<\/p><p>To reach our Customer Service team, simply <a href=\"mailto:support@thrilljoy.zendesk.com\" target=\"_blank\" title=\"mailto:support@thrilljoy.zendesk.com\">click here<\/a> to send us an email (or email us directly at support@thrilljoy.zendesk.com). We’ll get back to you as soon as possible. Our team is dedicated to making your Thrilljoy experience amazing. <\/p><p>Whether you need assistance with an order, have a question about our products, or just want to share your love for collectibles, we’re just an email away!<\/p>",
+            "row_content": "<p>We’re here to help with any questions, concerns, or feedback you may have!</p><p>To reach our Customer Service team, simply <a href=\"mailto:support@thrilljoy.zendesk.com\" target=\"_blank\" title=\"mailto:support@thrilljoy.zendesk.com\">click here</a> to send us an email (or email us directly at support@thrilljoy.zendesk.com). We’ll get back to you as soon as possible. Our team is dedicated to making your Thrilljoy experience amazing. </p><p>Whether you need assistance with an order, have a question about our products, or just want to share your love for collectibles, we’re just an email away!</p>",
             "page": ""
           }
         }
@@ -233,7 +275,7 @@
           "settings": {
             "heading": "How long will it take for my order to arrive?",
             "icon": "none",
-            "row_content": "<p><strong>Online orders will ship within 1-3 weeks, unless otherwise noted. <\/strong>For <strong>in-stock items<\/strong>, we aim to ship within this timeframe. However, <strong>pre-sale items <\/strong>may have a longer processing time. The product page for pre-order items will clearly indicate the expected shipping timeframe for that specific item. We appreciate your patience and look forward to delivering your products promptly!<\/p>",
+            "row_content": "<p><strong>Online orders will ship within 1-3 weeks, unless otherwise noted. </strong>For <strong>in-stock items</strong>, we aim to ship within this timeframe. However, <strong>pre-sale items </strong>may have a longer processing time. The product page for pre-order items will clearly indicate the expected shipping timeframe for that specific item. We appreciate your patience and look forward to delivering your products promptly!</p>",
             "page": ""
           }
         },
@@ -242,7 +284,7 @@
           "settings": {
             "heading": "Do you ship internationally?",
             "icon": "none",
-            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only.Import duty and tax charges are not included in the shipping price and will be calculated during checkout.<\/p>",
+            "row_content": "<p>We currently ship to addresses in the U.S. and Canada only.Import duty and tax charges are not included in the shipping price and will be calculated during checkout.</p>",
             "page": ""
           }
         },
@@ -251,7 +293,7 @@
           "settings": {
             "heading": "How can I track my shipment?",
             "icon": "none",
-            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. <\/p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress.<\/p>",
+            "row_content": "<p>Once your order is placed, you will receive an order confirmation email detailing your purchase. </p><p>When your order has shipped, a shipping confirmation email will be sent, including tracking information so you can monitor your shipment’s progress.</p>",
             "page": ""
           }
         },
@@ -260,7 +302,7 @@
           "settings": {
             "heading": "Is there a shipping fee?",
             "icon": "none",
-            "row_content": "<p>Yes, shipping fees will be calculated at checkout based on weight.<\/p>",
+            "row_content": "<p>Yes, shipping fees will be calculated at checkout based on weight.</p>",
             "page": ""
           }
         },
@@ -269,7 +311,7 @@
           "settings": {
             "heading": "Can I change my shipping address after placing an order?",
             "icon": "none",
-            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!<\/p>",
+            "row_content": "<p>Once an order is submitted, it will be processed immediately, and no changes can be made. Make sure to double-check before hitting that “Place Order” button!</p>",
             "page": ""
           }
         },
@@ -278,7 +320,7 @@
           "settings": {
             "heading": "What happens if my package is lost or stolen?",
             "icon": "none",
-            "row_content": "<p>If your package hasn’t arrived or appears to be missing, don’t worry—our Customer Service Team is here to help! Simply reach out to us directly to report the issue.<\/p><p>We’ll handle the process of investigating the missing shipment with the carrier on your behalf and work to resolve the situation as quickly as possible.<\/p>",
+            "row_content": "<p>If your package hasn’t arrived or appears to be missing, don’t worry—our Customer Service Team is here to help! Simply reach out to us directly to report the issue.</p><p>We’ll handle the process of investigating the missing shipment with the carrier on your behalf and work to resolve the situation as quickly as possible.</p>",
             "page": ""
           }
         },
@@ -287,7 +329,7 @@
           "settings": {
             "heading": "Do you offer free shipping?",
             "icon": "none",
-            "row_content": "<p>At this time, we are not offering free shipping.<\/p>",
+            "row_content": "<p>At this time, we are not offering free shipping.</p>",
             "page": ""
           }
         }
@@ -324,7 +366,7 @@
           "settings": {
             "heading": "How can I find out about upcoming product launches?",
             "icon": "none",
-            "row_content": "<p>Make sure you follow @thrilljoycollectibles on social and are signed up for our newsletter to receive the latest information on new product releases!<\/p>",
+            "row_content": "<p>Make sure you follow @thrilljoycollectibles on social and are signed up for our newsletter to receive the latest information on new product releases!</p>",
             "page": ""
           }
         },
@@ -333,7 +375,7 @@
           "settings": {
             "heading": "Do you have pre-order options for upcoming releases?",
             "icon": "none",
-            "row_content": "<p>Some pre-order items may take up to 45 days for delivery. Each product page will clearly indicate the expected shipping timeframe for that specific item.<\/p>",
+            "row_content": "<p>Some pre-order items may take up to 45 days for delivery. Each product page will clearly indicate the expected shipping timeframe for that specific item.</p>",
             "page": ""
           }
         },
@@ -342,7 +384,7 @@
           "settings": {
             "heading": "What happens if I miss the release of an item?",
             "icon": "none",
-            "row_content": "<p>If a limited-edition item sells out, we know it can be a huge bummer! Unfortunately, once it’s gone, it won’t be available again. Definitely stay tunedfor upcoming announcementsof future drops, as we often introduce new collections that might pique your interest!<\/p>",
+            "row_content": "<p>If a limited-edition item sells out, we know it can be a huge bummer! Unfortunately, once it’s gone, it won’t be available again. Definitely stay tunedfor upcoming announcementsof future drops, as we often introduce new collections that might pique your interest!</p>",
             "page": ""
           }
         },
@@ -351,7 +393,7 @@
           "settings": {
             "heading": "I ordered a pre-order item, when can I expect it to arrive?",
             "icon": "none",
-            "row_content": "<p>We have a <a href=\"\/pages\/thrilljoy-preorder-schedule\" title=\"Thrilljoy Preorder Schedule\">pre-order schedule here<\/a> with all of Thrilljoy's current expected arrival dates!<\/p>",
+            "row_content": "<p>We have a <a href=\"/pages/thrilljoy-preorder-schedule\" title=\"Thrilljoy Preorder Schedule\">pre-order schedule here</a> with all of Thrilljoy's current expected arrival dates!</p>",
             "page": ""
           }
         }
@@ -385,7 +427,7 @@
           "settings": {
             "heading": "How do you protect my personal information?",
             "icon": "none",
-            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your personal information.<\/p>",
+            "row_content": "<p>We take information security very seriously! We use industry-standard encryption and secure servers to protect your personal information.</p>",
             "page": ""
           }
         },
@@ -394,7 +436,7 @@
           "settings": {
             "heading": "Do you share my information with third parties?",
             "icon": "none",
-            "row_content": "<p>We do not sell or share your personal information with third parties, except as required by law or to fulfill your order with shipping providers.<\/p>",
+            "row_content": "<p>We do not sell or share your personal information with third parties, except as required by law or to fulfill your order with shipping providers.</p>",
             "page": ""
           }
         },
@@ -403,7 +445,7 @@
           "settings": {
             "heading": "What measures are in place to prevent fraud?",
             "icon": "none",
-            "row_content": "<p>At Thrilljoy, we want to make sure our limited drops get into the hands of our fans. We have invested in advanced measuresto protect your information and guard against bots.<\/p>",
+            "row_content": "<p>At Thrilljoy, we want to make sure our limited drops get into the hands of our fans. We have invested in advanced measuresto protect your information and guard against bots.</p>",
             "page": ""
           }
         }
@@ -434,7 +476,7 @@
         "heading_dmWjq6": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Thrilljoy Collectible Editions: What You Need to Know<\/strong>",
+            "heading": "<strong>Thrilljoy Collectible Editions: What You Need to Know</strong>",
             "use_h1": false,
             "heading_size": "h2"
           }
@@ -442,7 +484,7 @@
         "text_rXyHHg": {
           "type": "text",
           "settings": {
-            "text": "<p>At Thrilljoy, we love keeping things exciting—so when you grab a PIX! collectible, you’re not just getting an awesome figure, you’re also getting the<em>thrill of the chase<\/em>!<\/p>"
+            "text": "<p>At Thrilljoy, we love keeping things exciting—so when you grab a PIX! collectible, you’re not just getting an awesome figure, you’re also getting the<em>thrill of the chase</em>!</p>"
           }
         }
       },
@@ -452,6 +494,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "extra_classes": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
@@ -468,7 +511,7 @@
           "settings": {
             "heading": "What are Standard Editions & Chase Variants at Thrilljoy?",
             "icon": "none",
-            "row_content": "<p>Every PIX! collectible has a <strong>1-in-6 chance <\/strong>of being a <strong>limited edition chase<\/strong>! That means for every six figures produced, one will be a special chase variant with unique details, colors, or designs.<\/p>",
+            "row_content": "<p>Every PIX! collectible has a <strong>1-in-6 chance </strong>of being a <strong>limited edition chase</strong>! That means for every six figures produced, one will be a special chase variant with unique details, colors, or designs.</p>",
             "page": ""
           }
         },
@@ -477,7 +520,7 @@
           "settings": {
             "heading": "What are Super Chase Editions?",
             "icon": "none",
-            "row_content": "<p>For special events and select drops, we take the excitement up a notch with <strong>SUPER chase items<\/strong>, featuring extremely limited edition sizes—as low as <strong>just 98 pieces worldwide<\/strong>! These rare finds are the ultimate collector’s prize.<\/p>",
+            "row_content": "<p>For special events and select drops, we take the excitement up a notch with <strong>SUPER chase items</strong>, featuring extremely limited edition sizes—as low as <strong>just 98 pieces worldwide</strong>! These rare finds are the ultimate collector’s prize.</p>",
             "page": ""
           }
         },
@@ -486,7 +529,7 @@
           "settings": {
             "heading": "What are Ultra Chase Editions?",
             "icon": "none",
-            "row_content": "<p>Occasionally, we release <strong>ULTRA chase items<\/strong>, which are even rarer, with edition sizes as small as <strong>just 24 pieces<\/strong>. If you manage to snag one of these, you’re holding a truly elite collectible!<\/p>",
+            "row_content": "<p>Occasionally, we release <strong>ULTRA chase items</strong>, which are even rarer, with edition sizes as small as <strong>just 24 pieces</strong>. If you manage to snag one of these, you’re holding a truly elite collectible!</p>",
             "page": ""
           }
         },
@@ -495,7 +538,7 @@
           "settings": {
             "heading": "Why the Different Editions?",
             "icon": "none",
-            "row_content": "<p>We believe collecting should be <strong>fun, exciting, and rewarding<\/strong>. Our mix of standard, chase, super chase, and ultra chase editions adds an element of surprise while keeping our community engaged and connected. Limited production runs mean every piece is special, and every drop is an adventure!<\/p>",
+            "row_content": "<p>We believe collecting should be <strong>fun, exciting, and rewarding</strong>. Our mix of standard, chase, super chase, and ultra chase editions adds an element of surprise while keeping our community engaged and connected. Limited production runs mean every piece is special, and every drop is an adventure!</p>",
             "page": ""
           }
         },
@@ -504,7 +547,7 @@
           "settings": {
             "heading": "Want to Increase Your Odds?",
             "icon": "none",
-            "row_content": "<p>While chase variants are random, the more PIX! you collect, the better your chances of landing one of these rare editions! And don’t forget—you can always trade with fellow collectors in the Thrilljoy community to complete your perfect collection.<\/p><p><br\/>Happy collecting, and may the chase be ever in your favor!<\/p>",
+            "row_content": "<p>While chase variants are random, the more PIX! you collect, the better your chances of landing one of these rare editions! And don’t forget—you can always trade with fellow collectors in the Thrilljoy community to complete your perfect collection.</p><p><br/>Happy collecting, and may the chase be ever in your favor!</p>",
             "page": ""
           }
         }
@@ -535,6 +578,7 @@
   "order": [
     "main",
     "rich_text_DycnaQ",
+    "collapsible_content_rdkjKd",
     "collapsible_content_TQU4Np",
     "collapsible_content_ytrcYT",
     "collapsible_content_KiFNVb",
