@@ -17,7 +17,7 @@
         "text_CFzy66": {
           "type": "text",
           "settings": {
-            "text": "LIMITED EVENT EXCLUSIVES AVAILABLE NOW!",
+            "text": "Save $10 on each PANORAMIX item with code: SAVE10",
             "link": ""
           }
         },
@@ -50,6 +50,7 @@
         "text_mFNrzB",
         "text_zwrmbT"
       ],
+      "custom_css": [],
       "settings": {
         "text_margin": 120,
         "enabled": true,
