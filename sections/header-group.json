@@ -60,7 +60,7 @@
         "bg_color": "#398188",
         "color": "#ffffff",
         "alternative-color": true,
-        "speed": 20,
+        "speed": 30,
         "align_icons_row": false
       }
     },
