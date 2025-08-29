@@ -4389,4 +4389,31 @@ quick-add-modal .tj-breadcrumbs {
   }
 }
 
+main:has(.blood-container) {
+  position: relative;
+}
 
+.blood-1,
+.blood-2 {
+  position: fixed;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+}
+
+.blood-1 {
+  left: 0%;
+  top: 52%;
+}
+
+.blood-2 {
+  left: 100%;
+  top: 85%;
+}
+
+@media screen and (max-width: 768px) {
+  .blood-1,
+  .blood-2 {
+    width: 55vw;
+  }
+}
