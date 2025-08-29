@@ -250,7 +250,7 @@
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>BecoMe </h2><h2>a </h2><h2>Thrillseeker</h2>",
+        "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
         "link_out": "/account/register",
         "link_out_is_button": false,
