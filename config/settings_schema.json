@@ -8,6 +8,23 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Thrilljoy Custom Theme Settings",
+    "settings": [
+      {
+        "type": "number",
+        "id": "figure_low_stock_threshold",
+        "label": "Quantity threshold for figure lowstock badge",
+        "default": 48
+      },
+      {
+        "type": "number",
+        "id": "apparel_low_stock_threshold",
+        "label": "Quantity threshold for apparel lowstock badge",
+        "default": 4
+      }
+    ]
+  },
+  {
     "name": "Category nav settings",
     "settings": [
       {
@@ -19,7 +36,7 @@
     ]
   },
   {
-    "name": "General TT style settings",
+    "name": "General TT vid style settings",
     "settings": [
       {
         "type": "header",
