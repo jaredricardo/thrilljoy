@@ -4417,3 +4417,7 @@ main:has(.blood-container) {
     width: 55vw;
   }
 }
+
+.card__inner:has(.low-stock-badge) .presale-badge {
+  display: none;
+}

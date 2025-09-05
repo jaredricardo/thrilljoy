@@ -12,18 +12,11 @@
     UNAVAILABLE
     </span>
 {% endif %}
-
 {% if card_product.tags contains "retail-exclusive" %}
     <span class="dropping-soon-on-card" style="background-color:#782ae6;">
     RETAIL
     <br> 
     EXCLUSIVE
-    </span>
-{% endif %}
-
-{% if card_product.tags contains "presale" %}
-    <span class="dropping-soon-on-card" style="background-color:#2a49e6;">
-    PRESALE
     </span>
 {% endif %}
 
@@ -35,11 +28,17 @@
     {% endunless %}
 {% endif %}
 
+{% if card_product.tags contains "presale" %}
+    <span class="dropping-soon-on-card presale-badge" style="background-color:#2a49e6;">
+        PRESALE
+    </span>
+{% endif %}
+
 {% unless card_product.available == false %}
 
     {% if card_product.type == "MEGA PIX!" or card_product.type == "PIX!" or card_product.type == "PIX2.0" or card_product.type == "PIXL" %}
         {% if card_product.selected_or_first_available_variant.inventory_quantity <= settings.figure_low_stock_threshold %}
-            <span class="dropping-soon-on-card" style="background-color:#fbff18; color: black;">
+            <span class="dropping-soon-on-card low-stock-badge" style="background-color:#fbff18; color: black;">
                 LOW STOCK
             </span>
         {% endif %}
@@ -47,7 +46,7 @@
 
     {% if card_product.type == "Bucket Hat" or card_product.type == "Cap" or card_product.type == "Jersey" or card_product.type == "T-Shirt" or card_product.type == "Jumpsuit" %}
         {% if card_product.selected_or_first_available_variant.inventory_quantity <= settings.apparel_low_stock_threshold %}
-            <span class="dropping-soon-on-card" style="background-color:#fbff18; color: black;">
+            <span class="dropping-soon-on-card low-stock-badge" style="background-color:#fbff18; color: black;">
                 LOW STOCK
             </span>
         {% endif %}
