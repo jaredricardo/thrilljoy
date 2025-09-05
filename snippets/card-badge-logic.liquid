@@ -22,7 +22,7 @@
 
 {% if card_product.available == false %}
     {% unless card_product.tags contains "not-on-sale-yet" or card_product.tags contains "temp-unavailable" or card_product.tags contains 'retail-exclusive' %}
-    <span class="dropping-soon-on-card" style="background-color:#BA0011;">
+    <span class="dropping-soon-on-card sold-out-badge" style="background-color:#BA0011;">
         SOLD OUT
     </span>
     {% endunless %}

@@ -4421,3 +4421,7 @@ main:has(.blood-container) {
 .card__inner:has(.low-stock-badge) .presale-badge {
   display: none;
 }
+
+.card__inner:has(.sold-out-badge) .presale-badge {
+  display: none;
+}
