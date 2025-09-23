@@ -905,7 +905,7 @@
             {% render 'icon-arrow' %}
           </a>
           {% if product.type == 'T-Shirt' %}
-            {% unless product.tags contains 'jersey' %}
+            {% unless product.tags contains 'Jersey' or product.tags contains 'jersey' %}
               <div class="shirt-sizing-container">
                 <div class="ts-head">Thrilljoy Sizing</div>
                 <div class="ts-head">Standard US Sizing</div>
