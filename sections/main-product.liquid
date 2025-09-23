@@ -905,20 +905,22 @@
             {% render 'icon-arrow' %}
           </a>
           {% if product.type == 'T-Shirt' %}
-            <div class="shirt-sizing-container">
-              <div class="ts-head">Thrilljoy Sizing</div>
-              <div class="ts-head">Standard US Sizing</div>
-              <div class="ts-size">XS</div>
-              <div class="ts-size">XXS-XS</div>
-              <div class="ts-size">S</div>
-              <div class="ts-size">XS-M</div>
-              <div class="ts-size">M</div>
-              <div class="ts-size">M-L</div>
-              <div class="ts-size">L</div>
-              <div class="ts-size">L-XL</div>
-              <div class="ts-size">XL</div>
-              <div class="ts-size">XL-XXL</div>
-            </div>
+            {% unless product.tags contains 'jersey' %}
+              <div class="shirt-sizing-container">
+                <div class="ts-head">Thrilljoy Sizing</div>
+                <div class="ts-head">Standard US Sizing</div>
+                <div class="ts-size">XS</div>
+                <div class="ts-size">XXS-XS</div>
+                <div class="ts-size">S</div>
+                <div class="ts-size">XS-M</div>
+                <div class="ts-size">M</div>
+                <div class="ts-size">M-L</div>
+                <div class="ts-size">L</div>
+                <div class="ts-size">L-XL</div>
+                <div class="ts-size">XL</div>
+                <div class="ts-size">XL-XXL</div>
+              </div>
+            {% endunless %}
           {% endif %}
           {% if product.type == 'T-Shirt' or product.type == "Bucket Hat" %}
             <a href="/pages/thrilljoy-apparel-sizing-guide" target="_blank">Check out the full sizing guide here.</a>
