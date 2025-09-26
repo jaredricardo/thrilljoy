@@ -328,7 +328,7 @@
               endif
             -%}
             {%- if card_product.variants.size > 1 or qty_rules -%}
-              <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
+              <modal-opener data-modal="#QuickAdd-{{ card_product.id }}" {% if card_product.tags contains 'not-on-sale-yet' %}class="disabled"{% endif %}>
                 <button
                   id="{{ product_form_id }}-submit"
                   type="submit"
@@ -338,7 +338,11 @@
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   data-product-url="{{ card_product.url }}"
                 >
-                  {{ 'products.product.choose_options' | t }}
+                {% if card_product.tags contains 'not-on-sale-yet' %}
+                    DROPPING SOON
+                  {% else %}
+                    {{ 'products.product.choose_options' | t }}
+                {% endif %}
                   {%- if horizontal_quick_add -%}
                     <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                   {%- endif -%}
@@ -365,7 +369,7 @@
                 </div>
               </quick-add-modal>
             {%- else -%}
-              <product-form data-section-id="{{ section.id }}">
+              <product-form data-section-id="{{ section.id }}" {% if card_product.tags contains 'not-on-sale-yet' %}class="disabled"{% endif %}>
                 {%- form 'product',
                   card_product,
                   id: product_form_id,
@@ -396,15 +400,15 @@
                     {% endif %}
                   >
                     <span>
-                      {%- if card_product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                      {%- else -%}
-                        {% if card_product.tags contains 'not-on-sale-yet' %}
-                          Dropping Soon
+                      {% if card_product.tags contains 'not-on-sale-yet' %}
+                          DROPPING SOON
                         {% else %}
-                          {{ 'products.product.sold_out' | t }}
-                        {% endif %}
-                      {%- endif -%}
+                          {%- if card_product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                      {% endif %}
                     </span>
                     <span class="sold-out-message hidden">
                         {{ 'products.product.sold_out' | t }}

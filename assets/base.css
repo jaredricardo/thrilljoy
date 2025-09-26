@@ -4425,3 +4425,8 @@ main:has(.blood-container) {
 .card__inner:has(.sold-out-badge) .presale-badge {
   display: none;
 }
+
+.disabled {
+  pointer-events: none !important;
+  opacity: 0.5;
+}
