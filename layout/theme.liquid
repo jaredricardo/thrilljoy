@@ -153,9 +153,11 @@
 
     {% if request.page_type == "product" and product.type == "Loyalty" %}
       {% comment %} Redirect users away from loyalty items if they soemhow get to the page {% endcomment %}
-      <script>
-        window.location.href = "/"
-      </script>
+       {% unless product.tags contains 'allow-pdp' %}
+        <script>
+          window.location.href = "/"
+        </script>
+      {% endunless %}
     {% endif %}
 
 
