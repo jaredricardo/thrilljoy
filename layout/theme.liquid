@@ -151,7 +151,7 @@
       });
     </script>
 
-    {% if request.page_type == "product" and product.type == "Loyalty" %}
+    {% if product.type == "Loyalty" or product.type == "Mystery" %}
       {% comment %} Redirect users away from loyalty items if they soemhow get to the page {% endcomment %}
        {% unless product.tags contains 'allow-pdp' %}
         <script>
