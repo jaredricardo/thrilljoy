@@ -29,12 +29,14 @@
 {% endif %}
 
 {% if card_product.tags contains "presale" %}
-    <span class="dropping-soon-on-card presale-badge" style="background-color:#2a49e6;">
-        PRESALE
-    </span>
+    {% unless card_product.tags contains 'not-on-sale-yet' %}
+        <span class="dropping-soon-on-card presale-badge" style="background-color:#2a49e6;">
+            PRESALE
+        </span>
+    {% endunless %}
 {% endif %}
 
-{% unless card_product.available == false %}
+{% unless card_product.available == false or card_product.tags contains "presale"%}
 
     {% if card_product.type == "MEGA PIX!" or card_product.type == "PIX!" or card_product.type == "PIX2.0" or card_product.type == "PIXL" %}
         {% if card_product.selected_or_first_available_variant.inventory_quantity <= settings.figure_low_stock_threshold %}
