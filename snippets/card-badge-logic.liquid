@@ -36,6 +36,7 @@
     {% endunless %}
 {% endif %}
 
+{% comment %} presale products will not show low stock. This can be changed later if we'd like{% endcomment %}
 {% unless card_product.available == false or card_product.tags contains "presale"%}
 
     {% if card_product.type == "MEGA PIX!" or card_product.type == "PIX!" or card_product.type == "PIX2.0" or card_product.type == "PIXL" %}
