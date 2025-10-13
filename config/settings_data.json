@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "figure_low_stock_threshold": 48,
     "category_comparison_string": "genres",
     "preview_video_one": "shopify://files/videos/0216.mp4",
     "full_video_one": "shopify://files/videos/0216.mp4",
