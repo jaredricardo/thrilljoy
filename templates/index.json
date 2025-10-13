@@ -311,9 +311,9 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/Birthday-Banner-Redd_1.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 40,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
