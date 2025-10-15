@@ -4401,6 +4401,25 @@ main:has(.blood-container) {
   width: 35vw;
 }
 
+.balloon {
+  position: fixed;
+  z-index: 15;
+  width: 8vw;
+  max-width: 55px;
+}
+
+.balloon-1 {
+  top: 25vh;
+  right: 15vw;
+  transform: rotate(15deg);
+}
+
+.balloon-2 {
+  bottom: 5vh;
+  left: 10vw;
+  transform: rotate(-15deg);
+}
+
 .blood-1 {
   left: 0%;
   top: 52%;

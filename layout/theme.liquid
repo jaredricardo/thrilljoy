@@ -160,7 +160,6 @@
       {% endunless %}
     {% endif %}
 
-
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -439,12 +438,61 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {% comment %} confetti code, comment out when not using {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      {% if collection.handle == 'redd-favorites' or collection.handle == 'bloo-favorites' or collection.handle == 'tux-favorites' %}
+        
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+
+        function startConfetti() {
+          const duration = 3000, animationEnd = Date.now() + duration, defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
+          const interval = setInterval(function() {
+          const timeLeft = animationEnd - Date.now();
+
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+
+          const particleCount = 50 * (timeLeft / duration);
+
+          // since particles fall down, start a bit higher than random
+          confetti(
+            Object.assign({}, defaults, {
+              particleCount,
+              origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            })
+          );
+          
+          confetti(
+            Object.assign({}, defaults, {
+                particleCount,
+                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+              })
+            );
+          }, 250);
+
+        }
+
+        window.setTimeout(() => {
+          startConfetti()
+        }, 400)
+
+      {% endif %}
+    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
 
-    {% comment %} <img class="blood-1" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Blood-1.png?v=1748823917" alt="Blood splatter 1" />
-    <img class="blood-2" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Blood-2_21109f91-0812-41da-9ee1-0691c7614043.png?v=1748823916" alt="Blood splatter 2" /> {% endcomment %}
+    {% comment %} 
+      <img class="blood-1" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Blood-1.png?v=1748823917" alt="Blood splatter 1" />
+      <img class="blood-2" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Blood-2_21109f91-0812-41da-9ee1-0691c7614043.png?v=1748823916" alt="Blood splatter 2" /> 
+    {% endcomment %}
+
+    <img class="balloon balloon-1" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Balloon-Blue.png?v=1760498850" alt="baloon">
+    <img class="balloon balloon-2" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Balloon-Red.png?v=1760498850" alt="baloon">
    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
