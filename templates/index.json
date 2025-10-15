@@ -216,54 +216,6 @@
         "use_pagination_dots": true
       }
     },
-    "image_banner_h6zReh": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_xCeKVU": {
-          "type": "heading",
-          "settings": {
-            "heading": "PIX!",
-            "use_h1": false,
-            "heading_size": "h0"
-          }
-        },
-        "buttons_YV9VM3": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/pix-2",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_xCeKVU",
-        "buttons_YV9VM3"
-      ],
-      "custom_css": [
-        ".banner {height: 250px;}",
-        ".banner__box {padding: 0;}",
-        "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
-        "image_overlay_opacity": 0,
-        "fetch_priority": "high",
-        "use_preload": true,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
     "featured_collection_cVPwxi": {
       "type": "featured-collection",
       "settings": {
@@ -439,7 +391,6 @@
   },
   "order": [
     "tj_banner_carousel_LayRLh",
-    "image_banner_h6zReh",
     "featured_collection_cVPwxi",
     "klaviyo_email_capture_yehVpF",
     "simple_banner_with_text_bHQMwg",
