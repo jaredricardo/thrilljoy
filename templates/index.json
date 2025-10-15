@@ -305,13 +305,13 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp.png"
+        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp-balloons.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/Birthday-Banner-Tux.png",
+        "desktop_image": "shopify://shop_images/Birthday-Banner-Redd_1.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 40,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -403,7 +403,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/Birthday-Banner-Tux.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
