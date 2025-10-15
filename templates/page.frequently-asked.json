@@ -50,7 +50,7 @@
           "settings": {
             "heading": "What are the \"SAVE10\" Terms & Conditions?",
             "icon": "none",
-            "row_content": "<p>Offer valid online at <a href=\"http://thrilljoy.com\" target=\"_blank\" title=\"http://thrilljoy.com/\">thrilljoy.com</a> from August 25, 2025 at 9:00 AM ET through August 31, 2025 at 11:00 PM ET. Receive $10 off your purchase of any PIX! Panoramix products when you apply promo code SAVE10 at checkout. Promo code must be entered at time of checkout to qualify. Discount cannot be applied to previous purchases. Offer valid while supplies last. No cash value. Cannot be combined with other offers, discounts, or promotions. Thrilljoy reserves the right to modify or cancel this promotion at any time without notice.</p>",
+            "row_content": "<p>Offer valid only online at <strong>thrilljoy.com</strong> on <strong>October 17, 2025</strong>, from <strong>7:00 AM PT through 11:59 PM PT</strong>. Receive <strong>free domestic shipping</strong> on all items and orders placed during the promotional period. Offer applies automatically at checkout. No promo code required. Valid only for shipments within the United States. Offer cannot be applied to previous purchases. No cash value. Cannot be combined with other offers, discounts, or promotions. Thrilljoy reserves the right to modify or cancel this promotion at any time without notice.</p>",
             "page": ""
           }
         }
@@ -61,7 +61,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "SAVE10 PROMO ",
+        "heading": "Free Shipping Terms & Conditions",
         "heading_size": "h2",
         "heading_alignment": "left",
         "layout": "none",
