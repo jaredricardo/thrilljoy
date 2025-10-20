@@ -16,6 +16,7 @@
       "blocks": {
         "text_Ppa7CD": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "FREE SHIPPING 10/17 UNTIL 11:59PT",
             "link": ""
