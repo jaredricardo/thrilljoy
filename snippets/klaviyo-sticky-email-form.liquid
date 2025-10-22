@@ -119,25 +119,50 @@
         class KlaviyoStickyEmailForm extends HTMLElement {
             constructor() {
                 super()
+
+                const closedAt = localStorage.getItem('klaviyo_sticky_form_closed_at')
+                const submitted = localStorage.getItem('klaviyo_sticky_form_submitted')
+                const now = Date.now()
+                const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000
+
+                this.querySelector('.klaviyo-sticky-close-button').addEventListener('click', this.noSubmitCloseForm)
+
+                if (closedAt && !submitted) {
+                    const ts = parseInt(closedAt, 10)
+                    if (!Number.isNaN(ts) && (now - ts) < ONE_WEEK_MS) {
+                        return
+                    }
+                }
+
+                if (submitted) return
+
                 window.setTimeout(() => {
                     this.openForm()
                 }, 1000)
-                this.querySelector('.klaviyo-sticky-close-button').addEventListener('click', this.closeForm)
+
             }
 
             openForm() {
-                console.log('opening form')
                 this.classList.add('active')
             }
 
-            closeForm() {
-                console.log('closing form')
-                console.log(this)
+            noSubmitCloseForm() {
+                localStorage.setItem('klaviyo_sticky_form_closed_at', Date.now().toString())
                 this.closest('klaviyo-sticky-email-form').classList.remove('active')
             }
 
         }
         customElements.define('klaviyo-sticky-email-form', KlaviyoStickyEmailForm)
+
+        window.addEventListener("klaviyoForms", function(e) { 
+            if(!e.detail.formId === "WXKfzT") return
+            if(e.detail.type === "submit" ) {
+                localStorage.setItem('klaviyo_sticky_form_submitted', 'true')
+                window.setTimeout(() => {
+                    document.querySelector('klaviyo-sticky-email-form').classList.remove('active')
+                }, 1500)
+            }
+        })
     })
 </script>
 
