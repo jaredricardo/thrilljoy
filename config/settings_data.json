@@ -11,6 +11,7 @@
   "current": {
     "figure_low_stock_threshold": 48,
     "category_comparison_string": "genres",
+    "klaviyo_form_embed_code": "<div class=\"klaviyo-form-WXKfzT\"></div>",
     "preview_video_three": "shopify://files/videos/CB-Pixl Unboxing Vertical.mp4.mp4",
     "full_video_three": "shopify://files/videos/CB-Pixl Unboxing Vertical.mp4",
     "poster_3": "shopify://shop_images/Screenshot_2025-08-08_at_1.43.58_AM.png",
@@ -155,6 +156,7 @@
     "scavenger_congrats_message": "Thanks for cracking the code with us! Here’s a special treat just for you: Presale for our next drop kicks off June 12 at 9AM PT with limited quantities available before the official launch on June 20.",
     "scavenger_text": "",
     "scavenger_image": "shopify://shop_images/Image_1.jpg",
+    "form_embed_code": "<div class=\"klaviyo-form-SfeE7L\"></div>",
     "poster_four": "shopify://shop_images/Screenshot_2025-08-08_at_2.15.11_AM.png",
     "full_video_5": "shopify://files/videos/Scott Pilgrim pixl stop motion vertical.mp4",
     "sections": {
