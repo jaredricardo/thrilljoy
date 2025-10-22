@@ -36,6 +36,34 @@
     ]
   },
   {
+    "name": "Klaviyo Sticky Email Form",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_klaviyo_sticky_email_form",
+        "label": "Enable Klaviyo sticky email form",
+        "default": true
+      },
+      {
+        "type": "html",
+        "id": "klaviyo_form_embed_code",
+        "label": "Embed code from Klaviyo"
+      },
+      {
+        "type": "text",
+        "id": "klaviyo_form_heading",
+        "label": "Form heading text",
+        "default": "NEVER MISS A DROP"
+      },
+      {
+        "type": "textarea",
+        "id": "klaviyo_form_subheading",
+        "label": "Form subheading text",
+        "default": "Hey Thrillseekers! Get Drop announcements sent right to you!"
+      }
+    ]
+  },
+  {
     "name": "General TT vid style settings",
     "settings": [
       {

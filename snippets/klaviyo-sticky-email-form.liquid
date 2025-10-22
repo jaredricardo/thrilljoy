@@ -1,0 +1,162 @@
+<style>
+    klaviyo-sticky-email-form {
+        position: fixed;
+        bottom: -100%;
+        left: 4rem;
+        z-index: 10;
+        background-image: url('https://cdn.shopify.com/s/files/1/0672/1096/9252/files/PopUp-Shape.png?v=1761165602');
+        width: 450px;
+        transition: all 750ms ease-in-out;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;  
+    }  
+    
+    klaviyo-sticky-email-form .inner-sticky-area {
+        position: relative;
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    klaviyo-sticky-email-form .klaviyo-form-container form {
+        padding: 0 !important;
+    }
+
+    klaviyo-sticky-email-form.active {
+        bottom: 2rem;
+    }
+
+    klaviyo-sticky-email-form h3,
+    klaviyo-sticky-email-form p {
+        color: white;
+        margin: 0;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    klaviyo-sticky-email-form h3 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    klaviyo-sticky-email-form button.klaviyo-sticky-close-button {
+        position: absolute;
+        background: transparent;
+        border: none;
+        right: 4px;
+        top: 7px;
+        width: 35px;
+        height: 35px;
+        z-index: 15;
+        cursor: pointer;
+    }
+
+    klaviyo-sticky-email-form button.klaviyo-sticky-close-button svg {
+        width: 100%;
+        height: 100%;
+        stroke: white;
+    }
+
+    klaviyo-sticky-email-form .head {
+        width: 30%;
+        max-width: 150px;
+        position: absolute;
+        left: -3rem;
+        top: -3rem;
+        z-index: 15;
+    }
+
+    klaviyo-sticky-email-form .row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    klaviyo-sticky-email-form .row:has(h3) {
+        max-width: 82%;
+        margin-left: auto;
+    }
+
+    @media screen and (max-width:671px) {
+        body:has(klaviyo-sticky-email-form.active) #smile-ui-lite-container {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:571px) {
+        klaviyo-sticky-email-form {
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        klaviyo-sticky-email-form .row:has(h3) {
+            max-width: 100%;
+            margin-left: auto;
+            padding-top: 3.75rem;
+        }
+        klaviyo-sticky-email-form h3 {
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+        }
+        klaviyo-sticky-email-form .head {
+            width: 30%;
+            left: -1.75rem;
+            top: -3rem;
+        }
+        klaviyo-sticky-email-form button.klaviyo-sticky-close-button {
+            right: 5px;
+            top: 10px;
+        }
+    } 
+
+
+</style>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        class KlaviyoStickyEmailForm extends HTMLElement {
+            constructor() {
+                super()
+                window.setTimeout(() => {
+                    this.openForm()
+                }, 1000)
+                this.querySelector('.klaviyo-sticky-close-button').addEventListener('click', this.closeForm)
+            }
+
+            openForm() {
+                console.log('opening form')
+                this.classList.add('active')
+            }
+
+            closeForm() {
+                console.log('closing form')
+                console.log(this)
+                this.closest('klaviyo-sticky-email-form').classList.remove('active')
+            }
+
+        }
+        customElements.define('klaviyo-sticky-email-form', KlaviyoStickyEmailForm)
+    })
+</script>
+
+<klaviyo-sticky-email-form>
+    <div class="inner-sticky-area">
+        <button class="klaviyo-sticky-close-button">
+            {% render 'icon-close' %}
+        </button>
+          <img class="head" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/bloo_head.png?v=1738609257" alt="Thrilljoy head Logo">
+        <div class="row">
+            {% if settings.klaviyo_form_heading %}
+                <h3>{{ settings.klaviyo_form_heading }}</h3>
+            {% endif %}
+            {% if settings.klaviyo_form_subheading %}
+                <p>{{ settings.klaviyo_form_subheading }}</p>
+            {% endif %}
+        </div>
+        <div class="row klaviyo-form-container">
+            {{ settings.klaviyo_form_embed_code }}
+        </div>
+    </div>
+</klaviyo-sticky-email-form>

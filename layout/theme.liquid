@@ -159,11 +159,12 @@
 
     </style>
 
-    {% if customer %}
-      <script>
-        console.log('???????')
-      </script>
-    {% endif %}
+      {% if settings.enable_klaviyo_sticky_email_form %}
+        {% unless customer %}
+          {% render 'klaviyo-sticky-email-form' %}
+        {% endunless %}
+      {% endif %}
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1DG8D26D1" defer></script>
