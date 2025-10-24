@@ -2,9 +2,9 @@
     klaviyo-sticky-email-form {
         position: fixed;
         bottom: -100%;
-        left: 4rem;
+        right: 4rem;
         z-index: 10;
-        background-image: url('https://cdn.shopify.com/s/files/1/0672/1096/9252/files/PopUp-Shape.png?v=1761165602');
+        background-image: url('https://cdn.shopify.com/s/files/1/0672/1096/9252/files/PopUp-Shape-1053x.png?v=1761272573');
         width: 450px;
         transition: all 750ms ease-in-out;
         background-repeat: no-repeat;
@@ -78,11 +78,8 @@
         max-width: 82%;
         margin-left: auto;
     }
-
-    @media screen and (max-width:671px) {
-        body:has(klaviyo-sticky-email-form.active) #smile-ui-lite-container {
-            display: none;
-        }
+    body:has(klaviyo-sticky-email-form.active) #smile-ui-lite-container  {
+        display: none;
     }
 
     @media screen and (max-width:571px) {
@@ -171,7 +168,7 @@
         <button class="klaviyo-sticky-close-button">
             {% render 'icon-close' %}
         </button>
-          <img class="head" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/bloo_head.png?v=1738609257" alt="Thrilljoy head Logo">
+          <img class="head" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/Bloo-Head-200x.png?v=1761272573" alt="Thrilljoy head Logo">
         <div class="row">
             {% if settings.klaviyo_form_heading %}
                 <h3>{{ settings.klaviyo_form_heading }}</h3>
