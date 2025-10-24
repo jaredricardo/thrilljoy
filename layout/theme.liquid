@@ -151,7 +151,8 @@
         
         {% else %}
 
-        .header__inline-menu li:has(#HeaderMenu-club-le):not(:has(a[href="/pages/thrilljoy-loyalty"])) {
+        .header__inline-menu li:has(#HeaderMenu-club-le):not(:has(a[href="/pages/thrilljoy-loyalty"])),
+        .menu-drawer__inner-container li:has(#HeaderDrawer-club-le):not(:has(a[href="/pages/thrilljoy-loyalty"])) {
           display: none;
         }
 
