@@ -42,7 +42,9 @@
         "text_mFNrzB",
         "text_zwrmbT"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".announcement--root {display: none;}"
+      ],
       "settings": {
         "text_margin": 120,
         "enabled": true,
