@@ -186,6 +186,7 @@
     },
     "jr_section_timer_4J83MN": {
       "type": "jr-section-timer",
+      "disabled": true,
       "name": "JR Section Timer",
       "settings": {
         "background_color": "#ffffff",
