@@ -39,7 +39,7 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "https://thrilljoy.com/products/pix-jason-pumpkin",
+            "button_link": "shopify://products/pix-jason-pumpkin",
             "use_slide_linkout": true
           }
         },
