@@ -15,8 +15,8 @@
         "carousel_QiMyjD": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/6075-Pennywise-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/6075-Pennywise-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/JasonTimed-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/JasonTimed-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -39,7 +39,7 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://products/pix-pennywise",
+            "button_link": "https://thrilljoy.com/products/pix-jason-pumpkin",
             "use_slide_linkout": true
           }
         },
@@ -182,6 +182,19 @@
         "auto_rotate_seconds": 4000,
         "use_arrow_buttons": false,
         "use_pagination_dots": true
+      }
+    },
+    "jr_section_timer_4J83MN": {
+      "type": "jr-section-timer",
+      "disabled": true,
+      "name": "JR Section Timer",
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "timer_year": 2025,
+        "timer_month": 11,
+        "timer_day": 1,
+        "timer_hour": 3
       }
     },
     "featured_collection_cVPwxi": {
@@ -359,6 +372,7 @@
   },
   "order": [
     "tj_banner_carousel_LayRLh",
+    "jr_section_timer_4J83MN",
     "featured_collection_cVPwxi",
     "klaviyo_email_capture_yehVpF",
     "simple_banner_with_text_bHQMwg",
