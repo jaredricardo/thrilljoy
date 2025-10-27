@@ -186,7 +186,6 @@
     },
     "jr_section_timer_4J83MN": {
       "type": "jr-section-timer",
-      "disabled": true,
       "name": "JR Section Timer",
       "settings": {
         "background_color": "#ffffff",
@@ -238,13 +237,13 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-Pennywise.png"
+        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/Banner-Pennywise.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 40,
         "image_alt_text": "Thrilljoy Banner Image",
