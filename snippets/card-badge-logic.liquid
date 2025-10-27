@@ -36,18 +36,22 @@
     {% if card_product.type == "MEGA PIX!" or card_product.type == "PIX!" or card_product.type == "PIX2.0" or card_product.type == "PIXL" %}
         {% if card_product.selected_or_first_available_variant.inventory_quantity <= settings.figure_low_stock_threshold %}
             {% assign is_low_stock = true %}
-            <span class="dropping-soon-on-card low-stock-badge" style="background-color:#fbff18; color: black;">
-                LOW STOCK
-            </span>
+                {% unless card_product.id == 10301408510116 %}
+                    <span class="dropping-soon-on-card low-stock-badge" style="background-color:#fbff18; color: black;">
+                        LOW STOCK
+                    </span>
+                {% endunless %}
         {% endif %}
     {% endif %}
 
     {% if card_product.type == "Bucket Hat" or card_product.type == "Cap" or card_product.type == "Jersey" or card_product.type == "T-Shirt" or card_product.type == "Jumpsuit" %}
         {% if card_product.selected_or_first_available_variant.inventory_quantity <= settings.apparel_low_stock_threshold %}
             {% assign is_low_stock = true %}
-            <span class="dropping-soon-on-card low-stock-badge" style="background-color:#fbff18; color: black;">
-                LOW STOCK
-            </span>
+                {% unless card_product.id == 10301408510116 %}
+                    <span class="dropping-soon-on-card low-stock-badge" style="background-color:#fbff18; color: black;">
+                        LOW STOCK
+                    </span>
+                {% endunless %}
         {% endif %}
     {% endif %}
     
