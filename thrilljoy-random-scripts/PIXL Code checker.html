@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXL Code Checker</title>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const csv1Input = document.getElementById('csv1')
+        const csv2Input = document.getElementById('csv2')
+
+        function handleTypeformCSV(file, fileNumber) {
+            if (file && file.type === 'text/csv') {
+                const reader = new FileReader()
+                
+                reader.onload = function(e) {
+                    const csvContent = e.target.result
+                    const rows = csvContent.split('\n').map(row => row.split(','))
+                    formatTypeformRows(rows)
+                }
+                reader.readAsText(file)
+            } else {
+                console.log(`File ${fileNumber} is not a valid CSV file`)
+            }
+        }
+
+        function handlePIXLCodesCSV(file, fileNumber){
+            if (file && file.type === 'text/csv') {
+                const reader = new FileReader()
+                
+                reader.onload = function(e) {
+                    const csvContent = e.target.result
+                    const rows = csvContent.split('\n').map(row => row.split(','))
+                    formatPIXLCodes(rows)
+                }
+                reader.readAsText(file)
+            } else {
+                console.log(`File ${fileNumber} is not a valid CSV file`)
+            }
+        }
+
+        // Event listener for first CSV file
+        csv1Input.addEventListener('change', function(e) {
+            const file = e.target.files[0]
+            if (file) {
+                handleTypeformCSV(file, 1)
+            }
+        })
+
+        // Event listener for second CSV file
+        csv2Input.addEventListener('change', function(e) {
+            const file = e.target.files[0]
+            if (file) {
+                handlePIXLCodesCSV(file, 2)
+            }
+        })
+    })
+
+
+    function formatTypeformRows(rowsData) {
+        const regex = /['"]/g
+        const startingRow = 3 // typeform seems to start the data on the 4th row, so we skip first 3
+        const finalObj = {}
+        rowsData.forEach((row, i) => {
+            if(i < startingRow) return
+            let rowObj = {
+                "Full Name": row[0]?.replace(regex, ''),
+                "Email": row[1]?.replace(regex, ''),
+                "Phone": row[2]?.replace(regex, ''),
+                "Address Line 1": row[3]?.replace(regex, ''),
+                "City": row[4]?.replace(regex, ''),
+                "State": row[5]?.replace(regex, ''),
+                "Zip": row[6]?.replace(regex, ''),
+                "Country": row[7]?.replace(regex, ''),
+                "PIXL code": row[8]?.replace(regex, ''),
+                "Purchase Location": row[9]?.replace(regex, ''),
+                "Redemption Card Image": row[10]?.replace(regex, ''),
+                "Gold Figure Image": row[11]?.replace(regex, '')
+            }
+            finalObj [rowObj["PIXL code"]] = rowObj
+        })
+        console.log('/+++++')
+        console.log(finalObj)
+        return finalObj
+    }
+
+    function formatPIXLCodes(rowsData) {
+        const regex = /['"]/g
+        const finalArr = []
+        rowsData.forEach((row, i) => {
+            let code = row[0]?.replace(regex, '').trim() // Add .trim() here
+            if (code) { // Also check if code exists to avoid empty entries
+                finalArr.push(code)
+            }
+        })
+        console.log('//////')
+        console.log(finalArr)
+        return finalArr
+    }
+
+        
+    </script>
+</head>
+<body>
+
+    <div>
+        <label for="csv1">Upload First CSV File. This file should come from the submitted Typeform forms.</label>
+        <input type="file" id="csv1" name="csv1" accept=".csv">
+    </div>
+
+    <div>
+        <label for="csv2">Upload Second CSV File. This should be the valid codes, and only the codes, for the given group</label>
+        <input type="file" id="csv2" name="csv2" accept=".csv">
+    </div>
+
+    
+</body>
+</html>
