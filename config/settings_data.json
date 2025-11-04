@@ -21,7 +21,7 @@
     "preview_video_five": "shopify://files/videos/Scott Pilgrim pixl stop motion vertical small.mov",
     "full_video_five": "shopify://files/videos/Scott Pilgrim pixl stop motion vertical.mp4",
     "poster_5": "shopify://shop_images/Screenshot_2025-08-08_at_1.57.38_AM.png",
-    "enable_sticky_pencil": true,
+    "enable_sticky_pencil": false,
     "sticky_pencil_pencil_bg_color": "#398188",
     "sticky_pencil_text": "<p>Jason timed release closes in:</p>",
     "enable_sticky_pencil_timer": true,
