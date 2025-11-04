@@ -126,15 +126,6 @@
             "category_background_color": "#000000"
           }
         },
-        "category_block_i7NQKC": {
-          "type": "category-block",
-          "settings": {
-            "title": "Holiday",
-            "url": "shopify://collections/holiday",
-            "category_text_color": "#ffffff",
-            "category_background_color": "#000000"
-          }
-        },
         "category_block_AGMMVk": {
           "type": "category-block",
           "settings": {
@@ -169,7 +160,6 @@
         "category_block_d7rDWV",
         "category_block_aiGeRe",
         "category_block_fVc38G",
-        "category_block_i7NQKC",
         "category_block_AGMMVk",
         "category_block_kJz6i7",
         "category_block_bxAQhq"
