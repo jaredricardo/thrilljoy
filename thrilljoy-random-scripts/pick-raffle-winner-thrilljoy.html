@@ -1,267 +1,266 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffle Winner Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .input-section {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #005a87;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f4f8;
+            border-radius: 5px;
+            border-left: 4px solid #007cba;
+        }
+        .winner {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007cba;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            border: 2px solid #007cba;
+        }
+        .stats {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        .error {
+            color: #d32f2f;
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 Raffle Winner Picker</h1>
+        
+        <div class="input-section">
+            <label for="csvFile">Upload CSV File (with email column):</label>
+            <input type="file" id="csvFile" accept=".csv" />
+            <small>CSV should have emails in the first column. Each email can appear multiple times for multiple entries.</small>
+        </div>
 
-    // USE https://csvjson.com/csv2json TO GET THE BELOW CSV DATA INTO JSON FORMAT
+        <div class="input-section">
+            <label for="emailList">Or paste emails directly (one per line):</label>
+            <textarea id="emailList" placeholder="email1@example.com&#10;email2@example.com&#10;email1@example.com"></textarea>
+        </div>
 
-    const obj =   {
-    "christopherkostelec@gmail.com": 1,
-    "ami42538069@gmail.com": 1,
-    "ami42538069@gmail.com__1": 1,
-    "josh.moreau@gmail.com": 1,
-    "dief101time@gmail.com": 1,
-    "flinkinator@gmail.com": 1,
-    "flinkinator@gmail.com__1": 1,
-    "flinkinator@gmail.com__2": 1,
-    "flinkinator@gmail.com__3": 1,
-    "flinkinator@gmail.com__4": 1,
-    "flinkinator@gmail.com__5": 1,
-    "flinkinator@gmail.com__6": 1,
-    "flinkinator@gmail.com__7": 1,
-    "flinkinator@gmail.com__8": 1,
-    "flinkinator@gmail.com__9": 1,
-    "flinkinator@gmail.com__10": 1,
-    "evansimpson92@yahoo.com": 1,
-    "evansimpson92@yahoo.com__1": 1,
-    "josh.weihe@outlook.com": 1,
-    "darksidecollects@outlook.com": 1,
-    "rhyknow32@yahoo.com": 1,
-    "jessieryansx@gmail.com": 1,
-    "jessieryansx@gmail.com__1": 1,
-    "jessieryansx@gmail.com__2": 1,
-    "jessieryansx@gmail.com__3": 1,
-    "jessieryansx@gmail.com__4": 1,
-    "jessieryansx@gmail.com__5": 1,
-    "dale07@me.com": 1,
-    "boggs3010@gmail.com": 1,
-    "boggs3010@gmail.com__1": 1,
-    "sethfloyd@gmail.com": 1,
-    "farmenta3699@gmail.com": 1,
-    "akaycarr@gmail.com": 1,
-    "kravmagachef@gmail.com": 1,
-    "kravmagachef@gmail.com__1": 1,
-    "kravmagachef@gmail.com__2": 1,
-    "kravmagachef@gmail.com__3": 1,
-    "richard.corredor@gmail.com": 1,
-    "mbedell1987@gmail.com": 1,
-    "mbedell1987@gmail.com__1": 1,
-    "jtcllc21@gmail.com": 1,
-    "billyjalc@gmail.com": 1,
-    "billyjalc@gmail.com__1": 1,
-    "billyjalc@gmail.com__2": 1,
-    "billyjalc@gmail.com__3": 1,
-    "billyjalc@gmail.com__4": 1,
-    "bgraves93@live.com": 1,
-    "bgraves93@live.com__1": 1,
-    "bgraves93@live.com__2": 1,
-    "link29466@gmail.com": 1,
-    "link29466@gmail.com__1": 1,
-    "link29466@gmail.com__2": 1,
-    "link29466@gmail.com__3": 1,
-    "ice_virgo24@yahoo.com": 1,
-    "fuimallin@gmail.com": 1,
-    "fuimallin@gmail.com__1": 1,
-    "mattyfinger21@yahoo.com": 1,
-    "mattyfinger21@yahoo.com__1": 1,
-    "ahowey186@gmail.com": 1,
-    "vikingtim1@comcast.net": 1,
-    "mattyfinger21@yahoo.com__2": 1,
-    "mattyfinger21@yahoo.com__3": 1,
-    "snowboardersteven@hotmail.com": 1,
-    "snowboardersteven@hotmail.com__1": 1,
-    "kennethrich82@gmail.com": 1,
-    "kutiebeck@hotmail.com": 1,
-    "billyjalc@gmail.com__5": 1,
-    "vja1299@gmail.com": 1,
-    "vja1299@gmail.com__1": 1,
-    "vja1299@gmail.com__2": 1,
-    "ricky.lewis@live.nl": 1,
-    "ricky.lewis@live.nl__1": 1,
-    "mcgowan20@ymail.com": 1,
-    "srios3181@gmail.com": 1,
-    "robin_antwine@hotmail.com": 1,
-    "jessieryansx@gmail.com__6": 1,
-    "p_rodriguez@outlook.com": 1,
-    "jlclayton09@gmail.com": 1,
-    "jlclayton09@gmail.com__1": 1,
-    "johnnygaribay2@gmail.com": 1,
-    "johnnygaribay2@gmail.com__1": 1,
-    "johnnygaribay2@gmail.com__2": 1,
-    "marchuleta05@msn.com": 1,
-    "kfsignedon@yahoo.com": 1,
-    "gschneiderdesign@gmail.com": 1,
-    "dshatto@live.com": 1,
-    "dshatto@live.com__1": 1,
-    "dshatto@live.com__2": 1,
-    "kim_bouchard@aol.com": 1,
-    "grazianaedu@gmail.com": 1,
-    "mcj62587@yahoo.com": 1,
-    "mcj62587@yahoo.com__1": 1,
-    "johnjlockejr@gmail.com": 1,
-    "adejesus25@gmail.com": 1,
-    "kiley.sohrakoff@sanjuan.edu": 1,
-    "chashualor@yahoo.com": 1,
-    "msenior1979@gmail.com": 1,
-    "joshlmurdock@gmail.com": 1,
-    "eddie1770@gmail.com": 1,
-    "aaronreyna162@gmail.com": 1,
-    "nathandwhite092005@gmail.com": 1,
-    "nathandwhite092005@gmail.com__1": 1,
-    "nathandwhite092005@gmail.com__2": 1,
-    "nathandwhite092005@gmail.com__3": 2,
-    "chrisdballinger88@gmail.com": 1,
-    "chrisdballinger88@gmail.com__1": 1,
-    "billyheisel@yahoo.com": 1,
-    "marinekunath@gmail.com": 1,
-    "marinekunath@gmail.com__1": 1,
-    "marinekunath@gmail.com__2": 1,
-    "marinekunath@gmail.com__3": 1,
-    "marinekunath@gmail.com__4": 1,
-    "rafayala3076@gmail.com": 1,
-    "johnjlockejr@gmail.com__1": 1,
-    "chernandez200299@gmail.com": 1,
-    "fuimallin@gmail.com__2": 1,
-    "goindowntofunkytown@hotmail.com": 1,
-    "goindowntofunkytown@hotmail.com__1": 1,
-    "jasonsjobom@hotmail.com": 1,
-    "flinkinator@gmail.com__11": 1,
-    "flinkinator@gmail.com__12": 1,
-    "flinkinator@gmail.com__13": 1,
-    "derrick.l.rhone@gmail.com": 1,
-    "daddymatt237@aol.com": 1,
-    "daddymatt237@aol.com__1": 1,
-    "damone775@gmail.com": 1,
-    "damone775@gmail.com__1": 1,
-    "damone775@gmail.com__2": 1,
-    "damone775@gmail.com__3": 1,
-    "damone775@gmail.com__4": 1,
-    "damone775@gmail.com__5": 1,
-    "damone775@gmail.com__6": 1,
-    "damone775@gmail.com__7": 1,
-    "damone775@gmail.com__8": 1,
-    "damone775@gmail.com__9": 1,
-    "damone775@gmail.com__10": 1,
-    "damone775@gmail.com__11": 1,
-    "damone775@gmail.com__12": 1,
-    "damone775@gmail.com__13": 1,
-    "damone775@gmail.com__14": 1,
-    "damone775@gmail.com__15": 1,
-    "damone775@gmail.com__16": 1,
-    "juanjosemarfil@hotmail.com": 1,
-    "josh.moreau@gmail.com__1": 1,
-    "chernandez200299@gmail.com__1": 1,
-    "harveyhb01@gmail.com": 1,
-    "harveyhb01@gmail.com__1": 1,
-    "harveyhb01@gmail.com__2": 1,
-    "murrayjc1981@yahoo.com": 1,
-    "james_q_huynh@yahoo.com": 1,
-    "jared.muranko@gmail.com": 1,
-    "marinekunath@gmail.com__5": 1,
-    "marinekunath@gmail.com__6": 1,
-    "specialed474@gmail.com": 1,
-    "johnjlockejr@gmail.com__2": 1,
-    "jared.muranko@gmail.com__1": 1,
-    "epgessel@gmail.com": 1,
-    "epgessel@gmail.com__1": 1,
-    "juanjosemarfil@hotmail.com__1": 2,
-    "sam.a.brogi@gmail.com": 1,
-    "ballzdeepin@hotmail.com": 1,
-    "ballzdeepin@hotmail.com__1": 1,
-    "ballzdeepin@hotmail.com__2": 1,
-    "ballzdeepin@hotmail.com__3": 1,
-    "tommylouvise2020@gmail.com": 1,
-    "wnb78@aol.com": 1,
-    "tommylouvise2020@gmail.com__1": 1,
-    "jessieryansx@gmail.com__7": 1,
-    "flinkinator@gmail.com__14": 1,
-    "flinkinator@gmail.com__15": 1,
-    "flinkinator@gmail.com__16": 1,
-    "flinkinator@gmail.com__17": 1,
-    "couponswin@hotmail.com": 1,
-    "ferm_2830@yahoo.com": 1,
-    "ferm_2830@yahoo.com__1": 1,
-    "ferm_2830@yahoo.com__2": 1,
-    "jmwblues88@ymail.com": 1,
-    "j.mi.thehoff@gmail.com": 1,
-    "punish110@hotmail.com": 1,
-    "shulman.matthew@gmail.com": 1,
-    "anonk85@gmail.com": 1,
-    "dief101time@gmail.com__1": 1,
-    "too_sweet_03@hotmail.com": 1,
-    "jasonsjobom@hotmail.com__1": 1,
-    "jasonsjobom@hotmail.com__2": 1,
-    "farmenta3699@gmail.com__1": 1,
-    "ahowey186@gmail.com__1": 1,
-    "ekennedy721@gmail.com": 1,
-    "ekennedy721@gmail.com__1": 1,
-    "ekennedy721@gmail.com__2": 1,
-    "ekennedy721@gmail.com__3": 1,
-    "ekennedy721@gmail.com__4": 1,
-    "mattyfinger21@yahoo.com__4": 1,
-    "mattyfinger21@yahoo.com__5": 1,
-    "fuimallin@gmail.com__3": 1,
-    "robertjpatti@gmail.com": 1,
-    "robertjpatti@gmail.com__1": 1,
-    "johnjlockejr@gmail.com__3": 1,
-    "kutiebeck@hotmail.com__1": 1,
-    "madray86@gmail.com": 1,
-    "madray86@gmail.com__1": 1,
-    "ashley.s.hruska@gmail.com": 1,
-    "jcapo23.jc@gmail.com": 1,
-    "jcapo23.jc@gmail.com__1": 1,
-    "jcapo23.jc@gmail.com__2": 1,
-    "jcapo23.jc@gmail.com__3": 1,
-    "jcapo23.jc@gmail.com__4": 1,
-    "jcapo23.jc@gmail.com__5": 1,
-    "jcapo23.jc@gmail.com__6": 1,
-    "anonk85@gmail.com__1": 1,
-    "anonk85@gmail.com__2": 1,
-    "mattkaye1023@gmail.com": 1,
-    "flinkinator@gmail.com__18": 1,
-    "flinkinator@gmail.com__19": 1,
-    "flinkinator@gmail.com__20": 1,
-    "flinkinator@gmail.com__21": 1,
-    "leafs69.dm@gmail.com": 1,
-    "ponce939@yahoo.com": 1,
-    "rafayala3076@gmail.com__1": 1,
-    "chernandez200299@gmail.com__2": 1,
-    "dmb822@yahoo.com": 1,
-    "mattyfinger21@yahoo.com__6": 1,
-    "mattyfinger21@yahoo.com__7": 1,
-    "mattyfinger21@yahoo.com__8": 1,
-    "mattyfinger21@yahoo.com__9": 1,
-    "mattyfinger21@yahoo.com__10": 1,
-    "ekennedy721@gmail.com__5": 1,
-    "boggs3010@gmail.com__2": 1,
-    "aduncan7@gmail.com": 1,
-    "ferm_2830@yahoo.com__3": 1,
-    "ferm_2830@yahoo.com__4": 1,
-    "ferm_2830@yahoo.com__5": 1,
-    "aaronmknight@gmail.com": 1,
-    "shad0wgun@hotmail.com": 1,
-    "loveisamthrfckr@yahoo.com": 1
-  }
+        <button id="pickWinner">🎯 Pick Random Winner</button>
+        <button id="clearResults">🗑️ Clear Results</button>
 
-  let finalArray = []
+        <div id="results" class="results" style="display: none;">
+            <h3>Results:</h3>
+            <div id="winnerDisplay" class="winner"></div>
+            <div id="statsDisplay" class="stats"></div>
+        </div>
 
+        <div id="errorDisplay" class="error" style="display: none;"></div>
+    </div>
 
-for (const key in obj) {
+    <script>
+        let emailEntries = [];
 
-    const value = obj[key]
+        // File upload handler
+        document.getElementById('csvFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.type === 'text/csv') {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const csvContent = event.target.result;
+                    parseCSV(csvContent);
+                };
+                reader.readAsText(file);
+            } else if (file) {
+                showError('Please select a valid CSV file.');
+            }
+        });
 
-    for(let i = 0; i < value; i++) {
-        finalArray.push(key)
-    }
+        // Parse CSV content
+        function parseCSV(csvContent) {
+            try {
+                const lines = csvContent.split(/\r?\n/).filter(line => line.trim());
+                const emails = [];
+                
+                lines.forEach(line => {
+                    const columns = line.split(',');
+                    const email = columns[0]?.trim().replace(/['"]/g, '');
+                    if (email && isValidEmail(email)) {
+                        emails.push(email);
+                    }
+                });
 
-}
+                if (emails.length === 0) {
+                    showError('No valid emails found in the CSV file.');
+                    return;
+                }
 
-console.log(finalArray)
+                document.getElementById('emailList').value = emails.join('\n');
+                emailEntries = emails;
+                hideError();
+                console.log(`Loaded ${emails.length} email entries from CSV`);
+                
+            } catch (error) {
+                showError('Error parsing CSV file: ' + error.message);
+            }
+        }
 
-function randomWinner(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
-}
+        // Pick winner button handler
+        document.getElementById('pickWinner').addEventListener('click', function() {
+            // Get emails from textarea if CSV wasn't used
+            if (emailEntries.length === 0) {
+                const textAreaContent = document.getElementById('emailList').value.trim();
+                if (!textAreaContent) {
+                    showError('Please upload a CSV file or enter emails manually.');
+                    return;
+                }
+                
+                emailEntries = textAreaContent
+                    .split('\n')
+                    .map(email => email.trim())
+                    .filter(email => email && isValidEmail(email));
+            }
 
-console.log('/////////// THE RANDOM WINNER IS //////////')
-console.log(randomWinner(finalArray))
+            if (emailEntries.length === 0) {
+                showError('No valid emails found. Please check your input.');
+                return;
+            }
 
+            // Pick random winner
+            const winner = pickRandomWinner(emailEntries);
+            displayResults(winner, emailEntries);
+            hideError();
+        });
 
+        // Clear results button handler
+        document.getElementById('clearResults').addEventListener('click', function() {
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('emailList').value = '';
+            document.getElementById('csvFile').value = '';
+            emailEntries = [];
+            hideError();
+        });
 
-</script>
+        // Pick random winner function
+        function pickRandomWinner(entries) {
+            return entries[Math.floor(Math.random() * entries.length)];
+        }
+
+        // Display results
+        function displayResults(winner, allEntries) {
+            const resultsDiv = document.getElementById('results');
+            const winnerDiv = document.getElementById('winnerDisplay');
+            const statsDiv = document.getElementById('statsDisplay');
+
+            // Count entries per email
+            const emailCounts = {};
+            allEntries.forEach(email => {
+                emailCounts[email] = (emailCounts[email] || 0) + 1;
+            });
+
+            const uniqueEmails = Object.keys(emailCounts).length;
+            const totalEntries = allEntries.length;
+            const winnerEntries = emailCounts[winner];
+
+            winnerDiv.innerHTML = `🏆 ${winner}`;
+            
+            statsDiv.innerHTML = `
+                <strong>Stats:</strong><br>
+                • Winner had ${winnerEntries} ${winnerEntries === 1 ? 'entry' : 'entries'}<br>
+                • Total entries: ${totalEntries}<br>
+                • Unique participants: ${uniqueEmails}<br>
+                • Winner's odds: ${((winnerEntries / totalEntries) * 100).toFixed(2)}%
+            `;
+
+            resultsDiv.style.display = 'block';
+            
+            console.log('🎉 WINNER:', winner);
+            console.log('📊 All entries:', allEntries);
+            console.log('📈 Email counts:', emailCounts);
+        }
+
+        // Email validation
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Error handling
+        function showError(message) {
+            const errorDiv = document.getElementById('errorDisplay');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        function hideError() {
+            document.getElementById('errorDisplay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
