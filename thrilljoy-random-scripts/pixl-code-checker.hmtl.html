@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXL Code Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .upload-section {
+            background-color: #f9f9f9;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .upload-section:hover {
+            border-color: #007cba;
+        }
+
+        .upload-section.completed {
+            border-color: #28a745;
+            background-color: #f8fff9;
+        }
+
+        .upload-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .upload-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .file-input {
+            margin: 10px 0;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .file-status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .file-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .file-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        .results-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .results-header {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-btn {
+            background-color: #007cba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #005a8b;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ddd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .step.completed {
+            background-color: #28a745;
+        }
+
+        .step.active {
+            background-color: #007cba;
+        }
+
+        .progress-line {
+            width: 50px;
+            height: 2px;
+            background-color: #ddd;
+            margin-top: 14px;
+        }
+
+        .progress-line.completed {
+            background-color: #28a745;
+        }
+
+        .instructions {
+            background-color: #e7f3ff;
+            border-left: 4px solid #007cba;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+    </style>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const csv1Input = document.getElementById('csv1')
+        const csv2Input = document.getElementById('csv2')
+        const file1Status = document.getElementById('file1-status')
+        const file2Status = document.getElementById('file2-status')
+        const step1 = document.getElementById('step1')
+        const step2 = document.getElementById('step2')
+        const step3 = document.getElementById('step3')
+        const progressLine1 = document.getElementById('progress1')
+        const progressLine2 = document.getElementById('progress2')
+        const upload1Section = document.getElementById('upload1')
+        const upload2Section = document.getElementById('upload2')
+        
+        let typeformData = {}
+        let validCodes = []
+
+        function updateProgress() {
+            const file1Loaded = Object.keys(typeformData).length > 0
+            const file2Loaded = validCodes.length > 0
+
+            if (file1Loaded) {
+                step1.classList.add('completed')
+                progressLine1.classList.add('completed')
+                upload1Section.classList.add('completed')
+            }
+
+            if (file2Loaded) {
+                step2.classList.add('completed')
+                progressLine2.classList.add('completed')
+                upload2Section.classList.add('completed')
+            }
+
+            if (file1Loaded && file2Loaded) {
+                step3.classList.add('active')
+            }
+        }
+
+        function showFileStatus(statusElement, success, message) {
+            statusElement.textContent = message
+            statusElement.className = `file-status ${success ? 'success' : 'error'}`
+        }
+
+        function handleTypeformCSV(file, fileNumber) {
+            if (file && (file.type === 'text/csv' || file.name.endsWith('.csv'))) {
+                const reader = new FileReader()
+                
+                reader.onload = function(e) {
+                    try {
+                        const csvContent = e.target.result
+                        const rows = csvContent.split('\n').map(row => row.split(','))
+                        typeformData = formatTypeformRows(rows)
+                        showFileStatus(file1Status, true, `✓ Successfully loaded ${Object.keys(typeformData).length} form submissions`)
+                        updateProgress()
+                        checkForMatches()
+                    } catch (error) {
+                        showFileStatus(file1Status, false, `✗ Error processing file: ${error.message}`)
+                    }
+                }
+                reader.readAsText(file)
+            } else {
+                showFileStatus(file1Status, false, '✗ Please select a valid CSV file')
+            }
+        }
+
+        function handlePIXLCodesCSV(file, fileNumber){
+            if (file && (file.type === 'text/csv' || file.name.endsWith('.csv'))) {
+                const reader = new FileReader()
+                
+                reader.onload = function(e) {
+                    try {
+                        const csvContent = e.target.result
+                        const rows = csvContent.split('\n').map(row => row.split(','))
+                        validCodes = formatPIXLCodes(rows)
+                        showFileStatus(file2Status, true, `✓ Successfully loaded ${validCodes.length} valid codes`)
+                        updateProgress()
+                        checkForMatches()
+                    } catch (error) {
+                        showFileStatus(file2Status, false, `✗ Error processing file: ${error.message}`)
+                    }
+                }
+                reader.readAsText(file)
+            } else {
+                showFileStatus(file2Status, false, '✗ Please select a valid CSV file')
+            }
+        }
+
+        // Event listener for first CSV file
+        csv1Input.addEventListener('change', function(e) {
+            const file = e.target.files[0]
+            if (file) {
+                handleTypeformCSV(file, 1)
+            }
+        })
+
+        // Event listener for second CSV file
+        csv2Input.addEventListener('change', function(e) {
+            const file = e.target.files[0]
+            if (file) {
+                handlePIXLCodesCSV(file, 2)
+            }
+        })
+
+        function checkForMatches() {
+            // Only proceed if both files have been processed
+            if (Object.keys(typeformData).length === 0 || validCodes.length === 0) {
+                return
+            }
+
+            const matchedCodes = []
+
+            // Check each PIXL code from typeform data against valid codes
+            Object.keys(typeformData).forEach(pixlCode => {
+                if (validCodes.includes(pixlCode)) {
+                    const userData = typeformData[pixlCode]
+                    
+                    // Format shipping address
+                    const shippingAddress = [
+                        userData["Address Line 1"],
+                        userData["City"],
+                        userData["State"],
+                        userData["Zip"]
+                    ].filter(part => part && part.trim() !== '').join(', ')
+
+                    const matchedEntry = {
+                        "CODE": pixlCode,
+                        "REDEMPTION STATUS": "USED",
+                        "RECIPIENT": userData["Full Name"] || "",
+                        "E-MAIL ADDRESS": userData["Email"] || "",
+                        "PHONE #": userData["Phone"] || "",
+                        "SHIPPING ADDRESS": shippingAddress,
+                        "SHIPPED ON": "TO BE FILLED OUT BY FACTORY: DATE SHIPMENT WENT OUT",
+                        "SHIPPING TRACKING INFORMATION": "TO BE FILLED OUT BY FACTORY: FEDEX OR UPS TRACKING INFO"
+                    }
+
+                    matchedCodes.push(matchedEntry)
+                }
+            })
+
+            step3.classList.add('completed')
+            displayResults(matchedCodes)
+        }
+
+        function displayResults(results) {
+            const resultsSection = document.getElementById('results')
+            const resultsDiv = document.getElementById('results-content')
+            
+            resultsSection.style.display = 'block'
+            
+            if (results.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div class="no-results">
+                        <h3>No Matching Codes Found</h3>
+                        <p>None of the PIXL codes from the form submissions matched the valid codes list.</p>
+                    </div>
+                `
+            } else {
+                resultsDiv.innerHTML = `
+                    <div class="results-header">
+                        <h3>✓ Found ${results.length} Matching Code${results.length === 1 ? '' : 's'}</h3>
+                        <button class="download-btn" onclick="downloadResults()">📥 Download CSV</button>
+                    </div>
+                `
+            }
+            
+            // Store results globally for download
+            window.matchedResults = results
+        }
+
+        // Make downloadResults available globally
+        window.downloadResults = function() {
+            const results = window.matchedResults || []
+            
+            if (results.length === 0) {
+                alert('No results to download')
+                return
+            }
+            
+            // Create CSV content
+            const headers = [
+                'CODE',
+                'REDEMPTION STATUS', 
+                'RECIPIENT',
+                'E-MAIL ADDRESS',
+                'PHONE #',
+                'SHIPPING ADDRESS',
+                'SHIPPED ON',
+                'SHIPPING TRACKING INFORMATION'
+            ]
+            
+            // Create CSV rows
+            const csvRows = [
+                headers.join(','), // Header row
+                ...results.map(result => [
+                    `"${result.CODE || ''}"`,
+                    `"${result['REDEMPTION STATUS'] || ''}"`,
+                    `"${result.RECIPIENT || ''}"`,
+                    `"${result['E-MAIL ADDRESS'] || ''}"`,
+                    `"${result['PHONE #'] || ''}"`,
+                    `"${result['SHIPPING ADDRESS'] || ''}"`,
+                    `"${result['SHIPPED ON'] || ''}"`,
+                    `"${result['SHIPPING TRACKING INFORMATION'] || ''}"`
+                ].join(','))
+            ]
+            
+            const csvContent = csvRows.join('\n')
+            
+            // Create download
+            const dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent)
+            const downloadAnchorNode = document.createElement('a')
+            downloadAnchorNode.setAttribute("href", dataStr)
+            downloadAnchorNode.setAttribute("download", "matched_pixl_codes.csv")
+            document.body.appendChild(downloadAnchorNode)
+            downloadAnchorNode.click()
+            downloadAnchorNode.remove()
+        }
+    })
+
+    function formatTypeformRows(rowsData) {
+        const regex = /['"]/g
+        const startingRow = 3 // typeform seems to start the data on the 4th row, so we skip first 3
+        const finalObj = {}
+        rowsData.forEach((row, i) => {
+            if(i < startingRow) return
+            let rowObj = {
+                "Full Name": row[0]?.replace(regex, ''),
+                "Email": row[1]?.replace(regex, ''),
+                "Phone": row[2]?.replace(regex, ''),
+                "Address Line 1": row[3]?.replace(regex, ''),
+                "City": row[4]?.replace(regex, ''),
+                "State": row[5]?.replace(regex, ''),
+                "Zip": row[6]?.replace(regex, ''),
+                "Country": row[7]?.replace(regex, ''),
+                "PIXL code": row[8]?.replace(regex, ''),
+                "Purchase Location": row[9]?.replace(regex, ''),
+                "Redemption Card Image": row[10]?.replace(regex, ''),
+                "Gold Figure Image": row[11]?.replace(regex, '')
+            }
+            if (rowObj["PIXL code"] && rowObj["PIXL code"].trim() !== '') {
+                finalObj[rowObj["PIXL code"]] = rowObj
+            }
+        })
+        return finalObj
+    }
+
+    function formatPIXLCodes(rowsData) {
+        const regex = /['"]/g
+        const finalArr = []
+        rowsData.forEach((row, i) => {
+            let code = row[0]?.replace(regex, '').trim()
+            if (code) {
+                finalArr.push(code)
+            }
+        })
+        return finalArr
+    }
+
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>PIXL Code Checker</h1>
+        <p class="subtitle">Upload your files to check which PIXL codes have been redeemed</p>
+        
+        <div class="instructions">
+            <strong>Instructions:</strong>
+            <ol>
+                <li>First, upload the CSV file exported from Typeform (contains form submissions)</li>
+                <li>Second, upload the CSV file containing all valid PIXL codes</li>
+                <li>The tool will automatically check for matches and show results</li>
+            </ol>
+        </div>
+
+        <div class="step-indicator">
+            <div class="step" id="step1">1</div>
+            <div class="progress-line" id="progress1"></div>
+            <div class="step" id="step2">2</div>
+            <div class="progress-line" id="progress2"></div>
+            <div class="step" id="step3">3</div>
+        </div>
+
+        <div class="upload-section" id="upload1">
+            <label class="upload-label">Step 1: Upload Typeform Submissions</label>
+            <div class="upload-description">Select the CSV file downloaded from Typeform containing all form submissions</div>
+            <div class="file-input">
+                <input type="file" id="csv1" name="csv1" accept=".csv">
+            </div>
+            <div class="file-status" id="file1-status"></div>
+        </div>
+
+        <div class="upload-section" id="upload2">
+            <label class="upload-label">Step 2: Upload Valid Codes List</label>
+            <div class="upload-description">Select the CSV file containing all valid PIXL codes (one code per line)</div>
+            <div class="file-input">
+                <input type="file" id="csv2" name="csv2" accept=".csv">
+            </div>
+            <div class="file-status" id="file2-status"></div>
+        </div>
+
+        <div class="results-section" id="results">
+            <div id="results-content"></div>
+        </div>
+    </div>
+</body>
+</html>
