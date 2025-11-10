@@ -4449,3 +4449,7 @@ main:has(.blood-container) {
   pointer-events: none !important;
   opacity: 0.5;
 }
+
+.ewa-rteLine:empty {
+  margin-bottom: 1rem;
+}
