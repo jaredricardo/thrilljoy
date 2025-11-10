@@ -4454,3 +4454,13 @@ main:has(.blood-container) {
 .product__description .ewa-rteLine {
   margin-bottom: 1.5rem;
 }
+
+.product__description br,
+.product__description br {
+  display: none;
+}
+
+.product__description p,
+.product__description span {
+  font-size: 16px !important;
+}
