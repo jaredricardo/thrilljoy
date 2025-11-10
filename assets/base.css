@@ -4451,6 +4451,6 @@ main:has(.blood-container) {
 }
 
 .product__description > div,
-.product__descrtipion .ewa-rteLine {
+.ewa-rteLine {
   margin-bottom: 1.5rem;
 }
