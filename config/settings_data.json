@@ -10,6 +10,7 @@
 {
   "current": {
     "figure_low_stock_threshold": 48,
+    "apparel_low_stock_threshold": 2,
     "category_comparison_string": "genres",
     "klaviyo_form_embed_code": "<div class=\"klaviyo-form-WXKfzT\"></div>",
     "preview_video_three": "shopify://files/videos/CB-Pixl Unboxing Vertical.mp4.mp4",
