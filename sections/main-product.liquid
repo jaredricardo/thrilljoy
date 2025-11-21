@@ -284,11 +284,9 @@
                   {% endif %}
 
                   {% if product.metafields.custom.sold_out_physical_location_message %}
-                    {% unless product.available %}
-                      <div>
-                        {{ product.metafields.custom.sold_out_physical_location_message | metafield_tag }}
-                      </div>
-                    {% endunless %}
+                    <div>
+                      {{ product.metafields.custom.sold_out_physical_location_message | metafield_tag }}
+                    </div>
                   {% endif %}
 
                   {% if product.tags contains 'pre-sale' %}
