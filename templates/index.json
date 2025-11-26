@@ -12,11 +12,11 @@
     "tj_banner_carousel_LayRLh": {
       "type": "tj-banner-carousel",
       "blocks": {
-        "carousel_kFiXXa": {
+        "carousel_n6HkgD": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/Nov21-LIVE-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/Nov21-LIVE-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/Nov26-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/Nov26-LIVE-Hero-2000x750_0eebca22-563f-49c7-a8eb-6e1647397a04.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -43,11 +43,11 @@
             "use_slide_linkout": true
           }
         },
-        "carousel_n6HkgD": {
+        "carousel_kFiXXa": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/Nov14-LIVE-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/Nov14-LIVE-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/Nov21-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/Nov21-LIVE-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -169,8 +169,8 @@
         }
       },
       "block_order": [
-        "carousel_kFiXXa",
         "carousel_n6HkgD",
+        "carousel_kFiXXa",
         "carousel_ti6jtp",
         "carousel_kGwxBG",
         "carousel_9ztrEi"
