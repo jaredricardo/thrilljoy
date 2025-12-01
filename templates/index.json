@@ -14,6 +14,7 @@
       "blocks": {
         "carousel_wDXXxb": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/BlackFriday-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/BlackFriday-Hero-2500x1536.png",
@@ -46,7 +47,6 @@
         "carousel_79iMRY": {
           "type": "carousel",
           "name": "cyber monday TJ Banner Carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/CyberMonday-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/CyberMonday-Hero-2500x1536.png",
