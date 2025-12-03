@@ -703,9 +703,6 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-                {% if product.metafields.custom.ship_date_text %}
-                  <h4 class="expected-ship-date">{{ product.metafields.custom.ship_date_text }}</h4>
-                {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
