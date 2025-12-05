@@ -14,7 +14,6 @@
       "blocks": {
         "carousel_n6HkgD": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/Dec05-LIVE-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/Dec05-LIVE-Hero-2500x1536.png",
