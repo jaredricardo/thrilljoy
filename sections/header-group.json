@@ -16,17 +16,9 @@
       "blocks": {
         "text_Ppa7CD": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "FREE SHIPPING 10/17 UNTIL 11:59PT",
+            "text": "ORDER BY 12/12 11:59PM PT TO ARRIVE BY HOLIDAY",
             "link": ""
-          }
-        },
-        "text_mFNrzB": {
-          "type": "text",
-          "settings": {
-            "text": "PURCHASE A FULL PIXL SET AND RECEIVE $15 OFF SHIPPING🚨",
-            "link": "shopify://collections/new-featured"
           }
         },
         "text_zwrmbT": {
@@ -39,12 +31,9 @@
       },
       "block_order": [
         "text_Ppa7CD",
-        "text_mFNrzB",
         "text_zwrmbT"
       ],
-      "custom_css": [
-        ".announcement--root {display: none;}"
-      ],
+      "custom_css": [],
       "settings": {
         "text_margin": 120,
         "enabled": true,
