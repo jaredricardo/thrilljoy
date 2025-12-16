@@ -457,50 +457,85 @@
     {%- endif -%}
 
     <script>
-      document.addEventListener('cart:updated', (data) => {
+      document.addEventListener('cart:updated', (response) => {
 
-        const cartDrawer = document.querySelector('cart-drawer')
+        const cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer')
+        const header = document.querySelector('sticky-header')
+        const notification = document.querySelector('cart-notification')
+        const cartCount = response.detail.items.length
 
-        cartDrawer.querySelector('.drawer__inner').classList.contains('is-empty') && cartDrawer.querySelector('.drawer__inner').classList.remove('is-empty');
 
-        const sectionSelectors =  [
+        console.log('//////')
+        console.log(header)
+        console.log(notification)
+
+        let cart_type, sectionsToRender
+
+      {% if settings.cart_type == 'drawer' %}
+        cart_type = 'drawer'
+        sectionsToRender =  [
           {
             id: 'cart-drawer',
             selector: '#CartDrawer',
           },
           {
             id: 'cart-icon-bubble',
-            selector: '#shopify-section-cart-icon-bubble',
           }
         ]
-
-        const sectionsHtml = data.detail.cart.sections
-
-        sectionSelectors.forEach((section) => { 
-
-          const parser = new DOMParser()
-          const doc = parser.parseFromString(sectionsHtml[section.id], "text/html")
-          
-          const oldSection = document.querySelector(section.selector)
-          const newSection = doc.querySelector(section.selector)
-
-          console.log(doc)
-
-          console.log(oldSection)
-          console.log(newSection)
-
-          if(oldSection && newSection) {
-            oldSection.innerHTML = newSection.innerHTML
-            console.log('replaced')
+      {% else %}
+        cart_type = 'notification'
+        sectionsToRender =  [
+          {
+            id: 'cart-notification-product',
+            selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
+          },
+          {
+            id: 'cart-notification-button',
+          },
+          {
+            id: 'cart-icon-bubble',
           }
+        ]
+      {% endif %}
 
-          
-         
+        sectionsToRender.forEach((section) => {
+          const sectionElement = section.selector
+            ? document.querySelector(section.selector)
+            : document.getElementById(section.id)
+
+          if (!sectionElement) return;
+          sectionElement.innerHTML = getSectionInnerHTML(response.detail.sections[section.id], section.selector)
         })
+
+        if(cart.classList.contains('is-empty') && cartCount > 0) {
+          cart.classList.remove('is-empty')
+        }
+
+        if(cart_type == 'drawer') {
+          setTimeout(() => {
+            cart.querySelector('#CartDrawer-Overlay').addEventListener('click', () => {
+              cart.classList.remove('active')
+              document.body.classList.remove('overflow-hidden')
+            })
+            cart.open()
+          })
+        }
+
+        if(cart_type == 'notification') {
+          if(header) {
+            header.reveal()
+            if(notification) {
+              notification.open()
+            }
+          }
+        }
+
 
       })
 
-    
+      function getSectionInnerHTML(html, selector = '.shopify-section') {
+        return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML
+      }
 
     </script>
 

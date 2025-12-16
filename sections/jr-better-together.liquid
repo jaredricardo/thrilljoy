@@ -156,60 +156,61 @@
             </div>
         </div>
     </div>
+
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+
+            const btButton = document.querySelector('[data-section-id="{{ section.id }}"] #bt-button')
+            const variantId1 = {{ product.variants.first.id }}
+            const variantId2 = {{ section.settings.complimentary_product.variants.first.id }}
+            const cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer')
+            
+
+            btButton.addEventListener('click', () => {
+                console.log('click')
+                
+                let formData = {
+                    items: [
+                        {
+                            'id': variantId1,
+                            'quantity': 1
+                        },
+                        {
+                            'id': variantId2,
+                            'quantity': 1
+                        }
+                    ],
+                    sections: cart ? cart.getSectionsToRender().map(section => section.id) : []
+                }
+
+                const config = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: JSON.stringify(formData)
+                }
+
+                fetch(window.Shopify.routes.root + 'cart/add.js', config)
+                .then(response => {
+                    return response.json();
+                })
+                .then(response => {
+                    document.dispatchEvent(new CustomEvent('cart:updated', { detail: response } ));
+                })
+                .catch((error) => {
+                    alert('There was an error adding the products to the cart. Please try again.')
+                    console.error('Error:', error)
+                });
+            })
+
+        })
+    </script>
 {% endif %}
 
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
 
-        const btButton = document.querySelector('[data-section-id="{{ section.id }}"] #bt-button')
-        const variantId1 = {{ product.variants.first.id }}
-        const variantId2 = {{ section.settings.complimentary_product.variants.first.id }}
-        const cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer')
-        
-
-        btButton.addEventListener('click', () => {
-            console.log('click')
-            
-            let formData = {
-                items: [
-                    {
-                        'id': variantId1,
-                        'quantity': 1
-                    },
-                    {
-                        'id': variantId2,
-                        'quantity': 1
-                    }
-                ],
-                sections: cart ? cart.getSectionsToRender().map(section => section.id) : []
-            }
-
-            fetch(window.Shopify.routes.root + 'cart/add.js', {
-                body: JSON.stringify(formData),
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                 
-                }
-            })
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                document.dispatchEvent(new CustomEvent('cart:updated', {
-                    detail: { 
-                        cart: data 
-                    } 
-                }))
-            })
-            .catch((error) => {
-                alert('There was an error adding the products to the cart. Please try again.')
-                console.error('Error:', error)
-            });
-        })
-
-    })
-</script>
 
 {% schema %}
 {
