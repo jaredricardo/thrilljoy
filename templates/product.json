@@ -138,6 +138,19 @@
         "padding_bottom": 52
       }
     },
+    "jr_better_together_qyVxA7": {
+      "type": "jr-better-together",
+      "disabled": true,
+      "name": "Better Together",
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "card_bg_color": "#ffffff",
+        "header_text": "Better Together",
+        "button_text": "Add Both to Cart",
+        "complimentary_product": "pix-bent-neck-lady"
+      }
+    },
     "rich_text_dzCaK4": {
       "type": "rich-text",
       "blocks": {
@@ -326,6 +339,7 @@
   "order": [
     "main",
     "custom_liquid_9PDUML",
+    "jr_better_together_qyVxA7",
     "rich_text_dzCaK4",
     "multicolumn_RAfAWN",
     "related-products",
