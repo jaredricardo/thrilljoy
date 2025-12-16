@@ -1,0 +1,266 @@
+{% style %}
+
+    [data-section-id="{{ section.id }}"] {
+        background-color: {{ section.settings.background_color }};
+    }
+
+    a.bt-product {
+        text-decoration: none;
+    }
+
+    [data-section-id="{{ section.id }}"] h2,
+    [data-section-id="{{ section.id }}"] h3,
+    [data-section-id="{{ section.id }}"] p {
+        color: {{ section.settings.text_color }};
+        margin: 0;
+    }
+
+    [data-section-id="{{ section.id }}"] h4 {
+        margin: 0.5rem 0 0 0 ;
+    }
+
+    [data-section-id="{{ section.id }}"] h5 {
+        margin: 1rem 0;
+        font-weight: 500;
+    }
+
+    [data-section-id="{{ section.id }}"] .better-together .bt-product {
+        background-color: {{ section.settings.card_bg_color }};
+    }
+
+    .better-together {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .better-together .better-together-products {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .better-together .bt-product {
+        max-width: 25%; 
+    }
+
+    .better-together .bt-prices {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .better-together .bt-product img {
+        width: 100%;
+    }
+
+    .better-together .bt-prices p {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .better-together .bt-product { 
+            max-width: 50%;
+        }
+    }
+
+{% endstyle %}
+
+{% liquid 
+
+    assign page_product_title = product.title 
+    assign complimentary_product_title = section.settings.complimentary_product.title
+
+
+    if product.metafields.custom.broken_out_title
+
+      assign pdp_split = product.metafields.custom.broken_out_title | split: "|"
+      assign page_product_title = pdp_split[0]
+      assign page_product_subtitle = pdp_split[1]
+
+    endif
+
+    if section.settings.complimentary_product.metafields.custom.broken_out_title
+
+      assign cpd_split = section.settings.complimentary_product.metafields.custom.broken_out_title | split: "|"
+      assign complimentary_product_title = cpd_split[0]
+      assign complimentary_product_subtitle = cpd_split[1]
+
+    endif
+
+    assign show_section_on_page = true
+
+    if product.available == false or section.settings.complimentary_product.available == false
+        assign show_section_on_page = false
+    endif
+
+    if product.id == section.settings.complimentary_product.id
+        assign show_section_on_page = false
+    endif
+
+-%}
+
+{% if show_section_on_page%}
+    <div data-section-id="{{ section.id }}">
+        <div class="better-together page-width">
+            <h2>{{ section.settings.header_text }}</h2>
+            <div class="better-together-products">
+                <a class="bt-product" href="{{ product.url }}">
+                    <div class="top">
+                        <img src="{{ product.featured_image | image_url: width: 500 }}" alt="{{ product.title }}">
+                    </div>
+                    <div class="bottom">
+                        {% if product.metafields.custom.broken_out_title %}
+                                <h4>{{ page_product_title }}</h4>
+                                <h5>{{ page_product_subtitle }}</h5>
+                            {% else %}
+                                <h2>{{ product.title }}</h2>
+                        {% endif %}
+                        <p>{{ product.price | money }}</p>
+                    </div>
+                </a>
+                <a class="bt-product" href="{{ section.settings.complimentary_product.url }}">
+                    <div class="top">
+                        <img src="{{ section.settings.complimentary_product.featured_image | image_url: width: 500 }}" alt="{{ section.settings.complimentary_product.title }}">
+                    </div>
+                    <div class="bottom">
+                        {% if section.settings.complimentary_product.metafields.custom.broken_out_title %}
+                                <h4>{{ complimentary_product_title }}</h4>
+                                <h5>{{ complimentary_product_subtitle }}</h5>
+                            {% else %}
+                                <h2>{{ section.settings.complimentary_product.title }}</h2>
+                        {% endif %}
+                        <p>{{ section.settings.complimentary_product.price | money }}</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bt-bottom-container">
+                <div class="bt-prices">
+                    <p>{{ product.price | money }}</p>
+                    +   
+                    <p>{{ section.settings.complimentary_product.price | money }}</p>
+                </div>
+                <div id="bt-button"class="button">{{ section.settings.button_text }}</div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const btButton = document.querySelector('[data-section-id="{{ section.id }}"] #bt-button')
+        const variantId1 = {{ product.variants.first.id }}
+        const variantId2 = {{ section.settings.complimentary_product.variants.first.id }}
+        const cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer')
+        
+
+        btButton.addEventListener('click', () => {
+            console.log('click')
+            
+            let formData = {
+                items: [
+                    {
+                        'id': variantId1,
+                        'quantity': 1
+                    },
+                    {
+                        'id': variantId2,
+                        'quantity': 1
+                    }
+                ],
+                sections: cart ? cart.getSectionsToRender().map(section => section.id) : []
+            }
+
+            fetch(window.Shopify.routes.root + 'cart/add.js', {
+                body: JSON.stringify(formData),
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                 
+                }
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                document.dispatchEvent(new CustomEvent('cart:updated', {
+                    detail: { 
+                        cart: data 
+                    } 
+                }))
+            })
+            .catch((error) => {
+                alert('There was an error adding the products to the cart. Please try again.')
+                console.error('Error:', error)
+            });
+        })
+
+    })
+</script>
+
+{% schema %}
+{
+  "name": "JR Better Together",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color", 
+        "id": "text_color",
+        "label": "Section Text Color",
+        "default": "#000000"
+    },
+    {
+        "type": "color",
+        "id": "card_bg_color",
+        "label": "Card Background Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "text",
+        "id": "header_text",
+        "label": "Header Text",
+        "default": "Better Together"
+    },
+    {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Add Both to Cart"
+    },
+    {
+        "type": "product",
+        "id": "complimentary_product",
+        "label": "Select Complimentary Product",
+        "info": "Defaults to the current product page product as well as the selected product. If you wish to use product specific complimentary products, please set them in the product's metafield."
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Better Together"
+    }
+  ]
+}
+{% endschema %}

@@ -456,6 +456,54 @@
       {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
+    <script>
+      document.addEventListener('cart:updated', (data) => {
+
+        const cartDrawer = document.querySelector('cart-drawer')
+
+        cartDrawer.querySelector('.drawer__inner').classList.contains('is-empty') && cartDrawer.querySelector('.drawer__inner').classList.remove('is-empty');
+
+        const sectionSelectors =  [
+          {
+            id: 'cart-drawer',
+            selector: '#CartDrawer',
+          },
+          {
+            id: 'cart-icon-bubble',
+            selector: '#shopify-section-cart-icon-bubble',
+          }
+        ]
+
+        const sectionsHtml = data.detail.cart.sections
+
+        sectionSelectors.forEach((section) => { 
+
+          const parser = new DOMParser()
+          const doc = parser.parseFromString(sectionsHtml[section.id], "text/html")
+          
+          const oldSection = document.querySelector(section.selector)
+          const newSection = doc.querySelector(section.selector)
+
+          console.log(doc)
+
+          console.log(oldSection)
+          console.log(newSection)
+
+          if(oldSection && newSection) {
+            oldSection.innerHTML = newSection.innerHTML
+            console.log('replaced')
+          }
+
+          
+         
+        })
+
+      })
+
+    
+
+    </script>
+
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
