@@ -152,11 +152,13 @@
                     +   
                     <p>{{ section.settings.complimentary_product.price | money }}</p>
                 </div>
-                <div id="bt-button"class="button">{{ section.settings.button_text }}</div>
+                <div id="bt-button"class="button">
+                    {{ section.settings.button_text }}
+                    {% render 'loading-spinner' %}
+                </div>
             </div>
         </div>
     </div>
-
     
     <script>
         window.addEventListener('DOMContentLoaded', () => {
@@ -168,8 +170,10 @@
             
 
             btButton.addEventListener('click', () => {
-                console.log('click')
-                
+
+                btButton.classList.add('loading')
+                btButton.querySelector('.loading__spinner').classList.remove('hidden')
+
                 let formData = {
                     items: [
                         {
@@ -203,7 +207,11 @@
                 .catch((error) => {
                     alert('There was an error adding the products to the cart. Please try again.')
                     console.error('Error:', error)
-                });
+                })
+                .finally(() => {
+                    btButton.classList.remove('loading')
+                    btButton.querySelector('.loading__spinner').classList.add('hidden')
+                })
             })
 
         })

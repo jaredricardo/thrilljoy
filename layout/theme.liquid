@@ -464,11 +464,6 @@
         const notification = document.querySelector('cart-notification')
         const cartCount = response.detail.items.length
 
-
-        console.log('//////')
-        console.log(header)
-        console.log(notification)
-
         let cart_type, sectionsToRender
 
       {% if settings.cart_type == 'drawer' %}
@@ -485,10 +480,12 @@
       {% else %}
         cart_type = 'notification'
         sectionsToRender =  [
-          {
-            id: 'cart-notification-product',
-            selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
-          },
+          // does not currently work. Need the correct response with item key from shopify to make work. Unsure how at the moment
+          // but could probably do it if asked. 
+          // {
+          //   id: 'cart-notification-product',
+          //   selector: `[id="cart-notification-product-${notification.cartItemKey}"]`,
+          // },
           {
             id: 'cart-notification-button',
           },
@@ -507,11 +504,10 @@
           sectionElement.innerHTML = getSectionInnerHTML(response.detail.sections[section.id], section.selector)
         })
 
-        if(cart.classList.contains('is-empty') && cartCount > 0) {
-          cart.classList.remove('is-empty')
-        }
-
         if(cart_type == 'drawer') {
+          if(cart.classList.contains('is-empty') && cartCount > 0) {
+            cart.classList.remove('is-empty')
+          }
           setTimeout(() => {
             cart.querySelector('#CartDrawer-Overlay').addEventListener('click', () => {
               cart.classList.remove('active')
