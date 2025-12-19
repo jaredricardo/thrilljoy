@@ -48,6 +48,38 @@
         "collapsible_row_TncFWH": {
           "type": "collapsible_row",
           "settings": {
+            "heading": "What are our Holiday Shipping Terms?",
+            "icon": "none",
+            "row_content": "<p>The <strong>December 12 at 11:59pm PT</strong> shipping cutoff applies to <strong>domestic (U.S.) orders only</strong>. Orders placed after this time are <strong>not guaranteed to arrive before December 25</strong>. </p><p>While we will continue to process and ship orders as quickly as possible, <strong>delivery dates are not guaranteed</strong>, even for orders placed prior to the December 12 cutoff. Once a package leaves our facility, shipping timelines are determined by the carrier and may be impacted by factors outside of our control, including but not limited to carrier volume, weather, and holiday delays.  </p><p>Thrilljoy is not responsible for shipping delays caused by carriers and cannot guarantee delivery by a specific date.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_TncFWH"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Holiday Shipping Terms & Conditions",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_6dGEyK": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Mxx97P": {
+          "type": "collapsible_row",
+          "settings": {
             "heading": "What are our Buy One Gift One promotion Terms?",
             "icon": "none",
             "row_content": "<p>The Buy One Gift One offer is valid from <strong>Friday, November 28 at 12:00 AM ET</strong> through <strong>Sunday, November 30 at 11:59 PM ET</strong>. Offer applies to eligible <strong>Panoramix</strong> products and <strong>Thrilljoy Threads</strong> apparel only.</p><p> Lowest priced eligible item will be designated as the free item. Discount is applied automatically at checkout while supplies last.</p><p> Offer is valid on thrilljoy.com only. Offer cannot be combined with any other discounts, promotions, or coupon codes. Not valid on previous purchases. No substitutions, rain checks, or cash value.</p><p> All sales are subject to availability. Thrilljoy reserves the right to modify or cancel this promotion at any time.</p>",
@@ -56,7 +88,7 @@
         }
       },
       "block_order": [
-        "collapsible_row_TncFWH"
+        "collapsible_row_Mxx97P"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -611,6 +643,7 @@
     "main",
     "rich_text_DycnaQ",
     "collapsible_content_rdkjKd",
+    "collapsible_content_6dGEyK",
     "collapsible_content_F9UFip",
     "collapsible_content_TQU4Np",
     "collapsible_content_ytrcYT",
