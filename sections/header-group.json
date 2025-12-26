@@ -16,6 +16,7 @@
       "blocks": {
         "text_Ppa7CD": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "ORDER BY 12/12 11:59PM PT TO ARRIVE BY HOLIDAY",
             "link": ""

@@ -12,7 +12,7 @@
     "tj_banner_carousel_LayRLh": {
       "type": "tj-banner-carousel",
       "blocks": {
-        "carousel_ti6jtp": {
+        "carousel_McQCXk": {
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/RUSH-WelcometoDerry-Hero-2000x750.png",
@@ -138,7 +138,7 @@
         }
       },
       "block_order": [
-        "carousel_ti6jtp",
+        "carousel_McQCXk",
         "carousel_BJnAB3",
         "carousel_kGwxBG",
         "carousel_9ztrEi"
