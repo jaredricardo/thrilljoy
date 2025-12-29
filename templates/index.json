@@ -107,6 +107,7 @@
         },
         "carousel_BJnAB3": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/HolidayFavs-Hero-2000x750_1.png",
             "mobile_image": "shopify://shop_images/HolidayFavs-Hero-2500x1536_1.png",
