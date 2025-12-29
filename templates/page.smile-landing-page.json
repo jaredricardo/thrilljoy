@@ -242,6 +242,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_YLdegi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-TMeZcT\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -251,6 +261,7 @@
     "1742280573d936b744",
     "17422805966afa2f6b",
     "rich_text_qgi646",
+    "custom_liquid_YLdegi",
     "collapsible_content_GGKx9X"
   ]
 }
