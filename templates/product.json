@@ -140,7 +140,6 @@
     },
     "jr_better_together_qyVxA7": {
       "type": "jr-better-together",
-      "disabled": true,
       "name": "Better Together",
       "settings": {
         "background_color": "#ffffff",
@@ -148,7 +147,25 @@
         "card_bg_color": "#ffffff",
         "header_text": "Better Together",
         "button_text": "Add Both to Cart",
-        "complimentary_product": "pix-bent-neck-lady"
+        "complimentary_product": "pix-protector"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Recommended for you",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 72,
+        "padding_bottom": 52
       }
     },
     "multicolumn_RAfAWN": {
@@ -225,59 +242,6 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_dzCaK4": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9qDymW": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>1-of-6 ODDS OF A CHASE!</strong>",
-            "use_h1": false,
-            "heading_size": "h1"
-          }
-        },
-        "text_4gAjbJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>What is ODDS OF A CHASE?</strong></p><p>Each collectible has a 1-of-6 odds of a limited edition chase! </p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 98 pieces!</p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!</p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9qDymW",
-        "text_4gAjbJ"
-      ],
-      "custom_css": [
-        "h2 {text-align: center;}"
-      ],
-      "settings": {
-        "extra_classes": "hide-from-mega-pix",
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "Recommended for you",
-        "heading_size": "h2",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 72,
-        "padding_bottom": 52
-      }
-    },
     "multicolumn_3cjyCM": {
       "type": "multicolumn",
       "blocks": {
@@ -340,9 +304,15 @@
     "main",
     "custom_liquid_9PDUML",
     "jr_better_together_qyVxA7",
+<<<<<<< HEAD
+    "related-products",
+    "rich_text_dzCaK4",
+    "multicolumn_RAfAWN",
+=======
     "multicolumn_RAfAWN",
     "related-products",
     "rich_text_dzCaK4",
+>>>>>>> main
     "multicolumn_3cjyCM"
   ]
 }
