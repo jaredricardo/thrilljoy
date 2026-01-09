@@ -223,7 +223,16 @@
           "settings": {
             "heading": "What if my item is damaged or defective?",
             "icon": "none",
-            "row_content": "<p>If you receive a damaged or defective item, please contact our customer service within 48 hours of delivery to start the inspection process.</p>",
+            "row_content": "<p>Bummer! If something purchased direct from the Thrilljoy site shows up looking rough, please let us know within 48 hours. Snap some photos, send them in, and we’ll see if we can get you a replacement or store credit (stock permitting).</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TdTHPR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my box isn’t minty fresh?",
+            "icon": "none",
+            "row_content": "<p>What if my box isn’t minty fresh?We pack with care, but boxes are built to protect the figure, sometimes they take a bump or crease in the process. Small scuffs or corner dings usually aren’t replaceable.</p><p>But if your collectible arrives with major box damage that affects display or the figure itself, let us know! Replacements depend on stock and are handled case by case, but we’ll always do our best to make things right.</p>",
             "page": ""
           }
         },
@@ -249,6 +258,7 @@
       "block_order": [
         "collapsible_row_e89GiP",
         "collapsible_row_EwUh4d",
+        "collapsible_row_TdTHPR",
         "collapsible_row_GLaYQ9",
         "collapsible_row_dcbc7y"
       ],
@@ -396,13 +406,23 @@
             "row_content": "<p>We have a <a href=\"/pages/thrilljoy-preorder-schedule\" title=\"Thrilljoy Preorder Schedule\">pre-order schedule here</a> with all of Thrilljoy's current expected arrival dates!</p>",
             "page": ""
           }
+        },
+        "collapsible_row_VyVCpt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do prototype raffles work?",
+            "icon": "none",
+            "row_content": "<p>They’re totally random, and winners are contacted directly (no dramatic public drumrolls). Check your email within two weeks of the event, if your inbox is still ghosting you, feel free to reach out.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_rkbXqn",
         "collapsible_row_LjnkL3",
         "collapsible_row_4NMhTG",
-        "collapsible_row_TQKJjn"
+        "collapsible_row_TQKJjn",
+        "collapsible_row_VyVCpt"
       ],
       "settings": {
         "caption": "",
@@ -484,7 +504,7 @@
         "text_rXyHHg": {
           "type": "text",
           "settings": {
-            "text": "<p>At Thrilljoy, we love keeping things exciting—so when you grab a PIX! collectible, you’re not just getting an awesome figure, you’re also getting the<em>thrill of the chase</em>!</p>"
+            "text": "<p>At Thrilljoy, we love keeping things exciting! So when you grab a PIX! collectible, you’re not just getting an awesome figure, you’re also stepping into the thrill of the chase!</p>"
           }
         }
       },
@@ -509,9 +529,9 @@
         "collapsible_row_BbE9PK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What are Standard Editions & Chase Variants at Thrilljoy?",
+            "heading": "What are Standard Editions & Chase Variants?",
             "icon": "none",
-            "row_content": "<p>Every PIX! collectible has a <strong>1-in-6 chance </strong>of being a <strong>limited edition chase</strong>! That means for every six figures produced, one will be a special chase variant with unique details, colors, or designs.</p>",
+            "row_content": "<p>Every PIX! collectible has a chance at being a limited edition chase! Chases are produced at a 1-in-6 ratio, which means for every six figures made, one will be a chase with unique details, colors, or designs.<br/><br/><strong>Important note:</strong> Chases are shipped at random. Buying multiples doesn’t guarantee that you’ll receive a chase figure (sometimes you get lucky streaks, sometimes you don’t, that’s part of the chase!).</p>",
             "page": ""
           }
         },
@@ -520,7 +540,7 @@
           "settings": {
             "heading": "What are Super Chase Editions?",
             "icon": "none",
-            "row_content": "<p>For special events and select drops, we take the excitement up a notch with <strong>SUPER chase items</strong>, featuring extremely limited edition sizes—as low as <strong>just 98 pieces worldwide</strong>! These rare finds are the ultimate collector’s prize.</p>",
+            "row_content": "<p>For special events and select drops, we turn the excitement up a notch with SUPER chase items, produced in tiny edition sizes, as low as 96 pieces worldwide. These are designed to be the ultimate collector’s prize.</p>",
             "page": ""
           }
         },
@@ -529,7 +549,16 @@
           "settings": {
             "heading": "What are Ultra Chase Editions?",
             "icon": "none",
-            "row_content": "<p>Occasionally, we release <strong>ULTRA chase items</strong>, which are even rarer, with edition sizes as small as <strong>just 24 pieces</strong>. If you manage to snag one of these, you’re holding a truly elite collectible!</p>",
+            "row_content": "<p>Even rarer than Super Chases, ULTRA chase items can have edition sizes as small as 24 pieces worldwide. Snagging one means you’re holding something truly elite.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GjxwpD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do Chase Odds Work?",
+            "icon": "none",
+            "row_content": "<p>Chases (including Super and Ultra) are released into the wild completely at random. There’s no secret trick, timing, or “backdoor” method. It's luck of the draw. Because they’re randomized, streaks happen. If it feels like you’re missing them, don’t worry, it’s just the math balancing out over time.</p>",
             "page": ""
           }
         },
@@ -538,7 +567,7 @@
           "settings": {
             "heading": "Why the Different Editions?",
             "icon": "none",
-            "row_content": "<p>We believe collecting should be <strong>fun, exciting, and rewarding</strong>. Our mix of standard, chase, super chase, and ultra chase editions adds an element of surprise while keeping our community engaged and connected. Limited production runs mean every piece is special, and every drop is an adventure!</p>",
+            "row_content": "<p>Collecting should always feel fun, surprising, and rewarding. By mixing standard, chase, super chase, and ultra chase editions, we add that element of surprise while keeping the community buzzing and connected. Limited runs mean every drop is special, and every unbox is an adventure.</p>",
             "page": ""
           }
         },
@@ -547,7 +576,7 @@
           "settings": {
             "heading": "Want to Increase Your Odds?",
             "icon": "none",
-            "row_content": "<p>While chase variants are random, the more PIX! you collect, the better your chances of landing one of these rare editions! And don’t forget—you can always trade with fellow collectors in the Thrilljoy community to complete your perfect collection.</p><p><br/>Happy collecting, and may the chase be ever in your favor!</p>",
+            "row_content": "<p>Chase figures are random, but the more PIX! you collect, the better your chances of landing one! And don’t forget, you can always trade with fellow collectors in the Thrilljoy community to finish your perfect set.</p><p>Happy collecting, and may the chase be ever in your favor!</p>",
             "page": ""
           }
         }
@@ -556,6 +585,7 @@
         "collapsible_row_BbE9PK",
         "collapsible_row_6EigJp",
         "collapsible_row_NA7n4x",
+        "collapsible_row_GjxwpD",
         "collapsible_row_ikpTpV",
         "collapsible_row_E64PjP"
       ],
