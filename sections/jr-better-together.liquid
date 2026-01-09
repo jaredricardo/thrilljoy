@@ -76,6 +76,12 @@
         }
     }
 
+    {% unless product.type == "PIX2.0" %}
+        [data-section-id="{{ section.id }}"] {
+            display: none;
+        }
+    {% endunless %}
+
 {% endstyle %}
 
 {% liquid 
