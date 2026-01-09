@@ -15,8 +15,8 @@
         "carousel_kGwxBG": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/NYBloo-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/TealJersey-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/Dec05-LIVE-Hero-2000x750_1.png",
+            "mobile_image": "shopify://shop_images/Dec05-LIVE-Hero-2500x1536_1.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
