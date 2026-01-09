@@ -140,7 +140,6 @@
     },
     "jr_better_together_qyVxA7": {
       "type": "jr-better-together",
-      "disabled": true,
       "name": "Better Together",
       "settings": {
         "background_color": "#ffffff",
@@ -148,7 +147,25 @@
         "card_bg_color": "#ffffff",
         "header_text": "Better Together",
         "button_text": "Add Both to Cart",
-        "complimentary_product": "pix-bent-neck-lady"
+        "complimentary_product": "pix-protector"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Recommended for you",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 72,
+        "padding_bottom": 52
       }
     },
     "rich_text_dzCaK4": {
@@ -260,24 +277,6 @@
         "padding_bottom": 52
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "Recommended for you",
-        "heading_size": "h2",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 72,
-        "padding_bottom": 52
-      }
-    },
     "multicolumn_3cjyCM": {
       "type": "multicolumn",
       "blocks": {
@@ -340,9 +339,9 @@
     "main",
     "custom_liquid_9PDUML",
     "jr_better_together_qyVxA7",
+    "related-products",
     "rich_text_dzCaK4",
     "multicolumn_RAfAWN",
-    "related-products",
     "multicolumn_3cjyCM"
   ]
 }
