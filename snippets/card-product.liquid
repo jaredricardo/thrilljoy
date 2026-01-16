@@ -151,7 +151,7 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
+      <div class="card__content {% if request.page_type == 'search' and quick_add == 'standard' %} flex-override {% endif %}">
         <div class="card__information">
           {% if card_product.metafields.custom.broken_out_title %}
             <h3 

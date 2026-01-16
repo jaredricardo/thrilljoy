@@ -4464,3 +4464,9 @@ main:has(.blood-container) {
 .product__description span {
   font-size: 16px !important;
 }
+
+.card__content.flex-override {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
