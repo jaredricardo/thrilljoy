@@ -374,9 +374,9 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
         "text_color": "#ffffff",
