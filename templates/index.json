@@ -276,7 +276,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-6525-Chucky-Shovel-Melty.png"
+        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
@@ -374,7 +374,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/Banner-6525-Chucky-Melty.png",
+        "desktop_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 0,
         "image_alt_text": "Thrilljoy Banner Image",
