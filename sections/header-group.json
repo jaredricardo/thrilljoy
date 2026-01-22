@@ -17,8 +17,8 @@
         "text_Ppa7CD": {
           "type": "text",
           "settings": {
-            "text": "SHOP CHUCKY NOW 🔪",
-            "link": "shopify://products/pix-chucky-1"
+            "text": "BLITZO IS LIVE NOW!",
+            "link": "shopify://products/pix-blitzo"
           }
         },
         "text_zwrmbT": {
@@ -49,19 +49,6 @@
     },
     "17259048654223c26f": {
       "type": "apps",
-      "blocks": {
-        "announcement_bar_sales_banner_free_bUVn3Y": {
-          "type": "shopify://apps/announcement-bar/blocks/sales-banner-free/9350a41f-5964-4405-9bba-bbffcbe501a2",
-          "settings": {
-            "marquee_text": "<p>🔥</p><p>Buy One Get One FREE</p><p>🔥</p><p>DEAL ALERT</p>",
-            "background": "linear-gradient(5deg, rgba(0, 128, 139, 1), rgba(0, 128, 139, 1) 100%)",
-            "banner_text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_bar_sales_banner_free_bUVn3Y"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
