@@ -310,9 +310,9 @@
         "collapsible_row_x8R6W9": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Is there a shipping fee?",
+            "heading": "How does shipping pricing work?",
             "icon": "none",
-            "row_content": "<p>Yes, shipping fees will be calculated at checkout based on weight.</p>",
+            "row_content": "<p>Our shipping rates are based on your cart total, not the weight of each individual item.</p><p>When orders include multiple items, carriers look at the overall size of the box rather than just how heavy it is. Because of that, lighter items don’t always mean lower shipping costs, and certain products or bundles may fall into different shipping tiers.</p>",
             "page": ""
           }
         },
