@@ -15,6 +15,37 @@
         "carousel_kGwxBG": {
           "type": "carousel",
           "settings": {
+            "desktop_image": "shopify://shop_images/5888-Batman-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/5888-Batman-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/batman",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_zY6jwD": {
+          "type": "carousel",
+          "settings": {
             "desktop_image": "shopify://shop_images/6432-HelluvaBoss-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/6432-HelluvaBoss-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
@@ -139,6 +170,7 @@
       },
       "block_order": [
         "carousel_kGwxBG",
+        "carousel_zY6jwD",
         "carousel_Q4zEhJ",
         "carousel_axpr4Q",
         "carousel_7tnyKK"
@@ -211,13 +243,13 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png"
+        "bg_image": "shopify://shop_images/BG-5888-Batman.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/Banner-6476-Batman-Rainbow.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 40,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -263,7 +295,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
+        "image": "shopify://shop_images/BG-5888-CityOnly.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -309,7 +341,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/Banner-6476-Batman-Bullseye.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
