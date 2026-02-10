@@ -14,13 +14,6 @@
     "scrolling_announcement_D88dkd": {
       "type": "scrolling-announcement",
       "blocks": {
-        "text_Ppa7CD": {
-          "type": "text",
-          "settings": {
-            "text": "BATMAN IS LIVE NOW!",
-            "link": "shopify://collections/batman"
-          }
-        },
         "text_zwrmbT": {
           "type": "text",
           "settings": {
@@ -30,7 +23,6 @@
         }
       },
       "block_order": [
-        "text_Ppa7CD",
         "text_zwrmbT"
       ],
       "custom_css": [],
