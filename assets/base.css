@@ -4404,8 +4404,27 @@ main:has(.blood-container) {
 .balloon {
   position: fixed;
   z-index: 15;
-  width: 8vw;
-  max-width: 55px;
+  width: 10vw;
+  max-width: 155px;
+}
+
+.candy {
+  position: fixed;
+  z-index: 15;
+  width: 10vw;
+  max-width: 100px;
+}
+
+.candy.candy-1 {
+  top: 44vh;
+  right: 3vw;
+  transform: rotate(15deg);
+}
+
+.candy.candy-2 {
+  bottom: 3vh;
+  left: 5vw;
+  transform: rotate(-15deg);
 }
 
 .balloon-1 {
@@ -4432,9 +4451,13 @@ main:has(.blood-container) {
 
 @media screen and (max-width: 768px) {
   .blood-1,
-  .blood-2 {
-    width: 55vw;
+  .blood-2,
+  .candy-1,
+  .candy-2 {
+    width: 65px;
   }
+
+  
 }
 
 .card__inner:has(.low-stock-badge) .presale-badge {
