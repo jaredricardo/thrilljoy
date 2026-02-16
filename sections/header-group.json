@@ -20,18 +20,10 @@
             "text": "@THRILLJOYCOLLECTIBLES ON INSTAGRAM AND TIKTOK 🤩",
             "link": "https://www.instagram.com/thrilljoycollectibles/"
           }
-        },
-        "text_q4dGhA": {
-          "type": "text",
-          "settings": {
-            "text": "VALENTINE'S DAY DROP IS LIVE 💞",
-            "link": "shopify://collections/valentines-day-2026"
-          }
         }
       },
       "block_order": [
-        "text_zwrmbT",
-        "text_q4dGhA"
+        "text_zwrmbT"
       ],
       "custom_css": [],
       "settings": {
@@ -44,7 +36,7 @@
         "color": "#ffffff",
         "alternative-color": true,
         "speed": 20,
-        "align_icons_row": false
+        "align_icons_row": true
       }
     },
     "17259048654223c26f": {
