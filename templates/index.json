@@ -15,8 +15,8 @@
         "carousel_BTMG67": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/Feb13-LIVE-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/Feb13-LIVE-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/D030626-NOTIF-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D030626-NOTIF-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -39,7 +39,7 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/valentines-day-2026",
+            "button_link": "shopify://collections/get-notified",
             "use_slide_linkout": true
           }
         },
