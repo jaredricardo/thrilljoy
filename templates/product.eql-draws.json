@@ -67,6 +67,27 @@
             "show_gift_card_recipient": true
           }
         },
+        "eql_launches_eql_draw_nzjakc": {
+          "type": "shopify://apps/eql-launches/blocks/eql-draw/527a5c25-0ce4-4c16-8597-6f87dfefb064",
+          "settings": {
+            "base_size": 16,
+            "border_radius": "0",
+            "widget_width": 560,
+            "gap_size": 16,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "color_background": "#FFFFFF00",
+            "color_button_background": "#000000",
+            "color_button_text": "#FFFFFF",
+            "color_error_text": "#FF0000",
+            "color_field_background": "#FFFFFF",
+            "color_field_text": "#000000",
+            "color_field_border": "#000000",
+            "color_text": "#000000",
+            "color_mode": "light",
+            "draw_state": "OPEN"
+          }
+        },
         "video_cards_placement_4nweMc": {
           "type": "video-cards-placement",
           "settings": {}
@@ -108,6 +129,7 @@
         "quantity_selector",
         "text_UCqMyQ",
         "buy_buttons",
+        "eql_launches_eql_draw_nzjakc",
         "video_cards_placement_4nweMc",
         "description",
         "collapsible_tab_7jT6Rw",
