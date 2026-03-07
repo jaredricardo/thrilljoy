@@ -1,0 +1,347 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_fVahD6": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"odds-of-chase\">\n    <strong>ODDS OF A CHASE</strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    </a>\n  </div>"
+          }
+        },
+        "text_rzbTg9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<strong>Chance of Chase</strong> Learn more",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "variant_product_area_MyVGbM": {
+          "type": "variant-product-area",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "text_UCqMyQ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<strong>Coming on October 17th</strong>",
+            "text_style": "body"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "video_cards_placement_4nweMc": {
+          "type": "video-cards-placement",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_7jT6Rw": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "More Details",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "custom_liquid_QABgYV": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<details>\n  <summary><strong>More details</strong></summary>\n  <p>\n    <strong>Type:</strong>\n    <a href=\"/collections/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n\n    </a>\n  </p>\n  <p><strong>Weight:</strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n</p>\n<p><strong>Box Dimmensions</strong>\n</p>\n<p><strong>Height:</strong>\n{{ product.metafields.custom.height.value }}\n</p>\n<p><strong>Width:</strong>\n{{ product.metafields.custom.width.value }}\n</p>\n<p><strong>Length:</strong>\n{{ product.metafields.custom.length.value }}\n</p>\n</details>"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "custom_liquid_fVahD6",
+        "text_rzbTg9",
+        "variant_picker",
+        "variant_product_area_MyVGbM",
+        "quantity_selector",
+        "text_UCqMyQ",
+        "buy_buttons",
+        "video_cards_placement_4nweMc",
+        "description",
+        "collapsible_tab_7jT6Rw",
+        "custom_liquid_QABgYV",
+        "share"
+      ],
+      "custom_css": [],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 84
+      }
+    },
+    "custom_liquid_9PDUML": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"chance-chase-section\">\n    <p style=\"display: none;\">Chance of chase</p>\n  </div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "jr_better_together_qyVxA7": {
+      "type": "jr-better-together",
+      "name": "Better Together",
+      "settings": {
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "card_bg_color": "#ffffff",
+        "header_text": "Better Together",
+        "button_text": "Add Both to Cart",
+        "complimentary_product": "pix-protector"
+      }
+    },
+    "multicolumn_RAfAWN": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MjEKVL": {
+          "type": "column",
+          "settings": {
+            "title": "What is 1-of-6 ODDS OF A CHASE?",
+            "text": "<p>Each collectible has a 1-of-6 odds of a limited edition chase! </p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 98 pieces!</p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!</p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.</p>",
+            "link_label": "",
+            "link": "shopify://blogs/news/welcome-to-thrilljoy"
+          }
+        },
+        "column_Tg7NKV": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bfDDLM": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EiqBbe": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MjEKVL",
+        "column_Tg7NKV",
+        "column_bfDDLM",
+        "column_EiqBbe"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center; margin-bottom: 5rem;}"
+      ],
+      "settings": {
+        "extra_classes": "",
+        "title": "<strong>1-of-6 ODDS OF A CHASE!</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Recommended for you",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 72,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_dzCaK4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9qDymW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>1-of-6 ODDS OF A CHASE!</strong>",
+            "use_h1": false,
+            "heading_size": "h1"
+          }
+        },
+        "text_4gAjbJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>What is ODDS OF A CHASE?</strong></p><p>Each collectible has a 1-of-6 odds of a limited edition chase! </p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 96 pieces!</p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!</p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9qDymW",
+        "text_4gAjbJ"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "extra_classes": "hide-from-mega-pix",
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_3cjyCM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_C6HDp8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "title": "Limited Edition",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DiXqHB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "title": "Chase Edition",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eYtGXt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
+            "title": "Ultra Chase Edition",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_C6HDp8",
+        "column_DiXqHB",
+        "column_eYtGXt"
+      ],
+      "settings": {
+        "extra_classes": "hide-from-mega-pix",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_9PDUML",
+    "jr_better_together_qyVxA7",
+    "multicolumn_RAfAWN",
+    "related-products",
+    "rich_text_dzCaK4",
+    "multicolumn_3cjyCM"
+  ]
+}
