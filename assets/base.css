@@ -4422,7 +4422,7 @@ main:has(.blood-container) {
 }
 
 .candy.candy-2 {
-  bottom: 3vh;
+  bottom: 10vh;
   left: 5vw;
   transform: rotate(-15deg);
 }
