@@ -34,7 +34,7 @@
         "heading_QnJBNf"
       ],
       "custom_css": [
-        ".banner--small:not(.banner--adapt) {min-height: 25rem;}"
+        ".banner--small:not(.banner--adapt) {/* min-height: 25rem; */ height: auto;}"
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
