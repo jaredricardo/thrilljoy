@@ -211,13 +211,13 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png"
+        "bg_image": "shopify://shop_images/BG-2026-MegaCon-AlignTop.png"
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/Banner-2026-Valentines-Bloo.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 20,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -264,7 +264,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
+        "image": "shopify://shop_images/BG-2026-MegaCon-AlignBtm.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -310,7 +310,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01_3218aaeb-5853-465d-bdba-43a055de816b.png",
+        "desktop_image": "shopify://shop_images/Banner-2026-Valentines-Redd.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
