@@ -4411,7 +4411,7 @@ main:has(.blood-container) {
 .candy {
   position: fixed;
   z-index: 15;
-  width: 10vw;
+  width: 15vw;
   max-width: 100px;
 }
 
