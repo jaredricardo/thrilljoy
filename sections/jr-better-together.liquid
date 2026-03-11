@@ -76,7 +76,7 @@
         }
     }
 
-    {% unless product.type == "PIX2.0" %}
+    {% unless product.type == "PIX2.0" or product.tags contains "no-better-together" %}
         [data-section-id="{{ section.id }}"] {
             display: none;
         }
