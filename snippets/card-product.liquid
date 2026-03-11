@@ -320,7 +320,7 @@
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
         {% if quick_add == 'standard' %}
-          <div class="quick-add no-js-hidden" data-spark="b2c-only">
+          <div class="quick-add no-js-hidden" {% if card_product.tags contains 'no-quick-add' %} style="display:none !important;" {% endif %}>
             {%- liquid
               assign qty_rules = false
               if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
@@ -450,7 +450,7 @@
               {% endif %}
             </quick-add-bulk>
           {% else %}
-            <div class="quick-add no-js-hidden">
+            <div class="quick-add no-js-hidden" {% if card_product.tags contains 'no-quick-add' %} style="display:none !important;" {% endif %}>
               {%- liquid
                 assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
                 assign qty_rules = false
