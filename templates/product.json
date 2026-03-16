@@ -86,7 +86,7 @@
         "custom_liquid_QABgYV": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<details>\n  <summary><strong>More details</strong></summary>\n  <p>\n    <strong>Type:</strong>\n    <a href=\"/collections/all?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type={{ product.type}}&sort_by=title-ascending\">\n      {{ product.type}}\n\n    </a>\n  </p>\n  <p><strong>Weight:</strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n</p>\n<p><strong>Box Dimmensions</strong>\n</p>\n<p><strong>Height:</strong>\n{{ product.metafields.custom.height.value }}\n</p>\n<p><strong>Width:</strong>\n{{ product.metafields.custom.width.value }}\n</p>\n<p><strong>Length:</strong>\n{{ product.metafields.custom.length.value }}\n</p>\n</details>"
+            "custom_liquid": "<details>\n  <summary><strong>More details</strong></summary>\n \n  <p><strong>Weight:</strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n</p>\n<p><strong>Box Dimmensions</strong>\n</p>\n<p><strong>Height:</strong>\n{{ product.metafields.custom.height.value }}\n</p>\n<p><strong>Width:</strong>\n{{ product.metafields.custom.width.value }}\n</p>\n<p><strong>Length:</strong>\n{{ product.metafields.custom.length.value }}\n</p>\n</details>"
           }
         },
         "share": {
