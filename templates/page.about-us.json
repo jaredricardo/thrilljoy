@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_k9Rt7m": {
@@ -16,11 +25,11 @@
         "heading_yanWc6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/HeroBanner-elements-bg.png",
+        "image": "shopify://shop_images/HeroBanner-elements-bg.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -56,7 +65,7 @@
         "text_Q9BRmC": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Thrilljoy is an officially licensed collectible company dedicated to immortalizing your favorite pop culture moments with creativity and craftsmanship. We specialize in limited-edition collectibles, designed with innovative packaging and intricate details that bring fandom to life. We’re here to celebrate everything weird, wild, and wonderful about the worlds we love. Always listening, always evolving, we push boundaries to deliver fresh, exciting, and unforgettable ways for you to collect, connect, and celebrate your fandom. <\/strong><\/p>"
+            "text": "<p><strong>Thrilljoy is an officially licensed collectible company dedicated to immortalizing your favorite pop culture moments with creativity and craftsmanship. We specialize in limited-edition collectibles, designed with innovative packaging and intricate details that bring fandom to life. We’re here to celebrate everything weird, wild, and wonderful about the worlds we love. Always listening, always evolving, we push boundaries to deliver fresh, exciting, and unforgettable ways for you to collect, connect, and celebrate your fandom. </strong></p>"
           }
         }
       },
@@ -65,6 +74,7 @@
         "text_Q9BRmC"
       ],
       "settings": {
+        "extra_classes": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
@@ -91,7 +101,7 @@
         "text_color": "#000000",
         "col_order": "",
         "text_alignment": "center-aligned",
-        "image": "shopify:\/\/shop_images\/halfbloo_1.png"
+        "image": "shopify://shop_images/halfbloo_1.png"
       }
     },
     "jr_5050_zeYrHw": {
@@ -112,7 +122,7 @@
         "p_RkMigT": {
           "type": "p",
           "settings": {
-            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.<\/p>"
+            "p": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nunc, consequat a nibh sed, sollicitudin ullamcorper urna. Sed id volutpat ligula. Cras sapien sapien, convallis tempus urna in, hendrerit finibus massa.</p>"
           }
         },
         "button_8UXAqe": {
@@ -137,7 +147,7 @@
         "text_color": "#000000",
         "col_order": "",
         "text_alignment": "center-aligned",
-        "image": "shopify:\/\/shop_images\/bloo_head.png"
+        "image": "shopify://shop_images/bloo_head.png"
       }
     },
     "video_RxhBpx": {
@@ -147,7 +157,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/BrianIntroHorizontal_V2.webm",
+        "video": "shopify://files/videos/BrianIntroHorizontal_V2.webm",
         "video_url": "",
         "description": "",
         "full_width": false,
@@ -159,7 +169,7 @@
     "klaviyo_email_capture_qyYJCJ": {
       "type": "klaviyo-email-capture",
       "settings": {
-        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"><\/div>",
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
         "form_max_width": 600,
         "padding_y_d": 120,
         "padding_y_m": 30,
@@ -169,7 +179,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify:\/\/shop_images\/bg-thrilljoy-115-ppp.png"
+        "bg_image": "shopify://shop_images/bg-thrilljoy-115-ppp.png"
       }
     }
   },
