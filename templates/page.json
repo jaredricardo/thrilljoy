@@ -24,6 +24,9 @@
       "block_order": [
         "heading_yanWc6"
       ],
+      "custom_css": [
+        ".banner {min-height: auto;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
         "image_overlay_opacity": 0,
