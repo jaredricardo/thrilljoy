@@ -24,8 +24,8 @@
         "text_Ewnd7W": {
           "type": "text",
           "settings": {
-            "text": "3/06 Drop Live Now!",
-            "link": "shopify://collections/just-dropped"
+            "text": "Mega Drop is live!",
+            "link": "shopify://collections/megacon-2026"
           }
         }
       },
@@ -33,7 +33,6 @@
         "text_Ki6fR6",
         "text_Ewnd7W"
       ],
-      "disabled": true,
       "name": "Scrolling Announcement",
       "settings": {
         "text_margin": 120,
