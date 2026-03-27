@@ -76,6 +76,7 @@
         },
         "carousel_BTMG67": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/6544-NF-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/6544-NF-Hero-2500x1536.png",
