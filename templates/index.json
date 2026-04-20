@@ -363,7 +363,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/BG-2026-MegaCon-AlignBtm.png",
+        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
