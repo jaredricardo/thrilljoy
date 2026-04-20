@@ -76,6 +76,7 @@
         },
         "carousel_7VhqVV": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/D041726-NOTIF-Hero-2000x750_8471d905-a038-401e-8335-cb69931e78f8.png",
             "mobile_image": "shopify://shop_images/D041726-NOTIF-Hero-2500x1536_12a177ad-85c7-417b-a9fb-8f12ac34a1d5.png",
