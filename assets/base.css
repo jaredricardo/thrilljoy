@@ -4023,6 +4023,10 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 
+.tj-klaviyo-email-capture-component {
+  padding: 0 !important; /* image determines height; adjust padding via form-container instead */
+}
+
 .tj-klaviyo-email-capture-component .form-container {
   display: flex;
   flex-direction: column;
@@ -4030,21 +4034,30 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   align-items: center;
   text-align: center;
   z-index: 2;
-  position: relative;
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-.tj-klaviyo-email-capture-component .form-container .klaviyo-form {
+.tj-klaviyo-email-capture-component .form-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.tj-klaviyo-email-capture-component .form-inner .klaviyo-form {
   width: 100%;
 }
 
 .absolute-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
+  position: static;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: auto;
 }
 /* tj 50-50 section css */
 

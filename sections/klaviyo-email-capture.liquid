@@ -19,27 +19,34 @@
         color: {{ section.settings.subheader_color }};
     }
 
-    [data-section-id="{{ section.id }}"] .form-container {
+    [data-section-id="{{ section.id }}"] .form-inner {
         max-width: {{ section.settings.form_max_width }}px;
-        margin: 0 auto;
+        width: 100%;
+    }
+
+    [data-section-id="{{ section.id }}"] {
+        height: {{ section.settings.min_height_desktop }}px;
     }
 
     @media screen and (max-width: 768px) {
         [data-section-id="{{ section.id }}"] {
-            padding: {{ section.settings.padding_y_m }}px 1rem;   
+            padding: {{ section.settings.padding_y_m }}px 1rem;
+            height: {{ section.settings.min_height_mobile }}px;
         }
     }
 </style>
 
 <div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in tj-klaviyo-email-capture-component">
     <div class="form-container">
-        {% if section.settings.header != blank %}
-            <h2 class="h0">{{ section.settings.header }}</h2>
-        {% endif %}
-        {% if section.settings.subheader != blank %}
-            <h4>{{ section.settings.subheader }}</h4>
-        {% endif %}
-        {{ section.settings.klaviyo_html }}
+        <div class="form-inner">
+            {% if section.settings.header != blank %}
+                <h2 class="h0">{{ section.settings.header }}</h2>
+            {% endif %}
+            {% if section.settings.subheader != blank %}
+                <h4>{{ section.settings.subheader }}</h4>
+            {% endif %}
+            {{ section.settings.klaviyo_html }}
+        </div>
     </div>
     {% if section.settings.bg_image != blank %}
         <img class="absolute-bg-image" src="{{ section.settings.bg_image | image_url: width: '1200x' }}" alt="Thrilljoy Background Image">
@@ -116,6 +123,18 @@
                 "type": "image_picker",
                 "id": "bg_image",
                 "label": "Background image (optional, overtakes background color)"
+            },
+            {
+                "type": "number",
+                "id": "min_height_desktop",
+                "label": "Min height desktop (px)",
+                "default": 600
+            },
+            {
+                "type": "number",
+                "id": "min_height_mobile",
+                "label": "Min height mobile (px)",
+                "default": 350
             }
         ],
         "presets": [

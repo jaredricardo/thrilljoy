@@ -295,11 +295,7 @@
     },
     "klaviyo_email_capture_yehVpF": {
       "type": "klaviyo-email-capture",
-      "custom_css": [
-        "[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: 866/ 450;}",
-        ".form-container {height: 100%;}",
-        "@media screen and (max-width: 768px) {[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: auto; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
         "form_max_width": 600,
@@ -311,13 +307,15 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png"
+        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
+        "min_height_desktop": 600,
+        "min_height_mobile": 550
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 20,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -410,7 +408,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
