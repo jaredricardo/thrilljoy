@@ -297,8 +297,8 @@
       "type": "klaviyo-email-capture",
       "custom_css": [
         "[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: 2555/847;}",
-        ".form-container {margin-top: 5rem; height: 100%;}",
-        "@media screen and (max-width: 768px) {.form-container {margin-top: 2.5rem; } [data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: auto; }}"
+        ".form-container {height: 100%;}",
+        "@media screen and (max-width: 768px) {[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: auto; }}"
       ],
       "settings": {
         "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
