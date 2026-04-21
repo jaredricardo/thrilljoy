@@ -296,7 +296,7 @@
     "klaviyo_email_capture_yehVpF": {
       "type": "klaviyo-email-capture",
       "custom_css": [
-        "[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: 866/287;}",
+        "[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: 866/ 450;}",
         ".form-container {height: 100%;}",
         "@media screen and (max-width: 768px) {[data-section-id=\"template--24425089761444__klaviyo_email_capture_yehVpF\"] {aspect-ratio: auto; }}"
       ],
