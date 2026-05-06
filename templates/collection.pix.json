@@ -28,18 +28,10 @@
             "use_h1": true,
             "heading_size": "hxl"
           }
-        },
-        "text_jxCtGR": {
-          "type": "text",
-          "settings": {
-            "text": "Introducing PIX! – immortalize pop culture with a one-of-a-kind collectible that captures iconic pop culture moments and frames them forever. Designed for collectors, PIX! preserves both the memory and the value, making it a stunning, display-ready centerpiece for any collection.",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
-        "heading_QnJBNf",
-        "text_jxCtGR"
+        "heading_QnJBNf"
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
