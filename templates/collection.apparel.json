@@ -33,7 +33,7 @@
           "type": "text",
           "settings": {
             "text": "Introducing Thrilljoy Threads - this isn’t just clothing, it’s collectible streetwear. With ultra-limited drops, premium materials, and co-branded designs stamped with our signature wax seal and edition number, each piece lets you wear your fandom with bold, undeniable pride.",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         }
       },
@@ -43,10 +43,12 @@
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
-        "image_height": "adapt",
+        "image_height": "custom",
+        "banner_height_vh": 35,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",

@@ -6,6 +6,26 @@
   isolation: isolate;
 }
 
+.banner--custom:not(.banner--adapt) {
+  height: var(--banner-height-vh, 60vh);
+}
+
+.banner__texture {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.banner__texture-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .banner__box {
   text-align: center;
 }

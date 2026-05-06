@@ -38,10 +38,12 @@
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
-        "image_height": "small",
+        "image_height": "custom",
+        "banner_height_vh": 19,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",

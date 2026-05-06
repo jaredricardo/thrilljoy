@@ -33,7 +33,7 @@
           "type": "text",
           "settings": {
             "text": "Discover what’s fresh at Thrilljoy Collectibles—our latest and most coveted drops, from high-quality collectibles to limited-edition apparel and display-worthy treasures. Level up your collection with the best of Thrilljoy, all in one place.",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         }
       },
@@ -43,10 +43,12 @@
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
         "image_overlay_opacity": 10,
         "fetch_priority": "high",
         "use_preload": true,
-        "image_height": "adapt",
+        "image_height": "custom",
+        "banner_height_vh": 40,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",

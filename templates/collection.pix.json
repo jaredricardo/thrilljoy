@@ -26,14 +26,14 @@
           "settings": {
             "heading": "{{ collection.title }}",
             "use_h1": true,
-            "heading_size": "hxxl"
+            "heading_size": "hxl"
           }
         },
         "text_jxCtGR": {
           "type": "text",
           "settings": {
             "text": "Introducing PIX! – immortalize pop culture with a one-of-a-kind collectible that captures iconic pop culture moments and frames them forever. Designed for collectors, PIX! preserves both the memory and the value, making it a stunning, display-ready centerpiece for any collection.",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         }
       },
@@ -43,10 +43,12 @@
       ],
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
+        "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
         "image_overlay_opacity": 10,
         "fetch_priority": "high",
         "use_preload": true,
-        "image_height": "adapt",
+        "image_height": "custom",
+        "banner_height_vh": 40,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",

@@ -27,6 +27,19 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  {%- if section.settings.image_height == 'custom' -%}
+    #Banner-{{ section.id }} {
+      --banner-height-vh: {{ section.settings.banner_height_vh }}vh;
+    }
+    #Banner-{{ section.id }} .banner__box {
+      padding: 0rem 1rem 2rem 1rem;
+    }
+    @media screen and (max-width: 749px) {
+      #Banner-{{ section.id }} .banner__box {
+        padding: 0rem 0.5rem 2rem 0.5rem;
+      }
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -115,6 +128,20 @@
           sizes: sizes,
           widths: widths,
           fetchpriority: fetch_priority
+      }}
+    </div>
+  {%- endif -%}
+  {%- if section.settings.texture_image != blank -%}
+    <div class="banner__texture">
+      {{
+        section.settings.texture_image
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.texture_image.width,
+          class: 'banner__texture-image',
+          sizes: '100vw',
+          widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+          loading: 'eager'
       }}
     </div>
   {%- endif -%}
@@ -209,6 +236,16 @@
       "label": "t:sections.image-banner.settings.image_2.label"
     },
     {
+      "type": "header",
+      "content": "Texture Overlay"
+    },
+    {
+      "type": "image_picker",
+      "id": "texture_image",
+      "label": "Texture image",
+      "info": "Upload a transparent PNG (tear, wave, texture, etc). Absolutely positioned at the bottom of the banner, full width."
+    },
+    {
       "type": "range",
       "id": "image_overlay_opacity",
       "min": 0,
@@ -262,11 +299,26 @@
         {
           "value": "large",
           "label": "t:sections.image-banner.settings.image_height.options__4.label"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (viewport height %)"
         }
       ],
       "default": "medium",
       "label": "t:sections.image-banner.settings.image_height.label",
       "info": "t:sections.image-banner.settings.image_height.info"
+    },
+    {
+      "type": "range",
+      "id": "banner_height_vh",
+      "label": "Banner height (vh)",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "vh",
+      "default": 60,
+      "info": "Only applies when image height is set to 'Custom'."
     },
     {
       "type": "select",
