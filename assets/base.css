@@ -4235,7 +4235,7 @@ display: none;
     font-size: 15px;
   } 
   .card__heading.broken-out a {
-    gap: 0.5rem;
+    gap: 0rem;
   }
   .card__content:has(.broken-out) {
     padding: 0 !important;

@@ -14,7 +14,9 @@
                         style="color: {{ block.settings.category_text_color }};"
                         href="{{ block.settings.url }}"
                     >
-                    <img class="headshot" src="{{ block.settings.category_headshot | image_url: width: 100  }}" alt="Thrilljoy Category Headshot">
+                    {%- unless block.settings.category_headshot == blank -%}
+                      <img class="headshot" src="{{ block.settings.category_headshot | image_url: width: 100 }}" alt="Thrilljoy Category Headshot">
+                    {%- endunless -%}
                     <span>{{ block.settings.title }}</span>
                     </a>
                 </li>

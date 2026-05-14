@@ -26,6 +26,19 @@
   height: auto;
 }
 
+.banner__texture-image--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .banner__texture-image--desktop {
+    display: none;
+  }
+  .banner__texture-image--mobile {
+    display: block;
+  }
+}
+
 .banner__box {
   text-align: center;
 }

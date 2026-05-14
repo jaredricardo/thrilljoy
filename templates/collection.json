@@ -26,7 +26,8 @@
           "settings": {
             "heading": "{{ collection.title }}",
             "use_h1": true,
-            "heading_size": "hxxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "hxl"
           }
         }
       },
@@ -39,11 +40,13 @@
       "settings": {
         "image": "shopify://shop_images/bg-thrilljoy-115-ppp.png",
         "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
+        "texture_image_mobile": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "high",
         "use_preload": true,
         "image_height": "custom",
-        "banner_height_vh": 19,
+        "banner_height_vh": 20,
+        "banner_height_vh_mobile": 12,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
@@ -63,7 +66,7 @@
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": true,
+        "show_vendor": false,
         "show_rating": false,
         "quick_add": "standard",
         "enable_filtering": true,
@@ -71,7 +74,9 @@
         "enable_sorting": true,
         "columns_mobile": "1",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 28
       }
     }
   },

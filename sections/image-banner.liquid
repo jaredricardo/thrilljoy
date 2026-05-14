@@ -35,6 +35,9 @@
       padding: 0rem 1rem 2rem 1rem;
     }
     @media screen and (max-width: 749px) {
+      #Banner-{{ section.id }} {
+        --banner-height-vh: {{ section.settings.banner_height_vh_mobile }}vh;
+      }
       #Banner-{{ section.id }} .banner__box {
         padding: 0rem 0.5rem 2rem 0.5rem;
       }
@@ -131,18 +134,40 @@
       }}
     </div>
   {%- endif -%}
-  {%- if section.settings.texture_image != blank -%}
+  {%- liquid
+    assign active_texture = section.settings.texture_image
+    if section.settings.texture_image_mobile != blank
+      assign mobile_texture = section.settings.texture_image_mobile
+    else
+      assign mobile_texture = section.settings.texture_image
+    endif
+  -%}
+  {%- if active_texture != blank or mobile_texture != blank -%}
     <div class="banner__texture">
-      {{
-        section.settings.texture_image
-        | image_url: width: 3840
-        | image_tag:
-          width: section.settings.texture_image.width,
-          class: 'banner__texture-image',
-          sizes: '100vw',
-          widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-          loading: 'eager'
-      }}
+      {%- if active_texture != blank -%}
+        {{
+          active_texture
+          | image_url: width: 3840
+          | image_tag:
+            width: active_texture.width,
+            class: 'banner__texture-image banner__texture-image--desktop',
+            sizes: '100vw',
+            widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+            loading: 'eager'
+        }}
+      {%- endif -%}
+      {%- if section.settings.texture_image_mobile != blank -%}
+        {{
+          mobile_texture
+          | image_url: width: 750
+          | image_tag:
+            width: mobile_texture.width,
+            class: 'banner__texture-image banner__texture-image--mobile',
+            sizes: '100vw',
+            widths: '375, 550, 750',
+            loading: 'eager'
+        }}
+      {%- endif -%}
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -150,12 +175,33 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
+            {%- liquid
+              case block.settings.heading_size
+                when 'h2'
+                  assign desktop_heading_size = 'calc(var(--font-heading-scale) * 2rem)'
+                when 'h1'
+                  assign desktop_heading_size = 'calc(var(--font-heading-scale) * 4rem)'
+                when 'h0'
+                  assign desktop_heading_size = 'calc(var(--font-heading-scale) * 5.2rem)'
+                when 'hxl'
+                  assign desktop_heading_size = 'calc(var(--font-heading-scale) * 6.2rem)'
+                when 'hxxl'
+                  assign desktop_heading_size = 'clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem))'
+              endcase
+            -%}
+            {%- style -%}
+              @media screen and (min-width: 750px) {
+                #Banner-{{ section.id }} .banner__heading {
+                  font-size: {{ desktop_heading_size }};
+                }
+              }
+            {%- endstyle -%}
             {% if block.settings.use_h1 %}
                 <h1
               {% else %}
                 <h2
             {% endif %}
-              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+              class="banner__heading inline-richtext {{ block.settings.heading_size_mobile }}"
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
@@ -242,8 +288,14 @@
     {
       "type": "image_picker",
       "id": "texture_image",
-      "label": "Texture image",
+      "label": "Texture image - Desktop",
       "info": "Upload a transparent PNG (tear, wave, texture, etc). Absolutely positioned at the bottom of the banner, full width."
+    },
+    {
+      "type": "image_picker",
+      "id": "texture_image_mobile",
+      "label": "Texture image - Mobile",
+      "info": "Optional. If not set, the desktop texture will be used on mobile."
     },
     {
       "type": "range",
@@ -312,12 +364,23 @@
     {
       "type": "range",
       "id": "banner_height_vh",
-      "label": "Banner height (vh)",
+      "label": "Banner height - Desktop (vh)",
       "min": 10,
       "max": 100,
       "step": 1,
       "unit": "vh",
       "default": 60,
+      "info": "Only applies when image height is set to 'Custom'."
+    },
+    {
+      "type": "range",
+      "id": "banner_height_vh_mobile",
+      "label": "Banner height - Mobile (vh)",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "vh",
+      "default": 50,
       "info": "Only applies when image height is set to 'Custom'."
     },
     {
@@ -505,7 +568,35 @@
             }
           ],
           "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "label": "Heading size - Desktop"
+        },
+        {
+          "type": "select",
+          "id": "heading_size_mobile",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "Heading size - Mobile"
         }
       ]
     },
