@@ -26,7 +26,7 @@
           "settings": {
             "heading": "{{ collection.title }}",
             "use_h1": true,
-            "heading_size": "hxxl",
+            "heading_size": "hxl",
             "heading_size_mobile": "hxl"
           }
         }

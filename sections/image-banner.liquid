@@ -37,9 +37,13 @@
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }} {
         --banner-height-vh: {{ section.settings.banner_height_vh_mobile }}vh;
+        overflow: hidden;
       }
       #Banner-{{ section.id }} .banner__box {
         padding: 0rem 0.5rem 2rem 0.5rem;
+      }
+      #Banner-{{ section.id }} .banner__heading {
+        font-size: clamp(0.8rem, calc({{ section.settings.banner_height_vh_mobile }}vh * 0.45), 4rem);
       }
     }
   {%- endif -%}
