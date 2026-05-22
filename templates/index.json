@@ -14,6 +14,7 @@
       "blocks": {
         "carousel_BxLXiQ": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/D052226-NOTIF-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/D052226-NOTIF-Hero-2500x1536.png",
@@ -76,6 +77,7 @@
         },
         "carousel_f74DU4": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/D041726-LIVE-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/D041726-LIVE-Hero-2500x1536.png",
