@@ -46,7 +46,7 @@
         "use_preload": true,
         "image_height": "custom",
         "banner_height_vh": 20,
-        "banner_height_vh_mobile": 15,
+        "banner_height_vh_mobile": 20,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
