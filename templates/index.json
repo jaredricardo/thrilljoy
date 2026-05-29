@@ -102,7 +102,7 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/new-featured",
+            "button_link": "shopify://collections/just-dropped",
             "use_slide_linkout": true
           }
         },
