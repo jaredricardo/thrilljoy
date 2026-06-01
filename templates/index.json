@@ -47,8 +47,8 @@
         "carousel_wU9XAb": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/D050826-NM-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D050826-NM-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/D050826-NM-Hero-2000x750_5deb5cff-61c4-4185-a988-173ce811c483.png",
+            "mobile_image": "shopify://shop_images/D050826-NM-Hero-2500x1536_8b572736-863d-485b-bde3-5c9adf43a5d6.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
