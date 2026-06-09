@@ -118,7 +118,13 @@
          success_background_color: "#d3efcd",
          success_text_color: "#1B9500"
         }
-      });
+      })
+      window.addEventListener("klaviyoForms", (e) => {
+        if (e.detail.type == 'submit') {
+          gtag('event', 'form_submit', {'form': 'Klaviyo form', 'form_id': e.detail.formId});
+        }
+      })
+     
     </script>
 
     <style>
