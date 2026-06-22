@@ -24,7 +24,7 @@
         "heading_QnJBNf": {
           "type": "heading",
           "settings": {
-            "heading": "{{ collection.title }}",
+            "heading": "<strong>{{ collection.title }}</strong>",
             "use_h1": true,
             "heading_size": "h0",
             "heading_size_mobile": "h2"
