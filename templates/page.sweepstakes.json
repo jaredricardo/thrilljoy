@@ -9,42 +9,9 @@
  */
 {
   "sections": {
-    "image_banner_k9Rt7m": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_yanWc6": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.title }}",
-            "use_h1": false,
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_yanWc6"
-      ],
-      "custom_css": [
-        ".banner {min-height: auto;}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/bg-thrilljoy-115-ppp-b.png",
-        "image_overlay_opacity": 0,
-        "fetch_priority": "auto",
-        "use_preload": false,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -52,10 +19,50 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "sweepstakes_header_9eYxX6": {
+      "type": "sweepstakes-header",
+      "custom_css": [],
+      "name": "Sweepstakes Header",
+      "settings": {
+        "section_anchor_id": "",
+        "image": "shopify://shop_images/Thrilljoy-Logo-K_1_1.png",
+        "heading": "SWEEPSTAKES",
+        "bg_color": "#ffffff",
+        "heading_color": "#1A9CD1"
+      }
+    },
+    "sweepstakes_countdown_KXJeRL": {
+      "type": "sweepstakes-countdown",
+      "name": "Sweepstakes Countdown",
+      "settings": {
+        "section_anchor_id": "",
+        "bg_color": "#ffffff",
+        "sweepstakes_banner_image": "shopify://shop_images/Logo-Invincible_2.png",
+        "goes_live_in_text": "SWEEPSTAKES WILL GO LIVE IN",
+        "countdown_month": "7",
+        "countdown_day": "22",
+        "countdown_hour": "11",
+        "countdown_number_bg_color": "#000000",
+        "countdown_number_text_color": "#ffffff"
+      }
+    },
+    "image_divider_section_e9zcyh": {
+      "type": "image-divider-section",
+      "name": "Image Divider",
+      "settings": {
+        "section_anchor_id": "",
+        "divider_image": "shopify://shop_images/45de352336739a13a369cc31b8a10e5bf9fb5fff.png",
+        "desktop_height": 80,
+        "mobile_height": 60,
+        "bg_color": "#000000"
+      }
     }
   },
   "order": [
-    "image_banner_k9Rt7m",
-    "main"
+    "main",
+    "sweepstakes_header_9eYxX6",
+    "sweepstakes_countdown_KXJeRL",
+    "image_divider_section_e9zcyh"
   ]
 }

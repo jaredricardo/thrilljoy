@@ -1,0 +1,379 @@
+{% style %}
+
+    [data-section-id="{{ section.id }}"] {
+        background-color: {{ section.settings.bg_color }};
+    }
+
+        [data-section-id="{{ section.id }}"] .flip-card,
+        [data-section-id="{{ section.id }}"] .flip-half {
+        background-color: {{ section.settings.countdown_number_bg_color }};
+        color: {{ section.settings.countdown_number_text_color }};
+    }
+
+{% endstyle %}
+
+<script>
+(function() {
+    var sectionId = '{{ section.id }}';
+    var NEW_YORK_TIME_ZONE = 'America/New_York';
+
+    function pad(value) {
+        return String(value).padStart(2, '0');
+    }
+
+    function parseMonth(monthRaw) {
+        var numericMonth = parseInt(monthRaw, 10);
+
+        if (!Number.isNaN(numericMonth) && numericMonth >= 1 && numericMonth <= 12) {
+            return numericMonth - 1;
+        }
+
+        var parsed = Date.parse((monthRaw || '').trim() + ' 1, 2000');
+        if (Number.isNaN(parsed)) return null;
+
+        return new Date(parsed).getMonth();
+    }
+
+    function getTimeZoneParts(date, timeZone) {
+        var formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: timeZone,
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+
+        var parts = formatter.formatToParts(date);
+        var map = {};
+
+        parts.forEach(function(part) {
+            if (part.type !== 'literal') {
+                map[part.type] = parseInt(part.value, 10);
+            }
+        });
+
+        return {
+            year: map.year,
+            month: map.month,
+            day: map.day,
+            hour: map.hour,
+            minute: map.minute,
+            second: map.second
+        };
+    }
+
+    function getTimeZoneOffsetMs(date, timeZone) {
+        var tzParts = getTimeZoneParts(date, timeZone);
+        var asUtc = Date.UTC(
+            tzParts.year,
+            tzParts.month - 1,
+            tzParts.day,
+            tzParts.hour,
+            tzParts.minute,
+            tzParts.second
+        );
+
+        return asUtc - date.getTime();
+    }
+
+    function createDateInTimeZone(year, monthIndex, day, hour, timeZone) {
+        var utcGuess = Date.UTC(year, monthIndex, day, hour, 0, 0, 0);
+        var guessDate = new Date(utcGuess);
+        var offset = getTimeZoneOffsetMs(guessDate, timeZone);
+        var targetTime = utcGuess - offset;
+        var correctedOffset = getTimeZoneOffsetMs(new Date(targetTime), timeZone);
+
+        if (correctedOffset !== offset) {
+            targetTime = utcGuess - correctedOffset;
+        }
+
+        return new Date(targetTime);
+    }
+
+    function getCurrentYearInTimeZone(timeZone) {
+        return getTimeZoneParts(new Date(), timeZone).year;
+    }
+
+    function buildTargetDate(countdown) {
+        var monthRaw = countdown.dataset.countdownMonth;
+        var dayRaw = countdown.dataset.countdownDay;
+        var hourRaw = countdown.dataset.countdownHour;
+
+        if (!monthRaw || !dayRaw || !hourRaw) return null;
+
+        var monthIndex = parseMonth(monthRaw);
+        var day = parseInt(dayRaw, 10);
+        var hour = parseInt(hourRaw, 10);
+
+        if (monthIndex === null || Number.isNaN(day) || Number.isNaN(hour)) return null;
+        if (day < 1 || day > 31 || hour < 0 || hour > 23) return null;
+
+        var year = getCurrentYearInTimeZone(NEW_YORK_TIME_ZONE);
+        var target = createDateInTimeZone(year, monthIndex, day, hour, NEW_YORK_TIME_ZONE);
+        var targetParts = getTimeZoneParts(target, NEW_YORK_TIME_ZONE);
+
+        if (
+            targetParts.year !== year ||
+            targetParts.month !== monthIndex + 1 ||
+            targetParts.day !== day ||
+            targetParts.hour !== hour
+        ) {
+            return null;
+        }
+
+        return target;
+    }
+
+    function setCardValue(card, nextValue) {
+        if (!card) return;
+
+        var currentValue = card.dataset.value || '00';
+        if (currentValue === nextValue) return;
+
+        var top = card.querySelector('.flip-top');
+        var bottom = card.querySelector('.flip-bottom');
+        var animTop = card.querySelector('.flip-anim-top');
+
+        if (!top || !bottom || !animTop) return;
+
+        if (card._flipMidTimeout) window.clearTimeout(card._flipMidTimeout);
+        if (card._flipEndTimeout) window.clearTimeout(card._flipEndTimeout);
+
+        animTop.textContent = currentValue;
+        card.classList.remove('is-flipping');
+
+        // Restart animation consistently for each tick.
+        void card.offsetWidth;
+
+        card.classList.add('is-flipping');
+
+        card._flipMidTimeout = window.setTimeout(function() {
+            top.textContent = nextValue;
+            bottom.textContent = nextValue;
+            card.dataset.value = nextValue;
+        }, 220);
+
+        card._flipEndTimeout = window.setTimeout(function() {
+            card.classList.remove('is-flipping');
+            animTop.textContent = '';
+        }, 460);
+    }
+
+    function render(timeLeftMs, cards) {
+        var totalSeconds = Math.floor(timeLeftMs / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.floor((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+
+        setCardValue(cards.days, pad(days));
+        setCardValue(cards.hours, pad(hours));
+        setCardValue(cards.minutes, pad(minutes));
+        setCardValue(cards.seconds, pad(seconds));
+    }
+
+    function init() {
+        var section = document.querySelector('[data-section-id="' + sectionId + '"]');
+        if (!section) return;
+
+        var countdown = section.querySelector('.countdown-timer');
+        if (!countdown) return;
+
+        if (countdown._interval) {
+            window.clearInterval(countdown._interval);
+            countdown._interval = null;
+        }
+
+        var cards = {
+            days: countdown.querySelector('[data-unit="days"] .flip-card'),
+            hours: countdown.querySelector('[data-unit="hours"] .flip-card'),
+            minutes: countdown.querySelector('[data-unit="minutes"] .flip-card'),
+            seconds: countdown.querySelector('[data-unit="seconds"] .flip-card')
+        };
+
+        var targetDate = buildTargetDate(countdown);
+
+        // Keep initial 00 values if settings are incomplete.
+        if (!targetDate) return;
+
+        function tick() {
+            var diff = targetDate.getTime() - Date.now();
+
+            // Keep 00s once countdown is complete.
+            if (diff <= 0) {
+                window.clearInterval(countdown._interval);
+                return;
+            }
+
+            render(diff, cards);
+        }
+
+        var initialDiff = targetDate.getTime() - Date.now();
+
+        if (initialDiff <= 0) return;
+
+        tick();
+        countdown._interval = window.setInterval(tick, 1000);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+    document.addEventListener('shopify:section:load', function(event) {
+        if (!event.detail || event.detail.sectionId !== sectionId) return;
+        init();
+    });
+})();
+</script>
+
+<section class="sweepstakes-countdown-section" data-section-id="{{ section.id }}" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
+    {% if section.settings.sweepstakes_banner_image %}
+        <img src="{{ section.settings.sweepstakes_banner_image | img_url: 'master' }}" alt="Banner Image">
+    {% endif %}
+    {% if section.settings.goes_live_in_text %}
+        <h2>{{ section.settings.goes_live_in_text }}</h2>
+    {% endif %}
+    <div
+      class="countdown-timer"
+      data-countdown-month="{{ section.settings.countdown_month | escape }}"
+      data-countdown-day="{{ section.settings.countdown_day | escape }}"
+      data-countdown-hour="{{ section.settings.countdown_hour | escape }}"
+    >
+            <span class="hours-left-container" data-unit="days">
+                <span class="flip-card" data-value="00">
+                    <span class="flip-half flip-half-top">
+                        <span class="flip-value flip-top">00</span>
+                    </span>
+                    <span class="flip-half flip-half-bottom">
+                        <span class="flip-value flip-bottom">00</span>
+                    </span>
+                    <span class="flip-half flip-half-anim" aria-hidden="true">
+                        <span class="flip-value flip-anim-top"></span>
+                    </span>
+                </span>
+                <span class="countdown-label">DAYS</span>
+            </span>
+            <span class="hours-left-container" data-unit="hours">
+                <span class="flip-card" data-value="00">
+                    <span class="flip-half flip-half-top">
+                        <span class="flip-value flip-top">00</span>
+                    </span>
+                    <span class="flip-half flip-half-bottom">
+                        <span class="flip-value flip-bottom">00</span>
+                    </span>
+                    <span class="flip-half flip-half-anim" aria-hidden="true">
+                        <span class="flip-value flip-anim-top"></span>
+                    </span>
+                </span>
+                <span class="countdown-label">HOURS</span>
+            </span>
+            <span class="hours-left-container" data-unit="minutes">
+                <span class="flip-card" data-value="00">
+                    <span class="flip-half flip-half-top">
+                        <span class="flip-value flip-top">00</span>
+                    </span>
+                    <span class="flip-half flip-half-bottom">
+                        <span class="flip-value flip-bottom">00</span>
+                    </span>
+                    <span class="flip-half flip-half-anim" aria-hidden="true">
+                        <span class="flip-value flip-anim-top"></span>
+                    </span>
+                </span>
+                <span class="countdown-label">MINUTES</span>
+            </span>
+            <span class="hours-left-container" data-unit="seconds">
+                <span class="flip-card" data-value="00">
+                    <span class="flip-half flip-half-top">
+                        <span class="flip-value flip-top">00</span>
+                    </span>
+                    <span class="flip-half flip-half-bottom">
+                        <span class="flip-value flip-bottom">00</span>
+                    </span>
+                    <span class="flip-half flip-half-anim" aria-hidden="true">
+                        <span class="flip-value flip-anim-top"></span>
+                    </span>
+                </span>
+                <span class="countdown-label">SECONDS</span>
+            </span>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Sweepstakes Countdown",
+            "enabled_on": {
+            "templates": ["page"]
+        },
+        "settings": [
+            {
+                "type": "text",
+                "id": "section_anchor_id",
+                "label": "Section Anchor ID (optional)"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color",
+                "default": "#FFFFFF"
+            },
+            {
+                "type": "image_picker",
+                "id": "sweepstakes_banner_image",
+                "label": "Sweepstakes Banner Image"
+            },
+            {
+                "type": "text",
+                "id": "goes_live_in_text",
+                "label": "Goes Live In Text",
+                "default": "SWEEPSTAKES WILL GO LIVE IN"
+            },
+            {
+                "type": "header",
+                "content": "Countdown Date and Time (NYC)"
+            },
+            {
+                "type": "paragraph",
+                "content": "Enter month/day/hour as numbers in New York time (24-hour format). Example: Month 7, Day 7, Hour 20 = July 7 at 8:00 PM NYC."
+            },
+            {
+                "type": "text",
+                "id": "countdown_month",
+                "label": "Countdown Month"
+            },
+            {
+                "type": "text",
+                "id": "countdown_day",
+                "label": "Countdown Day"
+            },
+            {
+                "type": "text",
+                "id": "countdown_hour",
+                "label": "Countdown Hour"
+            },
+            {
+                "type": "color",
+                "id": "countdown_number_bg_color",
+                "label": "Countdown Number Background Color",
+                "default": "#000000"
+            },
+            {
+                "type": "color",
+                "id": "countdown_number_text_color",
+                "label": "Countdown Number Text Color",
+                "default": "#FFFFFF"
+            }
+        ],
+        "blocks": [],
+        "presets": [
+            {
+                "name": "Sweepstakes Countdown"
+            }
+        ]
+    }
+{% endschema %}

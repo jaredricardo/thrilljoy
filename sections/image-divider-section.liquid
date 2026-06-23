@@ -1,0 +1,81 @@
+{% style %}
+	[data-section-id="{{ section.id }}"] {
+		--image-divider-bg-color: {{ section.settings.bg_color }};
+		--image-divider-desktop-height: {{ section.settings.desktop_height }}px;
+		--image-divider-mobile-height: {{ section.settings.mobile_height }}px;
+	}
+{% endstyle %}
+
+<section
+	class="image-divider-section"
+	data-section-id="{{ section.id }}"
+	{% if section.settings.section_anchor_id != blank %}
+		id="{{ section.settings.section_anchor_id }}"
+	{% endif %}
+>
+	<div class="image-divider-section__bleed">
+		<div class="image-divider-section__media">
+			{% if section.settings.divider_image != blank %}
+				{{
+					section.settings.divider_image
+					| image_url: width: 2400
+					| image_tag:
+						class: 'image-divider-section__image',
+						loading: 'lazy',
+						widths: '550, 750, 1100, 1500, 1780, 2000, 2400',
+						sizes: '100vw',
+						alt: section.settings.divider_image.alt
+				}}
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": "Image Divider",
+	"settings": [
+		{
+			"type": "text",
+			"id": "section_anchor_id",
+			"label": "Section Anchor ID (optional)"
+		},
+		{
+			"type": "image_picker",
+			"id": "divider_image",
+			"label": "Divider Image"
+		},
+		{
+			"type": "range",
+			"id": "desktop_height",
+			"label": "Desktop Height",
+			"min": 80,
+			"max": 800,
+			"step": 10,
+			"unit": "px",
+			"default": 220
+		},
+		{
+			"type": "range",
+			"id": "mobile_height",
+			"label": "Mobile Height",
+			"min": 60,
+			"max": 500,
+			"step": 10,
+			"unit": "px",
+			"default": 140
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color",
+			"default": "#000000"
+		}
+	],
+	"presets": [
+		{
+			"name": "Image Divider"
+		}
+	]
+}
+{% endschema %}
