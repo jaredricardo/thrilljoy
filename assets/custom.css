@@ -1,0 +1,229 @@
+.sweepstakes-countdown-section {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sweepstakes-countdown-section img {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto 20px;
+}
+
+.sweepstakes-countdown-section h2 {
+  margin: 0 0 20px;
+  letter-spacing: 0.08em;
+  font-weight: 900;
+}
+
+.sweepstakes-countdown-section .countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 2rem; 
+}
+
+.sweepstakes-countdown-section .hours-left-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 150px;
+}
+
+.sweepstakes-countdown-section .flip-card {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  --card-height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 700px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #1a1a1a 0%, #121212 50%, #000000 100%);
+}
+
+.sweepstakes-countdown-section .flip-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 4;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.62), 0 2px 3px rgba(224, 224, 224, 0.35);
+  pointer-events: none;
+}
+
+.sweepstakes-countdown-section .flip-half {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.sweepstakes-countdown-section .flip-half-top {
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, #232323 0%, #171717 100%);
+}
+
+.sweepstakes-countdown-section .flip-half-bottom {
+  bottom: 0;
+  filter: brightness(0.9);
+  z-index: 1;
+  background: linear-gradient(180deg, #090909 0%, #000000 100%);
+}
+
+.sweepstakes-countdown-section .flip-half-anim {
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+  transform-origin: 50% 100%;
+  transform: rotateX(0deg);
+  backface-visibility: hidden;
+  visibility: hidden;
+  background: linear-gradient(180deg, #232323 0%, #171717 100%);
+}
+
+.sweepstakes-countdown-section .flip-value {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--card-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+  backface-visibility: hidden;
+  color: #f2f2f2;
+  background: linear-gradient(180deg, #ffffff 0%, #d6d6d6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sweepstakes-countdown-section .flip-top,
+.sweepstakes-countdown-section .flip-anim-top {
+  top: 0;
+}
+
+.sweepstakes-countdown-section .flip-bottom {
+  bottom: 0;
+}
+
+.sweepstakes-countdown-section .flip-card.is-flipping .flip-half-anim {
+  visibility: visible;
+  animation: sweepstakesFlipDown 460ms cubic-bezier(0.25, 0.1, 0.2, 1);
+}
+
+.sweepstakes-countdown-section .countdown-label {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+@keyframes sweepstakesFlipDown {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0.92;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .sweepstakes-countdown-section .countdown-timer {
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .sweepstakes-countdown-section .hours-left-container {
+    min-width: 64px;
+  }
+
+  .sweepstakes-countdown-section .flip-card {
+    width: 64px;
+    height: 74px;
+    --card-height: 74px;
+    border-radius: 8px;
+  }
+
+  .sweepstakes-countdown-section .flip-value {
+    font-size: 1.8rem;
+  }
+
+  .sweepstakes-countdown-section .countdown-label {
+    font-size: 1rem;
+  }
+}
+
+  .image-divider-section {
+    background-color: var(--image-divider-bg-color, transparent);
+  }
+
+  .image-divider-section .image-divider-section__bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .image-divider-section .image-divider-section__media {
+    position: relative;
+    width: 100%;
+    height: var(--image-divider-desktop-height, 220px);
+    overflow: hidden;
+    background-color: var(--image-divider-bg-color, transparent);
+  }
+
+  .image-divider-section .image-divider-section__image {
+    display: block;
+    width: 100%;
+    height: max-content;
+    object-fit: contain;
+    position: absolute;
+    top: -1px;
+    transform: rotate(180deg);
+  }
+
+  .sweepstakes-header .inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.sweepstakes-header .inner-container img {
+    max-width: 175px;
+    object-fit: contain;
+}
+
+  @media screen and (max-width: 749px) {
+    .image-divider-section .image-divider-section__media {
+      height: var(--image-divider-mobile-height, 140px);
+    }
+    .sweepstakes-header .inner-container img {
+        max-width: 125px;
+    }
+  }
+
