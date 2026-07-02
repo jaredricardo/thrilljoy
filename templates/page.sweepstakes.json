@@ -110,6 +110,15 @@
         "prize_image": "shopify://shop_images/Logo-Invincible_2.png",
         "prize_html": "<h3>Invincible</h3>\n<h5>\nPRIZE: Series of 3 Original Hand Drawn Production Art from Season 1 of the Amazon Prime series Invincible, individually framed.</h5>"
       }
+    },
+    "pineraffle_linked_entry_form_tg9cLp": {
+      "type": "pineraffle-linked-entry-form",
+      "name": "Custom Pine Raffle Form",
+      "settings": {
+        "raffle_image": "shopify://shop_images/6619-Thrilljoy-PIX_-Invincible-Allen-the-Alien-_Hero_-front_1_69ee6a5a-ab8d-4ecc-9e57-9ccfaf8f4d8c.png",
+        "section_anchor_id": "",
+        "bg_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -119,6 +128,7 @@
     "image_divider_section_e9zcyh",
     "sweepstakes_header_hNGmPM",
     "image_divider_section_4cgmbg",
-    "sweepstakes_countdown_and_banner_37aTNr"
+    "sweepstakes_countdown_and_banner_37aTNr",
+    "pineraffle_linked_entry_form_tg9cLp"
   ]
 }
