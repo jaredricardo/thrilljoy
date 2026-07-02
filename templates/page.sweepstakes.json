@@ -22,18 +22,27 @@
     },
     "sweepstakes_header_9eYxX6": {
       "type": "sweepstakes-header",
-      "custom_css": [],
+      "disabled": true,
+      "custom_css": [
+        "section {padding-bottom: 50px;}",
+        "@media screen and (max-width: 768px) {section {padding-bottom: 30px; }}"
+      ],
       "name": "Sweepstakes Header",
       "settings": {
         "section_anchor_id": "",
         "image": "shopify://shop_images/Thrilljoy-Logo-K_1_1.png",
         "heading": "SWEEPSTAKES",
         "bg_color": "#ffffff",
-        "heading_color": "#1A9CD1"
+        "heading_color": "#1a9cd1"
       }
     },
     "sweepstakes_countdown_KXJeRL": {
       "type": "sweepstakes-countdown",
+      "disabled": true,
+      "custom_css": [
+        "section {padding-bottom: 50px !important;}",
+        "@media screen and (max-width: 768px) {section {padding-bottom: 30px !important; }}"
+      ],
       "name": "Sweepstakes Countdown",
       "settings": {
         "section_anchor_id": "",
@@ -49,6 +58,7 @@
     },
     "image_divider_section_e9zcyh": {
       "type": "image-divider-section",
+      "disabled": true,
       "name": "Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -57,12 +67,58 @@
         "mobile_height": 60,
         "bg_color": "#000000"
       }
+    },
+    "sweepstakes_header_hNGmPM": {
+      "type": "sweepstakes-header",
+      "custom_css": [
+        ".sweepstakes-header .inner-container {border-bottom: none;}"
+      ],
+      "name": "Sweepstakes Header after launch",
+      "settings": {
+        "section_anchor_id": "",
+        "image": "shopify://shop_images/Thrilljoy-Logo-K_1_1.png",
+        "heading": "SWEEPSTAKES",
+        "bg_color": "#ffffff",
+        "heading_color": "#1a9cd1"
+      }
+    },
+    "image_divider_section_4cgmbg": {
+      "type": "image-divider-section",
+      "name": "Image Divider",
+      "settings": {
+        "section_anchor_id": "",
+        "divider_image": "shopify://shop_images/45de352336739a13a369cc31b8a10e5bf9fb5fff.png",
+        "desktop_height": 30,
+        "mobile_height": 30,
+        "bg_color": "#000000"
+      }
+    },
+    "sweepstakes_countdown_and_banner_37aTNr": {
+      "type": "sweepstakes-countdown-and-banner",
+      "name": "Sweepstakes banner",
+      "settings": {
+        "section_anchor_id": "",
+        "bg_color": "#000000",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 32,
+        "countdown_text": "INVINCIBLE SWEEPSTAKES:",
+        "countdown_month": "7",
+        "countdown_day": "22",
+        "countdown_hour": "11",
+        "prize_image": "shopify://shop_images/Logo-Invincible_2.png",
+        "prize_html": "<h3>Invincible</h3>\n<h5>\nPRIZE: Series of 3 Original Hand Drawn Production Art from Season 1 of the Amazon Prime series Invincible, individually framed.</h5>"
+      }
     }
   },
   "order": [
     "main",
     "sweepstakes_header_9eYxX6",
     "sweepstakes_countdown_KXJeRL",
-    "image_divider_section_e9zcyh"
+    "image_divider_section_e9zcyh",
+    "sweepstakes_header_hNGmPM",
+    "image_divider_section_4cgmbg",
+    "sweepstakes_countdown_and_banner_37aTNr"
   ]
 }
