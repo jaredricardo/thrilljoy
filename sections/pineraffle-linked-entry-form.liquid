@@ -17,6 +17,8 @@
   /* Section Layout */
   .pineraffle-proxy-section {
     padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .pineraffle-proxy-section .row {
@@ -25,27 +27,27 @@
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .pineraffle-proxy-section .col {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    align-self: center;
+  }
+
+  .pineraffle-proxy-section .col:nth-of-type(1) {
+    position: relative;
+    height: 550px;
   }
 
   .pineraffle-proxy-section .col img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 110%;
+    object-fit: contain;
     display: block;
     border-radius: 12px;
-  }
-
-  .pineraffle-proxy-section form {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    position: absolute;
+    bottom: 5%;
   }
 
   /* Stack columns on tablet and smaller */
@@ -68,6 +70,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    margin-top: 0;
     margin-bottom: 24px;
   }
 
@@ -76,10 +79,10 @@
     font-weight: 700;
     font-style: normal;
     font-size: 21px;
-    line-height: 100%;
+    line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   /* Form Styling */
@@ -104,47 +107,46 @@
   }
 
   /* First and Last name in same row */
+  .pineraffle-proxy-section form .name-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
   .pineraffle-proxy-section form #first-name,
   .pineraffle-proxy-section form #last-name {
-    width: calc(50% - 8px);
-    display: inline-block;
-  }
-
-  .pineraffle-proxy-section form #first-name {
-    margin-right: 8px;
-  }
-
-  .pineraffle-proxy-section form #last-name {
-    margin-left: 8px;
+    flex: 1;
+    margin-bottom: 0;
   }
 
   /* Checkbox styling */
+  .pineraffle-proxy-section form .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+
   .pineraffle-proxy-section form input[type="checkbox"] {
-    margin-right: 8px;
     width: 18px;
     height: 18px;
     cursor: pointer;
+    margin-top: 2px;
+    flex-shrink: 0;
   }
 
   .pineraffle-proxy-section form label {
-    display: block;
-    margin-bottom: 16px;
     font-size: 14px;
     line-height: 1.4;
     cursor: pointer;
-  }
-
-  .pineraffle-proxy-section form input[type="checkbox"] + label {
-    display: inline-block;
-    vertical-align: middle;
-    width: calc(100% - 26px);
+    margin: 0;
   }
 
   /* Submit button */
   .pineraffle-proxy-section form button[type="submit"] {
     width: 100%;
     padding: 14px 24px;
-    background-color: #1A9DD1;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 9px;
@@ -156,15 +158,43 @@
   }
 
   .pineraffle-proxy-section form button[type="submit"]:hover {
-    background-color: #1588b8;
+    opacity: 0.8;;
   }
 
   /* Mobile adjustments for first/last name */
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
+    .pineraffle-proxy-section form .name-row {
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 0;
+    }
+    
     .pineraffle-proxy-section form #first-name,
     .pineraffle-proxy-section form #last-name {
-      width: 100%;
-      margin: 0 0 16px 0;
+      margin-bottom: 16px;
+    }
+    .pineraffle-proxy-section .col:nth-of-type(1) {
+        z-index: 1;
+        height: 250px;
+    }
+    .pineraffle-proxy-section .col {
+        flex: auto; 
+        z-index: 2;
+    }
+    .pineraffle-proxy-section .col img {
+        bottom: -55%;
+        height: 180%;
+    }
+    .pineraffle-proxy-section form {
+        padding: 15px;  
+    }
+    .pineraffle-proxy-section h4 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    .pineraffle-proxy-section p {
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
   }
 
@@ -212,13 +242,19 @@
         <div class="col">
             <form action="submit">
                 <h4>ENTER SWEEPSTAKES NOW</h4>
-                <input type="text" id="first-name" placeholder="FIRST NAME">
-                <input type="text" id="last-name" placeholder="LAST NAME">
+                <div class="name-row">
+                    <input type="text" id="first-name" placeholder="FIRST NAME">
+                    <input type="text" id="last-name" placeholder="LAST NAME">
+                </div>
                 <input type="email" id="email" placeholder="EMAIL ADDRESS">
-                <input type="checkbox" id="rules-read" name="rules-read" required>
-                <label for="rules-read">I have read and agree to the official rules*</label>
-                <input type="checkbox" id="newsletter-consent" name="newsletter-consent">
-                <label for="newsletter-consent">Yes, send me newsletters, special offers, and promotional emails from Thrilljoy</label>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="rules-read" name="rules-read" required>
+                    <label for="rules-read">I have read and agree to the official rules*</label>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="newsletter-consent" name="newsletter-consent">
+                    <label for="newsletter-consent">Yes, send me newsletters, special offers, and promotional emails from Thrilljoy</label>
+                </div>
                 <button type="submit">SUBMIT</button>
             </form>
         </div>

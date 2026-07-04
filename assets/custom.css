@@ -374,7 +374,7 @@
 
     .prize-text-container h3 {
       font-size: 34px;
-      margin-top: 20px;
+      margin-top: 0px;
     }
 
     .prize-text-container h5 {
@@ -382,5 +382,8 @@
     }
     .countdown-area-container {
       padding-top: 0 !important;
+    }
+    .prize-text-container {
+      padding: 0px 30px 20px 30px;
     }
   }
