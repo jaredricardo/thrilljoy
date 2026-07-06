@@ -161,6 +161,84 @@
     opacity: 0.8;;
   }
 
+  /* Loading spinner */
+  .proxy-loading-container {
+    display: none;
+    text-align: center;
+    padding: 60px 30px;
+    background-color: white;
+    border: 3px solid #1A9DD1;
+    border-radius: 24px;
+  }
+
+  .proxy-loading-container.active {
+    display: block;
+  }
+
+  .proxy-spinner {
+    display: flex;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #1A9DD1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .proxy-loading-container p {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .proxy-loading-container p.subtitle {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    color: #666;
+  }
+
+  /* Success/Already Joined messages */
+  .proxy-message-container {
+    display: none;
+    text-align: center;
+    padding: 60px 30px;
+    background-color: white;
+    border: 3px solid #1A9DD1;
+    border-radius: 24px;
+  }
+
+  .proxy-message-container.active {
+    display: block;
+  }
+
+  .proxy-message-container svg {
+    margin: 0 auto 20px;
+    display: block;
+    stroke: #1A9DD1;
+  }
+
+  .proxy-message-container h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    color: #1A9DD1;
+  }
+
+  .proxy-message-container p {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 15px 0 0 0;
+    color: #333;
+  }
+
   /* Mobile adjustments for first/last name */
   @media (max-width: 768px) {
     .pineraffle-proxy-section form .name-row {
@@ -196,39 +274,190 @@
         margin-top: 20px;
         margin-bottom: 0px;
     }
+    
+    .proxy-loading-container,
+    .proxy-message-container {
+      padding: 40px 20px;
+    }
+    
+    .proxy-message-container h2 {
+      font-size: 20px;
+    }
   }
 
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.pineraffle-proxy-section form')
+    // Clear sessionStorage on page load to prevent form from defaulting to success message
+    sessionStorage.removeItem('pine_raffle_formSubmitted')
     
-    if (form) {
-      form.addEventListener('submit', function(e) {
+    const proxyForm = document.getElementById('proxy-raffle-form')
+    const proxyFirstName = document.getElementById('proxy-first-name')
+    const proxyLastName = document.getElementById('proxy-last-name')
+    const proxyEmail = document.getElementById('proxy-email')
+    
+    // Function to get PineRaffle form fields
+    function getPineRaffleFields() {
+      const pineRaffleForm = document.getElementById('pineraff-customer-details-form')
+      if (!pineRaffleForm) return null
+      
+      return {
+        form: pineRaffleForm,
+        firstName: pineRaffleForm.querySelector('input[name="first-name"]'),
+        lastName: pineRaffleForm.querySelector('input[name="last-name"]'),
+        email: pineRaffleForm.querySelector('input[name="email"]')
+      }
+    }
+    
+    // Real-time sync: Update PineRaffle form as user types in proxy form
+    if (proxyFirstName) {
+      proxyFirstName.addEventListener('input', function() {
+        const prFields = getPineRaffleFields()
+        if (prFields && prFields.firstName) {
+          prFields.firstName.value = this.value
+        }
+      })
+    }
+    
+    if (proxyLastName) {
+      proxyLastName.addEventListener('input', function() {
+        const prFields = getPineRaffleFields()
+        if (prFields && prFields.lastName) {
+          prFields.lastName.value = this.value
+        }
+      })
+    }
+    
+    if (proxyEmail) {
+      proxyEmail.addEventListener('input', function() {
+        const prFields = getPineRaffleFields()
+        if (prFields && prFields.email) {
+          prFields.email.value = this.value
+        }
+      })
+    }
+    
+    // Handle form submission
+    if (proxyForm) {
+      proxyForm.addEventListener('submit', function(e) {
         e.preventDefault()
         
-        // Get all form field values
-        const formData = {
-          firstName: document.getElementById('first-name').value,
-          lastName: document.getElementById('last-name').value,
-          email: document.getElementById('email').value,
-          rulesRead: document.getElementById('rules-read').checked,
-          newsletterConsent: document.getElementById('newsletter-consent').checked
+        // Get proxy form field values
+        const firstName = proxyFirstName.value.trim()
+        const lastName = proxyLastName.value.trim()
+        const email = proxyEmail.value.trim()
+        const rulesRead = document.getElementById('proxy-rules-read').checked
+        const newsletterConsent = document.getElementById('proxy-newsletter-consent').checked
+        
+        // Validate fields
+        if (!firstName) {
+          alert('Please enter your first name')
+          return
         }
         
-        // Log the form data
-        console.log('Form submitted with the following data:')
-        console.log(formData)
-        console.log('---')
-        console.log('First Name:', formData.firstName)
-        console.log('Last Name:', formData.lastName)
-        console.log('Email:', formData.email)
-        console.log('Rules Read & Agreed:', formData.rulesRead)
-        console.log('Newsletter Consent:', formData.newsletterConsent)
+        if (!lastName) {
+          alert('Please enter your last name')
+          return
+        }
         
-        // Add your form submission logic here
-        // For now, just logging the data
+        if (!email) {
+          alert('Please enter your email address')
+          return
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(email)) {
+          alert('Please enter a valid email address')
+          return
+        }
+        
+        if (!rulesRead) {
+          alert('You must agree to the official rules to enter')
+          return
+        }
+        
+        // Get PineRaffle form (fields should already be synced)
+        const prFields = getPineRaffleFields()
+        
+        if (prFields && prFields.form) {
+          
+          // Click the PineRaffle submit button to trigger all functionality
+          const submitButton = document.getElementById('pineraff-save-button') || 
+                               prFields.form.querySelector('.pineraff-save-button') ||
+                               prFields.form.querySelector('button[type="submit"]')
+          
+          if (submitButton) {
+            // Hide form and show loading spinner
+            proxyForm.style.display = 'none'
+            const loadingContainer = document.getElementById('proxy-loading-container')
+            if (loadingContainer) {
+              loadingContainer.classList.add('active')
+            }
+            
+            // Click the PineRaffle submit button
+            submitButton.click()
+            
+            // Poll for PineRaffle response
+            let pollAttempts = 0
+            const maxPollAttempts = 30 // 30 seconds max
+            
+            const pollInterval = setInterval(function() {
+              pollAttempts++
+              
+              const successMessage = document.getElementById('pineraff-success-message-cont')
+              const alreadyJoinedMessage = document.getElementById('pineraff-already-joined-message-cont')
+              
+              const isSuccess = successMessage && (successMessage.style.display === 'flex' || successMessage.style.display === 'block')
+              const isAlreadyJoined = alreadyJoinedMessage && (alreadyJoinedMessage.style.display === 'flex' || alreadyJoinedMessage.style.display === 'block')
+              
+              if (isSuccess || isAlreadyJoined) {
+                clearInterval(pollInterval)
+                
+                // Hide loading spinner
+                if (loadingContainer) {
+                  loadingContainer.classList.remove('active')
+                }
+                
+                // Show appropriate message
+                const messageContainer = document.getElementById('proxy-message-container')
+                const messageTitle = document.getElementById('proxy-message-title')
+                const messageSvg = document.getElementById('proxy-message-svg')
+                const emailNote = document.getElementById('proxy-email-note')
+                
+                if (messageContainer && messageTitle && messageSvg) {
+                  if (isSuccess) {
+                    messageTitle.textContent = 'Joined Successfully!'
+                    messageSvg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>'
+                    if (emailNote) {
+                      emailNote.style.display = 'block'
+                    }
+                  } else if (isAlreadyJoined) {
+                    messageTitle.textContent = 'Already Joined!'
+                    messageSvg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>'
+                    if (emailNote) {
+                      emailNote.style.display = 'none'
+                    }
+                  }
+                  
+                  messageContainer.classList.add('active')
+                }
+              } else if (pollAttempts >= maxPollAttempts) {
+                clearInterval(pollInterval)
+                if (loadingContainer) {
+                  loadingContainer.classList.remove('active')
+                }
+                proxyForm.style.display = 'block'
+              }
+            }, 1000) // Check every 1 second
+            
+          } else {
+            alert('Unable to submit entry. Please contact support.')
+          }
+        } else {
+          alert('Unable to submit entry. Please contact support.')
+        }
       })
     }
   })
@@ -240,23 +469,35 @@
             <img src="{{ section.settings.raffle_image |  image_url: width: 900  }}" alt="Raffle Image">
         </div>
         <div class="col">
-            <form action="submit">
+            <form id="proxy-raffle-form" action="submit">
                 <h4>ENTER SWEEPSTAKES NOW</h4>
                 <div class="name-row">
-                    <input type="text" id="first-name" placeholder="FIRST NAME">
-                    <input type="text" id="last-name" placeholder="LAST NAME">
+                    <input type="text" id="proxy-first-name" placeholder="FIRST NAME" required>
+                    <input type="text" id="proxy-last-name" placeholder="LAST NAME" required>
                 </div>
-                <input type="email" id="email" placeholder="EMAIL ADDRESS">
+                <input type="email" id="proxy-email" placeholder="EMAIL ADDRESS" required>
                 <div class="checkbox-row">
-                    <input type="checkbox" id="rules-read" name="rules-read" required>
-                    <label for="rules-read">I have read and agree to the official rules*</label>
+                    <input type="checkbox" id="proxy-rules-read" name="rules-read" required>
+                    <label for="proxy-rules-read">I have read and agree to the official rules*</label>
                 </div>
                 <div class="checkbox-row">
-                    <input type="checkbox" id="newsletter-consent" name="newsletter-consent">
-                    <label for="newsletter-consent">Yes, send me newsletters, special offers, and promotional emails from Thrilljoy</label>
+                    <input type="checkbox" id="proxy-newsletter-consent" name="newsletter-consent">
+                    <label for="proxy-newsletter-consent">Yes, send me newsletters, special offers, and promotional emails from Thrilljoy</label>
                 </div>
                 <button type="submit">SUBMIT</button>
             </form>
+            
+            <div id="proxy-loading-container" class="proxy-loading-container">
+                <div class="proxy-spinner"></div>
+                <p>Submitting your entry...</p>
+                <p class="subtitle">This may take up to 60 seconds</p>
+            </div>
+            
+            <div id="proxy-message-container" class="proxy-message-container">
+                <div id="proxy-message-svg"></div>
+                <h2 id="proxy-message-title"></h2>
+                <p id="proxy-email-note" style="display: none;">Please check your email, including spam folders, to confirm your successful entry.</p>
+            </div>
         </div>
     </div>
     <p>*NO PURCHASE NECESSARY. Open to legal residents of 50 U.S./D.C., 18+ or age of majority. 7/22/26–8/22/26. Win a series of 3 original hand drawn production art from Season 1 of the Amazon Prime series Invincible, individually framed (ARV: $1,500 USD). Odds depend on entries. Void where prohibited. Sponsored by Thrilljoy.</p>
