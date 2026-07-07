@@ -4,6 +4,24 @@
   margin: 0 auto;
 }
 
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
 .sweepstakes-countdown-section {
   padding: 50px 20px;
   text-align: center;
@@ -387,3 +405,47 @@
       padding: 0px 30px 20px 30px;
     }
   }
+
+/* 50/50 with HTML Section */
+.fifty-fifty-with-html {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.fifty-fifty-with-html .col-area {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 80px;
+  align-items: center;
+}
+
+.fifty-fifty-with-html .col-area .col {
+  min-width: 0;
+}
+
+.fifty-fifty-with-html .col-area .col img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .fifty-fifty-with-html {
+    padding: 0 20px;
+  }
+  
+  .fifty-fifty-with-html .col-area {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .fifty-fifty-with-html .col-area .col {
+    width: 100%;
+  }
+  .fifty-fifty-with-html .col-area .col img  {
+    padding: 0 15px;
+  }
+}

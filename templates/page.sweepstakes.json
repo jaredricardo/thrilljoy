@@ -119,6 +119,22 @@
         "section_anchor_id": "",
         "bg_color": "#ffffff"
       }
+    },
+    "50_50_with_html_zKyLEG": {
+      "type": "50-50-with-html",
+      "name": "5050 with HTML",
+      "settings": {
+        "section_anchor_id": "",
+        "bg_color": "#000000",
+        "text_color": "#ffffff",
+        "padding_y_desktop": 80,
+        "padding_y_mobile": 30,
+        "left_column_width": 35,
+        "right_column_width": 60,
+        "image": "shopify://shop_images/image_9.png",
+        "header_html_content": "<div class=\"header-html-content mobile-only\">\n    <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n    <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n</div>",
+        "html_content": "<div class=\"html-content-area\">\n    <div class=\"desktop-only\">\n        <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n        <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n    </div>\n    <div>\n        <h3 class=\"h3-3\">ONLY 9999 TOTAL</h3>\n        <h3 class=\"h3-4\">1/6 CHANCE OF CHASE</h3>\n        <h3 class=\"h3-5\">1 OF 1 HYPER RARE</h3>\n    </div>\n</div>"
+      }
     }
   },
   "order": [
@@ -129,6 +145,7 @@
     "sweepstakes_header_hNGmPM",
     "image_divider_section_4cgmbg",
     "sweepstakes_countdown_and_banner_37aTNr",
-    "pineraffle_linked_entry_form_tg9cLp"
+    "pineraffle_linked_entry_form_tg9cLp",
+    "50_50_with_html_zKyLEG"
   ]
 }

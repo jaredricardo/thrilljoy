@@ -1,0 +1,230 @@
+{% style %}
+
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.padding_y_desktop }}px;
+    padding-bottom: {{ section.settings.padding_y_desktop }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  [data-section-id="{{ section.id }}"] h1,
+  [data-section-id="{{ section.id }}"] h2,
+  [data-section-id="{{ section.id }}"] h3,
+  [data-section-id="{{ section.id }}"] h4,
+  [data-section-id="{{ section.id }}"] h5,
+  [data-section-id="{{ section.id }}"] h6,
+  [data-section-id="{{ section.id }}"] p,
+  [data-section-id="{{ section.id }}"] a,
+  [data-section-id="{{ section.id }}"] li,
+  [data-section-id="{{ section.id }}"] span {
+    color: {{ section.settings.text_color }};
+    margin: 0;
+  }
+
+  [data-section-id="{{ section.id }}"] .col:first-child {
+    flex: 0 0 {{ section.settings.left_column_width }}%;
+    max-width: {{ section.settings.left_column_width }}%;
+  }
+
+  [data-section-id="{{ section.id }}"] .col:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.padding_y_mobile }}px;
+      padding-bottom: {{ section.settings.padding_y_mobile }}px;
+    }
+    
+    [data-section-id="{{ section.id }}"] .col:first-child,
+    [data-section-id="{{ section.id }}"] .col:last-child {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+{% endstyle %}
+
+<section data-section-id="{{ section.id }}" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
+    <div class="fifty-fifty-with-html">
+        {% if section.settings.header_html_content %}
+            {{ section.settings.header_html_content }}
+        {% endif %}
+        <div class="col-area">
+            <div class="col">
+                <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Thilljoy Image">
+            </div>
+            <div class="col">
+                {{ section.settings.html_content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "5050 with HTML",
+  "enabled_on": {
+    "templates": ["product", "collection", "page", "index", "article", "blog", "404", "cart", "search"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_anchor_id",
+      "label": "Section Anchor ID (optional)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_y_desktop",
+      "label": "Vertical Padding - Desktop",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_y_mobile",
+      "label": "Vertical Padding - Mobile",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Column Width (Desktop Only)"
+    },
+    {
+      "type": "range",
+      "id": "left_column_width",
+      "label": "Left Column Width",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 50,
+      "info": "Left and right columns should add up to 100%"
+    },
+    {
+      "type": "range",
+      "id": "right_column_width",
+      "label": "Right Column Width",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "html",
+      "id": "header_html_content",
+      "label": "Header HTML Content"
+    },
+    {
+      "type": "html",
+      "id": "html_content",
+      "label": "HTML Content"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "5050 with HTML"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    .header-html-content  {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .html-content-area {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .html-content-area .h3-1 {
+        font-size: 43px;
+        font-weight: 700;
+    }
+    .html-content-area .h3-2 {
+        font-size: 33px;
+        font-weight: 400;
+    }
+    .html-content-area .h3-3 {
+        font-size: 43px;
+        font-weight: 400;
+    }
+    .html-content-area .h3-4 {
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 2rem !important;
+    }
+    .html-content-area .h3-5 {
+        font-size: 52px;
+        font-weight: 700;
+        border: 3px solid white;
+        border-radius: 9px;
+        padding: 2rem 3.5rem;
+        margin-top: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+        .header-html-content .h3-1 {
+            font-size: 26px;
+            margin-bottom: 0.5rem;
+        }
+        .header-html-content .h3-2 {
+            font-size: 19px;
+            font-weight: 400;
+        }
+       .html-content-area .h3-3 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        .html-content-area .h3-4 {
+            font-size: 28px;
+
+        }
+        .html-content-area .h3-5 {
+            font-size: 30px;
+            padding: 1rem;
+        }
+    }
+</style>
