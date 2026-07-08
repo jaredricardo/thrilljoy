@@ -298,23 +298,23 @@
       "settings": {
         "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
         "form_max_width": 600,
-        "padding_y_d": 60,
+        "padding_y_d": 50,
         "padding_y_m": 30,
         "bg_color": "rgba(0,0,0,0)",
         "button_bg_color": "#5fd551",
         "header": "Keep up to date with all things Thrilljoy!",
-        "header_color": "#ffffff",
+        "header_color": "#000000",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
-        "min_height_desktop": 600,
+        "bg_image": "shopify://shop_images/E-SDCC26-BG-AlignTop.png",
+        "min_height_desktop": 500,
         "min_height_mobile": 550
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/E-SDCC26-Banner-Tux.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 20,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -356,13 +356,14 @@
         "buttons_imY8D9"
       ],
       "custom_css": [
+        "h2 {color: black;}",
         "img {aspect-ratio: 2555/847;}",
         "banner {height: 250px;}",
         ".banner__box {padding: 0;}",
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
+        "image": "shopify://shop_images/E-SDCC26-BG-AlignBtm.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -410,7 +411,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
+        "desktop_image": "shopify://shop_images/E-SDCC26-Banner-Redd.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",

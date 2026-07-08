@@ -4407,9 +4407,12 @@ main:has(.blood-container) {
 }
 
 .blood-1,
-.blood-2 {
+.blood-2,
+.pop-1,
+.pop-2,
+.pop-3 {
   position: fixed;
-  z-index: 10;
+  z-index: 11;
   transform: translate(-50%, -50%);
   width: 35vw;
 }
@@ -4452,16 +4455,41 @@ main:has(.blood-container) {
   transform: rotate(-15deg);
 }
 
-.blood-1 {
+.blood-1{
   left: 0%;
   top: 52%;
 }
+
+.pop-1,
+.pop-2,
+.pop-3 {
+  max-width: 135px;
+}
+
+.pop-1  {
+  left: 0%;
+  top: 52%;
+  transform: rotate(-15deg);
+}
+
+.pop-2 {
+  left: 80%;
+  top: 12%;
+  transform: rotate(15deg);
+}
+
+
+.pop-3 {
+  left: 75%;
+  top: 85%;
+  transform: rotate(15deg);
+}
+
 
 .blood-2 {
   left: 100%;
   top: 85%;
 }
-
 @media screen and (max-width: 768px) {
   .blood-1,
   .blood-2,
@@ -4469,7 +4497,11 @@ main:has(.blood-container) {
   .candy-2 {
     width: 65px;
   }
-
+  .pop-1,
+  .pop-2,
+  .pop-3 {
+    max-width: 85px;
+  }
   
 }
 
