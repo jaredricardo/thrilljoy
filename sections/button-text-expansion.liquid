@@ -1,0 +1,137 @@
+{% style %}
+
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  [data-section-id="{{ section.id }}"] .expansion-button.active {
+    background-color: {{ section.settings.active_button_color | default: '#000000' }};
+    color: {{ section.settings.active_button_text_color | default: '#ffffff' }};
+  }
+
+{% endstyle %}
+
+<section data-section-id="{{ section.id }}" class="button-text-expansion" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
+    <div class="button-text-expansion-inner mw-1200">
+        {% if section.settings.html_content %}
+            {{ section.settings.html_content }}
+        {% endif %}
+        {% if section.blocks.size > 0 %}
+            <div class="buttons-area">
+                {% for block in section.blocks %}
+                    <button class="expansion-button" data-index="{{ forloop.index0 }}" style="color: {{ block.settings.button_text_color }}; background-color: {{ block.settings.button_bg_color }};">{{ block.settings.button_title }}</button>
+                    <div class="expand-content" data-index="{{ forloop.index0 }}">
+                    <div class="expand-content-inner">{{ block.settings.expand_text }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+  (function() {
+    const sectionId = '{{ section.id }}'
+    const section = document.querySelector(`[data-section-id="${sectionId}"]`)
+    
+    if (!section) return
+    
+    const buttons = section.querySelectorAll('.expansion-button')
+    const contents = section.querySelectorAll('.expand-content')
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        const index = this.getAttribute('data-index')
+        const targetContent = section.querySelector(`.expand-content[data-index="${index}"]`)
+        
+        // Toggle the clicked item
+        const isActive = this.classList.contains('active')
+        
+        if (isActive) {
+          // Close this item
+          this.classList.remove('active')
+          targetContent.classList.remove('active')
+        } else {
+          // Close all items (optional - remove these lines if you want multiple items open)
+          buttons.forEach(btn => btn.classList.remove('active'))
+          contents.forEach(content => content.classList.remove('active'))
+          
+          // Open this item
+          this.classList.add('active')
+          targetContent.classList.add('active')
+        }
+      })
+    })
+  })()
+</script>
+
+{% schema %}
+{
+  "name": "Button Text Expansion",
+  "enabled_on": {
+    "templates": ["product", "collection", "page", "index", "article", "blog", "404", "cart", "search"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_anchor_id",
+      "label": "Section Anchor ID (optional)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "html",
+      "id": "html_content",
+      "label": "HTML Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "expansion_item",
+      "name": "Expansion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_title",
+          "label": "Button Text",
+          "default": "Click to expand"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_bg_color",
+          "label": "Button Background Color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "html",
+          "id": "expand_text",
+          "label": "Expansion Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Button Text Expansion",
+      "blocks": [
+        {
+          "type": "expansion_item"
+        },
+        {
+          "type": "expansion_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

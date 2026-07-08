@@ -449,3 +449,79 @@
     padding: 0 15px;
   }
 }
+
+/* Button Text Expansion Section */
+.button-text-expansion {
+  padding: 40px 20px;
+}
+
+.button-text-expansion .buttons-area {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button-text-expansion .expansion-button {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  border: 2px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.button-text-expansion .expansion-button::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+.button-text-expansion .expansion-button.active::after {
+  transform: rotate(45deg);
+}
+
+.button-text-expansion .expansion-button:hover {
+  opacity: 0.8;
+}
+
+.button-text-expansion .expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.button-text-expansion .expand-content.active {
+  max-height: 1000px;
+}
+
+.button-text-expansion .expand-content-inner {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+@media screen and (max-width: 768px) {
+  .button-text-expansion {
+    padding: 30px 15px;
+  }
+  
+  .button-text-expansion .expansion-button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .button-text-expansion .expand-content-inner {
+    padding: 15px;
+  }
+}
