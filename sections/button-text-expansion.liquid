@@ -12,7 +12,7 @@
 {% endstyle %}
 
 <section data-section-id="{{ section.id }}" class="button-text-expansion" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
-    <div class="button-text-expansion-inner mw-1200">
+    <div class="button-text-expansion-inner mw-900">
         {% if section.settings.html_content %}
             {{ section.settings.html_content }}
         {% endif %}
@@ -21,7 +21,7 @@
                 {% for block in section.blocks %}
                     <button class="expansion-button" data-index="{{ forloop.index0 }}" style="color: {{ block.settings.button_text_color }}; background-color: {{ block.settings.button_bg_color }};">{{ block.settings.button_title }}</button>
                     <div class="expand-content" data-index="{{ forloop.index0 }}">
-                    <div class="expand-content-inner">{{ block.settings.expand_text }}</div>
+                        <div class="expand-content-inner">{{ block.settings.expand_text }}</div>
                     </div>
                 {% endfor %}
             </div>
@@ -104,16 +104,16 @@
           "type": "color",
           "id": "button_text_color",
           "label": "Button Text Color",
-          "default": "#000000"
+          "default": "#FFFFFF"
         },
         {
           "type": "color",
           "id": "button_bg_color",
           "label": "Button Background Color",
-          "default": "#FFFFFF"
+          "default": "#000000"
         },
         {
-          "type": "html",
+          "type": "richtext",
           "id": "expand_text",
           "label": "Expansion Content"
         }
@@ -135,3 +135,39 @@
   ]
 }
 {% endschema %}
+
+<style>
+
+    .button-text-content-container {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .button-text-content-container h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    .button-text-content-container h4:has(b) {
+        margin: 0 0 5px 0;
+        font-weight: bold;
+    }
+
+    .button-text-content-container h4 {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: 768px) {
+        .button-text-content-container h3 {
+            font-size: 25px;
+        }
+        .button-text-content-container h4:has(b) {
+            margin-bottom: 10px;
+        }
+    }
+
+</style>
+
