@@ -107,6 +107,7 @@
         },
         "carousel_gqdamV": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/061226-LIVE-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/061226-LIVE-Hero-2000x750.png",
