@@ -25,7 +25,7 @@
         "section {padding-bottom: 50px;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px; }}"
       ],
-      "name": "7/11 Sweepstakes Header",
+      "name": "PRE LAUNCH Sweepstakes Header",
       "settings": {
         "section_anchor_id": "",
         "image": "shopify://shop_images/Thrilljoy-Logo-K_1_1.png",
@@ -40,7 +40,7 @@
         "section {padding-bottom: 50px !important;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px !important; }}"
       ],
-      "name": "7/11 Sweepstakes Countdown",
+      "name": "PRE LAUNCH Sweepstakes Countdown",
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#ffffff",
@@ -55,7 +55,7 @@
     },
     "image_divider_section_e9zcyh": {
       "type": "image-divider-section",
-      "name": "7/11 Image Divider",
+      "name": "PRE LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
         "divider_image": "shopify://shop_images/45de352336739a13a369cc31b8a10e5bf9fb5fff.png",
@@ -66,8 +66,11 @@
     },
     "klaviyo_email_capture_hkKThq": {
       "type": "klaviyo-email-capture",
-      "custom_css": [],
-      "name": "7/11 TJ Klaviyo Email Capture",
+      "custom_css": [
+        "h2 {font-size: 28px;}",
+        "@media screen and (max-width: 768px) {h2 {font-size: 19px; }}"
+      ],
+      "name": "PRE LAUNCH TJ Klaviyo Email Capture",
       "settings": {
         "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
         "form_max_width": 600,
@@ -75,7 +78,7 @@
         "padding_y_m": 10,
         "bg_color": "#000000",
         "button_bg_color": "#5fd551",
-        "header": "Get notified when the sweepstakes goes live",
+        "header": "Join our mailing list and get notified when the sweepstakes is live!",
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
