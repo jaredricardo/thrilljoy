@@ -11,7 +11,6 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "custom_css": [
         "h1 {display: none;}"
       ],
@@ -22,7 +21,6 @@
     },
     "sweepstakes_header_9eYxX6": {
       "type": "sweepstakes-header",
-      "disabled": true,
       "custom_css": [
         "section {padding-bottom: 50px;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px; }}"
@@ -38,7 +36,6 @@
     },
     "sweepstakes_countdown_KXJeRL": {
       "type": "sweepstakes-countdown",
-      "disabled": true,
       "custom_css": [
         "section {padding-bottom: 50px !important;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px !important; }}"
@@ -58,7 +55,6 @@
     },
     "image_divider_section_e9zcyh": {
       "type": "image-divider-section",
-      "disabled": true,
       "name": "7/11 Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -68,12 +64,32 @@
         "bg_color": "#000000"
       }
     },
+    "klaviyo_email_capture_hkKThq": {
+      "type": "klaviyo-email-capture",
+      "custom_css": [],
+      "name": "7/11 TJ Klaviyo Email Capture",
+      "settings": {
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
+        "form_max_width": 600,
+        "padding_y_d": 20,
+        "padding_y_m": 10,
+        "bg_color": "#000000",
+        "button_bg_color": "#5fd551",
+        "header": "Get notified when the sweepstakes goes live",
+        "header_color": "#ffffff",
+        "subheader": "",
+        "subheader_color": "#ffffff",
+        "min_height_desktop": 300,
+        "min_height_mobile": 250
+      }
+    },
     "sweepstakes_header_hNGmPM": {
       "type": "sweepstakes-header",
+      "disabled": true,
       "custom_css": [
         ".sweepstakes-header .inner-container {border-bottom: none;}"
       ],
-      "name": "Sweepstakes Header after launch",
+      "name": "LAUNCH Sweepstakes Header after launch",
       "settings": {
         "section_anchor_id": "",
         "image": "shopify://shop_images/Thrilljoy-Logo-K_1_1.png",
@@ -84,7 +100,8 @@
     },
     "image_divider_section_4cgmbg": {
       "type": "image-divider-section",
-      "name": "Image Divider",
+      "disabled": true,
+      "name": "LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
         "divider_image": "shopify://shop_images/45de352336739a13a369cc31b8a10e5bf9fb5fff.png",
@@ -95,7 +112,8 @@
     },
     "sweepstakes_countdown_and_banner_37aTNr": {
       "type": "sweepstakes-countdown-and-banner",
-      "name": "Sweepstakes banner",
+      "disabled": true,
+      "name": "LAUNCH Sweepstakes banner",
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#000000",
@@ -113,7 +131,8 @@
     },
     "pineraffle_linked_entry_form_tg9cLp": {
       "type": "pineraffle-linked-entry-form",
-      "name": "Custom Pine Raffle Form",
+      "disabled": true,
+      "name": "LAUNCH Custom Pine Raffle Form",
       "settings": {
         "raffle_image": "shopify://shop_images/6619-Thrilljoy-PIX_-Invincible-Allen-the-Alien-_Hero_-front_1_69ee6a5a-ab8d-4ecc-9e57-9ccfaf8f4d8c.png",
         "section_anchor_id": "",
@@ -122,7 +141,8 @@
     },
     "50_50_with_html_zKyLEG": {
       "type": "50-50-with-html",
-      "name": "5050 with HTML",
+      "disabled": true,
+      "name": "LAUNCH 5050 with HTML",
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#000000",
@@ -164,7 +184,8 @@
         "expansion_item_XiQ3CN",
         "expansion_item_HUKTXX"
       ],
-      "name": "Button Text Expansion",
+      "disabled": true,
+      "name": "LAUNCH Button Text Expansion",
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#ffffff",
@@ -173,7 +194,8 @@
     },
     "image_divider_section_6Bw4tt": {
       "type": "image-divider-section",
-      "name": "Image Divider",
+      "disabled": true,
+      "name": "LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
         "divider_image": "shopify://shop_images/45de352336739a13a369cc31b8a10e5bf9fb5fff.png",
@@ -188,6 +210,7 @@
     "sweepstakes_header_9eYxX6",
     "sweepstakes_countdown_KXJeRL",
     "image_divider_section_e9zcyh",
+    "klaviyo_email_capture_hkKThq",
     "sweepstakes_header_hNGmPM",
     "image_divider_section_4cgmbg",
     "sweepstakes_countdown_and_banner_37aTNr",
