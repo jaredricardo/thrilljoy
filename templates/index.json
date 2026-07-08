@@ -306,7 +306,7 @@
         "header_color": "#000000",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/E-SDCC26-BG-AlignTop.png",
+        "bg_image": "shopify://shop_images/E-SDCC26-BG-AlignTop-v2.png",
         "min_height_desktop": 500,
         "min_height_mobile": 550
       }
@@ -370,9 +370,9 @@
         "image_height": "adapt",
         "banner_height_vh": 60,
         "banner_height_vh_mobile": 50,
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
