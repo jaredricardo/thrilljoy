@@ -22,7 +22,7 @@
     "timer_year": 2025,
     "timer_month": 4,
     "timer_day": 30,
-    "sticky_pencil_button_url": "shopify://products/mystery-box",
+    "sticky_pencil_button_url": "shopify://products/secret-stash-mystery-bundle",
     "sticky_pencil_button_bg_color": "#5fd551",
     "sticky_pencil_button_text_color": "#000000",
     "logo": "shopify://shop_images/THRILLJOY_LOGO_B_W_Thrilljoy_b_w_word_lockup_36028183-ae0d-492b-b6db-63201a78b865.png",
@@ -169,9 +169,7 @@
       "5149645339031002760": {
         "type": "shopify://apps/order-limits-minmaxify/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
         "disabled": false,
-        "settings": {
-          "async": false
-        }
+        "settings": {}
       },
       "6174324309569838175": {
         "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
