@@ -4406,6 +4406,11 @@ main:has(.blood-container) {
   position: relative;
 }
 
+.abs-fixed {
+  position: fixed;
+  z-index: 10;
+}
+
 .blood-1,
 .blood-2 {
   position: fixed;
@@ -4462,15 +4467,61 @@ main:has(.blood-container) {
   top: 85%;
 }
 
+.bttf {
+  pointer-events: none;
+}
+
+.bttf-sign {
+  width: 30vw; 
+  max-width: 150px;
+}
+
+.bttf-1 {
+  top: 25vh;
+  right: 5vw;
+}
+
+.bttf-2 {
+  bottom: 10vh;
+  left: 10vw;
+  transform: rotate(-15deg);
+}
+
+.bttf-3 {
+  top: 12vh;
+  left: 3vw;
+}
+
+.bttf-4 {
+  bottom: 0;
+  left: 0;
+  max-width: 40vw;
+  transform: rotate(180deg);
+  z-index: 9;
+}
+
+.bttf-5 {
+  top: 35px;
+  right: -90px;
+  max-width: 30vw;
+  transform: rotate(96deg);
+  z-index: 9;
+} 
+
 @media screen and (max-width: 768px) {
   .blood-1,
   .blood-2,
   .candy-1,
   .candy-2 {
     width: 65px;
+  }  
+  .bttf-sign {
+    max-width:125px;
   }
-
-  
+  .bttf-4,
+  .bttf-5 {
+    max-width: 50vw;
+  }
 }
 
 .card__inner:has(.low-stock-badge) .presale-badge {

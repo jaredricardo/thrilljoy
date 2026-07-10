@@ -338,7 +338,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
+        "bg_image": "shopify://shop_images/D-6671-BTTFDoc-BG-AlignTop.png",
         "min_height_desktop": 600,
         "min_height_mobile": 550
       }
@@ -346,7 +346,7 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-02.png",
+        "desktop_image": "shopify://shop_images/D-6671-BTTFDoc-Banner-Woody.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 20,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -394,7 +394,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
+        "image": "shopify://shop_images/D-6671-BTTFDoc-BG-AlignBtm.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -442,7 +442,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
+        "desktop_image": "shopify://shop_images/D-6671-BTTFDoc-Banner-Buzz.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
