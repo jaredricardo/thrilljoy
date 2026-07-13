@@ -207,7 +207,7 @@
       },
       "14447995696390441228": {
         "type": "shopify://apps/pineraffle/blocks/app-embed/a7355a0d-da3a-4b47-bff6-8f75b9cc8805",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "buttonTitle": "We're Having A Raffle! 🏆",
           "showPrizeName": true,

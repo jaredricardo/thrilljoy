@@ -21,6 +21,7 @@
     },
     "sweepstakes_header_9eYxX6": {
       "type": "sweepstakes-header",
+      "disabled": true,
       "custom_css": [
         "section {padding-bottom: 50px;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px; }}"
@@ -36,6 +37,7 @@
     },
     "sweepstakes_countdown_KXJeRL": {
       "type": "sweepstakes-countdown",
+      "disabled": true,
       "custom_css": [
         "section {padding-bottom: 50px !important;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px !important; }}"
@@ -55,6 +57,7 @@
     },
     "image_divider_section_e9zcyh": {
       "type": "image-divider-section",
+      "disabled": true,
       "name": "PRE LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -66,6 +69,7 @@
     },
     "klaviyo_email_capture_hkKThq": {
       "type": "klaviyo-email-capture",
+      "disabled": true,
       "custom_css": [
         "h2 {font-size: 28px;}",
         "@media screen and (max-width: 768px) {h2 {font-size: 19px; }}"
@@ -88,7 +92,6 @@
     },
     "sweepstakes_header_hNGmPM": {
       "type": "sweepstakes-header",
-      "disabled": true,
       "custom_css": [
         ".sweepstakes-header .inner-container {border-bottom: none;}"
       ],
@@ -103,7 +106,6 @@
     },
     "image_divider_section_4cgmbg": {
       "type": "image-divider-section",
-      "disabled": true,
       "name": "LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -115,7 +117,6 @@
     },
     "sweepstakes_countdown_and_banner_37aTNr": {
       "type": "sweepstakes-countdown-and-banner",
-      "disabled": true,
       "name": "LAUNCH Sweepstakes banner",
       "settings": {
         "section_anchor_id": "",
@@ -134,7 +135,6 @@
     },
     "pineraffle_linked_entry_form_tg9cLp": {
       "type": "pineraffle-linked-entry-form",
-      "disabled": true,
       "name": "LAUNCH Custom Pine Raffle Form",
       "settings": {
         "raffle_image": "shopify://shop_images/6619-Thrilljoy-PIX_-Invincible-Allen-the-Alien-_Hero_-front_1_69ee6a5a-ab8d-4ecc-9e57-9ccfaf8f4d8c.png",
@@ -144,19 +144,20 @@
     },
     "50_50_with_html_zKyLEG": {
       "type": "50-50-with-html",
-      "disabled": true,
       "name": "LAUNCH 5050 with HTML",
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#000000",
+        "bg_image_repeat": false,
         "text_color": "#ffffff",
         "padding_y_desktop": 80,
         "padding_y_mobile": 30,
         "left_column_width": 35,
         "right_column_width": 60,
+        "switch_columns": false,
         "image": "shopify://shop_images/image_9.png",
         "header_html_content": "<div class=\"header-html-content mobile-only\">\n    <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n    <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n</div>",
-        "html_content": "<div class=\"html-content-area\">\n    <div class=\"desktop-only\">\n        <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n        <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n    </div>\n    <div>\n        <h3 class=\"h3-3\">ONLY 9999 TOTAL</h3>\n        <h3 class=\"h3-4\">1/6 CHANCE OF CHASE</h3>\n        <h3 class=\"h3-5\">1 OF 1 HYPER RARE</h3>\n    </div>\n</div>"
+        "html_content": "<style>\n    [data-section-id=\"{{ section.id }}\"] .header-html-content  {\n        text-align: center;\n        margin-bottom: 30px;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area {\n        text-align: center;\n        display: flex;\n        flex-direction: column;\n        gap: 40px;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-1 {\n        font-size: 43px;\n        font-weight: 700;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-2 {\n        font-size: 33px;\n        font-weight: 400;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-3 {\n        font-size: 43px;\n        font-weight: 400;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-4 {\n        font-size: 45px;\n        font-weight: 600;\n        margin-bottom: 2rem !important;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-5 {\n        font-size: 52px;\n        font-weight: 700;\n        border: 3px solid white;\n        border-radius: 9px;\n        padding: 2rem 3.5rem;\n        margin-top: 1rem;\n    }\n    @media screen and (max-width: 768px) {\n        [data-section-id=\"{{ section.id }}\"] .header-html-content .h3-1 {\n            font-size: 26px;\n            margin-bottom: 0.5rem;\n        }\n        [data-section-id=\"{{ section.id }}\"] .header-html-content .h3-2 {\n            font-size: 19px;\n            font-weight: 400;\n        }\n       [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-3 {\n            font-size: 26px;\n            margin-bottom: 10px;\n        }\n        [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-4 {\n            font-size: 28px;\n\n        }\n        [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-5 {\n            font-size: 30px;\n            padding: 1rem;\n        }\n    }\n</style>\n<div class=\"html-content-area\">\n    <div class=\"desktop-only\">\n        <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n        <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n    </div>\n    <div>\n        <h3 class=\"h3-3\">ONLY 9999 TOTAL</h3>\n        <h3 class=\"h3-4\">1/6 CHANCE OF CHASE</h3>\n        <h3 class=\"h3-5\">1 OF 1 HYPER RARE</h3>\n    </div>\n</div>"
       }
     },
     "button_text_expansion_TMk44V": {
@@ -187,7 +188,6 @@
         "expansion_item_XiQ3CN",
         "expansion_item_HUKTXX"
       ],
-      "disabled": true,
       "name": "LAUNCH Button Text Expansion",
       "settings": {
         "section_anchor_id": "",
@@ -197,7 +197,6 @@
     },
     "image_divider_section_6Bw4tt": {
       "type": "image-divider-section",
-      "disabled": true,
       "name": "LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -205,6 +204,25 @@
         "desktop_height": 30,
         "mobile_height": 30,
         "bg_color": "#000000"
+      }
+    },
+    "50_50_with_html_weNHML": {
+      "type": "50-50-with-html",
+      "name": "5050 with HTML",
+      "settings": {
+        "section_anchor_id": "",
+        "bg_color": "#000000",
+        "background_image": "shopify://shop_images/ThJ-Pattern-0a0b09-RepeatTile-70_1.png",
+        "bg_image_repeat": true,
+        "text_color": "#000000",
+        "padding_y_desktop": 60,
+        "padding_y_mobile": 40,
+        "left_column_width": 50,
+        "right_column_width": 50,
+        "switch_columns": true,
+        "image": "shopify://shop_images/6619-InvincibleAllen-Spread_2.png",
+        "header_html_content": "",
+        "html_content": "<style>\n  [data-section-id=\"{{ section.id }}\"] .container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n    color: whitel\n  }\n\n  [data-section-id=\"{{ section.id }}\"] .container p {\n    color: white !important;\n  }\n  [data-section-id=\"{{ section.id }}\"] .container img {\n    max-width: 250px;\n    margin: 0 auto;\n  }\n\n  @media screen and (max-width: 768px) {\n    [data-section-id=\"{{ section.id }}\"] .container img {\n      max-width: 180px;\n    }\n  }\n</style>\n\n<div class=\"container\">\n  <img src=\"{{ settings.logo | img_url: 'master' }}\" alt=\"Thrilljoy logo\">\n  <p>Premium collectibles with truly unlimited edition runs. Join our community and #TEAR INTO THE THRILL!</p>\n</div>"
       }
     }
   },
@@ -220,6 +238,7 @@
     "pineraffle_linked_entry_form_tg9cLp",
     "50_50_with_html_zKyLEG",
     "button_text_expansion_TMk44V",
-    "image_divider_section_6Bw4tt"
+    "image_divider_section_6Bw4tt",
+    "50_50_with_html_weNHML"
   ]
 }
