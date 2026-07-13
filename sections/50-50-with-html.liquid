@@ -2,6 +2,17 @@
 
   [data-section-id="{{ section.id }}"] {
     background-color: {{ section.settings.bg_color }};
+    {% if section.settings.background_image %}
+    background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}');
+    background-size: cover;
+    background-position: center;
+    {% if section.settings.bg_image_repeat %}
+    background-repeat: repeat;
+    background-size: auto;
+    {% else %}
+    background-repeat: no-repeat;
+    {% endif %}
+    {% endif %}
     padding-top: {{ section.settings.padding_y_desktop }}px;
     padding-bottom: {{ section.settings.padding_y_desktop }}px;
     color: {{ section.settings.text_color }};
@@ -53,12 +64,21 @@
             {{ section.settings.header_html_content }}
         {% endif %}
         <div class="col-area">
+            {% if section.settings.switch_columns %}
+            <div class="col">
+                {{ section.settings.html_content }}
+            </div>
+            <div class="col">
+                <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Thilljoy Image">
+            </div>
+            {% else %}
             <div class="col">
                 <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Thilljoy Image">
             </div>
             <div class="col">
                 {{ section.settings.html_content }}
             </div>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -84,6 +104,19 @@
       "id": "bg_color",
       "label": "Background Color",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+      "info": "Optional background image for the section"
+    },
+    {
+      "type": "checkbox",
+      "id": "bg_image_repeat",
+      "label": "Repeat Background Image",
+      "default": false,
+      "info": "Check to tile/repeat the background image instead of covering the section"
     },
     {
       "type": "color",
@@ -145,17 +178,24 @@
       "content": "Content"
     },
     {
+      "type": "checkbox",
+      "id": "switch_columns",
+      "label": "Switch Columns Order",
+      "default": false,
+      "info": "Check to display HTML content on the left and image on the right"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "Image"
     },
     {
-      "type": "html",
+      "type": "liquid",
       "id": "header_html_content",
       "label": "Header HTML Content"
     },
     {
-      "type": "html",
+      "type": "liquid",
       "id": "html_content",
       "label": "HTML Content"
     }
@@ -168,63 +208,3 @@
   ]
 }
 {% endschema %}
-
-<style>
-    .header-html-content  {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .html-content-area {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-    .html-content-area .h3-1 {
-        font-size: 43px;
-        font-weight: 700;
-    }
-    .html-content-area .h3-2 {
-        font-size: 33px;
-        font-weight: 400;
-    }
-    .html-content-area .h3-3 {
-        font-size: 43px;
-        font-weight: 400;
-    }
-    .html-content-area .h3-4 {
-        font-size: 45px;
-        font-weight: 600;
-        margin-bottom: 2rem !important;
-    }
-    .html-content-area .h3-5 {
-        font-size: 52px;
-        font-weight: 700;
-        border: 3px solid white;
-        border-radius: 9px;
-        padding: 2rem 3.5rem;
-        margin-top: 1rem;
-    }
-    @media screen and (max-width: 768px) {
-        .header-html-content .h3-1 {
-            font-size: 26px;
-            margin-bottom: 0.5rem;
-        }
-        .header-html-content .h3-2 {
-            font-size: 19px;
-            font-weight: 400;
-        }
-       .html-content-area .h3-3 {
-            font-size: 26px;
-            margin-bottom: 10px;
-        }
-        .html-content-area .h3-4 {
-            font-size: 28px;
-
-        }
-        .html-content-area .h3-5 {
-            font-size: 30px;
-            padding: 1rem;
-        }
-    }
-</style>
