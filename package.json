@@ -1,0 +1,8 @@
+{
+  "name": "thrilljoy-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "shopify theme dev --store=ee4dfe-4a.myshopify.com",
+    "pull": "shopify theme pull --development --nodelete"
+  }
+}
