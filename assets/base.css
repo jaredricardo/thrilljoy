@@ -4506,3 +4506,7 @@ main:has(.blood-container) {
   flex-direction: column !important;
   justify-content: space-between !important;
 }
+
+#pr-widget-container {
+  display: none !important;
+}
