@@ -16,6 +16,7 @@
       "blocks": {
         "text_Ki6fR6": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "@thrilljoycollectibles on Instagram",
             "link": "https://www.instagram.com/thrilljoycollectibles"
@@ -24,8 +25,8 @@
         "text_Ewnd7W": {
           "type": "text",
           "settings": {
-            "text": "3/06 Drop Live Now!",
-            "link": "shopify://collections/just-dropped"
+            "text": "Click here for Invincible sweepstakes",
+            "link": "shopify://pages/sweepstakes"
           }
         }
       },
@@ -33,7 +34,6 @@
         "text_Ki6fR6",
         "text_Ewnd7W"
       ],
-      "disabled": true,
       "name": "Scrolling Announcement",
       "settings": {
         "text_margin": 120,
