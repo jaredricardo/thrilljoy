@@ -94,7 +94,8 @@
     "sweepstakes_header_hNGmPM": {
       "type": "sweepstakes-header",
       "custom_css": [
-        ".sweepstakes-header .inner-container {border-bottom: none;}"
+        ".sweepstakes-header .inner-container {border-bottom: none;}",
+        ".sweepstakes-header .inner-container {padding-bottom: 0;}"
       ],
       "name": "LAUNCH Sweepstakes Header after launch",
       "settings": {
@@ -158,6 +159,7 @@
         "right_column_width": 60,
         "switch_columns": false,
         "image": "shopify://shop_images/image_9.png",
+        "image_link": "",
         "header_html_content": "<div class=\"header-html-content mobile-only\">\n    <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n    <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n</div>",
         "html_content": "<style>\n    [data-section-id=\"{{ section.id }}\"] .header-html-content  {\n        text-align: center;\n        margin-bottom: 30px;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area {\n        text-align: center;\n        display: flex;\n        flex-direction: column;\n        gap: 40px;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-1 {\n        font-size: 43px;\n        font-weight: 700;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-2 {\n        font-size: 33px;\n        font-weight: 400;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-3 {\n        font-size: 43px;\n        font-weight: 400;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-4 {\n        font-size: 45px;\n        font-weight: 600;\n        margin-bottom: 2rem !important;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-5 {\n        font-size: 52px;\n        font-weight: 700;\n        border: 3px solid white;\n        border-radius: 9px;\n        padding: 2rem 3.5rem;\n        margin-top: 1rem;\n    }\n    @media screen and (max-width: 768px) {\n        [data-section-id=\"{{ section.id }}\"] .header-html-content .h3-1 {\n            font-size: 26px;\n            margin-bottom: 0.5rem;\n        }\n        [data-section-id=\"{{ section.id }}\"] .header-html-content .h3-2 {\n            font-size: 19px;\n            font-weight: 400;\n        }\n       [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-3 {\n            font-size: 26px;\n            margin-bottom: 10px;\n        }\n        [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-4 {\n            font-size: 28px;\n\n        }\n        [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-5 {\n            font-size: 30px;\n            padding: 1rem;\n        }\n    }\n</style>\n<div class=\"html-content-area\">\n    <div class=\"desktop-only\">\n        <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n        <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n    </div>\n    <div>\n        <h3 class=\"h3-3\">ONLY 9999 TOTAL</h3>\n        <h3 class=\"h3-4\">1/6 CHANCE OF CHASE</h3>\n        <h3 class=\"h3-5\">1 OF 1 HYPER RARE</h3>\n    </div>\n</div>"
       }
@@ -223,6 +225,7 @@
         "right_column_width": 50,
         "switch_columns": true,
         "image": "shopify://shop_images/6619-InvincibleAllen-Spread_2.png",
+        "image_link": "shopify://products/pix-allen-the-alien-2026-summer-event",
         "header_html_content": "",
         "html_content": "<style>\n  [data-section-id=\"{{ section.id }}\"] .container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n    color: whitel\n  }\n\n  [data-section-id=\"{{ section.id }}\"] .container p {\n    color: white !important;\n  }\n  [data-section-id=\"{{ section.id }}\"] .container img {\n    max-width: 250px;\n    margin: 0 auto;\n  }\n\n  @media screen and (max-width: 768px) {\n    [data-section-id=\"{{ section.id }}\"] .container img {\n      max-width: 180px;\n    }\n  }\n</style>\n\n<div class=\"container\">\n  <img src=\"{{ settings.logo | img_url: 'master' }}\" alt=\"Thrilljoy logo\">\n  <p>Premium collectibles with truly unlimited edition runs. Join our community and #TEAR INTO THE THRILL!</p>\n</div>"
       }

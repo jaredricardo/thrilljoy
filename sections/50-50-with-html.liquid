@@ -69,11 +69,15 @@
                 {{ section.settings.html_content }}
             </div>
             <div class="col">
+                {% if section.settings.image_link != blank %}<a href="{{ section.settings.image_link }}">{% endif %}
                 <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Thilljoy Image">
+                {% if section.settings.image_link != blank %}</a>{% endif %}
             </div>
             {% else %}
             <div class="col">
+                {% if section.settings.image_link != blank %}<a href="{{ section.settings.image_link }}">{% endif %}
                 <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Thilljoy Image">
+                {% if section.settings.image_link != blank %}</a>{% endif %}
             </div>
             <div class="col">
                 {{ section.settings.html_content }}
@@ -188,6 +192,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Image Link",
+      "info": "Optional. If set, the image will be wrapped in a link."
     },
     {
       "type": "liquid",
