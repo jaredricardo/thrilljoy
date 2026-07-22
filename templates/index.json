@@ -45,6 +45,7 @@
         },
         "carousel_QmpUbm": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/D-Soccer26-Hero-2000x750-Red.png",
             "mobile_image": "shopify://shop_images/D-Soccer26-Hero-2500x1536-Red.png",
