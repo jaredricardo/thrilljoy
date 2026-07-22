@@ -470,8 +470,8 @@
             <img src="{{ section.settings.raffle_image |  image_url: width: 900  }}" alt="Raffle Image">
         </div>
         <div class="col">
-            <h4 style="color: red;">SUBMISSIONS CURRENTLY OFFLINE DUE TO TECHNICAL DIFFICULTIES. WE WILL BE BACK ASAP! ❤️</h4>
-            <form id="proxy-raffle-form" action="submit" style="display: none;">
+            {% comment %} <h4 style="color: red;">SUBMISSIONS CURRENTLY OFFLINE DUE TO TECHNICAL DIFFICULTIES. WE WILL BE BACK ASAP! ❤️</h4> {% endcomment %}
+            <form id="proxy-raffle-form" action="submit">
                 <h4>ENTER SWEEPSTAKES NOW</h4>
                 <div class="name-row">
                     <input type="text" id="proxy-first-name" placeholder="FIRST NAME" required>
