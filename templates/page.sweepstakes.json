@@ -147,6 +147,9 @@
     },
     "50_50_with_html_zKyLEG": {
       "type": "50-50-with-html",
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.col:first-child {max-width: 80%; }}"
+      ],
       "name": "LAUNCH 5050 with HTML",
       "settings": {
         "section_anchor_id": "",
@@ -155,8 +158,8 @@
         "text_color": "#ffffff",
         "padding_y_desktop": 80,
         "padding_y_mobile": 30,
-        "left_column_width": 35,
-        "right_column_width": 60,
+        "left_column_width": 45,
+        "right_column_width": 55,
         "switch_columns": false,
         "image": "shopify://shop_images/image_9.png",
         "video": "shopify://files/videos/6619-360-v4-CC.mp4",
@@ -177,6 +180,7 @@
         "section_height_desktop": 450,
         "section_height_mobile": 350,
         "fg_image": "shopify://shop_images/6619-Lineup-v2_1.png",
+        "fg_image_link": "shopify://products/pix-allen-the-alien-2026-summer-event",
         "fg_image_width_desktop": 50,
         "fg_image_width_mobile": 100
       }

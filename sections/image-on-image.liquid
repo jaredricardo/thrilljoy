@@ -32,6 +32,7 @@
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: 750px) {
@@ -60,6 +61,7 @@
 
   <div class="ioi-overlay">
     {%- if section.settings.fg_image != blank -%}
+      {%- if section.settings.fg_image_link != blank -%}<a href="{{ section.settings.fg_image_link }}">{%- endif -%}
       <img
         class="ioi-foreground"
         src="{{ section.settings.fg_image | image_url: width: 1200 }}"
@@ -68,6 +70,7 @@
         width="{{ section.settings.fg_image.width }}"
         height="{{ section.settings.fg_image.height }}"
       >
+      {%- if section.settings.fg_image_link != blank -%}</a>{%- endif -%}
     {%- endif -%}
   </div>
 </section>
@@ -153,6 +156,12 @@
       "type": "image_picker",
       "id": "fg_image",
       "label": "Centered Foreground Image"
+    },
+    {
+      "type": "url",
+      "id": "fg_image_link",
+      "label": "Foreground Image Link",
+      "info": "Optional. Wraps the foreground image in a link."
     },
     {
       "type": "range",
