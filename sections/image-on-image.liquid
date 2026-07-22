@@ -1,0 +1,192 @@
+{% style %}
+
+  [data-section-id="{{ section.id }}"] {
+    position: relative;
+    width: 100%;
+    height: {{ section.settings.section_height_mobile }}px;
+    background-color: {{ section.settings.bg_color }};
+    overflow: hidden;
+  }
+
+  [data-section-id="{{ section.id }}"] .ioi-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: {{ section.settings.bg_image_fit }};
+    object-position: {{ section.settings.bg_image_position }};
+  }
+
+  [data-section-id="{{ section.id }}"] .ioi-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  [data-section-id="{{ section.id }}"] .ioi-foreground {
+    width: {{ section.settings.fg_image_width_mobile }}%;
+    max-height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    [data-section-id="{{ section.id }}"] {
+      height: {{ section.settings.section_height_desktop }}px;
+    }
+
+    [data-section-id="{{ section.id }}"] .ioi-foreground {
+      width: {{ section.settings.fg_image_width_desktop }}%;
+    }
+  }
+
+{% endstyle %}
+
+<section data-section-id="{{ section.id }}" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
+  {%- if section.settings.bg_image != blank -%}
+    <img
+      class="ioi-background"
+      src="{{ section.settings.bg_image | image_url: width: 2400 }}"
+      alt="{{ section.settings.bg_image.alt | escape }}"
+      loading="lazy"
+      width="{{ section.settings.bg_image.width }}"
+      height="{{ section.settings.bg_image.height }}"
+    >
+  {%- endif -%}
+
+  <div class="ioi-overlay">
+    {%- if section.settings.fg_image != blank -%}
+      {%- if section.settings.fg_image_link != blank -%}<a href="{{ section.settings.fg_image_link }}">{%- endif -%}
+      <img
+        class="ioi-foreground"
+        src="{{ section.settings.fg_image | image_url: width: 1200 }}"
+        alt="{{ section.settings.fg_image.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.fg_image.width }}"
+        height="{{ section.settings.fg_image.height }}"
+      >
+      {%- if section.settings.fg_image_link != blank -%}</a>{%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image on Image",
+  "enabled_on": {
+    "templates": ["product", "collection", "page", "index", "article", "blog", "404", "cart", "search"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_anchor_id",
+      "label": "Section Anchor ID (optional)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "bg_image_fit",
+      "label": "Background Image Fit",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" },
+        { "value": "fill", "label": "Fill" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "select",
+      "id": "bg_image_position",
+      "label": "Background Image Position",
+      "options": [
+        { "value": "center center", "label": "Center" },
+        { "value": "top center", "label": "Top" },
+        { "value": "bottom center", "label": "Bottom" },
+        { "value": "center left", "label": "Left" },
+        { "value": "center right", "label": "Right" }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "header",
+      "content": "Section Height"
+    },
+    {
+      "type": "range",
+      "id": "section_height_desktop",
+      "label": "Desktop Height (px)",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "section_height_mobile",
+      "label": "Mobile Height (px)",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Foreground Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "fg_image",
+      "label": "Centered Foreground Image"
+    },
+    {
+      "type": "url",
+      "id": "fg_image_link",
+      "label": "Foreground Image Link",
+      "info": "Optional. Wraps the foreground image in a link."
+    },
+    {
+      "type": "range",
+      "id": "fg_image_width_desktop",
+      "label": "Desktop Width (%)",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "fg_image_width_mobile",
+      "label": "Mobile Width (%)",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "default": 80
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Image on Image"
+    }
+  ]
+}
+{% endschema %}
