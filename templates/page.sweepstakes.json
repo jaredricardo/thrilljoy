@@ -164,6 +164,22 @@
         "html_content": "<style>\n    [data-section-id=\"{{ section.id }}\"] .header-html-content  {\n        text-align: center;\n        margin-bottom: 30px;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area {\n        text-align: center;\n        display: flex;\n        flex-direction: column;\n        gap: 40px;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-1 {\n        font-size: 43px;\n        font-weight: 700;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-2 {\n        font-size: 33px;\n        font-weight: 400;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-3 {\n        font-size: 43px;\n        font-weight: 400;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-4 {\n        font-size: 45px;\n        font-weight: 600;\n        margin-bottom: 2rem !important;\n    }\n    [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-5 {\n        font-size: 52px;\n        font-weight: 700;\n        border: 3px solid white;\n        border-radius: 9px;\n        padding: 2rem 3.5rem;\n        margin-top: 1rem;\n    }\n    @media screen and (max-width: 768px) {\n        [data-section-id=\"{{ section.id }}\"] .header-html-content .h3-1 {\n            font-size: 26px;\n            margin-bottom: 0.5rem;\n        }\n        [data-section-id=\"{{ section.id }}\"] .header-html-content .h3-2 {\n            font-size: 19px;\n            font-weight: 400;\n        }\n       [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-3 {\n            font-size: 26px;\n            margin-bottom: 10px;\n        }\n        [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-4 {\n            font-size: 28px;\n\n        }\n        [data-section-id=\"{{ section.id }}\"] .html-content-area .h3-5 {\n            font-size: 30px;\n            padding: 1rem;\n        }\n    }\n</style>\n<div class=\"html-content-area\">\n    <div class=\"desktop-only\">\n        <h3 class=\"h3-1\">TEAR INTO THE THRILL</h3>\n        <h3 class=\"h3-2\">LIMITED EDITION COLLECTIBLES</h3>\n    </div>\n    <div>\n        <h3 class=\"h3-3\">ONLY 8888 TOTAL</h3>\n        <h3 class=\"h3-4\">1/6 CHANCE OF CHASE</h3>\n        <h3 class=\"h3-5\">1 OF 1 HYPER RARE</h3>\n    </div>\n</div>"
       }
     },
+    "image_on_image_H7nzcj": {
+      "type": "image-on-image",
+      "name": "Image on Image",
+      "settings": {
+        "section_anchor_id": "",
+        "bg_color": "#ffffff",
+        "bg_image": "shopify://shop_images/Rectangle_65.png",
+        "bg_image_fit": "cover",
+        "bg_image_position": "center center",
+        "section_height_desktop": 450,
+        "section_height_mobile": 350,
+        "fg_image": "shopify://shop_images/6619-Lineup-v2_1.png",
+        "fg_image_width_desktop": 50,
+        "fg_image_width_mobile": 100
+      }
+    },
     "button_text_expansion_TMk44V": {
       "type": "button-text-expansion",
       "blocks": {
@@ -242,6 +258,7 @@
     "sweepstakes_countdown_and_banner_37aTNr",
     "pineraffle_linked_entry_form_tg9cLp",
     "50_50_with_html_zKyLEG",
+    "image_on_image_H7nzcj",
     "button_text_expansion_TMk44V",
     "image_divider_section_6Bw4tt",
     "50_50_with_html_weNHML"
