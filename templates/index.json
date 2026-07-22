@@ -12,38 +12,7 @@
     "tj_banner_carousel_LayRLh": {
       "type": "tj-banner-carousel",
       "blocks": {
-        "carousel_fYnbtA": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify://shop_images/D-Soccer26-Hero-2000x750-Red.png",
-            "mobile_image": "shopify://shop_images/D-Soccer26-Hero-2500x1536-Red.png",
-            "image_overlay_opacity": 0,
-            "mobile_min_height": 0,
-            "complete_center": false,
-            "text_alignment": "left",
-            "text_container_top_pos": -28,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 40,
-            "left_pos_mobile": 5,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "",
-            "subheader_margin_bottom": 16,
-            "description": "",
-            "description_margin_bottom": 16,
-            "text_color": "#ffffff",
-            "text_container_max_width_d": 50,
-            "text_container_max_width_m": 90,
-            "button_text": "",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/new-featured",
-            "use_slide_linkout": true
-          }
-        },
-        "carousel_yVXELB": {
+        "carousel_XGd3mU": {
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/E-SDCC26-NM-Hero-2000x750.png",
@@ -75,37 +44,6 @@
           }
         },
         "carousel_fXEaaj": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify://shop_images/D-6671-BTTFDoc-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D-6671-BTTFDoc-Hero-2500x1536.png",
-            "image_overlay_opacity": 0,
-            "mobile_min_height": 0,
-            "complete_center": false,
-            "text_alignment": "left",
-            "text_container_top_pos": -28,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 40,
-            "left_pos_mobile": 5,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "",
-            "subheader_margin_bottom": 16,
-            "description": "",
-            "description_margin_bottom": 16,
-            "text_color": "#ffffff",
-            "text_container_max_width_d": 50,
-            "text_container_max_width_m": 90,
-            "button_text": "",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/new-featured",
-            "use_slide_linkout": true
-          }
-        },
-        "carousel_wPtDgh": {
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/IMG_6796.png",
@@ -169,7 +107,6 @@
         },
         "carousel_P4zPrn": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/D-BlooLoveNY-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/D-BlooLoveNY-Hero-2500x1536.png",
@@ -196,6 +133,38 @@
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
             "button_link": "shopify://collections/mascots",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_gqdamV": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/061226-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/061226-LIVE-Hero-2000x750.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/just-dropped",
             "use_slide_linkout": true
           }
         },
@@ -228,6 +197,38 @@
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
             "button_link": "shopify://collections/masters-of-the-universe-1",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_f74DU4": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/D041726-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D041726-LIVE-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/just-dropped",
             "use_slide_linkout": true
           }
         },
@@ -264,13 +265,13 @@
         }
       },
       "block_order": [
-        "carousel_fYnbtA",
-        "carousel_yVXELB",
+        "carousel_XGd3mU",
         "carousel_fXEaaj",
-        "carousel_wPtDgh",
         "carousel_aWexg3",
         "carousel_P4zPrn",
+        "carousel_gqdamV",
         "carousel_r9gmkE",
+        "carousel_f74DU4",
         "carousel_ViaFhj"
       ],
       "custom_css": [
