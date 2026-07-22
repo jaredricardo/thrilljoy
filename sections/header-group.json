@@ -41,7 +41,7 @@
         "icon_max_width": 50,
         "padding_y": 15,
         "home-page-only": false,
-        "bg_color": "#1A9CD1",
+        "bg_color": "#1a9cd1",
         "color": "#ffffff",
         "alternative-color": true,
         "speed": 30,
