@@ -4406,6 +4406,46 @@ main:has(.blood-container) {
   position: relative;
 }
 
+.aang-1 {
+  top: 14%;
+  left: 2%;
+}
+
+.aang-2 {
+  top: 20%;
+  right: 2%;
+}
+
+.aang-3 {
+  bottom: 20%;
+  left: 3%;
+}
+
+.aang-4 {
+  bottom: 10%;
+  right: 2%;
+}
+
+.aang-1,
+.aang-2,
+.aang-3,
+.aang-4 {
+  position: fixed;
+  z-index: 11;
+  width: 25vw;
+  max-width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .aang-1,
+  .aang-2,
+  .aang-3,
+  .aang-4 {
+    width: 50px;
+  }
+}
+
+
 .blood-1,
 .blood-2 {
   position: fixed;
