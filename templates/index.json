@@ -239,7 +239,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/D-080726-BG-AlignTop.png",
+        "bg_image": "shopify://shop_images/D-080726-BG-AlignTop_1.png",
         "min_height_desktop": 600,
         "min_height_mobile": 550
       }
@@ -295,7 +295,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/D-080726-BG-AlignBtm.png",
+        "image": "shopify://shop_images/D-080726-BG-AlignBtm_1.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
