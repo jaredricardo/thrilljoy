@@ -47,10 +47,9 @@
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#ffffff",
-        "sweepstakes_banner_image": "shopify://shop_images/Logo-Invincible_2.png",
         "goes_live_in_text": "SWEEPSTAKES WILL GO LIVE IN",
-        "countdown_month": "7",
-        "countdown_day": "22",
+        "countdown_month": "10",
+        "countdown_day": "23",
         "countdown_hour": "11",
         "countdown_number_bg_color": "#000000",
         "countdown_number_text_color": "#ffffff"
