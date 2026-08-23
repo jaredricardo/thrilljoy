@@ -34,6 +34,7 @@
         "text_Ki6fR6",
         "text_Ewnd7W"
       ],
+      "disabled": true,
       "name": "Scrolling Announcement",
       "settings": {
         "text_margin": 120,
