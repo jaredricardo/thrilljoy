@@ -66,6 +66,7 @@
     },
     "klaviyo_email_capture_hkKThq": {
       "type": "klaviyo-email-capture",
+      "disabled": true,
       "custom_css": [
         "h2 {font-size: 28px;}",
         "@media screen and (max-width: 768px) {h2 {font-size: 19px; }}"
@@ -224,6 +225,7 @@
     },
     "image_divider_section_6Bw4tt": {
       "type": "image-divider-section",
+      "disabled": true,
       "name": "LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -235,6 +237,7 @@
     },
     "50_50_with_html_weNHML": {
       "type": "50-50-with-html",
+      "disabled": true,
       "name": "5050 with HTML",
       "settings": {
         "section_anchor_id": "",
