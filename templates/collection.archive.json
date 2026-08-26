@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "image_banner_LWbHrD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_QnJBNf": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_svg": "<svg width=\"36\" height=\"47\" viewbox=\"0 0 36 47\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 5.85938C0 2.65625 2.72 0 6 0H30C33.28 0 36 2.65625 36 5.85938V44.0391C36 46.4219 33.376 47.7891 31.312 46.5078L18 37.8125L4.688 46.5078C2.72 47.7891 0 46.4141 0 44.0391L0 5.85938ZM6 4.39062C5.16 4.39062 4.496 5.03125 4.496 5.85938V41.2891L15.464 34.1484C17.056 33.1406 19.024 33.1406 20.528 34.1484L31.496 41.2891V5.85938C31.496 5.03906 30.84 4.39062 29.992 4.39062H6Z\" fill=\"white\"></path>\n</svg>",
+            "use_custom_font_size": true,
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "heading_justify_desktop": "flex-start",
+            "heading_text_align_desktop": "left",
+            "heading_justify_mobile": "center",
+            "heading_text_align_mobile": "center",
+            "use_h1": true,
+            "heading_size": "hxl",
+            "heading_size_mobile": "hxl"
+          }
+        },
+        "description_HjrMPn": {
+          "type": "description",
+          "settings": {
+            "description": "These rare finds are no longer available, but you can still explore them in the Collector’s Archive... and maybe if you’re lucky, find them in the real world as well.",
+            "description_color": "#ffffff",
+            "font_size_desktop": 32,
+            "font_size_mobile": 14
+          }
+        }
+      },
+      "block_order": [
+        "heading_QnJBNf",
+        "description_HjrMPn"
+      ],
+      "custom_css": [],
+      "settings": {
+        "fallback_background_color": "#383838",
+        "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
+        "texture_image_mobile": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
+        "image_overlay_opacity": 0,
+        "fetch_priority": "high",
+        "use_preload": true,
+        "image_height": "content",
+        "banner_height_vh": 20,
+        "banner_height_vh_mobile": 12,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "archive_product_grid_fzUDCV": {
+      "type": "archive-product-grid",
+      "name": "Archive Product Grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "image_banner_LWbHrD",
+    "archive_product_grid_fzUDCV"
+  ]
+}

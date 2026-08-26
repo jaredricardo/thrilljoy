@@ -1,0 +1,55 @@
+{% comment %}
+  Renders a merch box card in the product grid.
+
+  Accepts:
+  - merch: {Object} Metaobject value from collection.metafields.custom.collection_merch_card.value
+
+  Usage:
+  {% render 'merch-box', merch: merch_card %}
+{% endcomment %}
+
+{%- liquid
+  assign merch_title      = merch.title.value
+  assign merch_bg         = merch.bg_color.value
+  assign merch_image      = merch.image.value
+  assign merch_btn_text   = merch.button_text.value
+  assign merch_btn_bg     = merch.button_bg_color.value
+  assign merch_btn_color  = merch.button_text_color.value
+  assign merch_btn_link   = merch.button_link.value.url
+-%}
+
+<li class="grid__item merch-box-item">
+  <div
+    class="merch-box"
+    style="background-color: {{ merch_bg }};"
+  >
+    {%- if merch_title != blank -%}
+        <p class="merch-box__title">{{ merch_title }}</p>
+    {%- endif -%}
+    {%- if merch_image != blank -%}
+      <div class="merch-box__image">
+        {{
+          merch_image
+          | image_url: width: 800
+          | image_tag:
+            loading: 'lazy',
+            class: 'merch-box__img',
+            sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw'
+        }}
+      </div>
+    {%- endif -%}
+
+    <div class="merch-box__content">
+
+      {%- if merch_btn_text != blank and merch_btn_link != blank -%}
+        <a
+          href="{{ merch_btn_link }}"
+          class="merch-box__button"
+          style="background-color: {{ merch_btn_bg }}; color: {{ merch_btn_color }};"
+        >
+          {{ merch_btn_text }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</li>
