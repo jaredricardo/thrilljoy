@@ -20,7 +20,7 @@
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign total_active_values = 0
   assign default_presentation = 'text'
-  assign archive_filter_labels = 'Type,Category,Rarity,Exclusivity' | split: ','
+  assign archive_filter_labels = 'Type,Category,Rarity,Exclusivity,Misc' | split: ','
   assign category_allowed_values = 'animation,fantasy,movies,classics,mascots,horror,streaming now,historical figures' | split: ','
   assign enable_sorting = false
   if results.url
