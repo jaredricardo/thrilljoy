@@ -4528,6 +4528,8 @@ main:has(.blood-container) {
   padding: 1rem;
   position: relative;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .merch-box__image {
@@ -4542,6 +4544,9 @@ main:has(.blood-container) {
 @media screen and (min-width: 750px) {
   .merch-box__image {
     bottom: 5%;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

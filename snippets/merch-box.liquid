@@ -19,7 +19,8 @@
 -%}
 
 <li class="grid__item merch-box-item">
-  <div
+  <a
+    href="{{ merch_btn_link }}"
     class="merch-box"
     style="background-color: {{ merch_bg }};"
   >
@@ -42,14 +43,13 @@
     <div class="merch-box__content">
 
       {%- if merch_btn_text != blank and merch_btn_link != blank -%}
-        <a
-          href="{{ merch_btn_link }}"
+        <div
           class="merch-box__button"
           style="background-color: {{ merch_btn_bg }}; color: {{ merch_btn_color }};"
         >
           {{ merch_btn_text }}
-        </a>
+        </div>
       {%- endif -%}
     </div>
-  </div>
+  </a>
 </li>

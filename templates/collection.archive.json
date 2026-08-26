@@ -52,7 +52,10 @@
         "heading_QnJBNf",
         "description_HjrMPn"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".banner__box {max-width: 100% !important;}",
+        "@media screen and (max-width: 768px) {.banner__box {padding: 2rem 1.5rem 4rem 1.5rem; }}"
+      ],
       "settings": {
         "fallback_background_color": "#383838",
         "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",

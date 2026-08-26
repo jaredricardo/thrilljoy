@@ -20,6 +20,9 @@
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign total_active_values = 0
   assign default_presentation = 'text'
+  assign archive_filter_labels = 'Type,Category,Rarity,Exclusivity' | split: ','
+  assign category_allowed_values = 'animation,fantasy,movies,classics,mascots,horror,streaming now,historical figures' | split: ','
+  assign enable_sorting = false
   if results.url
     assign results_url = results.url
   else
@@ -73,6 +76,7 @@
                   </facet-remove>
                 </div>
                 {%- for filter in results.filters -%}
+                  {%- if archive_filter_labels contains filter.label -%}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -99,6 +103,7 @@
                       </facet-remove>
                     {%- endif -%}
                   {% endif %}
+                  {%- endif -%}
                 {%- endfor -%}
               </div>
             {%- endif -%}
@@ -119,7 +124,7 @@
                 endif
               %}
 
-              {%- unless filter.label == 'Category' -%}
+              {%- if archive_filter_labels contains filter.label -%}
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
@@ -190,6 +195,10 @@
                           role="list"
                         >
                           {%- for value in sorted_values -%}
+                            {%- if filter.label == 'Category' -%}
+                              {%- assign _vl = value.label | downcase -%}
+                              {%- unless category_allowed_values contains _vl -%}{%- continue -%}{%- endunless -%}
+                            {%- endif -%}
                             {% liquid
                               assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-' | append: forloop.index
                               assign is_disabled = false
@@ -350,13 +359,14 @@
                     </div>
                   </details>
               {% endcase %}
-              {%- endunless -%}
+              {%- endif -%}
             {%- endfor -%}
           </div>
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
               {%- for filter in results.filters -%}
+                {%- if archive_filter_labels contains filter.label -%}
                 {%- for value in filter.active_values -%}
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -383,6 +393,7 @@
                     </facet-remove>
                   {%- endif -%}
                 {% endif %}
+                {%- endif -%}
               {%- endfor -%}
               <facet-remove class="active-facets__button-wrapper">
                 <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
@@ -524,7 +535,7 @@
                     endif
                   %}
 
-                  {%- unless filter.label == 'Category' -%}
+                  {%- if archive_filter_labels contains filter.label -%}
                   {% case filter.type %}
                     {% when 'boolean', 'list' %}
                       <details
@@ -566,6 +577,10 @@
                               endif
                             -%}
                             {%- for value in sorted_values -%}
+                              {%- if filter.label == 'Category' -%}
+                                {%- assign _vl = value.label | downcase -%}
+                                {%- unless category_allowed_values contains _vl -%}{%- continue -%}{%- endunless -%}
+                              {%- endif -%}
                               {% liquid
                                 assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-mobile-' | append: forloop.index
                                 assign is_disabled = false
@@ -736,7 +751,7 @@
                         </div>
                       </details>
                   {% endcase %}
-                  {%- endunless -%}
+                  {%- endif -%}
                 {%- endfor -%}
               {%- endif -%}
 
@@ -806,6 +821,7 @@
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
+      {%- if archive_filter_labels contains filter.label -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -832,6 +848,7 @@
             </a>
           </facet-remove>
         {%- endif -%}
+      {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
     <facet-remove class="active-facets__button-wrapper">
@@ -909,6 +926,7 @@
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
           {%- for filter in results.filters -%}
+            {%- if archive_filter_labels contains filter.label -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -935,6 +953,7 @@
                   </a>
                 </facet-remove>
               {%- endif -%}
+            {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
           <facet-remove class="active-facets__button-wrapper">
