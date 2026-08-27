@@ -1,0 +1,88 @@
+{% comment %}
+  Renders a dual-handle range slider for a list-type numeric filter.
+  Uses a custom element so connectedCallback re-initializes after Shopify AJAX filter updates.
+
+  Accepts:
+  - filter: {Object} A list-type filter whose values are integers
+{% endcomment %}
+
+{%- liquid
+  assign nrf_min = 0
+  assign nrf_max = 0
+  for value in filter.values
+    assign v_num = value.value | plus: 0
+    if v_num > nrf_max
+      assign nrf_max = v_num
+    endif
+  endfor
+  assign nrf_ceiling = nrf_max | plus: 2000
+
+  assign nrf_active_values = filter.values | where: 'active', true
+  assign nrf_active_min = nil
+  assign nrf_active_max = nil
+  if nrf_active_values.size > 0
+    assign nrf_active_min = 9999
+    assign nrf_active_max = 0
+    for av in nrf_active_values
+      assign av_num = av.value | plus: 0
+      if av_num < nrf_active_min
+        assign nrf_active_min = av_num
+      endif
+      if av_num > nrf_active_max
+        assign nrf_active_max = av_num
+      endif
+    endfor
+  endif
+
+  assign nrf_init_min = nrf_active_min | default: nrf_min
+  assign nrf_init_max = nrf_active_max | default: nrf_ceiling
+-%}
+
+{% comment %} Hidden checkboxes — submitted with the enclosing form {% endcomment %}
+{%- for value in filter.values -%}
+  <input
+    type="checkbox"
+    class="nrf__checkbox"
+    name="{{ value.param_name }}"
+    value="{{ value.value }}"
+    data-tier="{{ value.value | plus: 0 }}"
+    {% if value.active %}checked{% endif %}
+    style="position:absolute;clip:rect(0,0,0,0);pointer-events:none;"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+{%- endfor -%}
+
+<nrf-range
+  class="nrf__wrapper"
+  data-min="{{ nrf_min }}"
+  data-max="{{ nrf_ceiling }}"
+>
+  <div class="nrf__labels">
+    <span class="nrf__label-min">{{ nrf_init_min }}</span>
+    <span class="nrf__label-max">{{ nrf_init_max }}</span>
+  </div>
+  <div class="nrf__track-wrapper">
+    <div class="nrf__track">
+      <div class="nrf__range-fill"></div>
+    </div>
+    <input
+      type="range"
+      class="nrf__thumb nrf__thumb--min"
+      min="{{ nrf_min }}"
+      max="{{ nrf_ceiling }}"
+      value="{{ nrf_init_min }}"
+      step="1"
+      aria-label="{{ filter.label | escape }} minimum"
+    >
+    <input
+      type="range"
+      class="nrf__thumb nrf__thumb--max"
+      min="{{ nrf_min }}"
+      max="{{ nrf_ceiling }}"
+      value="{{ nrf_init_max }}"
+      step="1"
+      aria-label="{{ filter.label | escape }} maximum"
+    >
+  </div>
+</nrf-range>

@@ -73,6 +73,7 @@
                   </facet-remove>
                 </div>
                 {%- for filter in results.filters -%}
+                  {%- unless filter.label == 'Tags' -%}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -99,6 +100,7 @@
                       </facet-remove>
                     {%- endif -%}
                   {% endif %}
+                  {%- endunless -%}
                 {%- endfor -%}
               </div>
             {%- endif -%}
@@ -119,7 +121,7 @@
                 endif
               %}
 
-              {%- unless filter.label == 'Category' -%}
+              {%- unless filter.label == 'Tags' -%}
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
@@ -357,6 +359,7 @@
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
               {%- for filter in results.filters -%}
+                {%- unless filter.label == 'Tags' -%}
                 {%- for value in filter.active_values -%}
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -383,6 +386,7 @@
                     </facet-remove>
                   {%- endif -%}
                 {% endif %}
+                {%- endunless -%}
               {%- endfor -%}
               <facet-remove class="active-facets__button-wrapper">
                 <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
@@ -524,7 +528,7 @@
                     endif
                   %}
 
-                  {%- unless filter.label == 'Category' -%}
+                  {%- unless filter.label == 'Tags' -%}
                   {% case filter.type %}
                     {% when 'boolean', 'list' %}
                       <details
@@ -806,6 +810,7 @@
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
+      {%- unless filter.label == 'Tags' -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -833,6 +838,7 @@
           </facet-remove>
         {%- endif -%}
       {%- endif -%}
+      {%- endunless -%}
     {%- endfor -%}
     <facet-remove class="active-facets__button-wrapper">
       <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
@@ -909,6 +915,7 @@
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
           {%- for filter in results.filters -%}
+            {%- unless filter.label == 'Tags' -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -936,6 +943,7 @@
                 </facet-remove>
               {%- endif -%}
             {%- endif -%}
+            {%- endunless -%}
           {%- endfor -%}
           <facet-remove class="active-facets__button-wrapper">
             <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
