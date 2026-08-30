@@ -4510,3 +4510,239 @@ main:has(.blood-container) {
 #pr-widget-container {
   display: none !important;
 }
+
+/* ============================================
+  Merch Box
+  ============================================ */
+
+.merch-box-item {
+  /* inherits grid__item sizing — no overrides needed */
+}
+
+.merch-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--card-corner-radius, 0);
+  padding: 1rem;
+  position: relative;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.merch-box__image {
+  flex: 1 1 auto;
+  overflow: hidden;
+  min-height: 0;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .merch-box__image {
+    bottom: 5%;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.merch-box__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.merch-box__content {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: auto;
+  z-index: 1;
+  width: 100%;
+}
+
+.merch-box__title {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: #000000;
+  margin-top: 10%;
+}
+
+@media screen and (min-width: 750px) {
+  .merch-box__title {
+    font-size: 28px;
+  }
+}
+
+.merch-box__button {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  font-size: 12px;
+  min-height: 40px;
+}
+
+.merch-box__button:hover {
+  text-decoration: underline;
+}
+
+.merch-box__button svg {
+  max-width: 15px;
+}
+
+@media screen and (min-width: 750px) {
+  .merch-box__button {
+    font-size: revert;
+    padding: 0.75rem 1rem;
+    min-height: unset;
+  }
+}
+
+.archive-card,
+.merch-box {
+  padding: 1rem;
+}
+
+.archive-card__cta {
+  display: flex;
+  width: 100%;
+  background-color: #383838;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+  min-height: 40px;
+}
+
+.archive-card__cta svg {
+  max-width: 10px;
+}
+
+@media screen and (min-width: 750px) {
+  .archive-card__cta {
+    font-size: revert;
+    padding: 0.75rem 1rem;
+    min-height: unset;
+  }
+
+  .archive-card__cta svg {
+    max-width: 15px;
+  }
+}
+
+/* ── Dual-handle number range slider (archive facets) ─────────────────────── */
+.nrf__wrapper {
+  display: block;
+  padding: 1rem;
+}
+
+.nrf__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.nrf__track-wrapper {
+  position: relative;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.nrf__track {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: rgba(var(--color-foreground), 0.15);
+  border-radius: 2px;
+}
+
+.nrf__range-fill {
+  position: absolute;
+  height: 100%;
+  background-color: #5FD551;
+  border-radius: 2px;
+  pointer-events: none;
+  display: block !important;
+}
+
+.nrf__thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  pointer-events: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.nrf__thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgb(var(--color-foreground));
+  border: 2px solid rgb(var(--color-background));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.nrf__thumb::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgb(var(--color-foreground));
+  border: 2px solid rgb(var(--color-background));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/* Hide native browser track so only the custom track shows */
+.nrf__thumb::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 4px;
+}
+
+.nrf__thumb::-moz-range-track {
+  background: transparent;
+  height: 4px;
+}
+
+.nrf__thumb::-moz-range-progress {
+  background: transparent;
+}

@@ -1266,3 +1266,76 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+class NrfRange extends HTMLElement {
+  connectedCallback() {
+    // rAF lets sibling hidden checkboxes settle into the DOM first
+    requestAnimationFrame(() => this._init());
+  }
+
+  disconnectedCallback() {
+    this._bound = false;
+  }
+
+  _init() {
+    if (this._bound) return;
+    this._bound = true;
+
+    const jsFilter = this.closest('.js-filter');
+    if (!jsFilter) return;
+
+    this._checkboxes = jsFilter.querySelectorAll('.nrf__checkbox');
+    this._minThumb   = this.querySelector('.nrf__thumb--min');
+    this._maxThumb   = this.querySelector('.nrf__thumb--max');
+    this._fill       = this.querySelector('.nrf__range-fill');
+    this._labelMin   = this.querySelector('.nrf__label-min');
+    this._labelMax   = this.querySelector('.nrf__label-max');
+    this._absMin     = parseInt(this.dataset.min);
+    this._absMax     = parseInt(this.dataset.max);
+    this._span       = this._absMax - this._absMin || 1;
+
+    this._minThumb.addEventListener('input', () => {
+      if (parseInt(this._minThumb.value) > parseInt(this._maxThumb.value)) {
+        this._minThumb.value = this._maxThumb.value;
+      }
+      this._updateFill();
+      this._minThumb.style.zIndex = parseInt(this._minThumb.value) >= this._absMax ? 2 : 1;
+    });
+
+    this._maxThumb.addEventListener('input', () => {
+      if (parseInt(this._maxThumb.value) < parseInt(this._minThumb.value)) {
+        this._maxThumb.value = this._minThumb.value;
+      }
+      this._updateFill();
+    });
+
+    this._minThumb.addEventListener('change', () => this._commit());
+    this._maxThumb.addEventListener('change', () => this._commit());
+
+    this._updateFill();
+  }
+
+  _updateFill() {
+    const lo = parseInt(this._minThumb.value);
+    const hi = parseInt(this._maxThumb.value);
+    this._fill.style.left  = ((lo - this._absMin) / this._span * 100) + '%';
+    this._fill.style.width = ((hi - lo)           / this._span * 100) + '%';
+    this._labelMin.textContent = lo;
+    this._labelMax.textContent = hi;
+  }
+
+  _commit() {
+    const lo = parseInt(this._minThumb.value);
+    const hi = parseInt(this._maxThumb.value);
+    this._checkboxes.forEach((cb) => {
+      cb.checked = parseInt(cb.dataset.tier) >= lo && parseInt(cb.dataset.tier) <= hi;
+    });
+    if (this._checkboxes[0]) {
+      this._checkboxes[0].dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  }
+}
+
+if (!customElements.get('nrf-range')) {
+  customElements.define('nrf-range', NrfRange);
+}
