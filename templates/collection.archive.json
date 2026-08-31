@@ -86,18 +86,18 @@
             "tags": "horror, historical figures, anime & manga"
           }
         },
-        "tag_filter_3GPgKL": {
-          "type": "tag_filter",
-          "settings": {
-            "title": "Category",
-            "tags": ""
-          }
-        },
         "tag_filter_wmtWhP": {
           "type": "tag_filter",
           "settings": {
             "title": "License",
             "tags": "Masters of the Universe, Teenage Mutant Ninja Turtles,"
+          }
+        },
+        "tag_filter_zPyMBz": {
+          "type": "tag_filter",
+          "settings": {
+            "title": "Category",
+            "tags": ""
           }
         },
         "tag_filter_eaCCVf": {
@@ -110,8 +110,8 @@
       },
       "block_order": [
         "tag_filter_PekxPM",
-        "tag_filter_3GPgKL",
         "tag_filter_wmtWhP",
+        "tag_filter_zPyMBz",
         "tag_filter_eaCCVf"
       ],
       "name": "Archive Product Grid",
