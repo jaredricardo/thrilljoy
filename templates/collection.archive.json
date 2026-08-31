@@ -93,13 +93,6 @@
             "tags": "Masters of the Universe, Teenage Mutant Ninja Turtles,"
           }
         },
-        "tag_filter_zPyMBz": {
-          "type": "tag_filter",
-          "settings": {
-            "title": "Category",
-            "tags": ""
-          }
-        },
         "tag_filter_eaCCVf": {
           "type": "tag_filter",
           "settings": {
@@ -111,7 +104,6 @@
       "block_order": [
         "tag_filter_PekxPM",
         "tag_filter_wmtWhP",
-        "tag_filter_zPyMBz",
         "tag_filter_eaCCVf"
       ],
       "name": "Archive Product Grid",
