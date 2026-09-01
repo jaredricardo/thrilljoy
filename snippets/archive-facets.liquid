@@ -20,7 +20,7 @@
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign total_active_values = 0
   assign default_presentation = 'text'
-  assign archive_filter_labels = 'Type,Category,Rarity,Exclusivity,Misc,Limited Edition Tier' | split: ','
+  assign archive_filter_labels = 'Type,Category,Rarity,Exclusivity,Misc,Limited Edition Tier,Features' | split: ','
   assign enable_sorting = false
   if results.url
     assign results_url = results.url
@@ -146,7 +146,7 @@
                           <facet-remove>
                             <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                               <span class="active-facets__button-inner button button--tertiary">
-                                {{ block.settings.title | escape }}: {{ value.label | capitalize | escape }}
+                                {{ block.settings.title | escape }}: {{ value.label | escape }}
                                 {% render 'icon-close-small' %}
                                 <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                               </span>
@@ -530,10 +530,10 @@
                                     stroke-linejoin="round" />
                                 </svg>
                                 <span class="facet-checkbox__text" aria-hidden="true">
-                                  <span class="facet-checkbox__text-label">{{ value.label | capitalize | escape }}</span> ({{ value.count }})
+                                  <span class="facet-checkbox__text-label">{{ value.label | escape }}</span> ({{ value.count }})
                                 </span>
                                 <span class="visually-hidden">
-                                  {{ value.label | capitalize | escape }} (
+                                  {{ value.label | escape }} (
                                   {%- if value.count == 1 -%}
                                     {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
                                   {%- else -%}
@@ -621,7 +621,7 @@
                         <facet-remove>
                           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                             <span class="active-facets__button-inner button button--tertiary">
-                              {{ block.settings.title | escape }}: {{ value.label | capitalize | escape }}
+                              {{ block.settings.title | escape }}: {{ value.label | escape }}
                               {% render 'icon-close-small' %}
                               <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                             </span>
@@ -1083,10 +1083,10 @@
                                     <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
                                   </svg>
                                   <span class="facet-checkbox__text" aria-hidden="true">
-                                    <span class="facet-checkbox__text-label">{{ value.label | capitalize | escape }}</span> ({{ value.count }})
+                                    <span class="facet-checkbox__text-label">{{ value.label | escape }}</span> ({{ value.count }})
                                   </span>
                                   <span class="visually-hidden">
-                                    {{ value.label | capitalize | escape }} (
+                                    {{ value.label | escape }} (
                                     {%- if value.count == '1' -%}
                                       {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
                                     {%- else -%}
@@ -1251,7 +1251,7 @@
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                   <span class="active-facets__button-inner button button--tertiary">
-                    {{ block.settings.title | escape }}: {{ value.label | capitalize | escape }}
+                    {{ block.settings.title | escape }}: {{ value.label | escape }}
                     {% render 'icon-close-small' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                   </span>
@@ -1402,7 +1402,7 @@
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                         <span class="active-facets__button-inner button button--tertiary">
-                          {{ block.settings.title | escape }}: {{ value.label | capitalize | escape }}
+                          {{ block.settings.title | escape }}: {{ value.label | escape }}
                           {% render 'icon-close-small' %}
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                         </span>

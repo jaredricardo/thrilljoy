@@ -16,13 +16,14 @@
   assign merch_btn_bg     = merch.button_bg_color.value
   assign merch_btn_color  = merch.button_text_color.value
   assign merch_btn_link   = merch.button_link.value.url
+  assign bg_image         = merch.background_image.value
 -%}
 
 <li class="grid__item merch-box-item">
   <a
     href="{{ merch_btn_link }}"
     class="merch-box"
-    style="background-color: {{ merch_bg }};"
+    style="background-color: {{ merch_bg }};{% if bg_image != blank %} background-image: url('{{ bg_image | image_url: width: 1500 }}'); background-size: cover; background-position: center;{% endif %}"
   >
     {%- if merch_title != blank -%}
         <p class="merch-box__title">{{ merch_title }}</p>

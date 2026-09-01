@@ -150,9 +150,35 @@
                 {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
               "
             >
+              {% comment %} Merch box setup {% endcomment %}
+              {%- liquid
+                assign merch_card     = collection.metafields.custom.collection_merch_card.value
+                assign show_merch_box = false
+                if merch_card != blank and paginate.current_page == 1
+                  assign show_merch_box = true
+                  for filter in collection.filters
+                    if filter.active_values.size > 0
+                      assign show_merch_box = false
+                    endif
+                    if filter.type == 'price_range' and filter.min_value.value != blank or filter.max_value.value != blank
+                      assign show_merch_box = false
+                    endif
+                  endfor
+                endif
+                assign merch_position = merch_card.ideal_position_in_grid.value | plus: 0
+                assign merch_inserted = false
+                assign card_count     = 0
+              -%}
               {% assign skip_card_product_styles = false %}
               {%- for product in collection.products -%}
                 {% unless product.tags contains "no-index" %}
+                  {%- assign card_count = card_count | plus: 1 -%}
+
+                  {%- if show_merch_box and merch_inserted == false and card_count == merch_position -%}
+                    {% render 'merch-box', merch: merch_card %}
+                    {%- assign merch_inserted = true -%}
+                  {%- endif -%}
+
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
@@ -180,6 +206,10 @@
                   {%- assign skip_card_product_styles = true -%}
                 {% endunless %}
               {%- endfor -%}
+
+              {%- if show_merch_box and merch_inserted == false -%}
+                {% render 'merch-box', merch: merch_card %}
+              {%- endif -%}
             </ul>
 
             {%- if paginate.pages > 1 -%}

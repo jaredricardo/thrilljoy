@@ -79,6 +79,13 @@
     "archive_product_grid_fzUDCV": {
       "type": "archive-product-grid",
       "blocks": {
+        "tag_filter_DhJDdQ": {
+          "type": "tag_filter",
+          "settings": {
+            "title": "License",
+            "tags": "Masters of the Universe,"
+          }
+        },
         "tag_filter_PekxPM": {
           "type": "tag_filter",
           "settings": {
@@ -95,12 +102,13 @@
         }
       },
       "block_order": [
+        "tag_filter_DhJDdQ",
         "tag_filter_PekxPM",
         "tag_filter_eaCCVf"
       ],
       "name": "Archive Product Grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 36,
         "columns_desktop": 4,
         "color_scheme": "",
         "image_ratio": "adapt",
