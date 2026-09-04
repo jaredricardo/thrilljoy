@@ -15,6 +15,37 @@
         "carousel_yVXELB": {
           "type": "carousel",
           "settings": {
+            "desktop_image": "shopify://shop_images/D-091026-NOTIF-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-091026-NOTIF-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/get-notified",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_3mMAif": {
+          "type": "carousel",
+          "settings": {
             "desktop_image": "shopify://shop_images/D-082826-LIVE-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/D-082826-LIVE-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
@@ -267,6 +298,7 @@
       },
       "block_order": [
         "carousel_yVXELB",
+        "carousel_3mMAif",
         "carousel_pcGnff",
         "carousel_eJ3Mt6",
         "carousel_cMGQVy",
@@ -367,6 +399,14 @@
           "type": "heading",
           "settings": {
             "heading": "Thrilljoy Threads",
+            "heading_svg": "",
+            "use_custom_font_size": false,
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "heading_justify_desktop": "flex-start",
+            "heading_text_align_desktop": "left",
+            "heading_justify_mobile": "flex-start",
+            "heading_text_align_mobile": "left",
             "use_h1": false,
             "heading_size": "h0",
             "heading_size_mobile": "h1"
@@ -396,6 +436,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
+        "fallback_background_color": "#000000",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
