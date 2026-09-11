@@ -86,11 +86,18 @@
             "tags": "Masters of the Universe,Jason Universe,DC Comics,Blooniverse,Universal Monsters,Conjuring Universe,Teenage Mutant Ninja Turtles,Dreamworks,Lord of the Rings,Terrifier,Harry Potter,Chucky,Killer Klowns from Outer Space,Scott Pilgrim"
           }
         },
+        "tag_filter_FriarP": {
+          "type": "tag_filter",
+          "settings": {
+            "title": "Category",
+            "tags": ""
+          }
+        },
         "tag_filter_PekxPM": {
           "type": "tag_filter",
           "settings": {
             "title": "Category",
-            "tags": "animation,fantasy,movies,classics,horror,streaming now,historical figures,Comics and Superheroes,Icons and Mascots,Action and Adventure,Seasonal,TV Animation,Animation and Cartoons"
+            "tags": "animation,fantasy,movies,classics,horror,streaming now,historical figures,Comics and Superheroes,Icons and Mascots,Action and Adventure,Seasonal,TV Animation,Animation and Cartoons,Movie Night"
           }
         },
         "tag_filter_eaCCVf": {
@@ -103,6 +110,7 @@
       },
       "block_order": [
         "tag_filter_DhJDdQ",
+        "tag_filter_FriarP",
         "tag_filter_PekxPM",
         "tag_filter_eaCCVf"
       ],
