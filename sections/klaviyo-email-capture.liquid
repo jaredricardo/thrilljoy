@@ -1,4 +1,26 @@
 <style>
+    .tj-klaviyo-top-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .tj-klaviyo-mobile-texture {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        pointer-events: none;
+    }
+
     [data-section-id="{{ section.id }}"] {
         background-color: {{ section.settings.bg_color }};
         padding: {{ section.settings.padding_y_d }}px 1rem;
@@ -9,14 +31,22 @@
         background: {{ section.settings .button_bg_color }} !important;
     }
 
+    {% if section.settings.button_width_desktop > 0 %}
+        [data-section-id="{{ section.id }}"] .form-container .klaviyo-form button {
+            width: {{ section.settings.button_width_desktop }}px !important;
+            max-width: 100%;
+        }
+    {% endif %}
 
     [data-section-id="{{ section.id }}"] h2 {
         color: {{ section.settings.header_color }} !important;
         margin: 0;
+        font-size: {{ section.settings.header_font_size_desktop }}px;
     }
 
     [data-section-id="{{ section.id }}"] h4 {
         color: {{ section.settings.subheader_color }};
+        font-size: {{ section.settings.subheader_font_size_desktop }}px;
     }
 
     [data-section-id="{{ section.id }}"] .form-inner {
@@ -33,10 +63,39 @@
             padding: {{ section.settings.padding_y_m }}px 1rem;
             height: {{ section.settings.min_height_mobile }}px;
         }
+
+        [data-section-id="{{ section.id }}"] h2 {
+            font-size: {{ section.settings.header_font_size_mobile }}px;
+        }
+
+        [data-section-id="{{ section.id }}"] h4 {
+            font-size: {{ section.settings.subheader_font_size_mobile }}px;
+        }
+
+        {% if section.settings.button_width_mobile > 0 %}
+            [data-section-id="{{ section.id }}"] .form-container .klaviyo-form button {
+                width: {{ section.settings.button_width_mobile }}px !important;
+                max-width: 100%;
+            }
+        {% endif %}
+
+        .tj-klaviyo-top-image {
+            display: none;
+        }
+
+        .tj-klaviyo-mobile-texture {
+            display: block;
+        }
     }
 </style>
 
 <div data-section-id="{{ section.id }}" class="scroll-trigger animate--fade-in tj-klaviyo-email-capture-component">
+    {% if section.settings.top_image != blank %}
+        {{ section.settings.top_image | image_url: width: 3000 | image_tag: loading: 'lazy', widths: '375, 750, 1100, 1500, 1780, 2000, 3000', class: 'tj-klaviyo-top-image', alt: section.settings.top_image.alt }}
+    {% endif %}
+    {% if section.settings.mobile_texture_image != blank %}
+        {{ section.settings.mobile_texture_image | image_url: width: 1500 | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1500', class: 'tj-klaviyo-mobile-texture', alt: section.settings.mobile_texture_image.alt }}
+    {% endif %}
     <div class="form-container">
         <div class="form-inner">
             {% if section.settings.header != blank %}
@@ -63,6 +122,16 @@
                 "id": "klaviyo_html",
                 "label": "Klaviyo Email Capture HTML",
                 "default": "<div class='klaviyo-form-WV9pY7'></div>"
+            },
+            {
+                "type": "image_picker",
+                "id": "top_image",
+                "label": "Top image (optional, full width above section)"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_texture_image",
+                "label": "Mobile-only texture / tear-in image (top)"
             },
             {
                 "type": "range",
@@ -98,6 +167,24 @@
                 "default": "#5FD551"
             },
             {
+                "type": "range",
+                "id": "button_width_desktop",
+                "label": "Button width override desktop (px, 0 = auto)",
+                "min": 0,
+                "max": 400,
+                "step": 10,
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "button_width_mobile",
+                "label": "Button width override mobile (px, 0 = auto)",
+                "min": 0,
+                "max": 400,
+                "step": 10,
+                "default": 0
+            },
+            {
                 "type": "text",
                 "id": "header",
                 "label": "Header (optional)"
@@ -109,6 +196,24 @@
                 "default": "#ffffff"
             },
             {
+                "type": "range",
+                "id": "header_font_size_desktop",
+                "label": "Header font size desktop (px)",
+                "min": 16,
+                "max": 120,
+                "step": 2,
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "header_font_size_mobile",
+                "label": "Header font size mobile (px)",
+                "min": 16,
+                "max": 80,
+                "step": 1,
+                "default": 28
+            },
+            {
                 "type": "textarea",
                 "id": "subheader",
                 "label": "Subheader (optional)"
@@ -118,6 +223,24 @@
                 "id": "subheader_color",
                 "label": "Subheader color",
                 "default": "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "subheader_font_size_desktop",
+                "label": "Subheader font size desktop (px)",
+                "min": 10,
+                "max": 60,
+                "step": 1,
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "subheader_font_size_mobile",
+                "label": "Subheader font size mobile (px)",
+                "min": 10,
+                "max": 48,
+                "step": 1,
+                "default": 16
             },
             {
                 "type": "image_picker",

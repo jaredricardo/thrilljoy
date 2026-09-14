@@ -297,11 +297,13 @@
         "timer_hour": 3
       }
     },
-    "featured_collection_cVPwxi": {
+    "featured_collection_fNUTjc": {
       "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "<strong>TEAR INTO THE THRILL</strong>",
+        "heading_size": "h2",
+        "center_heading": true,
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -318,34 +320,16 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "standard",
+        "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "klaviyo_email_capture_yehVpF": {
-      "type": "klaviyo-email-capture",
-      "custom_css": [],
-      "settings": {
-        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
-        "form_max_width": 600,
-        "padding_y_d": 60,
-        "padding_y_m": 30,
-        "bg_color": "rgba(0,0,0,0)",
-        "button_bg_color": "#5fd551",
-        "header": "Keep up to date with all things Thrilljoy!",
-        "header_color": "#ffffff",
-        "subheader": "",
-        "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
-        "min_height_desktop": 600,
-        "min_height_mobile": 550
-      }
-    },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
+      "disabled": true,
       "settings": {
         "desktop_image": "shopify://shop_images/ThJ-Banner-Bloo_3f902c79-0563-4a48-99ad-9275e775bfab.png",
         "mobile_min_height": 250,
@@ -421,11 +405,13 @@
         "show_text_below": false
       }
     },
-    "featured_collection_MwRKP6": {
+    "featured_collection_J4Lc3V": {
       "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "<strong>THRILLJOY THREADS</strong>",
+        "heading_size": "h2",
+        "center_heading": true,
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -442,7 +428,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "standard",
+        "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -451,6 +437,7 @@
     },
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
+      "disabled": true,
       "settings": {
         "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
         "mobile_min_height": 250,
@@ -465,36 +452,44 @@
         "button_background_color": "#000000"
       }
     },
-    "simple_banner_with_text_K6HdPp": {
-      "type": "simple-banner-with-text",
-      "disabled": true,
+    "klaviyo_email_capture_yehVpF": {
+      "type": "klaviyo-email-capture",
       "custom_css": [
-        ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
+        ".tj-klaviyo-top-image,.tj-klaviyo-mobile-texture {transform: rotate(180deg);}",
+        "h2 {font-weight: bold !important;}"
       ],
       "settings": {
-        "desktop_image": "shopify://shop_images/sold_out_v3.png",
-        "mobile_min_height": 300,
-        "image_overlay_opacity": 0,
-        "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "",
-        "text_color": "#ffffff",
-        "link_out": "shopify://blogs/news/🎡-welcome-to-thrilljoy-s-block-party-boardwalk-bash-🎉",
-        "link_out_is_button": false,
-        "button_text": "Button Text",
-        "button_text_color": "#ffffff",
-        "button_background_color": "#000000"
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
+        "top_image": "shopify://shop_images/601af58404ac5df7dd45a100e27a4955f189d9fb.png",
+        "mobile_texture_image": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
+        "form_max_width": 650,
+        "padding_y_d": 60,
+        "padding_y_m": 30,
+        "bg_color": "#000000",
+        "button_bg_color": "#95e7bf",
+        "button_width_desktop": 0,
+        "button_width_mobile": 0,
+        "header": "SIGN UP FOR THE NEWSLETTER",
+        "header_color": "#ffffff",
+        "header_font_size_desktop": 28,
+        "header_font_size_mobile": 22,
+        "subheader": "Keep up to date with all things Thrilljoy",
+        "subheader_color": "#ffffff",
+        "subheader_font_size_desktop": 24,
+        "subheader_font_size_mobile": 14,
+        "min_height_desktop": 600,
+        "min_height_mobile": 350
       }
     }
   },
   "order": [
     "tj_banner_carousel_LayRLh",
     "jr_section_timer_4J83MN",
-    "featured_collection_cVPwxi",
-    "klaviyo_email_capture_yehVpF",
+    "featured_collection_fNUTjc",
     "simple_banner_with_text_bHQMwg",
     "image_banner_HdAagz",
-    "featured_collection_MwRKP6",
+    "featured_collection_J4Lc3V",
     "simple_banner_with_text_DzdpE3",
-    "simple_banner_with_text_K6HdPp"
+    "klaviyo_email_capture_yehVpF"
   ]
 }
