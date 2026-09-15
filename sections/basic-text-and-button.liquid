@@ -1,0 +1,244 @@
+{% style %}
+
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    position: relative;
+  }
+
+  .basic-text-and-button__top-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .basic-text-and-button__mobile-texture {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  [data-section-id="{{ section.id }}"] .basic-text-and-button__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+  }
+
+  [data-section-id="{{ section.id }}"] .basic-text-and-button__header {
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.header_font_size_mobile }}px;
+    padding-top: {{ section.settings.header_padding_top_mobile }}px;
+    margin: 0;
+  }
+
+  [data-section-id="{{ section.id }}"] .basic-text-and-button__body {
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.subheader_font_size_mobile }}px;
+    margin: 0;
+  }
+
+  [data-section-id="{{ section.id }}"] .basic-text-and-button__button {
+    background-color: {{ section.settings.button_bg_color }} !important;
+  }
+
+  @media screen and (min-width: 750px) {
+    [data-section-id="{{ section.id }}"] .basic-text-and-button__header {
+      font-size: {{ section.settings.header_font_size_desktop }}px;
+      padding-top: {{ section.settings.header_padding_top_desktop }}px;
+    }
+
+    [data-section-id="{{ section.id }}"] .basic-text-and-button__body {
+      font-size: {{ section.settings.subheader_font_size_desktop }}px;
+    }
+
+    .basic-text-and-button__top-image {
+      display: block;
+    }
+
+    .basic-text-and-button__mobile-texture {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .basic-text-and-button__top-image {
+      display: none;
+    }
+
+    .basic-text-and-button__mobile-texture {
+      display: block;
+    }
+  }
+
+{% endstyle %}
+
+<section data-section-id="{{ section.id }}" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
+  {%- if section.settings.top_image != blank -%}
+    {{ section.settings.top_image | image_url: width: 3000 | image_tag: loading: 'lazy', widths: '375, 750, 1100, 1500, 1780, 2000, 3000', class: 'basic-text-and-button__top-image', alt: section.settings.top_image.alt }}
+  {%- endif -%}
+  {%- if section.settings.mobile_texture_image != blank -%}
+    {{ section.settings.mobile_texture_image | image_url: width: 1500 | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1500', class: 'basic-text-and-button__mobile-texture', alt: section.settings.mobile_texture_image.alt }}
+  {%- endif -%}
+  <div class="page-width">
+    <div class="basic-text-and-button__wrapper">
+      {%- if section.settings.richtext_header != blank -%}
+        <div class="basic-text-and-button__header rte">{{ section.settings.richtext_header }}</div>
+      {%- endif -%}
+      {%- if section.settings.richtext_body != blank -%}
+        <div class="basic-text-and-button__body rte">{{ section.settings.richtext_body }}</div>
+      {%- endif -%}
+      {%- if section.settings.button_text != blank -%}
+        <a
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link }}"
+          {% endif %}
+          class="button button--primary basic-text-and-button__button"
+        >
+          {{- section.settings.button_text | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Basic Text and Button",
+  "enabled_on": {
+    "templates": ["product", "collection", "page", "index", "article", "blog", "404", "cart", "search"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_anchor_id",
+      "label": "Section Anchor ID (optional)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image",
+      "label": "Top image (optional, full width above section)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_texture_image",
+      "label": "Mobile-only texture / tear-in image (top)"
+    },
+    {
+        "type": "richtext",
+        "id": "richtext_header",
+        "label": "Header"
+    },
+    {
+        "type": "range",
+        "id": "header_font_size_desktop",
+        "label": "Header font size desktop (px)",
+        "min": 16,
+        "max": 120,
+        "step": 2,
+        "default": 40
+    },
+    {
+        "type": "range",
+        "id": "header_font_size_mobile",
+        "label": "Header font size mobile (px)",
+        "min": 16,
+        "max": 80,
+        "step": 1,
+        "default": 28
+    },
+    {
+        "type": "range",
+        "id": "header_padding_top_desktop",
+        "label": "Header padding top desktop (px)",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "header_padding_top_mobile",
+        "label": "Header padding top mobile (px)",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "richtext",
+        "id": "richtext_body",
+        "label": "Body"
+    },
+    {
+        "type": "range",
+        "id": "subheader_font_size_desktop",
+        "label": "Subheader font size desktop (px)",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "default": 20
+    },
+    {
+        "type": "range",
+        "id": "subheader_font_size_mobile",
+        "label": "Subheader font size mobile (px)",
+        "min": 10,
+        "max": 48,
+        "step": 1,
+        "default": 16
+    },
+    {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+    },
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+    },
+    {
+        "type": "header",
+        "content": "Color + Font Styling"
+    },
+    {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "color",
+        "id": "button_bg_color",
+        "label": "Button Background Color",
+        "default": "#000000"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Basic Text and Button"
+    }
+  ]
+}
+{% endschema %}
