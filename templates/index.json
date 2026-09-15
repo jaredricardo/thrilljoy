@@ -330,9 +330,7 @@
     "basic_text_and_button_x6zcGN": {
       "type": "basic-text-and-button",
       "custom_css": [
-        "a.button {border-radius: 0px !important; border: none; font-weight: bold; font-size: 16px;}",
-        "img {transform: rotate(180deg);}",
-        "a.button:before,a.button:after {display: none;}"
+        "img {transform: rotate(180deg);}"
       ],
       "name": "Basic Text and Button",
       "settings": {
@@ -352,6 +350,36 @@
         "button_link": "shopify://pages/thrilljoy-loyalty",
         "text_color": "#fffefe",
         "button_bg_color": "#95e7bf"
+      }
+    },
+    "character_column_kRGRy7": {
+      "type": "character-column",
+      "custom_css": [
+        "@media screen and (max-width: 768px) {br {display: none;}}"
+      ],
+      "name": "Character Column",
+      "settings": {
+        "section_anchor_id": "",
+        "padding_y_desktop": 40,
+        "padding_y_mobile": 10,
+        "header_font_size_desktop": 32,
+        "header_font_size_mobile": 40,
+        "col_1_bg_color": "#004c52",
+        "col_1_header": "NEW <br> HORROR",
+        "col_1_header_color": "#ffffff",
+        "col_1_image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
+        "col_1_button_text": "SHOP COLLECTION",
+        "col_1_button_link": "shopify://collections/horror",
+        "col_1_button_text_color": "#000000",
+        "col_1_button_bg_color": "#95e7bf",
+        "col_2_bg_color": "#95e7bf",
+        "col_2_header": "LET’S SING <br> ABOUT IT",
+        "col_2_header_color": "#000000",
+        "col_2_image": "shopify://shop_images/6530-Thrilljoy-PIX_-Hazbin-Hotel-Vox-_Hero_-front_1.png",
+        "col_2_button_text": "SHOP COLLECTION",
+        "col_2_button_link": "shopify://collections/all",
+        "col_2_button_text_color": "#ffffff",
+        "col_2_button_bg_color": "#000000"
       }
     },
     "simple_banner_with_text_bHQMwg": {
@@ -453,6 +481,7 @@
     "jr_section_timer_4J83MN",
     "featured_collection_fNUTjc",
     "basic_text_and_button_x6zcGN",
+    "character_column_kRGRy7",
     "simple_banner_with_text_bHQMwg",
     "featured_collection_J4Lc3V",
     "simple_banner_with_text_DzdpE3",
