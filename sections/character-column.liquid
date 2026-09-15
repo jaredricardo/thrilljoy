@@ -2,21 +2,17 @@
 
   [data-section-id="{{ section.id }}"] .character-column__row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   [data-section-id="{{ section.id }}"] .character-column__col {
+    padding-top: {{ section.settings.padding_y_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__col-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: {{ section.settings.padding_y_desktop }}px;
-  }
-
-  [data-section-id="{{ section.id }}"] .character-column__col--1 {
-    background-color: {{ section.settings.col_1_bg_color }};
-  }
-
-  [data-section-id="{{ section.id }}"] .character-column__col--2 {
-    background-color: {{ section.settings.col_2_bg_color }};
   }
 
   [data-section-id="{{ section.id }}"] .character-column__text {
@@ -39,24 +35,6 @@
     }
   }
 
-  [data-section-id="{{ section.id }}"] .character-column__col--1 .character-column__header {
-    color: {{ section.settings.col_1_header_color }};
-  }
-
-  [data-section-id="{{ section.id }}"] .character-column__col--2 .character-column__header {
-    color: {{ section.settings.col_2_header_color }};
-  }
-
-  [data-section-id="{{ section.id }}"] .character-column__button--1 {
-    color: {{ section.settings.col_1_button_text_color }} !important;
-    background-color: {{ section.settings.col_1_button_bg_color }} !important;
-  }
-
-  [data-section-id="{{ section.id }}"] .character-column__button--2 {
-    color: {{ section.settings.col_2_button_text_color }} !important;
-    background-color: {{ section.settings.col_2_button_bg_color }} !important;
-  }
-
   [data-section-id="{{ section.id }}"] .character-column__image-wrap {
     position: relative;
     height: 100%;
@@ -70,14 +48,25 @@
     object-fit: contain;
   }
 
+  @media screen and (min-width: 990px) {
+    [data-section-id="{{ section.id }}"] .character-column__row {
+      grid-template-columns: repeat({{ section.blocks.size | at_least: 1 }}, 1fr);
+    }
+
+    [data-section-id="{{ section.id }}"] .character-column__col-inner--single {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
   @media screen and (max-width: 989px) {
-    [data-section-id="{{ section.id }}"] .character-column__row,
-    [data-section-id="{{ section.id }}"] .character-column__col {
+    [data-section-id="{{ section.id }}"] .character-column__col-inner {
       grid-template-columns: 1fr;
     }
 
     [data-section-id="{{ section.id }}"] .character-column__col {
       padding-top: {{ section.settings.padding_y_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
 
     [data-section-id="{{ section.id }}"] .character-column__text {
@@ -90,62 +79,39 @@
 
 <section data-section-id="{{ section.id }}" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
   <div class="character-column__row">
-    <div class="character-column__col character-column__col--1">
-      <div class="character-column__text">
-        {%- if section.settings.col_1_header != blank -%}
-          <h2 class="character-column__header inline-richtext">{{ section.settings.col_1_header }}</h2>
-        {%- endif -%}
-        {%- if section.settings.col_1_button_text != blank -%}
-          <a
-            {% if section.settings.col_1_button_link == blank %}
-              role="link" aria-disabled="true"
-            {% else %}
-              href="{{ section.settings.col_1_button_link }}"
-            {% endif %}
-            class="button tj-new-button button--primary character-column__button--1"
-          >
-            {{- section.settings.col_1_button_text | escape -}}
-          </a>
-        {%- endif -%}
+    {%- for block in section.blocks -%}
+      <div class="character-column__col" style="background-color: {{ block.settings.bg_color }};" {{ block.shopify_attributes }}>
+        <div class="character-column__col-inner{% if section.blocks.size == 1 %} character-column__col-inner--single{% endif %}">
+          <div class="character-column__text">
+            {%- if block.settings.header != blank -%}
+              <h2 class="character-column__header inline-richtext" style="color: {{ block.settings.header_color }};">{{ block.settings.header }}</h2>
+            {%- endif -%}
+            {%- if block.settings.button_text != blank -%}
+              <a
+                {% if block.settings.button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_link }}"
+                {% endif %}
+                class="button tj-new-button button--primary character-column__button"
+                style="color: {{ block.settings.button_text_color }} !important; background-color: {{ block.settings.button_bg_color }} !important;"
+              >
+                {{- block.settings.button_text | escape -}}
+              </a>
+            {%- endif -%}
+          </div>
+          <div class="character-column__image-wrap">
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 1500
+                | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1500', alt: block.settings.image.alt
+              }}
+            {%- endif -%}
+          </div>
+        </div>
       </div>
-      <div class="character-column__image-wrap">
-        {%- if section.settings.col_1_image != blank -%}
-          {{
-            section.settings.col_1_image
-            | image_url: width: 1500
-            | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1500', alt: section.settings.col_1_image.alt
-          }}
-        {%- endif -%}
-      </div>
-    </div>
-    <div class="character-column__col character-column__col--2">
-      <div class="character-column__text">
-        {%- if section.settings.col_2_header != blank -%}
-          <h2 class="character-column__header inline-richtext">{{ section.settings.col_2_header }}</h2>
-        {%- endif -%}
-        {%- if section.settings.col_2_button_text != blank -%}
-          <a
-            {% if section.settings.col_2_button_link == blank %}
-              role="link" aria-disabled="true"
-            {% else %}
-              href="{{ section.settings.col_2_button_link }}"
-            {% endif %}
-            class="button tj-new-button button--primary character-column__button--2"
-          >
-            {{- section.settings.col_2_button_text | escape -}}
-          </a>
-        {%- endif -%}
-      </div>
-      <div class="character-column__image-wrap">
-        {%- if section.settings.col_2_image != blank -%}
-          {{
-            section.settings.col_2_image
-            | image_url: width: 1500
-            | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1500', alt: section.settings.col_2_image.alt
-          }}
-        {%- endif -%}
-      </div>
-    </div>
+    {%- endfor -%}
   </div>
 </section>
 
@@ -155,6 +121,7 @@
   "enabled_on": {
     "templates": ["product", "collection", "page", "index", "article", "blog", "404", "cart", "search"]
   },
+  "max_blocks": 3,
   "settings": [
     {
       "type": "text",
@@ -167,13 +134,31 @@
       "label": "Padding top desktop (px)",
       "min": 0,
       "max": 200,
-      "step": 4,
+      "step": 2,
       "default": 0
     },
     {
       "type": "range",
       "id": "padding_y_mobile",
       "label": "Padding top mobile (px)",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding bottom desktop (px)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom mobile (px)",
       "min": 0,
       "max": 120,
       "step": 2,
@@ -196,109 +181,73 @@
       "max": 80,
       "step": 1,
       "default": 28
-    },
-    {
-      "type": "header",
-      "content": "Column 1"
-    },
-    {
-      "type": "color",
-      "id": "col_1_bg_color",
-      "label": "Column 1 background color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "html",
-      "id": "col_1_header",
-      "label": "Column 1 header"
-    },
-    {
-      "type": "color",
-      "id": "col_1_header_color",
-      "label": "Column 1 header color",
-      "default": "#000000"
-    },
-    {
-      "type": "image_picker",
-      "id": "col_1_image",
-      "label": "Column 1 image"
-    },
-    {
-      "type": "text",
-      "id": "col_1_button_text",
-      "label": "Column 1 button text"
-    },
-    {
-      "type": "url",
-      "id": "col_1_button_link",
-      "label": "Column 1 button link"
-    },
-    {
-      "type": "color",
-      "id": "col_1_button_text_color",
-      "label": "Column 1 button text color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "col_1_button_bg_color",
-      "label": "Column 1 button background color",
-      "default": "#000000"
-    },
-    {
-      "type": "header",
-      "content": "Column 2"
-    },
-    {
-      "type": "color",
-      "id": "col_2_bg_color",
-      "label": "Column 2 background color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "html",
-      "id": "col_2_header",
-      "label": "Column 2 header"
-    },
-    {
-      "type": "color",
-      "id": "col_2_header_color",
-      "label": "Column 2 header color",
-      "default": "#000000"
-    },
-    {
-      "type": "image_picker",
-      "id": "col_2_image",
-      "label": "Column 2 image"
-    },
-    {
-      "type": "text",
-      "id": "col_2_button_text",
-      "label": "Column 2 button text"
-    },
-    {
-      "type": "url",
-      "id": "col_2_button_link",
-      "label": "Column 2 button link"
-    },
-    {
-      "type": "color",
-      "id": "col_2_button_text_color",
-      "label": "Column 2 button text color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "col_2_button_bg_color",
-      "label": "Column 2 button background color",
-      "default": "#000000"
     }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "html",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "color",
+          "id": "header_color",
+          "label": "Header color",
+          "default": "#000000"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "button_bg_color",
+          "label": "Button background color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Character Column"
+      "name": "Character Column",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
+

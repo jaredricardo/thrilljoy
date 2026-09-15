@@ -311,6 +311,10 @@
         "products_to_show": 20,
         "columns_desktop": 4,
         "full_width": true,
+        "new_button_text": "",
+        "new_button_link": "",
+        "new_button_text_color": "#ffffff",
+        "new_button_bg_color": "#000000",
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -320,7 +324,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -354,32 +358,84 @@
     },
     "character_column_kRGRy7": {
       "type": "character-column",
+      "blocks": {
+        "column_R3BaNm": {
+          "type": "column",
+          "settings": {
+            "bg_color": "#004c52",
+            "header": "NEW <br> HORROR",
+            "header_color": "#ffffff",
+            "image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
+            "button_text": "SHOP COLLECTION",
+            "button_link": "shopify://collections/horror",
+            "button_text_color": "#000000",
+            "button_bg_color": "#95e7bf"
+          }
+        },
+        "column_yBwbRe": {
+          "type": "column",
+          "settings": {
+            "bg_color": "#95e7bf",
+            "header": "LETS SING <br> ABOUT IT",
+            "header_color": "#000000",
+            "image": "shopify://shop_images/6530-Thrilljoy-PIX_-Hazbin-Hotel-Vox-_Hero_-front_1.png",
+            "button_text": "SHOP COLLECTION",
+            "button_link": "shopify://collections/horror",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "column_R3BaNm",
+        "column_yBwbRe"
+      ],
       "custom_css": [
-        "@media screen and (max-width: 768px) {br {display: none;}}"
+        "@media screen and (max-width: 768px) {br {display: none; }}"
       ],
       "name": "Character Column",
       "settings": {
         "section_anchor_id": "",
         "padding_y_desktop": 40,
         "padding_y_mobile": 10,
+        "padding_bottom_desktop": 0,
+        "padding_bottom_mobile": 0,
         "header_font_size_desktop": 32,
-        "header_font_size_mobile": 40,
-        "col_1_bg_color": "#004c52",
-        "col_1_header": "NEW <br> HORROR",
-        "col_1_header_color": "#ffffff",
-        "col_1_image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
-        "col_1_button_text": "SHOP COLLECTION",
-        "col_1_button_link": "shopify://collections/horror",
-        "col_1_button_text_color": "#000000",
-        "col_1_button_bg_color": "#95e7bf",
-        "col_2_bg_color": "#95e7bf",
-        "col_2_header": "LET’S SING <br> ABOUT IT",
-        "col_2_header_color": "#000000",
-        "col_2_image": "shopify://shop_images/6530-Thrilljoy-PIX_-Hazbin-Hotel-Vox-_Hero_-front_1.png",
-        "col_2_button_text": "SHOP COLLECTION",
-        "col_2_button_link": "shopify://collections/all",
-        "col_2_button_text_color": "#ffffff",
-        "col_2_button_bg_color": "#000000"
+        "header_font_size_mobile": 40
+      }
+    },
+    "character_column_ytUWpJ": {
+      "type": "character-column",
+      "blocks": {
+        "column_Nj4JWm": {
+          "type": "column",
+          "settings": {
+            "bg_color": "#000000",
+            "header": "NEW <br> HORROR",
+            "header_color": "#ffffff",
+            "image": "shopify://shop_images/6404-Thrilljoy_PIX_-Junji_Ito-Tomie-O-Card_1.png",
+            "button_text": "SHOP COLLECTION",
+            "button_link": "shopify://collections/horror",
+            "button_text_color": "#000000",
+            "button_bg_color": "#95e7bf"
+          }
+        }
+      },
+      "block_order": [
+        "column_Nj4JWm"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {br {display: none; }}"
+      ],
+      "name": "Character Column",
+      "settings": {
+        "section_anchor_id": "",
+        "padding_y_desktop": 20,
+        "padding_y_mobile": 10,
+        "padding_bottom_desktop": 20,
+        "padding_bottom_mobile": 10,
+        "header_font_size_desktop": 32,
+        "header_font_size_mobile": 40
       }
     },
     "simple_banner_with_text_bHQMwg": {
@@ -413,6 +469,10 @@
         "products_to_show": 20,
         "columns_desktop": 4,
         "full_width": true,
+        "new_button_text": "SHOP APPAREL",
+        "new_button_link": "shopify://collections/apparel",
+        "new_button_text_color": "#000000",
+        "new_button_bg_color": "#95E7BF",
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -422,7 +482,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -482,6 +542,7 @@
     "featured_collection_fNUTjc",
     "basic_text_and_button_x6zcGN",
     "character_column_kRGRy7",
+    "character_column_ytUWpJ",
     "simple_banner_with_text_bHQMwg",
     "featured_collection_J4Lc3V",
     "simple_banner_with_text_DzdpE3",

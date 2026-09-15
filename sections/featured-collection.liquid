@@ -30,10 +30,18 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .section-{{ section.id }}-padding .collection__custom-button {
+    padding-top: 1rem;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .section-{{ section.id }}-padding .collection__custom-button {
+      padding-top: 2rem;
     }
   }
 {%- endstyle -%}
@@ -176,6 +184,22 @@
       {%- endif -%}
     </slider-component>
 
+    {%- if section.settings.new_button_text != blank -%}
+      <div class="center collection__custom-button{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <a
+          {% if section.settings.new_button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.new_button_link }}"
+          {% endif %}
+          class="button tj-new-button button--primary"
+          style="color: {{ section.settings.new_button_text_color }} !important; background-color: {{ section.settings.new_button_bg_color }} !important;"
+        >
+          {{- section.settings.new_button_text | escape -}}
+        </a>
+      </div>
+    {%- endif -%}
+
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
@@ -301,6 +325,32 @@
       "id": "full_width",
       "label": "t:sections.featured-collection.settings.full_width.label",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Custom Button"
+    },
+    {
+      "type": "text",
+      "id": "new_button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "new_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "new_button_text_color",
+      "label": "Button text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "new_button_bg_color",
+      "label": "Button background color",
+      "default": "#000000"
     },
     {
       "type": "checkbox",
