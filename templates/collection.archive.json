@@ -41,7 +41,7 @@
         "description_HjrMPn": {
           "type": "description",
           "settings": {
-            "description": "These rare finds are no longer available, but you can still explore them in the Collector’s Archive... and maybe if you’re lucky, find them in the real world as well.",
+            "description": "These rare finds are no longer available, but you can still explore them in the Collectors' Archive... and maybe if you’re lucky, find them in the real world as well.",
             "description_color": "#ffffff",
             "font_size_desktop": 32,
             "font_size_mobile": 14
@@ -57,6 +57,7 @@
         "@media screen and (max-width: 768px) {.banner__box {padding: 2rem 1.5rem 4rem 1.5rem; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/CollectorsArchive-Genre-Banner.png",
         "fallback_background_color": "#383838",
         "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
         "texture_image_mobile": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
@@ -83,7 +84,7 @@
           "type": "tag_filter",
           "settings": {
             "title": "License",
-            "tags": "Masters of the Universe,Jason Universe,DC Comics,Blooniverse,Universal Monsters,Conjuring Universe,Teenage Mutant Ninja Turtles,Dreamworks,Lord of the Rings,Terrifier,Harry Potter,Chucky,Killer Klowns from Outer Space,Scott Pilgrim,Hanna-Barbera,Garbage Pail Kids,It,Cartoon Network,Back to the Future, ThunderCats,Hazbin Hotel,Helluva Boss,Game of Thrones,Nickelodeon"
+            "tags": "Masters of the Universe,Jason Universe,DC Comics,Blooniverse,Universal Monsters,Conjuring Universe,Teenage Mutant Ninja Turtles,Dreamworks,Lord of the Rings,Terrifier,Harry Potter,Chucky,Killer Klowns from Outer Space,Scott Pilgrim,Hanna-Barbera,Garbage Pail Kids,It,Cartoon Network,Back to the Future, ThunderCats,Hazbin Hotel,Helluva Boss,Game of Thrones,Nickelodeon,Looney Tunes,Avatar: The Last Airbender,"
           }
         },
         "tag_filter_FriarP": {

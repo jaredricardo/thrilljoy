@@ -15,7 +15,7 @@
       assign nrf_max = v_num
     endif
   endfor
-  assign nrf_ceiling = nrf_max | plus: 2000
+  assign nrf_ceiling = nrf_max | plus: 1
 
   assign nrf_active_values = filter.values | where: 'active', true
   assign nrf_active_min = nil
