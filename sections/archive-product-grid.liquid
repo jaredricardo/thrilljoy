@@ -166,7 +166,27 @@
                     endif
                   endfor
                 endif
+
+                comment
+                  Count how many products will actually render (excluding no-index) so the
+                  merch box can replace a product slot instead of adding an extra tile. This
+                  keeps the total tile count unchanged so the last row still fills evenly.
+                endcomment
+                assign valid_product_count = 0
+                for product in collection.products
+                  unless product.tags contains "no-index"
+                    assign valid_product_count = valid_product_count | plus: 1
+                  endunless
+                endfor
+
                 assign merch_position = merch_card.ideal_position_in_grid.value | plus: 0
+                if merch_position < 1
+                  assign merch_position = 1
+                endif
+                if show_merch_box and valid_product_count > 0 and merch_position > valid_product_count
+                  assign merch_position = valid_product_count
+                endif
+
                 assign merch_inserted = false
                 assign card_count     = 0
               -%}
@@ -178,6 +198,7 @@
                   {%- if show_merch_box and merch_inserted == false and card_count == merch_position -%}
                     {% render 'merch-box', merch: merch_card %}
                     {%- assign merch_inserted = true -%}
+                    {%- continue -%}
                   {%- endif -%}
 
                   {% assign lazy_load = false %}
