@@ -57,6 +57,7 @@
         "@media screen and (max-width: 768px) {.banner__box {padding: 2rem 1.5rem 4rem 1.5rem; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/CollectorsArchive-Genre-Banner.png",
         "fallback_background_color": "#383838",
         "texture_image": "shopify://shop_images/Thrilljoy-TearUp-White.png",
         "texture_image_mobile": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
