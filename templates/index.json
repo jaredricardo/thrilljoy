@@ -208,7 +208,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
+        "bg_image": "shopify://shop_images/D-091926-BG-AlignTop.png",
         "min_height_desktop": 600,
         "min_height_mobile": 550
       }
@@ -216,9 +216,9 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/ThJ-Banner-Bloo_3f902c79-0563-4a48-99ad-9275e775bfab.png",
+        "desktop_image": "shopify://shop_images/D-091926-Banner-Catwoman.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
@@ -272,7 +272,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
+        "image": "shopify://shop_images/D-091926-BG-AlignBtm.png",
         "fallback_background_color": "#000000",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
@@ -321,7 +321,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
+        "desktop_image": "shopify://shop_images/D-091926-Banner-Penguin.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
