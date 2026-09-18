@@ -4414,6 +4414,29 @@ main:has(.blood-container) {
   width: 35vw;
 }
 
+.batman-symbol {
+  position: fixed;
+  z-index: 10;
+  width: 15vw;
+  max-width: 200px;
+  pointer-events: none;
+}
+
+.batman-symbol.symbol-1 {
+  top: 15vh;
+  left: 5vw;
+}
+
+.batman-symbol.symbol-2 {
+  bottom: 10vh;
+  left: 5vw;
+}
+
+.batman-symbol.symbol-3 {
+  top: 40vh;
+  right: 5vw;
+}
+
 .balloon {
   position: fixed;
   z-index: 15;
@@ -4469,8 +4492,9 @@ main:has(.blood-container) {
   .candy-2 {
     width: 65px;
   }
-
-  
+  .batman-symbol {
+    max-width: 150px;
+  }
 }
 
 .card__inner:has(.low-stock-badge) .presale-badge {
