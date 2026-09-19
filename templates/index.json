@@ -139,6 +139,7 @@
         },
         "carousel_eJ3Mt6": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/PR-081826-BacktoSchool-Hero-2000x750.jpg",
             "mobile_image": "shopify://shop_images/PR-081826-BacktoSchool-Hero-2500x1536.jpg",
