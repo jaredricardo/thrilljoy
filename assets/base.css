@@ -4412,6 +4412,7 @@ main:has(.blood-container) {
   z-index: 10;
   transform: translate(-50%, -50%);
   width: 35vw;
+  pointer-events: none;
 }
 
 .balloon {
@@ -4458,7 +4459,7 @@ main:has(.blood-container) {
 }
 
 .blood-2 {
-  left: 100%;
+  right: -10%;
   top: 85%;
 }
 

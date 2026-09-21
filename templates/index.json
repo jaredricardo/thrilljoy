@@ -14,10 +14,9 @@
       "blocks": {
         "carousel_eb7JFy": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/D-090826-ArchiveMystery-Hero-2000x750_0bad5947-7a54-4361-b0b0-21a92ff5afd8.png",
-            "mobile_image": "shopify://shop_images/D-090826-ArchiveMystery-Hero-2500x1536_ecdea162-a999-408e-9246-daa574192c61.png",
+            "desktop_image": "shopify://shop_images/D-092426-PastelScare-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-092426-PastelScare-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -40,11 +39,42 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://products/collectors-archive-mystery-item-1",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
-        "carousel_LpHQDi": {
+        "carousel_pmAWLB": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/D-091926-BatmanAnimated-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-091926-BatmanAnimated-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/batman-day",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_tPjzMb": {
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/D-100226-NOTIF-Hero-2000x750_e075013a-d075-4703-80b8-2687ac6f534c.png",
@@ -106,37 +136,6 @@
             "use_slide_linkout": true
           }
         },
-        "carousel_eJ3Mt6": {
-          "type": "carousel",
-          "settings": {
-            "desktop_image": "shopify://shop_images/PR-081826-BacktoSchool-Hero-2000x750.jpg",
-            "mobile_image": "shopify://shop_images/PR-081826-BacktoSchool-Hero-2500x1536.jpg",
-            "image_overlay_opacity": 0,
-            "mobile_min_height": 0,
-            "complete_center": false,
-            "text_alignment": "left",
-            "text_container_top_pos": -28,
-            "text_container_left_pos": 5,
-            "top_pos_mobile": 40,
-            "left_pos_mobile": 5,
-            "image_alt_text": "Thrilljoy Banner Image",
-            "header": "",
-            "use_h1": false,
-            "header_margin_bottom": 16,
-            "subheader": "",
-            "subheader_margin_bottom": 16,
-            "description": "",
-            "description_margin_bottom": 16,
-            "text_color": "#ffffff",
-            "text_container_max_width_d": 50,
-            "text_container_max_width_m": 90,
-            "button_text": "",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/back-to-school",
-            "use_slide_linkout": true
-          }
-        },
         "carousel_aWexg3": {
           "type": "carousel",
           "settings": {
@@ -171,9 +170,9 @@
       },
       "block_order": [
         "carousel_eb7JFy",
-        "carousel_LpHQDi",
+        "carousel_pmAWLB",
+        "carousel_tPjzMb",
         "carousel_eMFh7p",
-        "carousel_eJ3Mt6",
         "carousel_aWexg3"
       ],
       "custom_css": [
@@ -240,7 +239,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
+        "bg_image": "shopify://shop_images/D-092426-BG-AlignTop.png",
         "min_height_desktop": 600,
         "min_height_mobile": 550
       }
@@ -248,9 +247,9 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/ThJ-Banner-Bloo_3f902c79-0563-4a48-99ad-9275e775bfab.png",
+        "desktop_image": "shopify://shop_images/D-092426-Banner-Chubby.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
@@ -304,7 +303,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
+        "image": "shopify://shop_images/D-092426-BG-AlignBtm.png",
         "fallback_background_color": "#000000",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
@@ -353,7 +352,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
+        "desktop_image": "shopify://shop_images/D-092426-Banner-Billy.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
