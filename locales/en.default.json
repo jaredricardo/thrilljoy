@@ -539,7 +539,15 @@
       "marketing": {
         "disclaimer": {
           "terms_of_service": "Terms of use"
+        },
+        "sms": {
+          "disclaimer": {
+            "terms_of_service": "Terms of use"
+          }
         }
+      },
+      "shop_policies": {
+        "terms_of_service": "Terms of use"
       }
     }
   }
