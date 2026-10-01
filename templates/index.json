@@ -342,16 +342,16 @@
         "bg_color": "#000000",
         "top_image": "shopify://shop_images/601af58404ac5df7dd45a100e27a4955f189d9fb.png",
         "mobile_texture_image": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
-        "richtext_header": "<p><strong>THRILLJOY REWARDS</strong></p>",
+        "richtext_header": "<p><strong>THRILLJOY XP REWARDS</strong></p>",
         "header_font_size_desktop": 28,
         "header_font_size_mobile": 22,
         "header_padding_top_desktop": 12,
         "header_padding_top_mobile": 6,
-        "richtext_body": "<p>Earn points and get access to exclusive rewards!</p>",
+        "richtext_body": "<p>Earn XP and get access to exclusive rewards!</p>",
         "subheader_font_size_desktop": 22,
         "subheader_font_size_mobile": 14,
-        "button_text": "JOIN REWARDS",
-        "button_link": "shopify://pages/thrilljoy-loyalty",
+        "button_text": "JOIN XP REWARDS",
+        "button_link": "https://thrilljoy.com/pages/rewards",
         "text_color": "#fffefe",
         "button_bg_color": "#95e7bf"
       }
@@ -472,7 +472,7 @@
         "new_button_text": "SHOP APPAREL",
         "new_button_link": "shopify://collections/apparel",
         "new_button_text_color": "#000000",
-        "new_button_bg_color": "#95E7BF",
+        "new_button_bg_color": "#95e7bf",
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -529,10 +529,10 @@
         "header_font_size_mobile": 22,
         "subheader": "Keep up to date with all things Thrilljoy",
         "subheader_color": "#ffffff",
-        "subheader_font_size_desktop": 24,
+        "subheader_font_size_desktop": 22,
         "subheader_font_size_mobile": 14,
-        "min_height_desktop": 600,
-        "min_height_mobile": 350
+        "min_height_desktop": 300,
+        "min_height_mobile": 200
       }
     }
   },
