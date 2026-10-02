@@ -396,26 +396,27 @@
           "type": "column",
           "settings": {
             "bg_color": "#004c52",
+            "bg_image": "shopify://shop_images/D-091026-Collection-Banner.png",
             "header": "HORRORS ABOUND",
             "header_color": "#ffffff",
             "image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
             "button_text": "SHOP COLLECTION",
             "button_link": "shopify://collections/horror",
             "button_text_color": "#000000",
-            "button_bg_color": "#95e7bf"
+            "button_bg_color": "#FFFFFF"
           }
         },
         "column_yBwbRe": {
           "type": "column",
           "settings": {
-            "bg_color": "#95e7bf",
+            "bg_color": "#3280FC",
             "header": "EVENT EXCLUSIVES",
-            "header_color": "#000000",
+            "header_color": "#FFFFFF",
             "image": "shopify://shop_images/6530-Thrilljoy-PIX_-Hazbin-Hotel-Vox-_Hero_-front_1.png",
             "button_text": "SHOP COLLECTION",
-            "button_link": "",
+            "button_link": "https://thrilljoy.com/collections/event-exclusives",
             "button_text_color": "#ffffff",
-            "button_bg_color": "#000000"
+            "button_bg_color": "#EC1C24"
           }
         }
       },
