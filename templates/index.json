@@ -15,8 +15,8 @@
         "carousel_eb7JFy": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/D-092426-PastelScare-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D-092426-PastelScare-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/D-100226-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-100226-LIVE-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -39,11 +39,42 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/horror",
+            "button_link": "shopify://collections/just-dropped",
             "use_slide_linkout": true
           }
         },
-        "carousel_pmAWLB": {
+        "carousel_k6gCeb": {
+          "type": "carousel",
+          "settings": {
+            "desktop_image": "shopify://shop_images/D-091026-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-091026-LIVE-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/new-featured",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_YmmVQV": {
           "type": "carousel",
           "settings": {
             "desktop_image": "shopify://shop_images/D-091926-BatmanAnimated-Hero-2000x750.png",
@@ -74,11 +105,12 @@
             "use_slide_linkout": true
           }
         },
-        "carousel_tPjzMb": {
+        "carousel_pcGnff": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/D-100226-NOTIF-Hero-2000x750_e075013a-d075-4703-80b8-2687ac6f534c.png",
-            "mobile_image": "shopify://shop_images/D-100226-NOTIF-Hero-2500x1536_13109488-6f28-48bc-bcf7-0a2d5c3469a8.png",
+            "desktop_image": "shopify://shop_images/D-082826-NOTIF-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-082826-NOTIF-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -105,11 +137,12 @@
             "use_slide_linkout": true
           }
         },
-        "carousel_eMFh7p": {
+        "carousel_cMGQVy": {
           "type": "carousel",
+          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/D-091026-LIVE-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D-091026-LIVE-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/E-SDCC26-LIVE-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/E-SDCC26-LIVE-Hero-2000x750.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -132,7 +165,103 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/new-featured",
+            "button_link": "shopify://collections/summer-event",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_Gtm4hV": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/PR-080726-AvatarAang-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/PR-080726-AvatarAang-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/avatar-the-last-airbender",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_fXEaaj": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/D-6671-BTTFDoc-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-6671-BTTFDoc-Hero-2500x1536.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://products/pix-back-to-the-future-doc",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_wPtDgh": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/IMG_6796.png",
+            "mobile_image": "shopify://shop_images/IMG_6797.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5fd551",
+            "button_link": "shopify://collections/house-of-the-dragon",
             "use_slide_linkout": true
           }
         },
@@ -170,9 +299,13 @@
       },
       "block_order": [
         "carousel_eb7JFy",
-        "carousel_pmAWLB",
-        "carousel_tPjzMb",
-        "carousel_eMFh7p",
+        "carousel_k6gCeb",
+        "carousel_YmmVQV",
+        "carousel_pcGnff",
+        "carousel_cMGQVy",
+        "carousel_Gtm4hV",
+        "carousel_fXEaaj",
+        "carousel_wPtDgh",
         "carousel_aWexg3"
       ],
       "custom_css": [
@@ -182,19 +315,6 @@
         "auto_rotate_seconds": 4000,
         "use_arrow_buttons": false,
         "use_pagination_dots": true
-      }
-    },
-    "jr_section_timer_4J83MN": {
-      "type": "jr-section-timer",
-      "disabled": true,
-      "name": "JR Section Timer",
-      "settings": {
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "timer_year": 2025,
-        "timer_month": 11,
-        "timer_day": 1,
-        "timer_hour": 3
       }
     },
     "featured_collection_cVPwxi": {
@@ -239,7 +359,7 @@
         "header_color": "#ffffff",
         "subheader": "",
         "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/D-092426-BG-AlignTop.png",
+        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
         "min_height_desktop": 600,
         "min_height_mobile": 550
       }
@@ -247,9 +367,9 @@
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/D-092426-Banner-Chubby.png",
+        "desktop_image": "shopify://shop_images/ThJ-Banner-Bloo_3f902c79-0563-4a48-99ad-9275e775bfab.png",
         "mobile_min_height": 250,
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 20,
         "image_alt_text": "Thrilljoy Banner Image",
         "header_text": "<h2>Become </h2><h2>a </h2><h2>Thrillseeker</h2>",
         "text_color": "#ffffff",
@@ -267,14 +387,6 @@
           "type": "heading",
           "settings": {
             "heading": "Thrilljoy Threads",
-            "heading_svg": "",
-            "use_custom_font_size": false,
-            "heading_font_size_desktop": 40,
-            "heading_font_size_mobile": 24,
-            "heading_justify_desktop": "flex-start",
-            "heading_text_align_desktop": "left",
-            "heading_justify_mobile": "flex-start",
-            "heading_text_align_mobile": "left",
             "use_h1": false,
             "heading_size": "h0",
             "heading_size_mobile": "h1"
@@ -303,8 +415,7 @@
         "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/D-092426-BG-AlignBtm.png",
-        "fallback_background_color": "#000000",
+        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -352,7 +463,7 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/D-092426-Banner-Billy.png",
+        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
@@ -388,7 +499,6 @@
   },
   "order": [
     "tj_banner_carousel_LayRLh",
-    "jr_section_timer_4J83MN",
     "featured_collection_cVPwxi",
     "klaviyo_email_capture_yehVpF",
     "simple_banner_with_text_bHQMwg",
