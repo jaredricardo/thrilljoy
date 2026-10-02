@@ -396,7 +396,7 @@
           "type": "column",
           "settings": {
             "bg_color": "#004c52",
-            "header": "NEW <br> HORROR",
+            "header": "NEW HORROR",
             "header_color": "#ffffff",
             "image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
             "button_text": "SHOP COLLECTION",
@@ -409,11 +409,11 @@
           "type": "column",
           "settings": {
             "bg_color": "#95e7bf",
-            "header": "LETS SING <br> ABOUT IT",
+            "header": "EVENT EXCLUSIVES",
             "header_color": "#000000",
             "image": "shopify://shop_images/6530-Thrilljoy-PIX_-Hazbin-Hotel-Vox-_Hero_-front_1.png",
             "button_text": "SHOP COLLECTION",
-            "button_link": "shopify://collections/horror",
+            "button_link": "",
             "button_text_color": "#ffffff",
             "button_bg_color": "#000000"
           }
@@ -444,11 +444,11 @@
           "type": "column",
           "settings": {
             "bg_color": "#000000",
-            "header": "NEW <br> HORROR",
+            "header": "JUST DROPPED",
             "header_color": "#ffffff",
             "image": "shopify://shop_images/6404-Thrilljoy_PIX_-Junji_Ito-Tomie-O-Card_1.png",
             "button_text": "SHOP COLLECTION",
-            "button_link": "shopify://collections/horror",
+            "button_link": "shopify://collections/just-dropped",
             "button_text_color": "#000000",
             "button_bg_color": "#95e7bf"
           }
