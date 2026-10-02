@@ -1554,7 +1554,7 @@ slider-component#GalleryDots-template--23586092908708__main li button.active-but
 slider-component#GalleryDots-template--23615465226404__main li button.active-button,
 slider-component#GalleryDots-template--23615654887588__main li button.active-button
 {   
-    background: #5FD551;   
+    background: var(--TJ-green);   
 }
 .slider-buttons {
   display: none!important;

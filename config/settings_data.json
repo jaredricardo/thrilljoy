@@ -32,7 +32,7 @@
     "timer_hour": 3,
     "sticky_pencil_button_text": "",
     "sticky_pencil_button_url": "shopify://products/pix-jason-pumpkin",
-    "sticky_pencil_button_bg_color": "#5fd551",
+    "sticky_pencil_button_bg_color": "#95e7bf",
     "sticky_pencil_button_text_color": "#000000",
     "logo": "shopify://shop_images/THRILLJOY_LOGO_B_W_Thrilljoy_b_w_word_lockup_36028183-ae0d-492b-b6db-63201a78b865.png",
     "logo_width": 150,
@@ -186,11 +186,6 @@
         "disabled": false,
         "settings": {}
       },
-      "6174324309569838175": {
-        "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-        "disabled": false,
-        "settings": {}
-      },
       "4291333794791649201": {
         "type": "shopify://apps/loyalty-rewards-and-referrals/blocks/embed-sdk/6f172e67-4106-4ac0-89c5-b32a069b3101",
         "disabled": false,
@@ -214,6 +209,11 @@
         "type": "shopify://apps/pineraffle/blocks/app-embed/a7355a0d-da3a-4b47-bff6-8f75b9cc8805",
         "disabled": true,
         "settings": {}
+      },
+      "6174324309569838175": {
+        "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -222,7 +222,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#5fd551",
+          "button": "#95E7BF",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -288,7 +288,7 @@
           "background": "#000000",
           "background_gradient": "",
           "text": "#f3f3f3",
-          "button": "#5fd551",
+          "button": "#95E7BF",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -310,7 +310,7 @@
           "background": "#f0f0f0",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#5fd551",
+          "button": "#95E7BF",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -321,7 +321,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#5fd551",
+          "button": "#95E7BF",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"

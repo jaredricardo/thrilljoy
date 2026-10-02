@@ -1,4 +1,5 @@
 :root {
+  --TJ-green: #95e7bf;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -3595,8 +3596,8 @@ body::before {
     to bottom,
     #00808b 0,
     #00808b 33%,
-    #5fd551 33%,
-    #5fd551 66%,
+    var(--TJ-green) 33%,
+    var(--TJ-green) 66%,
     #ffff 66%,
     #ffff 100%
   );
@@ -3681,7 +3682,7 @@ body {
 .tj-banner-carousel-wrapper .swiper-button-prev,
 .tj-banner-carousel-wrapper .swiper-button-next {
   display: block;
-  color: #5fd551;
+  color: var(--TJ-green);
   height: max-content;
   width: max-content;
 }
@@ -3763,7 +3764,7 @@ body .swiper-pagination {
 }
 
 body .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #5fd551 !important;
+  background: var(--TJ-green) !important;
   opacity: 1;
 }
 
@@ -4684,7 +4685,7 @@ main:has(.blood-container) {
 .nrf__range-fill {
   position: absolute;
   height: 100%;
-  background-color: #5FD551;
+  background-color: var(--TJ-green);
   border-radius: 2px;
   pointer-events: none;
   display: block !important;
