@@ -399,20 +399,22 @@
             "bg_image": "shopify://shop_images/D-091026-Collection-Banner.png",
             "header": "HORRORS ABOUND",
             "header_color": "#ffffff",
-            "image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
+            "image": "shopify://shop_images/6516-Thrilljoy-PIX_-Mars-Attacks_-Martian-Soldier_Hero_-front.png",
+            "image_offset_y": 22,
             "button_text": "SHOP COLLECTION",
             "button_link": "shopify://collections/horror",
             "button_text_color": "#000000",
-            "button_bg_color": "#FFFFFF"
+            "button_bg_color": "#ffffff"
           }
         },
         "column_yBwbRe": {
           "type": "column",
           "settings": {
-            "bg_color": "#326BC4",
+            "bg_color": "#326bc4",
             "header": "EVENT EXCLUSIVES",
             "header_color": "#ffffff",
             "image": "shopify://shop_images/6530-Thrilljoy-PIX_-Hazbin-Hotel-Vox-_Hero_-front_1.png",
+            "image_offset_y": 10,
             "button_text": "SHOP COLLECTION",
             "button_link": "https://thrilljoy.com/collections/event-exclusives",
             "button_text_color": "#ffffff",
@@ -449,6 +451,7 @@
             "header": "JUST DROPPED",
             "header_color": "#ffffff",
             "image": "shopify://shop_images/6568-Thrilljoy_PIX_-Teen_Titans_Go_-Raven_-O-Card.png",
+            "image_offset_y": 0,
             "button_text": "SHOP COLLECTION",
             "button_link": "shopify://collections/just-dropped",
             "button_text_color": "#000000",
