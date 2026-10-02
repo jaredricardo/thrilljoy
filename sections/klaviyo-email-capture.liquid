@@ -23,7 +23,6 @@
 
     [data-section-id="{{ section.id }}"] {
         background-color: {{ section.settings.bg_color }};
-        padding: {{ section.settings.padding_y_d }}px 1rem;
         position: relative;
     } 
 
@@ -54,14 +53,21 @@
         width: 100%;
     }
 
+    [data-section-id="{{ section.id }}"] .form-container {
+        padding: {{ section.settings.padding_y_d }}px 1rem;
+    }
+
     [data-section-id="{{ section.id }}"] {
-        height: {{ section.settings.min_height_desktop }}px;
+        min-height: {{ section.settings.min_height_desktop }}px;
     }
 
     @media screen and (max-width: 768px) {
         [data-section-id="{{ section.id }}"] {
+            min-height: {{ section.settings.min_height_mobile }}px;
+        }
+
+        [data-section-id="{{ section.id }}"] .tj-klaviyo-email-capture-component .form-container {
             padding: {{ section.settings.padding_y_m }}px 1rem;
-            height: {{ section.settings.min_height_mobile }}px;
         }
 
         [data-section-id="{{ section.id }}"] h2 {

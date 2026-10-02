@@ -4034,7 +4034,6 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   align-items: center;
   text-align: center;
   z-index: 2;
-  position: absolute;
   inset: 0;
   padding: 2rem;
   box-sizing: border-box;
@@ -4577,7 +4576,6 @@ main:has(.blood-container) {
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
-  color: #000000;
   margin-top: 10%;
 }
 
@@ -4761,4 +4759,10 @@ main:has(.blood-container) {
 .tj-new-button:after,
 .tj-new-button:before {
   display: none;
+}
+
+@media screen and (max-width: 561px) {
+  .klaviyo-form-button {
+    font-size: 12px !important;
+  }
 }
