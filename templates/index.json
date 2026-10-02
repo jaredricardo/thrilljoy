@@ -396,7 +396,7 @@
           "type": "column",
           "settings": {
             "bg_color": "#004c52",
-            "header": "NEW HORROR",
+            "header": "HORRORS ABOUND",
             "header_color": "#ffffff",
             "image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front_1_2.png",
             "button_text": "SHOP COLLECTION",
@@ -444,9 +444,10 @@
           "type": "column",
           "settings": {
             "bg_color": "#000000",
+            "bg_image": "shopify://shop_images/D-100226-Collection-Banner.png",
             "header": "JUST DROPPED",
             "header_color": "#ffffff",
-            "image": "shopify://shop_images/6404-Thrilljoy_PIX_-Junji_Ito-Tomie-O-Card_1.png",
+            "image": "shopify://shop_images/6568-Thrilljoy_PIX_-Teen_Titans_Go_-Raven_-O-Card.png",
             "button_text": "SHOP COLLECTION",
             "button_link": "shopify://collections/just-dropped",
             "button_text_color": "#000000",
