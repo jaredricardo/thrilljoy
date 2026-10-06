@@ -387,6 +387,14 @@
           "type": "heading",
           "settings": {
             "heading": "Thrilljoy Threads",
+            "heading_svg": "",
+            "use_custom_font_size": false,
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "heading_justify_desktop": "flex-start",
+            "heading_text_align_desktop": "left",
+            "heading_justify_mobile": "flex-start",
+            "heading_text_align_mobile": "left",
             "use_h1": false,
             "heading_size": "h0",
             "heading_size_mobile": "h1"
@@ -416,6 +424,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
+        "fallback_background_color": "#000000",
         "image_overlay_opacity": 0,
         "fetch_priority": "auto",
         "use_preload": false,
@@ -463,11 +472,11 @@
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
       "settings": {
-        "desktop_image": "shopify://shop_images/HeroBanner_-01.png",
+        "desktop_image": "shopify://shop_images/ThJ-Banner-Redd.png",
         "mobile_min_height": 250,
         "image_overlay_opacity": 30,
         "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "<h2>What </h2><h2>the</h2><h2>FAQ?</h2>",
+        "header_text": "<h2>What&nbsp;</h2><h2>the</h2><h2>FAQ?</h2>",
         "text_color": "#ffffff",
         "link_out": "/pages/frequently-asked-questions",
         "link_out_is_button": false,
