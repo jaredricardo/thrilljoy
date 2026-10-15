@@ -15,6 +15,37 @@
         "carousel_eb7JFy": {
           "type": "carousel",
           "settings": {
+            "desktop_image": "shopify://shop_images/D-100226-LIVE-Hero-2000x750_copy.png",
+            "mobile_image": "shopify://shop_images/D-100226-LIVE-Hero-2500x1536_copy.png",
+            "image_overlay_opacity": 0,
+            "mobile_min_height": 0,
+            "complete_center": false,
+            "text_alignment": "left",
+            "text_container_top_pos": -28,
+            "text_container_left_pos": 5,
+            "top_pos_mobile": 40,
+            "left_pos_mobile": 5,
+            "image_alt_text": "Thrilljoy Banner Image",
+            "header": "",
+            "use_h1": false,
+            "header_margin_bottom": 16,
+            "subheader": "",
+            "subheader_margin_bottom": 16,
+            "description": "",
+            "description_margin_bottom": 16,
+            "text_color": "#ffffff",
+            "text_container_max_width_d": 50,
+            "text_container_max_width_m": 90,
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "button_background_color": "#95e7bf",
+            "button_link": "shopify://collections/event-exclusives",
+            "use_slide_linkout": true
+          }
+        },
+        "carousel_kPDeaw": {
+          "type": "carousel",
+          "settings": {
             "desktop_image": "shopify://shop_images/D-100226-LIVE-Hero-2000x750.png",
             "mobile_image": "shopify://shop_images/D-100226-LIVE-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
@@ -38,16 +69,16 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://collections/just-dropped",
             "use_slide_linkout": true
           }
         },
-        "carousel_k6gCeb": {
+        "carousel_YmmVQV": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/D-091026-LIVE-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D-091026-LIVE-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/D-091926-BatmanAnimated-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-091926-BatmanAnimated-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -69,8 +100,8 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
-            "button_link": "shopify://collections/new-featured",
+            "button_background_color": "#95e7bf",
+            "button_link": "shopify://collections/batman-day",
             "use_slide_linkout": true
           }
         },
@@ -132,7 +163,7 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://collections/get-notified",
             "use_slide_linkout": true
           }
@@ -164,7 +195,7 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://collections/summer-event",
             "use_slide_linkout": true
           }
@@ -196,7 +227,7 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://collections/avatar-the-last-airbender",
             "use_slide_linkout": true
           }
@@ -228,7 +259,7 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://products/pix-back-to-the-future-doc",
             "use_slide_linkout": true
           }
@@ -260,7 +291,7 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://collections/house-of-the-dragon",
             "use_slide_linkout": true
           }
@@ -291,7 +322,7 @@
             "text_container_max_width_m": 90,
             "button_text": "",
             "button_text_color": "#ffffff",
-            "button_background_color": "#5fd551",
+            "button_background_color": "#95e7bf",
             "button_link": "shopify://collections/toy-story",
             "use_slide_linkout": true
           }
@@ -299,7 +330,7 @@
       },
       "block_order": [
         "carousel_eb7JFy",
-        "carousel_k6gCeb",
+        "carousel_kPDeaw",
         "carousel_YmmVQV",
         "carousel_pcGnff",
         "carousel_cMGQVy",
@@ -317,11 +348,26 @@
         "use_pagination_dots": true
       }
     },
-    "featured_collection_cVPwxi": {
-      "type": "featured-collection",
+    "jr_section_timer_4J83MN": {
+      "type": "jr-section-timer",
+      "disabled": true,
+      "name": "JR Section Timer",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "timer_year": 2025,
+        "timer_month": 11,
+        "timer_day": 1,
+        "timer_hour": 3
+      }
+    },
+    "featured_collection_fNUTjc": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "<strong>TEAR INTO THE THRILL</strong>",
+        "heading_size": "h2",
+        "center_heading": true,
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -329,6 +375,10 @@
         "products_to_show": 20,
         "columns_desktop": 4,
         "full_width": true,
+        "new_button_text": "",
+        "new_button_link": "",
+        "new_button_text_color": "#ffffff",
+        "new_button_bg_color": "#000000",
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -345,27 +395,125 @@
         "padding_bottom": 36
       }
     },
-    "klaviyo_email_capture_yehVpF": {
-      "type": "klaviyo-email-capture",
-      "custom_css": [],
+    "basic_text_and_button_x6zcGN": {
+      "type": "basic-text-and-button",
+      "custom_css": [
+        "img {transform: rotate(180deg);}"
+      ],
+      "name": "Basic Text and Button",
       "settings": {
-        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
-        "form_max_width": 600,
-        "padding_y_d": 60,
-        "padding_y_m": 30,
-        "bg_color": "rgba(0,0,0,0)",
-        "button_bg_color": "#5fd551",
-        "header": "Keep up to date with all things Thrilljoy!",
-        "header_color": "#ffffff",
-        "subheader": "",
-        "subheader_color": "#ffffff",
-        "bg_image": "shopify://shop_images/BG-GenericTeal-AlignTop.png",
-        "min_height_desktop": 600,
-        "min_height_mobile": 550
+        "section_anchor_id": "",
+        "bg_color": "#000000",
+        "top_image": "shopify://shop_images/601af58404ac5df7dd45a100e27a4955f189d9fb.png",
+        "mobile_texture_image": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
+        "richtext_header": "<p><strong>THRILLJOY XP REWARDS</strong></p>",
+        "header_font_size_desktop": 28,
+        "header_font_size_mobile": 22,
+        "header_padding_top_desktop": 12,
+        "header_padding_top_mobile": 6,
+        "richtext_body": "<p>Earn XP and get access to exclusive rewards!</p>",
+        "subheader_font_size_desktop": 22,
+        "subheader_font_size_mobile": 14,
+        "button_text": "JOIN XP REWARDS",
+        "button_link": "https://thrilljoy.com/pages/rewards",
+        "text_color": "#fffefe",
+        "button_bg_color": "#95e7bf"
+      }
+    },
+    "character_column_kRGRy7": {
+      "type": "character-column",
+      "blocks": {
+        "column_R3BaNm": {
+          "type": "column",
+          "settings": {
+            "bg_color": "#004c52",
+            "bg_image": "shopify://shop_images/D-091026-Collection-Banner.png",
+            "header": "HORRORS ABOUND",
+            "header_color": "#ffffff",
+            "image": "shopify://shop_images/6726-Thrilljoy-PIX_-Terrifier-The-Little-Pale-Girl-_Hero_-front.png",
+            "image_offset_y": -8,
+            "image_scale": 1.3,
+            "button_text": "SHOP COLLECTION",
+            "button_link": "shopify://collections/horror",
+            "button_text_color": "#000000",
+            "button_bg_color": "#ffffff"
+          }
+        },
+        "column_yBwbRe": {
+          "type": "column",
+          "settings": {
+            "bg_color": "#326bc4",
+            "bg_image": "shopify://shop_images/D-100926-Collection-Banner.png",
+            "header": "EVENT EXCLUSIVES",
+            "header_color": "#ffffff",
+            "image": "shopify://shop_images/6516-Thrilljoy-PIX_-Mars-Attacks_-Martian-Soldier_Hero_-front.png",
+            "image_offset_y": -20,
+            "image_scale": 1.3,
+            "button_text": "SHOP COLLECTION",
+            "button_link": "https://thrilljoy.com/collections/event-exclusives",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "column_R3BaNm",
+        "column_yBwbRe"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {br {display: none; }}"
+      ],
+      "name": "Character Column",
+      "settings": {
+        "section_anchor_id": "",
+        "padding_y_desktop": 20,
+        "padding_y_mobile": 10,
+        "padding_bottom_desktop": 0,
+        "padding_bottom_mobile": 0,
+        "header_font_size_desktop": 32,
+        "header_font_size_mobile": 40
+      }
+    },
+    "character_column_ytUWpJ": {
+      "type": "character-column",
+      "blocks": {
+        "column_Nj4JWm": {
+          "type": "column",
+          "settings": {
+            "bg_color": "#000000",
+            "bg_image": "shopify://shop_images/D-100226-Collection-Banner.png",
+            "header": "JUST DROPPED",
+            "header_color": "#ffffff",
+            "image": "shopify://shop_images/6568-Thrilljoy_PIX_-Teen_Titans_Go_-Raven_-O-Card.png",
+            "image_offset_y": 0,
+            "image_scale": 1.2,
+            "button_text": "SHOP COLLECTION",
+            "button_link": "shopify://collections/just-dropped",
+            "button_text_color": "#000000",
+            "button_bg_color": "#95e7bf"
+          }
+        }
+      },
+      "block_order": [
+        "column_Nj4JWm"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {br {display: none; }}"
+      ],
+      "name": "Character Column",
+      "settings": {
+        "section_anchor_id": "",
+        "padding_y_desktop": 20,
+        "padding_y_mobile": 10,
+        "padding_bottom_desktop": 20,
+        "padding_bottom_mobile": 10,
+        "header_font_size_desktop": 32,
+        "header_font_size_mobile": 40
       }
     },
     "simple_banner_with_text_bHQMwg": {
       "type": "simple-banner-with-text",
+      "disabled": true,
       "settings": {
         "desktop_image": "shopify://shop_images/ThJ-Banner-Bloo_3f902c79-0563-4a48-99ad-9275e775bfab.png",
         "mobile_min_height": 250,
@@ -380,72 +528,13 @@
         "button_background_color": "#000000"
       }
     },
-    "image_banner_HdAagz": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_Rxc3WB": {
-          "type": "heading",
-          "settings": {
-            "heading": "Thrilljoy Threads",
-            "heading_svg": "",
-            "use_custom_font_size": false,
-            "heading_font_size_desktop": 40,
-            "heading_font_size_mobile": 24,
-            "heading_justify_desktop": "flex-start",
-            "heading_text_align_desktop": "left",
-            "heading_justify_mobile": "flex-start",
-            "heading_text_align_mobile": "left",
-            "use_h1": false,
-            "heading_size": "h0",
-            "heading_size_mobile": "h1"
-          }
-        },
-        "buttons_imY8D9": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/apparel",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Rxc3WB",
-        "buttons_imY8D9"
-      ],
-      "custom_css": [
-        "img {aspect-ratio: 2555/847;}",
-        "banner {height: 250px;}",
-        ".banner__box {padding: 0;}",
-        "@media screen and (max-width: 768px) {.banner {height: 200px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/BG-GenericTeal-AlignBtm.png",
-        "fallback_background_color": "#000000",
-        "image_overlay_opacity": 0,
-        "fetch_priority": "auto",
-        "use_preload": false,
-        "image_height": "adapt",
-        "banner_height_vh": 60,
-        "banner_height_vh_mobile": 50,
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-12a86de0-f9ec-4bff-b178-4ff2c6578ed1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
-    "featured_collection_MwRKP6": {
+    "featured_collection_J4Lc3V": {
       "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "<strong>THRILLJOY THREADS</strong>",
+        "heading_size": "h2",
+        "center_heading": true,
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -453,6 +542,10 @@
         "products_to_show": 20,
         "columns_desktop": 4,
         "full_width": true,
+        "new_button_text": "SHOP APPAREL",
+        "new_button_link": "shopify://collections/apparel",
+        "new_button_text_color": "#000000",
+        "new_button_bg_color": "#95e7bf",
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -471,6 +564,7 @@
     },
     "simple_banner_with_text_DzdpE3": {
       "type": "simple-banner-with-text",
+      "disabled": true,
       "settings": {
         "desktop_image": "shopify://shop_images/ThJ-Banner-Redd.png",
         "mobile_min_height": 250,
@@ -485,35 +579,46 @@
         "button_background_color": "#000000"
       }
     },
-    "simple_banner_with_text_K6HdPp": {
-      "type": "simple-banner-with-text",
-      "disabled": true,
+    "klaviyo_email_capture_yehVpF": {
+      "type": "klaviyo-email-capture",
       "custom_css": [
-        ".tj-simple-banner,.tj-simple-banner img {min-height: auto !important;}"
+        ".tj-klaviyo-top-image,.tj-klaviyo-mobile-texture {transform: rotate(180deg);}",
+        "h2 {font-weight: bold !important;}"
       ],
       "settings": {
-        "desktop_image": "shopify://shop_images/sold_out_v3.png",
-        "mobile_min_height": 300,
-        "image_overlay_opacity": 0,
-        "image_alt_text": "Thrilljoy Banner Image",
-        "header_text": "",
-        "text_color": "#ffffff",
-        "link_out": "shopify://blogs/news/🎡-welcome-to-thrilljoy-s-block-party-boardwalk-bash-🎉",
-        "link_out_is_button": false,
-        "button_text": "Button Text",
-        "button_text_color": "#ffffff",
-        "button_background_color": "#000000"
+        "klaviyo_html": "<div class=\"klaviyo-form-WV9pY7\"></div>",
+        "top_image": "shopify://shop_images/601af58404ac5df7dd45a100e27a4955f189d9fb.png",
+        "mobile_texture_image": "shopify://shop_images/Thrilljoy-TearUp-White-v2-cropped.png",
+        "form_max_width": 650,
+        "padding_y_d": 80,
+        "padding_y_m": 30,
+        "bg_color": "#000000",
+        "button_bg_color": "#95e7bf",
+        "button_width_desktop": 150,
+        "button_width_mobile": 80,
+        "header": "SIGN UP FOR THE NEWSLETTER",
+        "header_color": "#ffffff",
+        "header_font_size_desktop": 28,
+        "header_font_size_mobile": 22,
+        "subheader": "Keep up to date with all things Thrilljoy",
+        "subheader_color": "#ffffff",
+        "subheader_font_size_desktop": 22,
+        "subheader_font_size_mobile": 14,
+        "min_height_desktop": 300,
+        "min_height_mobile": 200
       }
     }
   },
   "order": [
     "tj_banner_carousel_LayRLh",
-    "featured_collection_cVPwxi",
-    "klaviyo_email_capture_yehVpF",
+    "jr_section_timer_4J83MN",
+    "featured_collection_fNUTjc",
+    "basic_text_and_button_x6zcGN",
+    "character_column_kRGRy7",
+    "character_column_ytUWpJ",
     "simple_banner_with_text_bHQMwg",
-    "image_banner_HdAagz",
-    "featured_collection_MwRKP6",
+    "featured_collection_J4Lc3V",
     "simple_banner_with_text_DzdpE3",
-    "simple_banner_with_text_K6HdPp"
+    "klaviyo_email_capture_yehVpF"
   ]
 }

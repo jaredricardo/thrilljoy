@@ -1,4 +1,5 @@
 :root {
+  --TJ-green: #95e7bf;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -3595,8 +3596,8 @@ body::before {
     to bottom,
     #00808b 0,
     #00808b 33%,
-    #5fd551 33%,
-    #5fd551 66%,
+    var(--TJ-green) 33%,
+    var(--TJ-green) 66%,
     #ffff 66%,
     #ffff 100%
   );
@@ -3681,7 +3682,7 @@ body {
 .tj-banner-carousel-wrapper .swiper-button-prev,
 .tj-banner-carousel-wrapper .swiper-button-next {
   display: block;
-  color: #5fd551;
+  color: var(--TJ-green);
   height: max-content;
   width: max-content;
 }
@@ -3763,7 +3764,7 @@ body .swiper-pagination {
 }
 
 body .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #5fd551 !important;
+  background: var(--TJ-green) !important;
   opacity: 1;
 }
 
@@ -4034,7 +4035,6 @@ body .swiper-pagination-bullet.swiper-pagination-bullet-active {
   align-items: center;
   text-align: center;
   z-index: 2;
-  position: absolute;
   inset: 0;
   padding: 2rem;
   box-sizing: border-box;
@@ -4474,6 +4474,73 @@ main:has(.blood-container) {
   
 }
 
+.party-balloon {
+  position: fixed;
+  z-index: 15;
+  width: 3.5vw;
+  max-width: 52.5px;
+  pointer-events: none;
+}
+
+.party-balloon-1 {
+  top: 8vh;
+  left: 4vw;
+  transform: rotate(-10deg);
+}
+
+.party-balloon-2 {
+  top: 6vh;
+  right: 5vw;
+  transform: rotate(12deg);
+}
+
+.party-balloon-3 {
+  bottom: 6vh;
+  left: 6vw;
+  transform: rotate(10deg);
+}
+
+.party-balloon-4 {
+  bottom: 8vh;
+  right: 4vw;
+  transform: rotate(-12deg);
+}
+
+.party-streamer {
+  position: fixed;
+  top: 0;
+  z-index: 16;
+  width: 35vw;
+  pointer-events: none;
+}
+
+.party-streamer-left {
+  left: 0;
+}
+
+.party-streamer-right {
+  right: 0;
+}
+
+.party-confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 14;
+  width: 100%;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .party-balloon {
+    width: 30px;
+  }
+
+  .party-streamer {
+    width: 40vw;
+  }
+}
+
 .card__inner:has(.low-stock-badge) .presale-badge {
   display: none;
 }
@@ -4578,7 +4645,6 @@ main:has(.blood-container) {
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
-  color: #000000;
   margin-top: 10%;
 }
 
@@ -4687,7 +4753,7 @@ main:has(.blood-container) {
 .nrf__range-fill {
   position: absolute;
   height: 100%;
-  background-color: #5FD551;
+  background-color: var(--TJ-green);
   border-radius: 2px;
   pointer-events: none;
   display: block !important;
@@ -4746,4 +4812,26 @@ main:has(.blood-container) {
 
 .nrf__thumb::-moz-range-progress {
   background: transparent;
+}
+
+.tj-new-button,
+.klaviyo-form-button {
+  border-radius: 0px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tj-new-button:after,
+.tj-new-button:before {
+  display: none;
+}
+
+@media screen and (max-width: 561px) {
+  .klaviyo-form-button {
+    font-size: 12px !important;
+  }
 }

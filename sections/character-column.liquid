@@ -1,0 +1,302 @@
+{% style %}
+
+  [data-section-id="{{ section.id }}"] .character-column__row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__col {
+    padding-top: {{ section.settings.padding_y_desktop }}px;
+    padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__col-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__col-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__header {
+    margin: 0;
+    font-size: {{ section.settings.header_font_size_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    [data-section-id="{{ section.id }}"] .character-column__header {
+      font-size: {{ section.settings.header_font_size_desktop }}px;
+    }
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__image-wrap {
+    position: relative;
+    height: 100%;
+    min-height: 20rem;
+    overflow: hidden;
+  }
+
+  [data-section-id="{{ section.id }}"] .character-column__image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: 990px) {
+    [data-section-id="{{ section.id }}"] .character-column__row {
+      grid-template-columns: repeat({{ section.blocks.size | at_least: 1 }}, 1fr);
+    }
+
+    [data-section-id="{{ section.id }}"] .character-column__col-inner--single {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    [data-section-id="{{ section.id }}"] .character-column__col-inner {
+      grid-template-columns: 1fr;
+    }
+
+    [data-section-id="{{ section.id }}"] .character-column__col {
+      padding-top: {{ section.settings.padding_y_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    [data-section-id="{{ section.id }}"] .character-column__text {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+{% endstyle %}
+
+<section data-section-id="{{ section.id }}" {% if section.settings.section_anchor_id %} id="{{ section.settings.section_anchor_id }}" {% endif %}>
+  <div class="character-column__row">
+    {%- for block in section.blocks -%}
+      <div class="character-column__col" style="background-color: {{ block.settings.bg_color }};{% if block.settings.bg_image != blank %} background-image: url({{ block.settings.bg_image | image_url: width: 1800 }});{% endif %}" {{ block.shopify_attributes }}>
+        {%- if block.settings.button_link != blank -%}<a href="{{ block.settings.button_link }}" class="character-column__col-link" aria-label="{{ block.settings.header | strip_html | escape }}">{%- endif -%}
+        <div class="character-column__col-inner{% if section.blocks.size == 1 %} character-column__col-inner--single{% endif %}">
+          <div class="character-column__text">
+            {%- if block.settings.header != blank -%}
+              <h2 class="character-column__header inline-richtext" style="color: {{ block.settings.header_color }};">{{ block.settings.header }}</h2>
+            {%- endif -%}
+            {%- if block.settings.button_text != blank -%}
+              {%- if block.settings.button_link != blank -%}
+                <span
+                  class="button tj-new-button button--primary character-column__button"
+                  style="color: {{ block.settings.button_text_color }} !important; background-color: {{ block.settings.button_bg_color }} !important;"
+                >
+                  {{- block.settings.button_text | escape -}}
+                </span>
+              {%- else -%}
+                <a
+                  role="link" aria-disabled="true"
+                  class="button tj-new-button button--primary character-column__button"
+                  style="color: {{ block.settings.button_text_color }} !important; background-color: {{ block.settings.button_bg_color }} !important;"
+                >
+                  {{- block.settings.button_text | escape -}}
+                </a>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+          <div class="character-column__image-wrap">
+            {%- if block.settings.image != blank -%}
+              {%- assign image_offset_y = block.settings.image_offset_y | default: 0 -%}
+              {%- assign image_scale = block.settings.image_scale | default: 1.0 -%}
+              {%- capture image_transform -%}
+                {%- if image_offset_y != 0 -%}translateY({{ image_offset_y }}px) {%- endif -%}
+                {%- if image_scale != 1.0 -%}scale({{ image_scale }}){%- endif -%}
+              {%- endcapture -%}
+              {%- assign image_transform = image_transform | strip -%}
+              {%- capture image_style -%}{%- if image_transform != blank -%}transform: {{ image_transform }};{%- endif -%}{%- endcapture -%}
+              {{
+                block.settings.image
+                | image_url: width: 1500
+                | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1500', alt: block.settings.image.alt, style: image_style
+              }}
+            {%- endif -%}
+          </div>
+        </div>
+        {%- if block.settings.button_link != blank -%}</a>{%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Character Column",
+  "enabled_on": {
+    "templates": ["product", "collection", "page", "index", "article", "blog", "404", "cart", "search"]
+  },
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_anchor_id",
+      "label": "Section Anchor ID (optional)"
+    },
+    {
+      "type": "range",
+      "id": "padding_y_desktop",
+      "label": "Padding top desktop (px)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_y_mobile",
+      "label": "Padding top mobile (px)",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Padding bottom desktop (px)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom mobile (px)",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "header_font_size_desktop",
+      "label": "Header font size desktop (px)",
+      "min": 16,
+      "max": 120,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "header_font_size_mobile",
+      "label": "Header font size mobile (px)",
+      "min": 16,
+      "max": 80,
+      "step": 1,
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background image"
+        },
+        {
+          "type": "html",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "color",
+          "id": "header_color",
+          "label": "Header color",
+          "default": "#000000"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_offset_y",
+          "label": "Image offset up/down (px)",
+          "min": -100,
+          "max": 100,
+          "step": 2,
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "image_scale",
+          "label": "Image scale",
+          "min": 1,
+          "max": 2,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "button_bg_color",
+          "label": "Button background color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Character Column",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

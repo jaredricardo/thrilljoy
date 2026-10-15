@@ -30,10 +30,18 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .section-{{ section.id }}-padding .collection__custom-button {
+    padding-top: 1rem;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .section-{{ section.id }}-padding .collection__custom-button {
+      padding-top: 2rem;
     }
   }
 {%- endstyle -%}
@@ -66,7 +74,7 @@
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
-    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}{% if section.settings.center_heading %} center{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
@@ -176,6 +184,22 @@
       {%- endif -%}
     </slider-component>
 
+    {%- if section.settings.new_button_text != blank -%}
+      <div class="center collection__custom-button{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <a
+          {% if section.settings.new_button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.new_button_link }}"
+          {% endif %}
+          class="button tj-new-button button--primary"
+          style="color: {{ section.settings.new_button_text_color }} !important; background-color: {{ section.settings.new_button_bg_color }} !important;"
+        >
+          {{- section.settings.new_button_text | escape -}}
+        </a>
+      </div>
+    {%- endif -%}
+
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
@@ -237,6 +261,12 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+      "type": "checkbox",
+      "id": "center_heading",
+      "default": false,
+      "label": "Center heading"
+    },
+    {
       "type": "richtext",
       "id": "description",
       "label": "t:sections.featured-collection.settings.description.label"
@@ -295,6 +325,32 @@
       "id": "full_width",
       "label": "t:sections.featured-collection.settings.full_width.label",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Custom Button"
+    },
+    {
+      "type": "text",
+      "id": "new_button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "new_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "new_button_text_color",
+      "label": "Button text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "new_button_bg_color",
+      "label": "Button background color",
+      "default": "#000000"
     },
     {
       "type": "checkbox",
