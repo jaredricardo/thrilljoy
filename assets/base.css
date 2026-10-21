@@ -4541,6 +4541,63 @@ main:has(.blood-container) {
   }
 }
 
+.pix-figure {
+  position: fixed;
+  z-index: 15;
+  width: 9vw;
+  max-width: 140px;
+  pointer-events: none;
+}
+
+.pix-figure-1 {
+  top: 10vh;
+  left: -1vw;
+  transform: rotate(8deg);
+}
+
+.pix-figure-2 {
+  top: 18vh;
+  right: 4vw;
+  transform: rotate(10deg);
+}
+
+.pix-figure-3 {
+  top: 45vh;
+  left: 2vw;
+  transform: rotate(6deg);
+}
+
+.pix-figure-4 {
+  top: 50vh;
+  right: 3vw;
+  transform: rotate(-12deg);
+}
+
+.pix-figure-5 {
+  bottom: 22vh;
+  left: 6vw;
+  transform: rotate(-5deg);
+}
+
+.pix-figure-6 {
+  bottom: 30vh;
+  right: 6vw;
+  transform: rotate(9deg);
+}
+
+.pix-figure-7 {
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%) rotate(4deg);
+}
+
+@media screen and (max-width: 768px) {
+  .pix-figure {
+    width: 70px;
+    max-width: none;
+  }
+}
+
 .card__inner:has(.low-stock-badge) .presale-badge {
   display: none;
 }
