@@ -4558,7 +4558,7 @@ main:has(.blood-container) {
 .pix-figure-2 {
   top: 18vh;
   right: 4vw;
-  transform: rotate(10deg);
+  transform: rotate(28deg);
 }
 
 .pix-figure-3 {
@@ -4568,8 +4568,8 @@ main:has(.blood-container) {
 }
 
 .pix-figure-4 {
-  top: 50vh;
-  right: 3vw;
+  top: 48vh;
+  right: 2vw;
   transform: rotate(-12deg);
 }
 
@@ -4580,8 +4580,8 @@ main:has(.blood-container) {
 }
 
 .pix-figure-6 {
-  bottom: 30vh;
-  right: 6vw;
+  bottom: 10vh;
+  right: 11vw;
   transform: rotate(9deg);
 }
 
