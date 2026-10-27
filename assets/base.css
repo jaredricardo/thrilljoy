@@ -4585,12 +4585,6 @@ main:has(.blood-container) {
   transform: rotate(9deg);
 }
 
-.pix-figure-7 {
-  bottom: 5vh;
-  left: 50%;
-  transform: translateX(-50%) rotate(4deg);
-}
-
 @media screen and (max-width: 768px) {
   .pix-figure {
     width: 70px;
