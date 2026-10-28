@@ -20,12 +20,6 @@
           "type": "price",
           "settings": {}
         },
-        "custom_liquid_fVahD6": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"odds-of-chase\">\n    <strong>ODDS OF A CHASE</strong>\n    <a href=\"#chance-chase-section\">\n      Learn More\n    </a>\n  </div>"
-          }
-        },
         "text_rzbTg9": {
           "type": "text",
           "disabled": true,
@@ -83,10 +77,12 @@
             "page": ""
           }
         },
-        "custom_liquid_QABgYV": {
-          "type": "custom_liquid",
+        "product_details": {
+          "type": "product_details",
           "settings": {
-            "custom_liquid": "<details>\n  <summary><strong>More details </strong></summary>\n  <p><strong>Weight:</strong> {% assign weight_in_lbs = product.variants.first.weight | divided_by: 453.592 %}\n{{ weight_in_lbs | round: 2 }} lb\n</p>\n<p><strong>Height:</strong>\n{{ product.metafields.custom.height.value }}\n</p>\n<p><strong>Width:</strong>\n{{ product.metafields.custom.width.value }}\n</p>\n<p><strong>Length:</strong>\n{{ product.metafields.custom.length.value }}\n</p>\n</details>"
+            "rarity_heading": "RARITY",
+            "rarity_text": "1/6 ODDS OF A CHASE",
+            "details_heading": "PRODUCT DETAILS"
           }
         },
         "share": {
@@ -99,7 +95,6 @@
       "block_order": [
         "title",
         "price",
-        "custom_liquid_fVahD6",
         "text_rzbTg9",
         "variant_picker",
         "variant_product_area_MyVGbM",
@@ -109,11 +104,12 @@
         "video_cards_placement_4nweMc",
         "description",
         "collapsible_tab_7jT6Rw",
-        "custom_liquid_QABgYV",
+        "product_details",
         "share"
       ],
       "custom_css": [],
       "settings": {
+        "enable_updated_layout": true,
         "enable_sticky_info": false,
         "color_scheme": "scheme-1",
         "media_size": "large",
@@ -127,15 +123,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 84
-      }
-    },
-    "custom_liquid_9PDUML": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div id=\"chance-chase-section\">\n    <p style=\"display: none;\">Chance of chase</p>\n  </div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "jr_better_together_qyVxA7": {
@@ -242,106 +229,23 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_dzCaK4": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9qDymW": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>1-of-6 ODDS OF A CHASE!</strong>",
-            "use_h1": false,
-            "heading_size": "h1"
-          }
-        },
-        "text_4gAjbJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>What is ODDS OF A CHASE?</strong></p><p>Each collectible has a 1-of-6 odds of a limited edition chase! </p><p>For special events, we may release limited edition SUPER chase items, with edition sizes as low as just 96 pieces!</p><p>Occasionally, we will release ULTRA chase items, featuring edition sizes as small as 24 pieces!</p><p>With limited production runs and rare chase pieces, PIX! delivers the thrill of the chase and the joy of community.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9qDymW",
-        "text_4gAjbJ"
-      ],
-      "custom_css": [
-        "h2 {text-align: center;}"
-      ],
+    "product_collectibility": {
+      "type": "product-collectibility",
       "settings": {
-        "extra_classes": "hide-from-mega-pix",
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "multicolumn_3cjyCM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_C6HDp8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5757_1_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
-            "title": "Limited Edition",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_DiXqHB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5757_2_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
-            "title": "Chase Edition",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_eYtGXt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5757_3_pjauJQ6WyVd82SRtwG3veqZC54DzYhg9fsE7UFcL.jpg",
-            "title": "Ultra Chase Edition",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_C6HDp8",
-        "column_DiXqHB",
-        "column_eYtGXt"
-      ],
-      "settings": {
-        "extra_classes": "hide-from-mega-pix",
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-9ae2f928-1bb0-423b-be1d-366ddabc8e32",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52
+        "top_image": "shopify://shop_images/601af58404ac5df7dd45a100e27a4955f189d9fb.png",
+        "chase_heading": "1/6 ODDS OF CHASE",
+        "chase_text": "<p>Every limited edition PIX! has 1-of-6 odds of a chase! Reveal the wax seal to see the size of the run - the highest possible run will never exceed 9999!</p>",
+        "authenticity_heading": "CARD OF AUTHENTICITY",
+        "authenticity_text": "<p>Every PIX! comes with a card of authenticity that has your unique number in the production run!<br/>How close are you to 0001?</p>",
+        "footer_text": "<p>Tear into the Thrill with Thrilljoy and enjoy limited production runs, the thrill of the chase, and the joy of community.</p>"
       }
     }
   },
   "order": [
     "main",
-    "custom_liquid_9PDUML",
     "jr_better_together_qyVxA7",
     "multicolumn_RAfAWN",
     "related-products",
-    "rich_text_dzCaK4",
-    "multicolumn_3cjyCM"
+    "product_collectibility"
   ]
 }

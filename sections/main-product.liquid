@@ -13,7 +13,7 @@
 
 <product-info
   id="MainProduct-{{ section.id }}"
-  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
+  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}{% if section.settings.enable_updated_layout %} product-main--updated{% endif %}"
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
   data-update-url="true"
@@ -85,6 +85,7 @@
     >
   {%- endif -%}
   
+  {% unless section.settings.enable_updated_layout %}
   {% style %}
     /* Thumbnails to the left side */
     media-gallery#MediaGallery-{{ section.id }}
@@ -207,7 +208,59 @@
         height: 110%;
     }
   {% endstyle %}
+  {% endunless %}
 
+  {% if section.settings.enable_updated_layout %}
+    {% style %}
+      #MainProduct-{{ section.id }} media-gallery {
+        display: block;
+        background: transparent;
+      }
+
+      #MainProduct-{{ section.id }} .thumbnail-slider {
+        flex-direction: row;
+      }
+
+      #MainProduct-{{ section.id }} .thumbnail-list {
+        flex-direction: row;
+        margin: 0;
+      }
+
+      #MainProduct-{{ section.id }} .thumbnail-list__item {
+        width: calc((100% - 3rem) / 4);
+        height: auto;
+        margin-bottom: 0;
+      }
+
+      #MainProduct-{{ section.id }} .thumbnail-slider .slider-button {
+        display: flex;
+      }
+
+      #MainProduct-{{ section.id }} .product__media-list img,
+      #MainProduct-{{ section.id }} .thumbnail img {
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+        border-radius: 0;
+      }
+    {% endstyle %}
+  {% endif %}
+
+  {%- assign description_block = section.blocks | where: 'type', 'description' | first -%}
+  {%- capture product_description -%}
+    {%- if description_block != blank -%}
+      <div {{ description_block.shopify_attributes }}>
+        {% if product.type == "PIX!" %}
+          <p><b>PLEASE NOTE- THIS PRODUCT WILL BE BRANDED “PIX!”, NOT “PIX! PANORAMIX”</b></p>
+        {% endif %}
+        {%- if product.description != blank -%}
+          <div class="product__description rte quick-add-hidden">
+            {{ product.description }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  {%- endcapture -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width main-product-area {% if product.tags contains 'retail-exclusive' %} retail-exclusive {% endif %}">
@@ -423,14 +476,47 @@
                   {%- endif -%}
                 </p>
               {%- when 'description' -%}
-                {% if product.type == "PIX!" %}
-                  <p><b>PLEASE NOTE- THIS PRODUCT WILL BE BRANDED “PIX!”, NOT “PIX! PANORAMIX”</b></p>
-                {% endif %}
-                {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+                <div{% if section.settings.enable_updated_layout and product.media.size > 0 %} class="product__additional-inline"{% endif %}>
+                  {{ product_description }}
+                </div>
+              {%- when 'product_details' -%}
+                {%- capture product_details -%}
+                  <div class="product__details" {{ block.shopify_attributes }}>
+                    <div class="product__rarity">
+                      <h2 class="h4">{{ block.settings.rarity_heading | escape }}</h2>
+                      {% if product.metafields.custom.limited_edition_number.value != blank %}
+                        <p>LE {{ product.metafields.custom.limited_edition_number.value | escape }}</p>
+                      {% endif %}
+                      <p class="hide-from-mega-pix">{{ block.settings.rarity_text | escape }}</p>
+                    </div>
+                    <details class="product__specifications" open>
+                      <summary><strong>{{ block.settings.details_heading | escape }}</strong></summary>
+                      <dl>
+                        {% if product.type != blank %}
+                          <div><dt>Product Type:</dt><dd class="product__type">{{ product.type | escape }}</dd></div>
+                        {% endif %}
+                        {% if product.variants.first.weight > 0 %}
+                          <div>
+                            <dt>Weight:</dt>
+                            <dd>{{ product.variants.first.weight | divided_by: 453.592 | round: 2 }} lb</dd>
+                          </div>
+                        {% endif %}
+                        {% if product.metafields.custom.height.value != blank %}
+                          <div><dt>Height:</dt><dd>{{ product.metafields.custom.height.value | escape }}</dd></div>
+                        {% endif %}
+                        {% if product.metafields.custom.width.value != blank %}
+                          <div><dt>Width:</dt><dd>{{ product.metafields.custom.width.value | escape }}</dd></div>
+                        {% endif %}
+                        {% if product.metafields.custom.length.value != blank %}
+                          <div><dt>Length:</dt><dd>{{ product.metafields.custom.length.value | escape }}</dd></div>
+                        {% endif %}
+                      </dl>
+                    </details>
                   </div>
-                {%- endif -%}
+                {%- endcapture -%}
+                <div{% if section.settings.enable_updated_layout and product.media.size > 0 %} class="product__additional-inline"{% endif %}>
+                  {{ product_details }}
+                </div>
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -919,6 +1005,14 @@
           {% endif %} 
         </section>
       </div>
+      {% if section.settings.enable_updated_layout and product.media.size > 0 %}
+        <div class="product__media-wrapper product__additional-desktop grid__item">
+          {{ product_description }}
+        </div>
+        <div class="product__info-wrapper product__additional-desktop grid__item">
+          {{ product_details }}
+        </div>
+      {% endif %}
     </div>
 
     {% render 'product-media-modal', variant_images: variant_images %}
@@ -1194,6 +1288,31 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "product_details",
+      "name": "Rarity & product details",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "rarity_heading",
+          "label": "Rarity heading",
+          "default": "RARITY"
+        },
+        {
+          "type": "text",
+          "id": "rarity_text",
+          "label": "Rarity text",
+          "default": "1/6 ODDS OF A CHASE"
+        },
+        {
+          "type": "text",
+          "id": "details_heading",
+          "label": "Details heading",
+          "default": "PRODUCT DETAILS"
+        }
+      ]
     },
     {
       "type": "share",
@@ -2352,6 +2471,13 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_updated_layout",
+      "default": false,
+      "label": "Use updated product layout",
+      "info": "Show horizontal thumbnails and place the description and product details below the gallery on desktop."
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",

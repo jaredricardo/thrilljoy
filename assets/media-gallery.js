@@ -105,9 +105,6 @@ if (!customElements.get('media-gallery')) {
           .querySelectorAll('button')
           .forEach((element) => element.classList.remove('active-button'));
         dot.querySelector('button').classList.add('active-button');
-        if (this.elements.dots.isSlideVisible(thumbnail, 10)) return;
-
-        // this.elements.dots.slider.scrollTo({ left: thumbnail.offsetLeft });
       }
 
       announceLiveRegion(activeItem, position) {

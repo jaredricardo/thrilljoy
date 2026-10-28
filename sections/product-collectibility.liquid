@@ -1,0 +1,100 @@
+<section id="chance-chase-section" class="product-collectibility hide-from-mega-pix">
+  {% if section.settings.top_image != blank %}
+    {{
+      section.settings.top_image
+      | image_url: width: 3000
+      | image_tag:
+        loading: 'lazy',
+        widths: '375, 750, 1100, 1500, 2000, 3000',
+        sizes: '100vw',
+        class: 'product-collectibility__edge',
+        alt: ''
+    }}
+  {% endif %}
+  <div class="page-width product-collectibility__inner">
+    <div class="product-collectibility__columns">
+      <div class="product-collectibility__column">
+        <img
+          src="{{ 'chase-badge-image.png' | asset_url }}"
+          alt=""
+          width="768"
+          height="768"
+          loading="lazy"
+          class="product-collectibility__image"
+        >
+        {% if section.settings.chase_heading != blank %}
+          <h2>{{ section.settings.chase_heading | escape }}</h2>
+        {% endif %}
+        <div class="rte">{{ section.settings.chase_text }}</div>
+      </div>
+      <div class="product-collectibility__column">
+        <img
+          src="{{ 'le-image.png' | asset_url }}"
+          alt=""
+          width="808"
+          height="808"
+          loading="lazy"
+          class="product-collectibility__image"
+        >
+        {% if section.settings.authenticity_heading != blank %}
+          <h2>{{ section.settings.authenticity_heading | escape }}</h2>
+        {% endif %}
+        <div class="rte">{{ section.settings.authenticity_text }}</div>
+      </div>
+    </div>
+    {% if section.settings.footer_text != blank %}
+      <div class="product-collectibility__footer rte">{{ section.settings.footer_text }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product collectibility",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "top_image",
+      "label": "Top torn-edge image"
+    },
+    {
+      "type": "text",
+      "id": "chase_heading",
+      "label": "Chase heading",
+      "default": "1/6 ODDS OF CHASE"
+    },
+    {
+      "type": "richtext",
+      "id": "chase_text",
+      "label": "Chase text",
+      "default": "<p>Every limited edition PIX! has 1-of-6 odds of a chase! Reveal the wax seal to see the size of the run - the highest possible run will never exceed 9999!</p>"
+    },
+    {
+      "type": "text",
+      "id": "authenticity_heading",
+      "label": "Authenticity heading",
+      "default": "CARD OF AUTHENTICITY"
+    },
+    {
+      "type": "richtext",
+      "id": "authenticity_text",
+      "label": "Authenticity text",
+      "default": "<p>Every PIX! comes with a card of authenticity that has your unique number in the production run!<br/>How close are you to 0001?</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_text",
+      "label": "Closing text",
+      "default": "<p>Tear into the Thrill with Thrilljoy and enjoy limited production runs, the thrill of the chase, and the joy of community.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product collectibility"
+    }
+  ]
+}
+{% endschema %}

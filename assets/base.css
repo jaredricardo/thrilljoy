@@ -4887,3 +4887,233 @@ main:has(.blood-container) {
     font-size: 12px !important;
   }
 }
+
+.product-main--updated .product__additional-desktop {
+  display: none;
+}
+
+.product-main--updated .tj-breadcrumbs .breadcrumb.current {
+  font-weight: 700;
+}
+
+.product-main--updated media-gallery {
+  position: relative;
+}
+
+.product-main--updated .thumbnail-slider {
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-main--updated .thumbnail-list.slider {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  min-width: 0;
+  gap: 1rem;
+  padding: 0;
+  scroll-padding-left: 0;
+}
+
+.product-main--updated .thumbnail-slider .slider-button {
+  flex: 0 0 4rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #000;
+}
+
+.product-main--updated .thumbnail-slider .slider-button:disabled {
+  opacity: 0.4;
+}
+
+.product-main--updated .thumbnail-list .thumbnail {
+  border-radius: 0;
+}
+
+.product-main--updated [id^='GalleryDots-'] {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  list-style: none;
+}
+
+.product-main--updated [id^='GalleryDots-'] button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+.product-main--updated [id^='GalleryDots-'] .active-button {
+  background: var(--TJ-green);
+}
+
+.product-main--updated .product__details {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.product-main--updated .product__rarity {
+  margin-bottom: 4rem;
+}
+
+.product-main--updated .product__rarity h2,
+.product-main--updated .product__rarity p {
+  margin: 0;
+}
+
+.product-main--updated .product__rarity p {
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.product-main--updated .product__rarity h2,
+.product-main--updated .product__specifications summary {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.product-main--updated .product__specifications summary::after {
+  content: '+';
+  margin-left: 0.5rem;
+}
+
+.product-main--updated .product__specifications[open] summary::after {
+  content: '-';
+}
+
+.product-main--updated .product__specifications dl {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 0 0 0.5rem;
+}
+
+.product-main--updated .product__specifications dl > div {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.product-main--updated .product__specifications dd {
+  margin: 0;
+}
+
+.product-main--updated .product__specifications .product__type {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 750px) {
+  .product-main--updated .product__additional-inline {
+    display: none;
+  }
+
+  .product-main--updated .product__additional-desktop {
+    display: block;
+    margin-top: 5rem;
+  }
+
+  .product-main--updated [id^='GalleryDots-'] {
+    display: none;
+  }
+}
+
+.product-collectibility {
+  position: relative;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.product-collectibility__edge {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+.product-collectibility__inner {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+.product-collectibility__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.product-collectibility__column {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.product-collectibility__image {
+  display: block;
+  width: 18rem;
+  height: 18rem;
+  object-fit: contain;
+  margin: 0 auto 2rem;
+}
+
+.product-collectibility__column h2 {
+  margin: 0;
+  color: inherit;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.product-collectibility .rte {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
+.product-collectibility .rte p {
+  margin: 0;
+}
+
+.product-collectibility__footer {
+  max-width: 85rem;
+  margin: 8rem auto 0;
+}
+
+@media screen and (max-width: 749px) {
+  .product-collectibility__inner {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .product-collectibility__columns {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .product-collectibility__image {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .product-collectibility__column h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-collectibility .rte {
+    font-size: 1.8rem;
+  }
+
+  .product-collectibility__footer {
+    margin-top: 4rem;
+  }
+}
