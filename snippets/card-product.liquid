@@ -44,6 +44,11 @@
     assign title = split[0]
     assign subtitle = split[1]
 
+    assign card_product_url = card_product.url
+    if within_collection != blank
+      assign card_product_url = card_product.url | within: within_collection
+    endif
+
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
@@ -123,7 +128,7 @@
               {% endif %}
             >
               <a
-                href="{{ card_product.url }}"
+                href="{{ card_product_url }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -161,7 +166,7 @@
               {% endif %}
               >
               <a
-                href="{{ card_product.url }}"
+                href="{{ card_product_url }}"
                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -178,7 +183,7 @@
               {% endif %}
               >
               <a
-                href="{{ card_product.url }}"
+                href="{{ card_product_url }}"
                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -322,7 +327,7 @@
         {% if quick_add == 'standard' and card_product.template_suffix == 'eql-draws' %}
           <div class="quick-add no-js-hidden">
             <a
-              href="{{ card_product.url }}"
+              href="{{ card_product_url }}"
               class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
             >
               ENTER NOW
@@ -543,7 +548,7 @@
                           {% if card_product == blank %}
                             role="link" aria-disabled="true"
                           {% else %}
-                            href="{{ card_product.url }}"
+                            href="{{ card_product_url }}"
                           {% endif %}
                           class="link product__view-details animate-arrow small-hide medium-hide"
                         >
@@ -552,7 +557,7 @@
                         </a>
                       </div>
                       <div class="quick-add-modal__content-info--bulk-details large-up-hide">
-                        <a href="{{ card_product.url }}" class="full-unstyled-link">
+                        <a href="{{ card_product_url }}" class="full-unstyled-link">
                           <h3>{{ card_product.title | escape }}{% if card_product.tags contains 'tm' %}&trade;{% endif %}</h3>
                           {% if card_product.tags contains 'tm' %}&trade;{% endif %}
                         </a>
@@ -566,7 +571,7 @@
                     </div>
                     <div>
                       <div class="quick-add-modal__content-info--bulk-details small-hide medium-hide">
-                        <a href="{{ card_product.url }}" class="full-unstyled-link">
+                        <a href="{{ card_product_url }}" class="full-unstyled-link">
                           <h3 class="h2">
                             {{ card_product.title | escape }}
                           {% if product.tags contains 'tm' %}&trade;{% endif %}

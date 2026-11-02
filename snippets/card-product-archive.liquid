@@ -44,6 +44,11 @@
     assign title = split[0]
     assign subtitle = split[1]
 
+    assign card_product_url = card_product.url
+    if within_collection != blank
+      assign card_product_url = card_product.url | within: within_collection
+    endif
+
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
@@ -122,7 +127,7 @@
               {% endif %}
             >
               <a
-                href="{{ card_product.url }}"
+                href="{{ card_product_url }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -160,7 +165,7 @@
               {% endif %}
               >
               <a
-                href="{{ card_product.url }}"
+                href="{{ card_product_url }}"
                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -177,7 +182,7 @@
               {% endif %}
               >
               <a
-                href="{{ card_product.url }}"
+                href="{{ card_product_url }}"
                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -196,7 +201,7 @@
         </div>
       </div>
         <a
-          href="{{ card_product.url }}"
+          href="{{ card_product_url }}"
           class="archive-card__cta"
         >
           {% render 'icon-save' %} Collectors' Archive

@@ -266,15 +266,29 @@
   <div class="page-width main-product-area {% if product.tags contains 'retail-exclusive' %} retail-exclusive {% endif %}">
     <div class="tj-breadcrumbs" {% if product.tags contains 'no-index' or product.template_suffix == "not-purchasable-with-money" %} style="display:none;" {% endif %}>
       <a class="breadcrumb" href="{{ routes.root_url }}">Home</a>
-      {% render 'icon-caret' %}
-      {% case product.type %}
-        {% when "PIX!" %}
-          <a class="breadcrumb" href="{{ collections['pix'].url }}">{{ product.type }}</a>
-        {% when "MEGA PIX!" %}
-          <a class="breadcrumb" href="{{ collections['mega-pix'].url }}">{{ product.type }}</a>
-      {% endcase %}
-      {% if is_apparel %}
-        <a class="breadcrumb" href="{{ collections['apparel'].url }}">Apparel</a>
+      {% assign has_parent_breadcrumb = false %}
+      {% if collection != blank %}
+        {% render 'icon-caret' %}
+        <a class="breadcrumb" href="{{ collection.url }}">{{ collection.title | escape }}</a>
+        {% assign has_parent_breadcrumb = true %}
+      {% else %}
+        {% case product.type %}
+          {% when "PIX!" %}
+            {% render 'icon-caret' %}
+            <a class="breadcrumb" href="{{ collections['pix'].url }}">{{ product.type }}</a>
+            {% assign has_parent_breadcrumb = true %}
+          {% when "MEGA PIX!" %}
+            {% render 'icon-caret' %}
+            <a class="breadcrumb" href="{{ collections['mega-pix'].url }}">{{ product.type }}</a>
+            {% assign has_parent_breadcrumb = true %}
+        {% endcase %}
+        {% if is_apparel %}
+          {% if has_parent_breadcrumb %}
+            {% render 'icon-caret' %}
+          {% endif %}
+          <a class="breadcrumb" href="{{ collections['apparel'].url }}">Apparel</a>
+          {% assign has_parent_breadcrumb = true %}
+        {% endif %}
       {% endif %}
       {% render 'icon-caret' %}
       <p class="breadcrumb current">{{ product.title | truncate: 25 }}</p>
@@ -484,6 +498,19 @@
                   <div class="product__details" {{ block.shopify_attributes }}>
                     <div class="product__rarity">
                       <h2 class="h4">{{ block.settings.rarity_heading | escape }}</h2>
+                      {% assign rarity_chase_tag = '' %}
+                      {% if product.tags contains 'super' %}
+                        {% assign rarity_chase_tag = 'super' %}
+                      {% elsif product.tags contains 'ultra' %}
+                        {% assign rarity_chase_tag = 'ultra' %}
+                      {% elsif product.tags contains '1 of 1' %}
+                        {% assign rarity_chase_tag = '1 of 1' %}
+                      {% elsif product.tags contains 'timed' %}
+                        {% assign rarity_chase_tag = 'timed' %}
+                      {% endif %}
+                      {% if rarity_chase_tag != blank %}
+                        <p>{{ rarity_chase_tag | upcase | escape }} CHASE</p>
+                      {% endif %}
                       {% if product.metafields.custom.limited_edition_number.value != blank %}
                         <p>LE {{ product.metafields.custom.limited_edition_number.value | escape }}</p>
                       {% endif %}
@@ -493,8 +520,9 @@
                       <summary><strong>{{ block.settings.details_heading | escape }}</strong></summary>
                       <dl>
                         {% if product.type != blank %}
-                          <div><dt>Product Type:</dt><dd class="product__type">{{ product.type | escape }}</dd></div>
-                        {% endif %}
+                        {% assign normalized_product_type = product.type | downcase %}
+                        <div><dt>Product Type:</dt><dd class="product__type">{% if normalized_product_type == 'pix2.0' %}PIX!{% else %}{{ product.type | escape }}{% endif %}</dd></div>
+                      {% endif %}
                         {% if product.variants.first.weight > 0 %}
                           <div>
                             <dt>Weight:</dt>
