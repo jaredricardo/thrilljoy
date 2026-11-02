@@ -508,13 +508,13 @@
                       {% elsif product.tags contains 'timed' %}
                         {% assign rarity_chase_tag = 'timed' %}
                       {% endif %}
-                      {% if rarity_chase_tag != blank %}
-                        <p>{{ rarity_chase_tag | upcase | escape }} CHASE</p>
-                      {% endif %}
                       {% if product.metafields.custom.limited_edition_number.value != blank %}
                         <p>LE {{ product.metafields.custom.limited_edition_number.value | escape }}</p>
                       {% endif %}
                       <p class="hide-from-mega-pix">{{ block.settings.rarity_text | escape }}</p>
+                      {% if rarity_chase_tag != blank %}
+                        <p>{{ rarity_chase_tag | upcase | escape }} CHASE</p>
+                      {% endif %}
                     </div>
                     <details class="product__specifications" open>
                       <summary><strong>{{ block.settings.details_heading | escape }}</strong></summary>
