@@ -15,94 +15,24 @@
     },
     "17422804280a180dc2": {
       "type": "apps",
-      "blocks": {
-        "smile_io_smile_landing_page_header_VHGY9e": {
-          "type": "shopify://apps/smile-io/blocks/smile-landing-page-header/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-          "settings": {
-            "primary_colour": "#333333",
-            "secondary_colour": "#ffffff",
-            "background_image": "shopify://shop_images/ClubLE-Banner-BlooPeace_016d1ccf-ed73-455a-9aa1-5ecb6e3305b2.png",
-            "title_text": "Welcome to Club LE",
-            "description_text": "Club LE is your exclusive gateway to unlocking rewards, perks, and \nunforgettable experiences while you collect what you love. Club LE is \ndesigned for those who thrive on the thrill of the chase.",
-            "join_button_text": "Join now",
-            "login_button_text": "Log in",
-            "is_previewing_logged_in_state": false,
-            "discover_button_text": "Discover the loyalty program"
-          }
-        }
-      },
-      "block_order": [
-        "smile_io_smile_landing_page_header_VHGY9e"
-      ],
       "settings": {
         "include_margins": true
       }
     },
     "17422804733a096118": {
       "type": "apps",
-      "blocks": {
-        "smile_io_smile_landing_page_how_it_works_QR4647": {
-          "type": "shopify://apps/smile-io/blocks/smile-landing-page-how-it-works/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-          "settings": {
-            "primary_colour": "#333333",
-            "secondary_colour": "#ffffff",
-            "title_text": "How it works",
-            "step1_heading_text": "Join",
-            "step1_description_text": "Sign up or login to start earning straight away.",
-            "step2_heading_text": "Earn",
-            "step2_description_text": "Earn points for every dollar spent.",
-            "step3_heading_text": "Redeem",
-            "step3_description_text": "Redeem points for discounts on your next purchase."
-          }
-        }
-      },
-      "block_order": [
-        "smile_io_smile_landing_page_how_it_works_QR4647"
-      ],
       "settings": {
         "include_margins": true
       }
     },
     "1742280573d936b744": {
       "type": "apps",
-      "blocks": {
-        "smile_io_smile_landing_page_earning_rule_highlight_97qrz8": {
-          "type": "shopify://apps/smile-io/blocks/smile-landing-page-earning-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-          "settings": {
-            "primary_colour": "#333333",
-            "secondary_colour": "#ffffff",
-            "image": "shopify://shop_images/ClubLE-Points.png",
-            "title_text": "Earn points for every order placed",
-            "description_text": "The more XPs you collect, the more you can unlock, from free shipping to dollars off future purchases, entry into raffles for limited-edition collectibles, and even access to exclusive experiences.",
-            "button_text": "Ways to earn"
-          }
-        }
-      },
-      "block_order": [
-        "smile_io_smile_landing_page_earning_rule_highlight_97qrz8"
-      ],
       "settings": {
         "include_margins": true
       }
     },
     "17422805966afa2f6b": {
       "type": "apps",
-      "blocks": {
-        "smile_io_smile_landing_page_redeeming_rule_highlight_6WYAzV": {
-          "type": "shopify://apps/smile-io/blocks/smile-landing-page-redeeming-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-          "settings": {
-            "primary_colour": "#333333",
-            "secondary_colour": "#ffffff",
-            "image": "shopify://shop_images/ClubLE-Redeem.png",
-            "title_text": "Redeem points for rewards",
-            "description_text": "Redeem points on your next purchase, or save them up for higher value rewards.",
-            "button_text": "Ways to redeem"
-          }
-        }
-      },
-      "block_order": [
-        "smile_io_smile_landing_page_redeeming_rule_highlight_6WYAzV"
-      ],
       "settings": {
         "include_margins": true
       }
