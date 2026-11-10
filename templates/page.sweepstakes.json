@@ -22,6 +22,7 @@
     },
     "sweepstakes_header_9eYxX6": {
       "type": "sweepstakes-header",
+      "disabled": true,
       "custom_css": [
         "section {padding-bottom: 50px;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px; }}"
@@ -37,6 +38,7 @@
     },
     "sweepstakes_countdown_KXJeRL": {
       "type": "sweepstakes-countdown",
+      "disabled": true,
       "custom_css": [
         "section {padding-bottom: 50px !important;}",
         "@media screen and (max-width: 768px) {section {padding-bottom: 30px !important; }}"
@@ -55,6 +57,7 @@
     },
     "image_divider_section_e9zcyh": {
       "type": "image-divider-section",
+      "disabled": true,
       "name": "PRE LAUNCH Image Divider",
       "settings": {
         "section_anchor_id": "",
@@ -66,6 +69,7 @@
     },
     "klaviyo_email_capture_hkKThq": {
       "type": "klaviyo-email-capture",
+      "disabled": true,
       "custom_css": [
         "h2 {font-size: 28px;}",
         "@media screen and (max-width: 768px) {h2 {font-size: 19px; }}"
@@ -104,7 +108,7 @@
         "image": "shopify://shop_images/Thrilljoy-Logo-K_1_1.png",
         "heading": "SWEEPSTAKES",
         "bg_color": "#ffffff",
-        "heading_color": "#14AE8F"
+        "heading_color": "#14ae8f"
       }
     },
     "image_divider_section_4cgmbg": {
@@ -129,7 +133,7 @@
         "padding_bottom": 80,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 52,
-        "countdown_text": "INVINCIBLE SWEEPSTAKES:",
+        "countdown_text": "POST MALONE SWEEPSTAKES:",
         "countdown_month": "12",
         "countdown_day": "19",
         "countdown_hour": "3",
@@ -218,7 +222,7 @@
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#ffffff",
-        "html_content": "<style>\n\n    .button-text-content-container {\n        text-align: center;\n        margin: 0 auto;\n    }\n\n    .button-text-content-container h3 {\n        font-size: 30px;\n        font-weight: 700;\n        margin-top: 0;\n    }\n\n    .button-text-content-container h4:has(b) {\n        margin: 0 0 5px 0;\n        font-weight: bold;\n    }\n\n    .button-text-content-container h4 {\n        margin-top: 0;\n        font-size: 20px;\n        font-weight: 400;\n    }\n\n    @media screen and (max-width: 768px) {\n        .button-text-content-container h3 {\n            font-size: 25px;\n        }\n        .button-text-content-container h4:has(b) {\n            margin-bottom: 10px;\n        }\n    }\n\n</style>\n\n\n<div class=\"button-text-content-container\">\n    <h3>SO EXCITED ABOUT POST MALONE WE DECIDED TO RUN A <span style=\"color:#14AE8F\">SWEEPSTAKES</span> ABOUT IT</h3>\n    <h4><b>Enter before DECEMBER 18, 2026 at 11:59PM PT.</b></h4>\n    <h4>Drawing takes place on August 24, 2026. Approximate retail value: &gt;~$1,500 For full terms and conditions, see below. No purchase necessary.</h4>\n</div>"
+        "html_content": "<style>\n\n    .button-text-content-container {\n        text-align: center;\n        margin: 0 auto;\n    }\n\n    .button-text-content-container h3 {\n        font-size: 30px;\n        font-weight: 700;\n        margin-top: 0;\n    }\n\n    .button-text-content-container h4:has(b) {\n        margin: 0 0 5px 0;\n        font-weight: bold;\n    }\n\n    .button-text-content-container h4 {\n        margin-top: 0;\n        font-size: 20px;\n        font-weight: 400;\n    }\n\n    @media screen and (max-width: 768px) {\n        .button-text-content-container h3 {\n            font-size: 25px;\n        }\n        .button-text-content-container h4:has(b) {\n            margin-bottom: 10px;\n        }\n    }\n\n</style>\n\n\n<div class=\"button-text-content-container\">\n    <h3>SO EXCITED ABOUT POST MALONE WE DECIDED TO RUN A <span style=\"color:#14AE8F\">SWEEPSTAKES</span> ABOUT IT</h3>\n    <h4><b>Enter before DECEMBER 18, 2026 at 11:59PM PT.</b></h4>\n    <h4>Drawing takes place on December 21, 2026. Approximate retail value: &gt;~$5,000. For full terms and conditions, see below. No purchase necessary.</h4>\n</div>"
       }
     },
     "image_divider_section_6Bw4tt": {

@@ -207,7 +207,7 @@
       },
       "14447995696390441228": {
         "type": "shopify://apps/pineraffle/blocks/app-embed/a7355a0d-da3a-4b47-bff6-8f75b9cc8805",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       }
     },
@@ -217,7 +217,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#95E7BF",
+          "button": "#95e7bf",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -283,7 +283,7 @@
           "background": "#000000",
           "background_gradient": "",
           "text": "#f3f3f3",
-          "button": "#95E7BF",
+          "button": "#95e7bf",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -305,7 +305,7 @@
           "background": "#f0f0f0",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#95E7BF",
+          "button": "#95e7bf",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -316,7 +316,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#95E7BF",
+          "button": "#95e7bf",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
