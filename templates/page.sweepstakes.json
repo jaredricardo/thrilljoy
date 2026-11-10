@@ -187,7 +187,7 @@
         "section_height_desktop": 450,
         "section_height_mobile": 350,
         "fg_image": "shopify://shop_images/6619-Lineup-v2_1_1.png",
-        "fg_image_link": "shopify://products/pix-allen-the-alien-2026-summer-event",
+        "fg_image_link": "shopify://products/pix-post-malone",
         "fg_image_width_desktop": 50,
         "fg_image_width_mobile": 100
       }
@@ -243,7 +243,7 @@
     "50_50_with_html_weNHML": {
       "type": "50-50-with-html",
       "disabled": true,
-      "name": "5050 with HTML",
+      "name": "LAUNCH 5050 with HTML",
       "settings": {
         "section_anchor_id": "",
         "bg_color": "#000000",
@@ -256,7 +256,7 @@
         "right_column_width": 50,
         "switch_columns": true,
         "image": "shopify://shop_images/6619-InvincibleAllen-Spread_2_2__png.png",
-        "image_link": "shopify://products/pix-allen-the-alien-2026-summer-event",
+        "image_link": "shopify://products/pix-post-malone",
         "header_html_content": "",
         "html_content": "<style>\n  [data-section-id=\"{{ section.id }}\"] .container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n    color: whitel\n  }\n\n  [data-section-id=\"{{ section.id }}\"] .container p {\n    color: white !important;\n  }\n  [data-section-id=\"{{ section.id }}\"] .container img {\n    max-width: 250px;\n    margin: 0 auto;\n  }\n\n  @media screen and (max-width: 768px) {\n    [data-section-id=\"{{ section.id }}\"] .container img {\n      max-width: 180px;\n    }\n  }\n</style>\n\n<div class=\"container\">\n  <img src=\"{{ settings.logo | img_url: 'master' }}\" alt=\"Thrilljoy logo\">\n  <p>Premium collectibles with truly unlimited edition runs. Join our community and #TEAR INTO THE THRILL!</p>\n</div>"
       }
