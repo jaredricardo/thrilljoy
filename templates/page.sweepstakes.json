@@ -142,6 +142,7 @@
     },
     "pineraffle_linked_entry_form_tg9cLp": {
       "type": "pineraffle-linked-entry-form",
+      "disabled": true,
       "name": "LAUNCH Custom Pine Raffle Form",
       "settings": {
         "raffle_image": "shopify://shop_images/6619-Thrilljoy-PIX_-Invincible-Allen-the-Alien-_Hero_-front_1_1.png",
