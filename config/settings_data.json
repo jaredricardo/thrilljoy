@@ -133,7 +133,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Thrilljoy LLC",
-    "brand_description": "<p>Discover your thrill.</p><p><a href=\"mailto:support@thrilljoy.zendesk.com\" title=\"mailto:support@thrilljoy.zendesk.com\">Contact us</a></p>",
+    "brand_description": "<p>Discover your thrill.</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact us</a></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "https://instagram.com/thrilljoycollectibles",

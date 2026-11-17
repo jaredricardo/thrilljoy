@@ -99,16 +99,15 @@
       </div>
       <div class="field">
         <input
-          type="tel"
-          id="ContactForm-phone"
+          type="text"
+          id="ContactForm-order-number"
           class="field__input"
-          autocomplete="tel"
-          name="contact[{{ 'templates.contact.form.phone' | t }}]"
-          pattern="[0-9\-]*"
-          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-          placeholder="{{ 'templates.contact.form.phone' | t }}"
+          name="contact[Order number]"
+          placeholder="Order Number"
         >
-        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+        <label class="field__label" for="ContactForm-order-number">
+          Order Number <span>(if applicable)</span>
+        </label>
       </div>
       <div class="field">
         <textarea
@@ -130,6 +129,7 @@
         </button>
       </div>
     {%- endform -%}
+    <p>or reach out to us at <a href="mailto:support@thrilljoy.zendesk.com" style="color: black;">support@thrilljoy.zendesk.com</a></p>
   </div>
 </div>
 
