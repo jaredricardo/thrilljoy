@@ -1,0 +1,110 @@
+{%- comment -%}
+  Storefront collection products exclude drafts and products not published to the Online Store.
+  Inventory only controls the purchase action, not the takeover state.
+{%- endcomment -%}
+{%- assign takeover_products = collection.products -%}
+{%- assign image_sizes = '(min-width: 990px) min(23vw, 40rem), (min-width: 600px) min(45vw, 40rem), min(calc(100vw - 5rem), 40rem)' -%}
+{%- if takeover_products.size == 1 -%}
+  {%- assign image_sizes = '(max-width: 459px) min(calc(100vw - 5rem), 27rem), ' | append: image_sizes -%}
+{%- endif -%}
+
+<section class="glitch-console" aria-labelledby="GlitchTitle-{{ section.id }}">
+  <header class="glitch-panel glitch-console__heading">
+    <h1 id="GlitchTitle-{{ section.id }}" data-glitch-type>ROOT / PIX! PRODUCTS / UNRELEASED</h1>
+    <p data-glitch-type>ASSET: image_6438.png [PREVIEW UNAVAILABLE]</p>
+  </header>
+
+  <ul class="glitch-panel glitch-console__log" role="list" aria-label="Product status">
+    <li><span aria-hidden="true">&gt;&gt;</span> <span data-glitch-type>EXCLUSIVE PRODUCT STATUS: PUSH LIVE </span><span class="glitch-console__prompt" data-glitch-type>Y</span><span data-glitch-type>/N?</span></li>
+    <li><span aria-hidden="true">&gt;&gt;</span> <span data-glitch-type>PUSH LIVE Y</span></li>
+    {%- if takeover_products == empty -%}
+      <li><span aria-hidden="true">&gt;&gt;</span> <span data-glitch-type>UNAUTHORIZED ACCESS REVOKED</span></li>
+      <li><span aria-hidden="true">&gt;&gt;</span> <span data-glitch-type>WINTER BLOO RETURNED TO DRAFT MODE</span></li>
+    {%- endif -%}
+  </ul>
+
+  {%- if takeover_products != empty -%}
+    <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+    <ul class="glitch-grid" role="list" aria-label="{{ collection.title | escape }}">
+      {%- for product in takeover_products -%}
+        <li class="glitch-card">
+          {%- liquid
+            assign variant = product.selected_or_first_available_variant
+            assign variant_count = product.variants.size
+            assign form_id = 'GlitchProductForm-' | append: section.id | append: '-' | append: product.id
+            assign title_id = 'GlitchProductTitle-' | append: section.id | append: '-' | append: product.id
+            assign sold_out = false
+            if product.available == false
+              assign sold_out = true
+            elsif variant_count == 1 and variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.quantity_rule.min > variant.inventory_quantity
+              assign sold_out = true
+            endif
+          -%}
+          <a class="glitch-card__link" href="{{ product.url }}" aria-labelledby="{{ title_id }}">
+            {%- if product.featured_image -%}
+              {{
+                product.featured_image
+                | image_url: width: 800
+                | image_tag: class: 'glitch-card__image', widths: '240, 360, 540, 720, 800', sizes: image_sizes
+              }}
+            {%- endif -%}
+            <p class="glitch-card__vendor" data-glitch-scramble>{{ product.vendor | escape }}</p>
+            <h2 id="{{ title_id }}" data-glitch-scramble>{{ product.title | escape }}</h2>
+          </a>
+          <p class="glitch-card__price" data-glitch-scramble>
+            {%- if product.price_varies -%}
+              {%- assign min_price = product.price_min | money_with_currency -%}
+              {{ 'products.product.price.from_price_html' | t: price: min_price }}
+            {%- else -%}
+              {{ product.price | money_with_currency }}
+            {%- endif -%}
+          </p>
+
+          <div class="glitch-card__actions">
+            {%- if sold_out -%}
+              <button type="button" class="glitch-button" disabled><span data-glitch-scramble>{{ 'products.product.sold_out' | t }}</span></button>
+            {%- elsif variant_count > 1 or variant.requires_selling_plan -%}
+              <a class="glitch-button" href="{{ product.url }}"><span data-glitch-scramble>{{ 'products.product.choose_options' | t }}</span></a>
+            {%- else -%}
+              <product-form>
+                <div class="product-form__error-message-wrapper" role="alert" hidden>
+                  <span class="product-form__error-message"></span>
+                </div>
+                {%- form 'product', product, id: form_id -%}
+                  <input type="hidden" name="id" value="{{ variant.id }}">
+                  <input type="hidden" name="quantity" value="{{ variant.quantity_rule.min | default: 1 }}">
+                  <button type="submit" name="add" class="glitch-button">
+                    <span data-glitch-scramble>{{ 'products.product.add_to_cart' | t }}</span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+                {%- endform -%}
+              </product-form>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="glitch-panel glitch-console__message glitch-console__message--warning" data-glitch-type>WARNING: UNAUTHORIZED ACCESS</p>
+  {%- else -%}
+    <p class="glitch-panel glitch-console__message">
+      <span data-glitch-type>Standard Drop Schedule Restored</span>
+      {%- if section.settings.drop_schedule != blank %}<br><span data-glitch-type>{{ section.settings.drop_schedule | escape }}</span>{% endif %}
+    </p>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Glitch collection grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "drop_schedule",
+      "label": "Restored drop schedule",
+      "info": "Shown when no products in this collection are visible on the Online Store. Sold-out products still show their product card.",
+      "default": "FRIDAY 11/20 8AM PT"
+    }
+  ]
+}
+{% endschema %}

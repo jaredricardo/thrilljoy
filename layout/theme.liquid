@@ -1,3 +1,9 @@
+{%- liquid
+  assign glitch_takeover = false
+  if request.page_type == 'collection' and template.suffix == 'glitch-takeover'
+    assign glitch_takeover = true
+  endif
+-%}
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
@@ -168,7 +174,7 @@
 
     </style>
 
-      {% if settings.enable_klaviyo_sticky_email_form %}
+      {% if settings.enable_klaviyo_sticky_email_form and glitch_takeover == false %}
         {% unless customer %}
           {% render 'klaviyo-sticky-email-form' %}
         {% endunless %}
@@ -442,6 +448,10 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {%- if glitch_takeover -%}
+      {{ 'glitch-takeover.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'glitch-takeover.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -563,9 +573,10 @@
     </script>
 
     {% comment %} confetti code, comment out when not using {% endcomment %}
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <script>
-      {% if collection.handle == 'redd-favorites' or collection.handle == 'bloo-favorites' or collection.handle == 'tux-favorites' %}
+    {% unless glitch_takeover %}
+      <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+      <script>
+        {% if collection.handle == 'redd-favorites' or collection.handle == 'bloo-favorites' or collection.handle == 'tux-favorites' %}
         
         function randomInRange(min, max) {
           return Math.random() * (max - min) + min;
@@ -604,11 +615,12 @@
           startConfetti()
         }, 400)
 
-      {% endif %}
-    </script>
+        {% endif %}
+      </script>
+    {% endunless %}
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if glitch_takeover %} glitch-takeover{% elsif settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
 
 
       {% comment %} <img class="blood-1" src="https://cdn.shopify.com/s/files/1/0672/1096/9252/files/D-092426-Float-PinkBlood-2.png?v=1789992755" alt="Blood splatter 1" />

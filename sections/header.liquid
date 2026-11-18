@@ -1,3 +1,9 @@
+{%- liquid
+  assign glitch_takeover = false
+  if request.page_type == 'collection' and template.suffix == 'glitch-takeover'
+    assign glitch_takeover = true
+  endif
+-%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -233,7 +239,7 @@
  
 </style>
 
-{% if settings.enable_sticky_pencil_timer %}
+{% if settings.enable_sticky_pencil_timer and glitch_takeover == false %}
 
   <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -333,7 +339,7 @@
 -%}
 
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  {% if settings.enable_sticky_pencil %}
+  {% if settings.enable_sticky_pencil and glitch_takeover == false %}
     <div class="sticky-pencil-outter">
       <div class="sticky-pencil-banner page-width">
         <div class="ghost-logo-container">
@@ -388,13 +394,15 @@
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
-      if section.settings.menu != blank
-        render 'header-drawer'
-      endif
+      unless glitch_takeover
+        if section.settings.menu != blank
+          render 'header-drawer'
+        endif
 
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
+        if section.settings.logo_position == 'top-center' or section.settings.menu == blank
+          render 'header-search', input_id: 'Search-In-Modal-1'
+        endif
+      endunless
     -%}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
@@ -428,7 +436,7 @@
     {%- endif -%}
 
     {%- liquid
-      if section.settings.menu != blank
+      if section.settings.menu != blank and glitch_takeover == false
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu', blocks: section.blocks
         elsif section.settings.menu_type_desktop != 'drawer'
@@ -467,6 +475,11 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%- if glitch_takeover -%}
+      <p class="glitch-header__node" data-glitch-type>STORE_NODE. //ACCESS_01</p>
+      <a class="glitch-button glitch-header__exit" href="{{ routes.root_url }}"><span data-glitch-type>Exit test mode</span></a>
+    {%- endif -%}
+
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -494,7 +507,7 @@
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if shop.customer_accounts_enabled -%}
-        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank and glitch_takeover == false %} small-hide{% endif %}">
           {%- if section.settings.enable_customer_avatar -%}
             <account-icon>
               {%- if customer and customer.has_avatar? -%}
