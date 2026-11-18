@@ -1,3 +1,4 @@
+{% unless request.page_type == 'collection' and template.suffix == 'glitch-takeover' %}
 <script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
 
 {% if section.blocks.size == 1 %}
@@ -116,6 +117,7 @@
           {% endif %}
       </div>
   {% endif %}
+{% endunless %}
 {% schema %}
   {
     "name": "Announcement bar",

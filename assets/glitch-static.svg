@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640">
+  <defs>
+    <filter id="rgb" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".48 .91" numOctaves="2" seed="41" stitchTiles="stitch"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="3.3" intercept="-1.85"/>
+        <feFuncG type="linear" slope="3.1" intercept="-1.72"/>
+        <feFuncB type="linear" slope="3.5" intercept="-1.82"/>
+        <feFuncA type="linear" slope="0" intercept="1"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="tracking" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".009 .68" numOctaves="2" seed="17" stitchTiles="stitch"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="3.4" intercept="-2"/>
+        <feFuncG type="linear" slope="3.6" intercept="-2.1"/>
+        <feFuncB type="linear" slope="4.3" intercept="-2.35"/>
+        <feFuncA type="linear" slope="0" intercept="1"/>
+      </feComponentTransfer>
+    </filter>
+    <linearGradient id="signal">
+      <stop stop-color="white" stop-opacity=".36"/>
+      <stop offset=".25" stop-color="white" stop-opacity=".57"/>
+      <stop offset=".52" stop-color="white" stop-opacity=".27"/>
+      <stop offset=".81" stop-color="white" stop-opacity=".65"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <mask id="bands">
+      <path fill="url(#signal)" d="M0 0h1600v640H0z"/>
+      <path opacity=".42" d="M0 29h1600v17H0zM0 77h1600v69H0zM0 182h1600v33H0zM0 325h1600v66H0zM0 463h1600v54H0zM0 585h1600v20H0z"/>
+    </mask>
+    <pattern id="scanlines" width="4" height="5" patternUnits="userSpaceOnUse">
+      <path fill-opacity=".72" d="M0 0h4v2H0z"/>
+    </pattern>
+    <linearGradient id="tear-cyan">
+      <stop stop-color="#126bff" stop-opacity="0"/>
+      <stop offset=".34" stop-color="#2549ff" stop-opacity=".55"/>
+      <stop offset=".68" stop-color="#14dcc5"/>
+      <stop offset="1" stop-color="#11e5b3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tear-pink">
+      <stop stop-color="#ff3873" stop-opacity="0"/>
+      <stop offset=".25" stop-color="#ec387f"/>
+      <stop offset=".67" stop-color="#6b3bff" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#5270ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="dropouts">
+      <path d="M140 112h870v10H140zM550 199h1050v9H550zM0 290h710v8H0zM860 368h740v13H860zM240 479h1050v9H240zM650 571h950v12H650z"/>
+    </clipPath>
+  </defs>
+  <path fill="#030406" d="M0 0h1600v640H0z"/>
+  <g mask="url(#bands)">
+    <path id="tracking-field" filter="url(#tracking)" opacity=".7" d="M0 0h1600v640H0z"/>
+    <path filter="url(#rgb)" opacity=".42" style="mix-blend-mode:screen" d="M0 0h1600v640H0z"/>
+    <path fill="url(#scanlines)" d="M0 0h1600v640H0z"/>
+  </g>
+  <g clip-path="url(#dropouts)">
+    <use href="#tracking-field" transform="translate(-84 8) scale(1.1 1)" opacity=".72"/>
+    <path fill="#020305" opacity=".8" d="M140 116h870v2H140zM550 202h1050v3H550zM0 294h710v2H0zM860 374h740v3H860zM240 483h1050v2H240zM650 576h950v3H650z"/>
+  </g>
+  <path fill="url(#tear-cyan)" opacity=".36" d="M250 112h950v1H250zM635 198h965v2H635zM0 292h780v1H0zM790 368h810v1H790zM290 486h800v1H290zM720 572h880v2H720z"/>
+  <path fill="url(#tear-pink)" opacity=".38" d="M120 120h750v1H120zM450 207h1150v1H450zM0 296h690v1H0zM710 378h890v2H710zM170 480h940v1H170zM660 582h940v1H660z"/>
+  <rect width="1600" height="640" fill="#000" opacity=".5"/>
+</svg>
