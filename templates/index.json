@@ -47,8 +47,8 @@
         "carousel_bq8HGU": {
           "type": "carousel",
           "settings": {
-            "desktop_image": "shopify://shop_images/D-112026-WinterBloo-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D-112026-WinterBloo-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/PR-112326-Holiday-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/PR-112326-Holiday-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -71,7 +71,7 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#95e7bf",
-            "button_link": "shopify://products/pix-winter-bloo",
+            "button_link": "shopify://collections/holiday-favorites",
             "use_slide_linkout": true
           }
         },
