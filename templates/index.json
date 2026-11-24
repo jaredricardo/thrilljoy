@@ -46,10 +46,9 @@
         },
         "carousel_bq8HGU": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/D-120926-NOTIF-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/D-120926-NOTIF-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/D-120926-NOTIF-Hero-2000x750_2278ad7d-d103-4565-8fb6-248e1493768b.png",
+            "mobile_image": "shopify://shop_images/D-120926-NOTIF-Hero-2500x1536_38f6fe7c-4260-4867-8d70-935daced6fa8.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
