@@ -4593,6 +4593,36 @@ main:has(.blood-container) {
   }
 }
 
+.float-figure {
+  position: fixed;
+  z-index: 15;
+  height: auto;
+  max-width: 100px;
+  pointer-events: none;
+}
+
+.float-figure-1 { top: 6vh; left: 3vw; width: 90px; }
+.float-figure-2 { top: 44vh; left: 12vw; width: 55px; }
+.float-figure-3 { top: 20vh; right: 5vw; width: 75px; }
+.float-figure-4 { bottom: 8vh; left: 18vw; width: 45px; }
+.float-figure-5 { bottom: 19vh; right: 20vw; width: 100px; }
+
+@media screen and (max-width: 989px) {
+  .float-figure-1 { top: 150px; }
+}
+
+@media screen and (max-width: 768px) {
+  .float-figure {
+    max-width: 60px;
+  }
+
+  .float-figure-1 { width: 55px; }
+  .float-figure-2 { width: 35px; }
+  .float-figure-3 { width: 45px; }
+  .float-figure-4 { width: 30px; }
+  .float-figure-5 { width: 60px; }
+}
+
 .card__inner:has(.low-stock-badge) .presale-badge {
   display: none;
 }

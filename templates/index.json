@@ -14,10 +14,9 @@
       "blocks": {
         "carousel_kPDeaw": {
           "type": "carousel",
-          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/6628-PostMalone-Hero-2000x750.png",
-            "mobile_image": "shopify://shop_images/6628-PostMalone-Hero-2500x1536.png",
+            "desktop_image": "shopify://shop_images/D-6863-Hero-2000x750.png",
+            "mobile_image": "shopify://shop_images/D-6863-Hero-2500x1536.png",
             "image_overlay_opacity": 0,
             "mobile_min_height": 0,
             "complete_center": false,
@@ -40,7 +39,7 @@
             "button_text": "",
             "button_text_color": "#ffffff",
             "button_background_color": "#95e7bf",
-            "button_link": "shopify://products/pix-post-malone",
+            "button_link": "shopify://collections/new-featured",
             "use_slide_linkout": true
           }
         },
